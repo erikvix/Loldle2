@@ -5,6 +5,7 @@
  * - Falas dubladas em PT-BR: Wiki League of Legends PT-BR (CC BY-SA)
  * - Campeões sem falas em PT-BR: Wiki League of Legends em inglês (CC BY-SA),
  *   com as falas traduzidas em scripts/translations.json
+ * - Fala oficial de cada campeão em PT-BR: Riot Universe (biografia do campeão)
  *
  * Falas em inglês ainda sem tradução são gravadas em scripts/untranslated.json
  * e ficam de fora do jogo até serem traduzidas.
@@ -16,6 +17,7 @@ import { readFile, rm, writeFile } from 'node:fs/promises'
 const WIKI_PT = 'https://leagueoflegends.fandom.com/pt-br/api.php'
 const WIKI_EN = 'https://leagueoflegends.fandom.com/api.php'
 const DDRAGON = 'https://ddragon.leagueoflegends.com'
+const UNIVERSE = 'https://universe-meeps.leagueoflegends.com/v1/pt_br'
 const OUTPUT = new URL('../src/data/quotes.json', import.meta.url)
 const TRANSLATIONS = new URL('./translations.json', import.meta.url)
 const UNTRANSLATED = new URL('./untranslated.json', import.meta.url)
@@ -53,9 +55,11 @@ interface DDragonChampion {
 }
 
 // `original` presente indica fala traduzida automaticamente do inglês.
+// `source: 'universe'` indica a fala oficial da biografia do campeão no Riot Universe.
 export interface QuoteEntry {
   text: string
   original?: string
+  source?: 'universe'
 }
 
 interface QuotesFile {
@@ -67,10 +71,19 @@ interface QuotesFile {
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
-async function getJson<T>(url: string): Promise<T> {
-  const res = await fetch(url, { headers: { 'User-Agent': 'Loldle2 quote fetcher' } })
-  if (!res.ok) throw new Error(`${res.status} ao buscar ${url}`)
-  return (await res.json()) as T
+async function getJson<T>(url: string, attempts = 3): Promise<T> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': 'Loldle2 quote fetcher' } })
+      // 404 não adianta repetir.
+      if (res.status === 404) throw new Error(`404 ao buscar ${url}`)
+      if (!res.ok) throw new Error(`${res.status} ao buscar ${url}`)
+      return (await res.json()) as T
+    } catch (error) {
+      if (attempt >= attempts || (error as Error).message.startsWith('404')) throw error
+      await sleep(1000 * attempt)
+    }
+  }
 }
 
 async function getChampions(version: string, locale: string) {
@@ -162,6 +175,60 @@ async function fetchQuotes(source: WikiSource, pageNames: string[], names: strin
   return []
 }
 
+// Slugs do Riot Universe que não são só o id do Data Dragon em minúsculas.
+const UNIVERSE_SLUGS: Record<string, string> = { Renata: 'renataglasc' }
+
+interface UniverseChampion {
+  champion: { biography: { quote?: string; 'quote-author'?: string } }
+}
+
+function normalizeName(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/gi, '')
+    .toLowerCase()
+}
+
+// Remove as aspas que envolvem a fala no Universe, que variam: "...", “...”, ''...'', “...”.
+function stripWrappingQuotes(text: string): string {
+  let quote = text
+    .replace(/<[^>]+>/g, ' ') // tags HTML como <i> e <br/>
+    .trim()
+    .replace(/["”'’]+([.!?…])$/, '$1') // aspas antes do ponto final
+  const opener = ["''", '"', '“', "'", '‘'].find((token) => quote.startsWith(token))
+  if (opener) quote = quote.slice(opener.length)
+  const closer = ["''", '"', '”', "'", '’'].find((token) => quote.endsWith(token))
+  if (closer) quote = quote.slice(0, -closer.length)
+  // Aspas que sobram no meio separam falas de um diálogo (ex.: Kindred).
+  quote = quote.replace(/''|"/g, ' ')
+  // Aspa simples sem par antes de pontuação (ex.: Heimerdinger, "Impossível', você diz?").
+  if ((quote.match(/'/g) ?? []).length % 2 === 1) quote = quote.replace(/'(?=[,.!?])/, '')
+  return quote.replace(/\s+/g, ' ').trim()
+}
+
+// Fala oficial da biografia do campeão no Riot Universe, se for dita pelo próprio campeão.
+async function fetchUniverseQuote(championId: string, names: string[]): Promise<string | null> {
+  const slug = UNIVERSE_SLUGS[championId] ?? championId.toLowerCase()
+  let biography: UniverseChampion['champion']['biography']
+  try {
+    biography = (await getJson<UniverseChampion>(`${UNIVERSE}/champions/${slug}/index.json`)).champion.biography
+  } catch (error) {
+    console.warn(`  ! Universe ${slug}: ${(error as Error).message}`)
+    return null
+  }
+
+  // Autor vazio é o próprio campeão; outro autor (ex.: Ryze na página do Bardo) fica de fora.
+  const author = biography['quote-author']?.trim()
+  if (author && !names.some((name) => normalizeName(name) === normalizeName(author))) return null
+
+  const quote = stripWrappingQuotes(biography.quote ?? '')
+  if (quote.length < MIN_LENGTH) return null
+  const lower = quote.toLowerCase()
+  if (nameParts(names).some((part) => lower.includes(part))) return null
+  return quote
+}
+
 async function main() {
   const [version] = await getJson<string[]>(`${DDRAGON}/api/versions.json`)
   const champions = await getChampions(version, 'pt_BR')
@@ -177,30 +244,36 @@ async function main() {
     const englishName = englishNames.get(champion.id) ?? champion.name
     const names = [champion.name, englishName]
 
+    let voiceQuotes: QuoteEntry[]
     const ptQuotes = await fetchQuotes(PT_SOURCE, [champion.name], names)
     if (ptQuotes.length > 0) {
-      quotesById[champion.id] = ptQuotes.map((text) => ({ text }))
-      console.log(`  ${champion.name}: ${ptQuotes.length} falas (PT-BR)`)
-      continue
+      voiceQuotes = ptQuotes.map((text) => ({ text }))
+    } else {
+      // Algumas páginas usam o id do Data Dragon (ex.: "Nunu" em vez de "Nunu & Willump").
+      const enQuotes = await fetchQuotes(EN_SOURCE, [englishName, champion.id], names)
+      const forbidden = nameParts(names)
+      voiceQuotes = enQuotes
+        .filter((original) => translations[original])
+        .map((original) => ({ text: translations[original], original }))
+        // A tradução também não pode entregar o nome do campeão.
+        .filter(({ text }) => !forbidden.some((part) => text.toLowerCase().includes(part)))
+      const pending = enQuotes.filter((original) => !translations[original])
+      if (pending.length > 0) untranslated[champion.id] = pending
     }
 
-    // Algumas páginas usam o id do Data Dragon (ex.: "Nunu" em vez de "Nunu & Willump").
-    const enQuotes = await fetchQuotes(EN_SOURCE, [englishName, champion.id], names)
-    const forbidden = nameParts(names)
-    const translated = enQuotes
-      .filter((original) => translations[original])
-      .map((original) => ({ text: translations[original], original }))
-      // A tradução também não pode entregar o nome do campeão.
-      .filter(({ text }) => !forbidden.some((part) => text.toLowerCase().includes(part)))
-    const pending = enQuotes.filter((original) => !translations[original])
+    const universeQuote = await fetchUniverseQuote(champion.id, names)
+    const quotes: QuoteEntry[] = universeQuote ? [{ text: universeQuote, source: 'universe' }] : []
+    // A fala oficial substitui uma igual vinda da wiki (ex.: tradução nossa da mesma frase).
+    const official = universeQuote ? normalizeName(universeQuote) : null
+    quotes.push(...voiceQuotes.filter(({ text }) => normalizeName(text) !== official))
 
-    if (pending.length > 0) untranslated[champion.id] = pending
-    if (translated.length > 0) quotesById[champion.id] = translated
+    if (quotes.length > 0) quotesById[champion.id] = quotes
     else missing.push(champion.name)
 
+    const dubbed = quotes.filter((q) => !q.original && !q.source).length
     console.log(
-      `  ${champion.name}: ${translated.length} falas (traduzidas)` +
-        (pending.length > 0 ? `, ${pending.length} sem tradução` : ''),
+      `  ${champion.name}: ${universeQuote ? '1 oficial, ' : ''}${dubbed} dubladas, ` +
+        `${quotes.length - dubbed - (universeQuote ? 1 : 0)} traduzidas`,
     )
     await sleep(150)
   }
@@ -216,10 +289,12 @@ async function main() {
 
   const entries = Object.values(quotesById).flat()
   const translatedCount = entries.filter((q) => q.original).length
+  const officialCount = entries.filter((q) => q.source === 'universe').length
   const pendingCount = Object.values(untranslated).flat().length
   console.log(
     `\n${Object.keys(quotesById).length} campeões, ${entries.length} falas ` +
-      `(${entries.length - translatedCount} dubladas, ${translatedCount} traduzidas)`,
+      `(${officialCount} oficiais, ${entries.length - translatedCount - officialCount} dubladas, ` +
+      `${translatedCount} traduzidas)`,
   )
   if (pendingCount > 0) {
     await writeFile(UNTRANSLATED, JSON.stringify(untranslated, null, 2) + '\n')

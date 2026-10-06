@@ -870,6 +870,10 @@
   "quotes": {
     "Aatrox": [
       {
+        "text": "Minha missão é destruir até a esperança...",
+        "source": "universe"
+      },
+      {
         "text": "Ouçam, o silêncio depois da aniquilação!"
       },
       {
@@ -933,9 +937,6 @@
         "text": "Eu farei o meu sofrimento... florescer."
       },
       {
-        "text": "Minha missão é destruir até... a esperança."
-      },
-      {
         "text": "Moldarei todas as formas mortais à minha própria imagem!"
       },
       {
@@ -961,6 +962,10 @@
       }
     ],
     "Ahri": [
+      {
+        "text": "As emoções humanas podem ser mais voláteis até do que a magia mais poderosa.",
+        "source": "universe"
+      },
       {
         "text": "Uma raposa esperta nunca é apanhada."
       },
@@ -1054,6 +1059,10 @@
     ],
     "Akali": [
       {
+        "text": "Ter cara de perigoso e ser perigoso são coisas diferentes.",
+        "source": "universe"
+      },
+      {
         "text": "Temam a assassina sem mestre.",
         "original": "Fear the assassin with no master."
       },
@@ -1115,6 +1124,10 @@
       }
     ],
     "Akshan": [
+      {
+        "text": "Nem tudo acontece por um motivo. Algumas coisas devem ser corrigidas.",
+        "source": "universe"
+      },
       {
         "text": "Consertando o mundo, um canalha de cada vez!",
         "original": "Fixing the world, one scoundrel at a time!"
@@ -1178,7 +1191,8 @@
     ],
     "Alistar": [
       {
-        "text": "Nada pode me impedir."
+        "text": "Nada pode me impedir!",
+        "source": "universe"
       },
       {
         "text": "Agora estou enfurecido."
@@ -1202,7 +1216,17 @@
         "text": "Você é forte!"
       }
     ],
+    "Ambessa": [
+      {
+        "text": "Se é inimigo meu, é inimigo da minha família.",
+        "source": "universe"
+      }
+    ],
     "Amumu": [
+      {
+        "text": "A solidão pode ser mais solitária do que a morte.",
+        "source": "universe"
+      },
       {
         "text": "Achei que nunca fosse me escolher."
       },
@@ -1232,6 +1256,10 @@
       }
     ],
     "Anivia": [
+      {
+        "text": "Eu sou a fúria da nevasca, a ferroada do vento e o frio do gelo. Eu sou Freljord.",
+        "source": "universe"
+      },
       {
         "text": "Em minhas asas."
       },
@@ -1319,6 +1347,10 @@
     ],
     "Annie": [
       {
+        "text": "Eu nunca brinco com fósforos.",
+        "source": "universe"
+      },
+      {
         "text": "Você quer brincar também? Vai ser divertido!"
       },
       {
@@ -1332,9 +1364,6 @@
       },
       {
         "text": "A gente já chegou?"
-      },
-      {
-        "text": "Eu nunca brinco com fósforos."
       },
       {
         "text": "Você viu meu ursinho Tibbers?"
@@ -1485,6 +1514,10 @@
     ],
     "Ashe": [
       {
+        "text": "Uma tribo, um povo, uma Freljord.",
+        "source": "universe"
+      },
+      {
         "text": "O mundo todo em uma flecha."
       },
       {
@@ -1577,6 +1610,10 @@
     ],
     "AurelionSol": [
       {
+        "text": "Temam. Adorem. Maravilhem-se. Todas são respostas apropriadas.",
+        "source": "universe"
+      },
+      {
         "text": "Hunf. Trágico.",
         "original": "Hmph. Tragic."
       },
@@ -1639,6 +1676,10 @@
     ],
     "Aurora": [
       {
+        "text": "Eu vejo o reino espiritual e o reino material ao mesmo tempo. Esse mundo mesclado é meu... e ele é lindo.",
+        "source": "universe"
+      },
+      {
         "text": "Veja com olhos desanuviados.",
         "original": "See with eyes unclouded."
       },
@@ -1700,6 +1741,10 @@
       }
     ],
     "Azir": [
+      {
+        "text": "Shurima foi outrora a glória de Runeterra. E assim eu a farei de novo.",
+        "source": "universe"
+      },
       {
         "text": "Shurima! Seu imperador retornou."
       },
@@ -1793,6 +1838,10 @@
     ],
     "Belveth": [
       {
+        "text": "Este mundo não será esquecido. Eu o substituirei, como cria que devora criador.",
+        "source": "universe"
+      },
+      {
         "text": "Eu sou a voz do silêncio."
       },
       {
@@ -1885,6 +1934,10 @@
     ],
     "Blitzcrank": [
       {
+        "text": "UMA ÚNICA ENGRENAGEM EM MOVIMENTO PODE FAZER TODA A DIFERENÇA.",
+        "source": "universe"
+      },
+      {
         "text": "Aquecido e pronto para servir.",
         "original": "Fired up and ready to serve."
       },
@@ -1942,6 +1995,10 @@
       }
     ],
     "Brand": [
+      {
+        "text": "Este lugar vai queimar, não pelas cinzas que voam ou o sopro do vento, mas pela vingança feita com minhas mãos.",
+        "source": "universe"
+      },
       {
         "text": "Pronto para incendiar o mundo? Hehehe...",
         "original": "Ready to set the world on fire? Heheheh..."
@@ -2005,6 +2062,10 @@
     ],
     "Braum": [
       {
+        "text": "Hoje, lutamos como inimigos. Amanhã, podemos lutar como irmãos.",
+        "source": "universe"
+      },
+      {
         "text": "O coração é o músculo mais forte.",
         "original": "The heart is the strongest muscle."
       },
@@ -2067,6 +2128,10 @@
     ],
     "Briar": [
       {
+        "text": "Eu não perco o controle, eu me liberto do controle.",
+        "source": "universe"
+      },
+      {
         "text": "Ahh... É isso que as pessoas chamam de \"estratégia\"?",
         "original": "Ahh... Is this what people call 'strategy'?"
       },
@@ -2119,15 +2184,15 @@
         "original": "Everyone's got a pillory of their own. Mine's just on the outside."
       },
       {
-        "text": "Eu não perco o controle, eu me liberto do controle.",
-        "original": "I don't lose control—I free myself from control."
-      },
-      {
         "text": "Aww, meu cabelo já está desbotando? E eu estou sem sangue!",
         "original": "Aww, my hair's fading already? And I'm fresh outta blood!"
       }
     ],
     "Caitlyn": [
+      {
+        "text": "Vá em frente, pode correr. Eu te dou uma vantagem de cinco minutos.",
+        "source": "universe"
+      },
       {
         "text": "Estou no caso.",
         "original": "I'm on the case."
@@ -2191,7 +2256,8 @@
     ],
     "Camille": [
       {
-        "text": "Precisão é a diferença entre um açougueiro e um cirurgião."
+        "text": "Precisão é a diferença entre um açougueiro e um cirurgião.",
+        "source": "universe"
       },
       {
         "text": "Que decisão mais estapafúrdia!"
@@ -2282,6 +2348,10 @@
       }
     ],
     "Cassiopeia": [
+      {
+        "text": "Segredos cortam mais do que lâminas…",
+        "source": "universe"
+      },
       {
         "text": "Não há antidoto contra mim."
       },
@@ -2375,6 +2445,10 @@
     ],
     "Chogath": [
       {
+        "text": "Sua alma alimentará o Vazio!",
+        "source": "universe"
+      },
+      {
         "text": "Vocês desejariam que o mundo que conhecem acabasse! Siiiiiimmm...",
         "original": "You'd wish the world you know to end! Yeeeesssss..."
       },
@@ -2437,6 +2511,10 @@
     ],
     "Corki": [
       {
+        "text": "A morte que vem do céu!",
+        "source": "universe"
+      },
+      {
         "text": "Estou nos trinques, e tenho uma máquina de primeira!",
         "original": "I'm up to snuff, and gots me an ace machine!"
       },
@@ -2482,6 +2560,10 @@
       }
     ],
     "Darius": [
+      {
+        "text": "A História só lembra dos vitoriosos. Fique com Noxus e jamais seja esquecido.",
+        "source": "universe"
+      },
       {
         "text": "Eles vão se arrepender de se opor a mim.",
         "original": "They will regret opposing me."
@@ -2544,6 +2626,10 @@
       }
     ],
     "Diana": [
+      {
+        "text": "Sou a luz que percorre a alma da lua.",
+        "source": "universe"
+      },
       {
         "text": "A lua nova está nascendo."
       },
@@ -2619,6 +2705,10 @@
     ],
     "Draven": [
       {
+        "text": "'O melhor' é onde eu decido colocar os limites de cada dia.",
+        "source": "universe"
+      },
+      {
         "text": "Cara, eu sou bom.",
         "original": "Man, I'm good."
       },
@@ -2681,6 +2771,10 @@
     ],
     "DrMundo": [
       {
+        "text": "Eu deve ser bom médico. Pacientes nunca mais voltar.",
+        "source": "universe"
+      },
+      {
         "text": "O doutor está... hã... aqui!",
         "original": "The doctor is... uh... in!"
       },
@@ -2738,6 +2832,10 @@
       }
     ],
     "Ekko": [
+      {
+        "text": "Meus dispositivos funcionam melhor quando não funcionam do jeito previsto... que é basicamente o tempo todo.",
+        "source": "universe"
+      },
       {
         "text": "Não é quanto tempo você tem, é como você usa.",
         "original": "It's not how much time you have, it's how you use it."
@@ -2801,6 +2899,10 @@
     ],
     "Elise": [
       {
+        "text": "Beleza também é poder, e pode ser mais ágil e mortal do que uma espada.",
+        "source": "universe"
+      },
+      {
         "text": "Só a aranha está segura em sua teia.",
         "original": "Only the spider is safe in her web."
       },
@@ -2810,6 +2912,10 @@
       }
     ],
     "Evelynn": [
+      {
+        "text": "Tem planos para hoje à noite? Que tal nos reunirmos para libertar esse vasto poço de tormento dentro de você?",
+        "source": "universe"
+      },
       {
         "text": "Você sabe que me quer.",
         "original": "You know you want me."
@@ -2872,6 +2978,10 @@
       }
     ],
     "Ezreal": [
+      {
+        "text": "Se eu não conheço as regras, como posso estar desobedecendo?",
+        "source": "universe"
+      },
       {
         "text": "Missão aceita! ...Espera, pra onde a gente vai?",
         "original": "Quest accepted! ...Wait, where are we going?"
@@ -2997,6 +3107,10 @@
     ],
     "Fiora": [
       {
+        "text": "Eu busco sua morte em nome da honra. Embora você não tenha nenhuma, morrerá mesmo assim.",
+        "source": "universe"
+      },
+      {
         "text": "Anseio por um oponente à altura.",
         "original": "I long for a worthy opponent."
       },
@@ -3058,6 +3172,10 @@
       }
     ],
     "Fizz": [
+      {
+        "text": "Vocês não podem nem respirar na água. Que chatos.",
+        "source": "universe"
+      },
       {
         "text": "Deixa eu pegar eles!",
         "original": "Let me at 'em!"
@@ -3121,6 +3239,10 @@
     ],
     "Galio": [
       {
+        "text": "Fique atrás de mim, demaciano! Você pode não ter percebido, mas sou bem grande.",
+        "source": "universe"
+      },
+      {
         "text": "Hora de causar impacto!",
         "original": "Time to make an impact!"
       },
@@ -3183,6 +3305,10 @@
     ],
     "Gangplank": [
       {
+        "text": "Eu estava matando e afundando navios de guerra noxianos quando você ainda estava mijando em suas ceroulas, garoto. Você não quer me enfrentar.",
+        "source": "universe"
+      },
+      {
         "text": "Nem as chamas nem as profundezas puderam me levar.",
         "original": "Neither the flames nor the depths could claim me."
       },
@@ -3244,6 +3370,10 @@
       }
     ],
     "Garen": [
+      {
+        "text": "Este reino e suas pessoas me deram tudo que tenho. Que tipo de homem eu seria se desse menos que isso em troca?",
+        "source": "universe"
+      },
       {
         "text": "Meu coração e minha espada sempre por Demacia.",
         "original": "My heart and sword always for Demacia."
@@ -3333,6 +3463,10 @@
     ],
     "Gragas": [
       {
+        "text": "Isso aqui sim vai colocar cabelo no seu peito!",
+        "source": "universe"
+      },
+      {
         "text": "Se você está pagando, eu topo!",
         "original": "If you're buying, I'm in!"
       },
@@ -3379,6 +3513,10 @@
     ],
     "Graves": [
       {
+        "text": "Estamos aqui pelo ouro, não para matar... Não quero ninguém bancando o herói.",
+        "source": "universe"
+      },
+      {
         "text": "Vamos encarar o perigo."
       },
       {
@@ -3386,6 +3524,10 @@
       }
     ],
     "Gwen": [
+      {
+        "text": "É tão gostoso sentir o vento nas costas. Eu não posso perder isso. E não vou.",
+        "source": "universe"
+      },
       {
         "text": "Cabeça erguida, queixo pra cima, tesoura pronta!",
         "original": "Head high, chin up, scissors ready!"
@@ -3449,6 +3591,10 @@
     ],
     "Hecarim": [
       {
+        "text": "Destruam suas fileiras e passem por cima deles sem piedade. Esmaguem os vivos. Saboreiem seu terror.",
+        "source": "universe"
+      },
+      {
         "text": "Contemplem o poder das Ilhas das Sombras.",
         "original": "Behold, the might of the Shadow Isles."
       },
@@ -3510,6 +3656,10 @@
       }
     ],
     "Heimerdinger": [
+      {
+        "text": "Impossível, você diz? Bobagem. Espere só até ver meus cálculos!",
+        "source": "universe"
+      },
       {
         "text": "De fato, uma escolha sábia.",
         "original": "Indeed, a wise choice."
@@ -3573,6 +3723,10 @@
     ],
     "Hwei": [
       {
+        "text": "Calma e caos. Deixe tudo na tela.",
+        "source": "universe"
+      },
+      {
         "text": "Um pintor encara seu tema olho no olho.",
         "original": "A painter meets their subject eye to eye."
       },
@@ -3634,6 +3788,10 @@
       }
     ],
     "Illaoi": [
+      {
+        "text": "Sabedoria é, quase sempre, um chute na cabeça.",
+        "source": "universe"
+      },
       {
         "text": "Não sou muito de sermões, ossos quebrados ensinam lições melhores.",
         "original": "I'm not big on sermons—broken bones teach better lessons."
@@ -3697,6 +3855,10 @@
     ],
     "Irelia": [
       {
+        "text": "Houve um tempo em que eu dançava sozinha... Hoje, eu danço pelas Primeiras Terras.",
+        "source": "universe"
+      },
+      {
         "text": "Lutem pelas Primeiras Terras!",
         "original": "Fight for the First Lands!"
       },
@@ -3758,6 +3920,10 @@
       }
     ],
     "Ivern": [
+      {
+        "text": "A sagacidade dos cogumelos sempre me surpreende.",
+        "source": "universe"
+      },
       {
         "text": "Minha cor favorita é primavera.",
         "original": "My favorite color is spring."
@@ -3821,6 +3987,10 @@
     ],
     "Janna": [
       {
+        "text": "Não tema os ventos da mudança — eles sempre o protegerão.",
+        "source": "universe"
+      },
+      {
         "text": "A tempestade está ao seu comando.",
         "original": "The tempest is at your command."
       },
@@ -3866,6 +4036,10 @@
       }
     ],
     "JarvanIV": [
+      {
+        "text": "Palavras podem formar um governante, mas apenas ações entram para a história.",
+        "source": "universe"
+      },
       {
         "text": "Por minha vontade, isso será concluído.",
         "original": "By my will, this shall be finished."
@@ -3929,6 +4103,10 @@
     ],
     "Jax": [
       {
+        "text": "Armas são feitas de força e vontade.",
+        "source": "universe"
+      },
+      {
         "text": "Vamos nessa.",
         "original": "Let's do this."
       },
@@ -3990,6 +4168,10 @@
       }
     ],
     "Jayce": [
+      {
+        "text": "Confie em mim: se estivermos atentos, Piltover poderá suprimir qualquer ameaça. Ei, eu sou a prova viva disto!",
+        "source": "universe"
+      },
       {
         "text": "Luto por um amanhã mais brilhante.",
         "original": "I fight for a brighter tomorrow."
@@ -4053,6 +4235,10 @@
     ],
     "Jhin": [
       {
+        "text": "A arte requer uma certa... crueldade.",
+        "source": "universe"
+      },
+      {
         "text": "Na carnificina, eu floresço, como uma flor ao amanhecer.",
         "original": "In carnage, I bloom, like a flower in the dawn."
       },
@@ -4114,6 +4300,10 @@
       }
     ],
     "Jinx": [
+      {
+        "text": "Explosivos voláteis são tudo que uma garota pode querer!",
+        "source": "universe"
+      },
       {
         "text": "Regras foram feitas pra serem quebradas... como prédios! Ou pessoas!",
         "original": "Rules are made to be broken... like buildings! Or people!"
@@ -4177,6 +4367,10 @@
     ],
     "Kaisa": [
       {
+        "text": "Minha aparência pode assustar você, mas não se engane, eu estou do seu lado e nós lutaremos até o final.",
+        "source": "universe"
+      },
+      {
         "text": "Você é o caçador... ou a presa?",
         "original": "Are you the hunter... or the prey?"
       },
@@ -4238,6 +4432,10 @@
       }
     ],
     "Kalista": [
+      {
+        "text": "Hipócritas, infiéis e traidores… sintam nosso ódio.",
+        "source": "universe"
+      },
       {
         "text": "Morte a todos os traidores."
       },
@@ -4331,6 +4529,10 @@
     ],
     "Karma": [
       {
+        "text": "Conforme Ionia muda, também devo mudar.",
+        "source": "universe"
+      },
+      {
         "text": "Sempre confie no seu espírito.",
         "original": "Always trust your spirit."
       },
@@ -4392,6 +4594,10 @@
       }
     ],
     "Karthus": [
+      {
+        "text": "A morte não é o fim da jornada, é apenas o começo...",
+        "source": "universe"
+      },
       {
         "text": "Agonia, êxtase, paz. Cada passagem tem uma beleza própria.",
         "original": "Agony, ecstasy, peace. Every passing has a beauty all its own."
@@ -4455,6 +4661,10 @@
     ],
     "Kassadin": [
       {
+        "text": "São poucos os que conseguem realmente trilhar os caminhos entre os mundos.",
+        "source": "universe"
+      },
+      {
         "text": "O equilíbrio de poder deve ser preservado.",
         "original": "The balance of power must be preserved."
       },
@@ -4492,6 +4702,10 @@
       }
     ],
     "Katarina": [
+      {
+        "text": "Nunca questione minha lealdade. Você jamais saberá o que eu aguento por ela.",
+        "source": "universe"
+      },
       {
         "text": "A violência resolve tudo.",
         "original": "Violence solves everything."
@@ -4555,6 +4769,10 @@
     ],
     "Kayle": [
       {
+        "text": "Nenhum humano é perfeito. Mas eu não sou humana.",
+        "source": "universe"
+      },
+      {
         "text": "Vão tremer diante da minha perfeição!"
       },
       {
@@ -4562,6 +4780,10 @@
       }
     ],
     "Kayn": [
+      {
+        "text": "A criança se foi, mas o assassino vive.",
+        "source": "universe"
+      },
       {
         "text": "Você vai provar que é digno?",
         "original": "Will you prove worthy?"
@@ -4625,6 +4847,10 @@
     ],
     "Kennen": [
       {
+        "text": "Existo em meio aos reinos, no espaço entre a descarga de um raio e o chamado de um trovão, no verdadeiro equilíbrio que reside na tempestade.",
+        "source": "universe"
+      },
+      {
         "text": "Os olhos nunca mentem.",
         "original": "The eyes never lie."
       },
@@ -4670,6 +4896,10 @@
       }
     ],
     "Khazix": [
+      {
+        "text": "Matar. Consumir. Adaptar-se.",
+        "source": "universe"
+      },
       {
         "text": "Mudança... é bom.",
         "original": "Change... is good."
@@ -4733,6 +4963,10 @@
     ],
     "Kindred": [
       {
+        "text": "Diga-me de novo, Ovelhinha, que coisas posso tomar? Tudo o que existir, caro Lobo.",
+        "source": "universe"
+      },
+      {
         "text": "Nunca um...",
         "original": "Never one..."
       },
@@ -4794,6 +5028,10 @@
       }
     ],
     "Kled": [
+      {
+        "text": "Um homem normal correria... mas eu não sou de correr!",
+        "source": "universe"
+      },
       {
         "text": "A coragem é imprevisível. É na insanidade total que dá pra confiar!",
         "original": "I find courage unpredictable. It's total insanity you can rely on!"
@@ -4919,6 +5157,10 @@
     ],
     "KSante": [
       {
+        "text": "Não há monstro maior que o orgulho.",
+        "source": "universe"
+      },
+      {
         "text": "Melhor lutar do que viver com medo.",
         "original": "Better to fight, than to live in fear."
       },
@@ -4980,6 +5222,10 @@
       }
     ],
     "Leblanc": [
+      {
+        "text": "Não estou pedindo conselhos. Se eu quisesse uma segunda opinião, pediria a mim mesma.",
+        "source": "universe"
+      },
       {
         "text": "A Rosa Negra florescerá mais uma vez.",
         "original": "The Black Rose shall bloom once more."
@@ -5043,6 +5289,10 @@
     ],
     "LeeSin": [
       {
+        "text": "Iluminação é saber o valor da própria ignorância.",
+        "source": "universe"
+      },
+      {
         "text": "Sua vontade, minhas mãos.",
         "original": "Your will, my hands."
       },
@@ -5104,6 +5354,10 @@
       }
     ],
     "Leona": [
+      {
+        "text": "Contemplamos o mundo apenas pela luz do sol.",
+        "source": "universe"
+      },
       {
         "text": "A aurora chegou.",
         "original": "The dawn has arrived."
@@ -5167,6 +5421,10 @@
     ],
     "Lillia": [
       {
+        "text": "Quando os humanos florescem, é tão lindo… eu posso ajudá-los! Talvez. Será? Pode ser…",
+        "source": "universe"
+      },
+      {
         "text": "Eu? Um sonho que virou realidade!"
       },
       {
@@ -5192,6 +5450,10 @@
       }
     ],
     "Lissandra": [
+      {
+        "text": "Tantos segredos sepultados no gelo...",
+        "source": "universe"
+      },
       {
         "text": "Vou enterrar o mundo no gelo.",
         "original": "I will bury the world in ice."
@@ -5253,7 +5515,17 @@
         "original": "The Watchers will return."
       }
     ],
+    "Locke": [
+      {
+        "text": "Demônios são maus, mas os verdadeiros monstros são as pessoas.",
+        "source": "universe"
+      }
+    ],
     "Lucian": [
+      {
+        "text": "Empunhe a luz, tolere a dor e acabe com as sombras deste mundo.",
+        "source": "universe"
+      },
       {
         "text": "Todo mundo morre. Alguns só precisam de uma ajudinha.",
         "original": "Everybody dies. Some just need a little help."
@@ -5316,6 +5588,10 @@
       }
     ],
     "Lulu": [
+      {
+        "text": "O melhor caminho entre dois pontos é de cabeça para baixo, entre eles, depois de dentro pra fora e dando mais uma volta.",
+        "source": "universe"
+      },
       {
         "text": "Prazer em conhecer você!"
       },
@@ -5388,6 +5664,10 @@
     ],
     "Lux": [
       {
+        "text": "A minha luz interior é o que me torna diferente, e sempre cuido com o lugar que escolho iluminar.",
+        "source": "universe"
+      },
+      {
         "text": "Vamos iluminar isso!",
         "original": "Let's light it up!"
       },
@@ -5450,6 +5730,10 @@
     ],
     "Malphite": [
       {
+        "text": "Cuidado, servos do mal! O Fragmento do Monolito está aqui.",
+        "source": "universe"
+      },
+      {
         "text": "Você vai perder.",
         "original": "You will lose."
       },
@@ -5471,6 +5755,10 @@
       }
     ],
     "Malzahar": [
+      {
+        "text": "Nós somos eternos. E exigimos sacrifícios.",
+        "source": "universe"
+      },
       {
         "text": "O esquecimento aguarda!",
         "original": "Oblivion awaits!"
@@ -5534,6 +5822,10 @@
     ],
     "Maokai": [
       {
+        "text": "Várias cascas vazias ao meu redor, sem alma ou medo... mas trarei o medo a eles.",
+        "source": "universe"
+      },
+      {
         "text": "As Ilhas florescerão novamente!",
         "original": "The Isles will bloom again!"
       },
@@ -5596,6 +5888,10 @@
     ],
     "MasterYi": [
       {
+        "text": "O gume da espada mais afiada não é páreo para a calmaria de uma mente em paz.",
+        "source": "universe"
+      },
+      {
         "text": "Minha lâmina é sua.",
         "original": "My blade is yours."
       },
@@ -5656,7 +5952,17 @@
         "original": "The goggles? Just for reading."
       }
     ],
+    "Mel": [
+      {
+        "text": "O lobo, a raposa. Ambos necessários, ambos implacáveis.",
+        "source": "universe"
+      }
+    ],
     "Milio": [
+      {
+        "text": "A luz dentro de nós, nossa chama interior... É o que mantém meu fogo aceso.",
+        "source": "universe"
+      },
       {
         "text": "Qual o problema? Não aguenta o calor?",
         "original": "What's wrong? Can't take the heat?"
@@ -5720,6 +6026,10 @@
     ],
     "MissFortune": [
       {
+        "text": "Quanto maior o risco, maior a recompensa.",
+        "source": "universe"
+      },
+      {
         "text": "Sem problema.",
         "original": "Not a problem."
       },
@@ -5773,6 +6083,10 @@
       }
     ],
     "MonkeyKing": [
+      {
+        "text": "Nem tente me deter!",
+        "source": "universe"
+      },
       {
         "text": "Eu serei o melhor.",
         "original": "I will be the best."
@@ -5836,6 +6150,10 @@
     ],
     "Mordekaiser": [
       {
+        "text": "Destino. Dominação. Desonra.",
+        "source": "universe"
+      },
+      {
         "text": "Destino. Dominação. Engano.",
         "original": "Destiny. Domination. Deceit."
       },
@@ -5898,6 +6216,10 @@
     ],
     "Morgana": [
       {
+        "text": "Só quem você ama pode partir seu coração.",
+        "source": "universe"
+      },
+      {
         "text": "Estou presa, mas não vou me quebrar.",
         "original": "I am bound, but I will not break."
       },
@@ -5959,6 +6281,10 @@
       }
     ],
     "Naafiri": [
+      {
+        "text": "Nossa perseguição dura mil anos. Ninguém foge por tanto tempo.",
+        "source": "universe"
+      },
       {
         "text": "Vamos à caça!",
         "original": "We give chase!"
@@ -6023,7 +6349,7 @@
     "Nami": [
       {
         "text": "Eu decido o que a maré vai trazer.",
-        "original": "I decide what the tide will bring."
+        "source": "universe"
       },
       {
         "text": "Sempre há outra onda.",
@@ -6083,6 +6409,10 @@
       }
     ],
     "Nasus": [
+      {
+        "text": "Por séculos, eu só observei. Está chegando a hora do acerto de contas.",
+        "source": "universe"
+      },
       {
         "text": "O ciclo da vida e da morte continua: nós viveremos, eles morrerão.",
         "original": "The cycle of life and death continues,we will live,they will die."
@@ -6145,6 +6475,10 @@
       }
     ],
     "Nautilus": [
+      {
+        "text": "Quando se é consumido pelas trevas, não há nada a fazer além de seguir em frente.",
+        "source": "universe"
+      },
       {
         "text": "Cuidado com as profundezas.",
         "original": "Beware the depths."
@@ -6300,6 +6634,10 @@
     ],
     "Nidalee": [
       {
+        "text": "Os indomados não conhecem o medo.",
+        "source": "universe"
+      },
+      {
         "text": "A selva chama, eu respondo."
       },
       {
@@ -6392,6 +6730,10 @@
     ],
     "Nilah": [
       {
+        "text": "Alegria em vida, alegria na eternidade.",
+        "source": "universe"
+      },
+      {
         "text": "Alegria, incessante e eterna!",
         "original": "Joy, unceasing and forever!"
       },
@@ -6453,6 +6795,10 @@
       }
     ],
     "Nocturne": [
+      {
+        "text": "A escuridão se aproxima...",
+        "source": "universe"
+      },
       {
         "text": "Abrace a escuridão.",
         "original": "Embrace the darkness."
@@ -6620,6 +6966,10 @@
     ],
     "Orianna": [
       {
+        "text": "Quando uma mariposa emerge de seu casulo, ela lembra de sua vida como lagarta?",
+        "source": "universe"
+      },
+      {
         "text": "Vamos matar seus inimigos. Isso vai ser divertido.",
         "original": "We will kill your enemies. That will be fun."
       },
@@ -6681,6 +7031,10 @@
       }
     ],
     "Ornn": [
+      {
+        "text": "Eu já disse o bastante.",
+        "source": "universe"
+      },
       {
         "text": "Tudo bem, nós vamos.",
         "original": "Fine, we go."
@@ -6744,6 +7098,10 @@
     ],
     "Pantheon": [
       {
+        "text": "Aqui será minha eternidade... um dia que os deuses nunca se esquecerão!",
+        "source": "universe"
+      },
+      {
         "text": "Na batalha, renascemos.",
         "original": "In battle, we are reborn."
       },
@@ -6805,6 +7163,10 @@
       }
     ],
     "Poppy": [
+      {
+        "text": "Não sou uma heroína. Só uma yordle com um martelo.",
+        "source": "universe"
+      },
       {
         "text": "Não sou heroína, só uma Yordle com um martelo.",
         "original": "I'm no hero—just a Yordle with a hammer."
@@ -6868,6 +7230,10 @@
     ],
     "Pyke": [
       {
+        "text": "Tem espaço suficiente para todos no fundo do mar...",
+        "source": "universe"
+      },
+      {
         "text": "Afundem todos.",
         "original": "Sink 'em all."
       },
@@ -6929,6 +7295,10 @@
       }
     ],
     "Qiyana": [
+      {
+        "text": "Um dia, tudo isso será Ixaocan. Um império glorioso, com uma imperatriz mais gloriosa ainda.",
+        "source": "universe"
+      },
       {
         "text": "Agora você pode me admirar.",
         "original": "You may now appreciate me."
@@ -6992,6 +7362,10 @@
     ],
     "Quinn": [
       {
+        "text": "A maioria dos soldados só depende de suas armas. Poucos dependem um do outro de verdade.",
+        "source": "universe"
+      },
+      {
         "text": "A justiça ganha asas.",
         "original": "Justice takes wing."
       },
@@ -7053,6 +7427,10 @@
       }
     ],
     "Rakan": [
+      {
+        "text": "Eu tenho liberdade. Eu tenho uma parceira. Eu tenho uma causa pela qual morrer.",
+        "source": "universe"
+      },
       {
         "text": "Vamos dançar.",
         "original": "Let's dance."
@@ -7116,6 +7494,10 @@
     ],
     "Rell": [
       {
+        "text": "Seu coração tem que ser forte e duro como aço. Indestrutível.",
+        "source": "universe"
+      },
+      {
         "text": "Nada entra, ninguém sai.",
         "original": "Nothing gets in, no one gets out."
       },
@@ -7177,6 +7559,10 @@
       }
     ],
     "Renata": [
+      {
+        "text": "Não precisamos ser inimigos. Eu vou te fazer mudar de ideia.",
+        "source": "universe"
+      },
       {
         "text": "Ai, que sufoco."
       },
@@ -7270,6 +7656,10 @@
     ],
     "Renekton": [
       {
+        "text": "Sangue e vingança!",
+        "source": "universe"
+      },
+      {
         "text": "Enquanto eu viver, todos morrerão!",
         "original": "As I live, all will die!"
       },
@@ -7331,6 +7721,10 @@
       }
     ],
     "Rengar": [
+      {
+        "text": "Cace os fracos e você sobreviverá. Cace os fortes e você terá uma vida.",
+        "source": "universe"
+      },
       {
         "text": "Esta noite, caçamos!",
         "original": "Tonight, we hunt!"
@@ -7394,6 +7788,10 @@
     ],
     "Riven": [
       {
+        "text": "A espada de um guerreiro reflete a verdade em seu coração. A minha é sombria... e partida ao meio.",
+        "source": "universe"
+      },
+      {
         "text": "O que está quebrado pode ser forjado de novo.",
         "original": "What is broken can be reforged."
       },
@@ -7455,6 +7853,10 @@
       }
     ],
     "Rumble": [
+      {
+        "text": "Aff, vai demorar um tempão para limpar os restos do seu rosto da minha armadura!",
+        "source": "universe"
+      },
       {
         "text": "Vamos entrar na luta!",
         "original": "Let's get in the fight!"
@@ -7518,6 +7920,10 @@
     ],
     "Ryze": [
       {
+        "text": "Tenham cuidado com esse mundo. O que está feito pode ser desfeito.",
+        "source": "universe"
+      },
+      {
         "text": "Um passo à frente do cataclismo.",
         "original": "A step ahead of cataclysm."
       },
@@ -7580,6 +7986,10 @@
     ],
     "Samira": [
       {
+        "text": "Virtudes? Tenho algumas. Vícios? Outros tantos.",
+        "source": "universe"
+      },
+      {
         "text": "É estilo que você quer? Toma."
       },
       {
@@ -7587,6 +7997,10 @@
       }
     ],
     "Sejuani": [
+      {
+        "text": "Fui esculpida no gelo. Moldada por tempestades. Endurecida pelo frio.",
+        "source": "universe"
+      },
       {
         "text": "Não confie em nada além da sua força.",
         "original": "Trust nothing but your strength."
@@ -7650,6 +8064,10 @@
     ],
     "Senna": [
       {
+        "text": "Enquanto as sombras abraçam a luz, eu as abraço...",
+        "source": "universe"
+      },
+      {
         "text": "Ninguém luta sozinho na Névoa.",
         "original": "No one fights alone in the Mist."
       },
@@ -7712,6 +8130,10 @@
     ],
     "Seraphine": [
       {
+        "text": "Essa é pra vocês!",
+        "source": "universe"
+      },
+      {
         "text": "Vamos mudar o mundo!",
         "original": "Let's change the world!"
       },
@@ -7773,6 +8195,10 @@
       }
     ],
     "Sett": [
+      {
+        "text": "Ser o chefe... é bem melhor do que não ser o chefe.",
+        "source": "universe"
+      },
       {
         "text": "Eu sou invicto.",
         "original": "I'm undisputed."
@@ -7868,6 +8294,10 @@
     ],
     "Shen": [
       {
+        "text": "O olho não vê o medo, o ódio, o amor – e todas as coisas que perturbariam o equilíbrio.",
+        "source": "universe"
+      },
+      {
         "text": "Uma demonstração de julgamento superior.",
         "original": "A demonstration of superior judgement."
       },
@@ -7929,6 +8359,10 @@
       }
     ],
     "Shyvana": [
+      {
+        "text": "Eu sou mais do que presas e escamas.",
+        "source": "universe"
+      },
       {
         "text": "Eles não são nada diante de mim.",
         "original": "They are nothing before me."
@@ -7992,6 +8426,10 @@
     ],
     "Singed": [
       {
+        "text": "Você ainda não pode morrer, eu ainda tenho muito a aprender sobre sua anatomia frágil.",
+        "source": "universe"
+      },
+      {
         "text": "Que tal um drinque?",
         "original": "How about a drink?"
       },
@@ -8021,6 +8459,10 @@
       }
     ],
     "Sion": [
+      {
+        "text": "A guerra é eterna... assim como eu.",
+        "source": "universe"
+      },
       {
         "text": "O descanso é para os vivos.",
         "original": "Rest is for the living."
@@ -8084,6 +8526,10 @@
     ],
     "Sivir": [
       {
+        "text": "Não me importa o rosto que está em sua moeda, contanto que pague.",
+        "source": "universe"
+      },
+      {
         "text": "Eu sempre pego minha parte - em ouro, ou sangue."
       },
       {
@@ -8091,6 +8537,10 @@
       }
     ],
     "Skarner": [
+      {
+        "text": "Minha existência pode ter virado lenda, mas não sou uma mera fábula.",
+        "source": "universe"
+      },
       {
         "text": "Sou a vanguarda da proteção de Ixtal.",
         "original": "I am the vanguard of Ixtal's protection."
@@ -8153,6 +8603,10 @@
       }
     ],
     "Smolder": [
+      {
+        "text": "Dragões imperiais são os melhores dragões. Minha mãe que disse.",
+        "source": "universe"
+      },
       {
         "text": "Eu trago o calor!",
         "original": "I bring the heat!"
@@ -8278,6 +8732,10 @@
     ],
     "Soraka": [
       {
+        "text": "Dois caminhos estão diante de você, mas você só pode escolher um.",
+        "source": "universe"
+      },
+      {
         "text": "Deixe-me guiá-lo.",
         "original": "Let me guide you."
       },
@@ -8339,6 +8797,10 @@
       }
     ],
     "Swain": [
+      {
+        "text": "Já vivi o bastante para detestar todos os homens. Só as nações são dignas de reverência.",
+        "source": "universe"
+      },
       {
         "text": "Tema o poder que você não vê.",
         "original": "Fear the power you do not see."
@@ -8402,6 +8864,10 @@
     ],
     "Sylas": [
       {
+        "text": "Não sou um traidor. Sou a verdadeira Demacia.",
+        "source": "universe"
+      },
+      {
         "text": "Chega de jaulas!",
         "original": "No more cages!"
       },
@@ -8463,6 +8929,10 @@
       }
     ],
     "Syndra": [
+      {
+        "text": "Meu potencial é ilimitado. Eu não serei reprimida.",
+        "source": "universe"
+      },
       {
         "text": "Tanto poder inexplorado!",
         "original": "So much untapped power!"
@@ -8526,6 +8996,10 @@
     ],
     "TahmKench": [
       {
+        "text": "O mundo é um só rio e eu sou seu rei.",
+        "source": "universe"
+      },
+      {
         "text": "Me chame de rei, me chame de demônio. A água esquece o nome dos afogados.",
         "original": "Call me king, call me demon. Water forgets the names of the drowned."
       },
@@ -8587,6 +9061,10 @@
       }
     ],
     "Taliyah": [
+      {
+        "text": "O mundo é uma tapeçaria de nossa própria criação.",
+        "source": "universe"
+      },
       {
         "text": "Conheça o tear. Seja a pedra."
       },
@@ -8742,6 +9220,10 @@
     ],
     "Taric": [
       {
+        "text": "As melhores armas são belas.",
+        "source": "universe"
+      },
+      {
         "text": "Aquele brilho de esperança que você vê, sou eu.",
         "original": "That glimmer of hope you see, that's me."
       },
@@ -8796,10 +9278,6 @@
       {
         "text": "Vemos beleza nas estrelas, e elas veem beleza em nós.",
         "original": "We see beauty in the stars, and they see beauty in us."
-      },
-      {
-        "text": "As melhores armas são belas.",
-        "original": "The best weapons are beautiful."
       }
     ],
     "Teemo": [
@@ -8833,6 +9311,10 @@
       }
     ],
     "Thresh": [
+      {
+        "text": "A mente é algo maravilhoso de se destruir.",
+        "source": "universe"
+      },
       {
         "text": "Que agonia deliciosa vamos infligir.",
         "original": "What delightful agony we shall inflict."
@@ -8896,6 +9378,10 @@
     ],
     "Tristana": [
       {
+        "text": "Boomer está mandando um 'oi'!",
+        "source": "universe"
+      },
+      {
         "text": "Uma vez artilheira de Bandle, sempre artilheira de Bandle!",
         "original": "Once a Bandle gunner, always a Bandle gunner!"
       },
@@ -8957,6 +9443,10 @@
       }
     ],
     "Trundle": [
+      {
+        "text": "Passe a perna em todo mundo que não puder descer o porrete, e desça o porrete em todo mundo que não puder passar a perna.",
+        "source": "universe"
+      },
       {
         "text": "Hora de trollar!",
         "original": "Time to troll!"
@@ -9020,6 +9510,10 @@
     ],
     "Tryndamere": [
       {
+        "text": "A minha arma é a ira.",
+        "source": "universe"
+      },
+      {
         "text": "Isto vai ser um massacre.",
         "original": "This'll be a slaughter."
       },
@@ -9053,6 +9547,10 @@
       }
     ],
     "TwistedFate": [
+      {
+        "text": "Não é apostar se você não puder perder...",
+        "source": "universe"
+      },
       {
         "text": "A Dona Sorte está sorrindo.",
         "original": "Lady Luck is smilin'."
@@ -9116,6 +9614,10 @@
     ],
     "Twitch": [
       {
+        "text": "Jogaram isto fora? Mas é tão brilhante!",
+        "source": "universe"
+      },
+      {
         "text": "O que não te mata só ainda não terminou.",
         "original": "What doesn't kill you just isn't finished yet."
       },
@@ -9177,6 +9679,10 @@
       }
     ],
     "Udyr": [
+      {
+        "text": "Posso sentir a sede de vitória dos inimigos. Que nunca a saciem.",
+        "source": "universe"
+      },
       {
         "text": "O conflito alimenta Freljord.",
         "original": "Conflict feeds the Freljord."
@@ -9240,6 +9746,10 @@
     ],
     "Urgot": [
       {
+        "text": "Só há uma forma de medir um homem. Deixando-o... em... pedaços.",
+        "source": "universe"
+      },
+      {
         "text": "Você não pode conhecer a força... até ser quebrado.",
         "original": "You cannot know strength... Until you are broken."
       },
@@ -9301,6 +9811,10 @@
       }
     ],
     "Varus": [
+      {
+        "text": "Vocês não destruíram todos nós. E esse erro será seu fim.",
+        "source": "universe"
+      },
       {
         "text": "Os culpados conhecerão a agonia.",
         "original": "The guilty will know agony."
@@ -9364,6 +9878,10 @@
     ],
     "Vayne": [
       {
+        "text": "Demônios andam entre nós, disfarçados de humanos.",
+        "source": "universe"
+      },
+      {
         "text": "Vamos caçar aqueles que caíram na escuridão.",
         "original": "Let us hunt those who have fallen to darkness."
       },
@@ -9425,6 +9943,10 @@
       }
     ],
     "Veigar": [
+      {
+        "text": "Você nega as trevas em sua alma...",
+        "source": "universe"
+      },
       {
         "text": "Saiba que, se a situação fosse inversa, eu não teria piedade de você!",
         "original": "Know that if the tables were turned, I would show you no mercy!"
@@ -9550,6 +10072,10 @@
     ],
     "Vex": [
       {
+        "text": "Fala sério... affffff.",
+        "source": "universe"
+      },
+      {
         "text": "Tá. Até parece que eu ligo.",
         "original": "'Kay. See if I care."
       },
@@ -9611,6 +10137,10 @@
       }
     ],
     "Vi": [
+      {
+        "text": "Podemos fazer isso da maneira difícil ou... Ah, não, peraí. Só existe a maneira difícil.",
+        "source": "universe"
+      },
       {
         "text": "Soca primeiro. Pergunta enquanto soca.",
         "original": "Punch first. Ask questions while punching."
@@ -9674,6 +10204,10 @@
     ],
     "Viego": [
       {
+        "text": "Nenhum custo é alto demais. Não há atrocidade que eu não possa cometer. Por ela... Eu farei qualquer coisa.",
+        "source": "universe"
+      },
+      {
         "text": "O amor arruína tudo.",
         "original": "Love ruins all."
       },
@@ -9735,6 +10269,10 @@
       }
     ],
     "Viktor": [
+      {
+        "text": "Unam-se à Gloriosa Evolução!",
+        "source": "universe"
+      },
       {
         "text": "Junte-se à gloriosa evolução.",
         "original": "Join the glorious evolution."
@@ -9798,6 +10336,10 @@
     ],
     "Vladimir": [
       {
+        "text": "O tempo me fez mais sábio, mas não mais paciente.",
+        "source": "universe"
+      },
+      {
         "text": "Os rios correrão vermelhos.",
         "original": "The rivers will run red."
       },
@@ -9859,6 +10401,10 @@
       }
     ],
     "Volibear": [
+      {
+        "text": "Eles se esqueceram dos velhos costumes. Os velhos costumes não se esqueceram deles.",
+        "source": "universe"
+      },
       {
         "text": "Sinta o poder da natureza selvagem.",
         "original": "Feel the power of the wild."
@@ -9922,6 +10468,10 @@
     ],
     "Warwick": [
       {
+        "text": "Onde há sangue... há ira!",
+        "source": "universe"
+      },
+      {
         "text": "O sangue escorre... todos eles correm.",
         "original": "Blood runs... they all run."
       },
@@ -9983,6 +10533,10 @@
       }
     ],
     "Xayah": [
+      {
+        "text": "Já foi apunhalado por uma pluma?",
+        "source": "universe"
+      },
       {
         "text": "Nunca resisto a um convite para dançar.",
         "original": "I can never resist an invitation to dance."
@@ -10046,6 +10600,10 @@
     ],
     "Xerath": [
       {
+        "text": "Uma vida de escravidão me preparou para uma eternidade de soberania.",
+        "source": "universe"
+      },
+      {
         "text": "Eu serei livre.",
         "original": "I will be free."
       },
@@ -10107,6 +10665,10 @@
       }
     ],
     "XinZhao": [
+      {
+        "text": "Nem minha lança nem meu espírito vacilam.",
+        "source": "universe"
+      },
       {
         "text": "Para a arena!",
         "original": "To the arena!"
@@ -10170,6 +10732,10 @@
     ],
     "Yasuo": [
       {
+        "text": "A morte é como o vento: está sempre ao meu lado.",
+        "source": "universe"
+      },
+      {
         "text": "A morte é como o vento: sempre ao meu lado.",
         "original": "Death is like the wind—always by my side."
       },
@@ -10231,6 +10797,10 @@
       }
     ],
     "Yone": [
+      {
+        "text": "Quando eles me olham, enxergam apenas a máscara. Quando eu olho para eles, enxergo apenas seus medos.",
+        "source": "universe"
+      },
       {
         "text": "Uma para cortar, uma para selar.",
         "original": "One to cut, one to seal."
@@ -10294,6 +10864,10 @@
     ],
     "Yorick": [
       {
+        "text": "Essas ilhas… Como elas gritam.",
+        "source": "universe"
+      },
+      {
         "text": "Não tema... Vou fazer bom uso do seu cadáver.",
         "original": "Fear not... I will make use of your corpse."
       },
@@ -10354,7 +10928,17 @@
         "original": "There is some."
       }
     ],
+    "Yunara": [
+      {
+        "text": "A Guerra dos Falsos Kanmei, um nome dado por aqueles que não entendem nada do que falam.",
+        "source": "universe"
+      }
+    ],
     "Yuumi": [
+      {
+        "text": "Gatos são feitos de astúcia e alvorada, cachorros são feitos de latidos e baba! Já o Livro é só árvore velha mesmo.",
+        "source": "universe"
+      },
       {
         "text": "Você e eu, a gente dá conta!",
         "original": "You and me, we got this!"
@@ -10416,7 +11000,17 @@
         "original": "Book, float us that-a-way!"
       }
     ],
+    "Zaahen": [
+      {
+        "text": "Enrijeça a mente. Fortaleça a carne. Cace os Caídos.",
+        "source": "universe"
+      }
+    ],
     "Zac": [
+      {
+        "text": "Quanto mais bravo você ficar, mais isso vai doer...",
+        "source": "universe"
+      },
       {
         "text": "Fui feito para isso... literalmente.",
         "original": "I was made for this... literally."
@@ -10480,6 +11074,10 @@
     ],
     "Zed": [
       {
+        "text": "Equilíbrio é a maestria dos tolos.",
+        "source": "universe"
+      },
+      {
         "text": "A lâmina invisível é a mais mortal.",
         "original": "The unseen blade is the deadliest."
       },
@@ -10541,6 +11139,10 @@
       }
     ],
     "Zeri": [
+      {
+        "text": "Este é o meu lugar. Este é o nosso lugar.",
+        "source": "universe"
+      },
       {
         "text": "Uma faísca é tudo de que preciso!",
         "original": "A spark is all I need!"
@@ -10666,6 +11268,10 @@
     ],
     "Zilean": [
       {
+        "text": "Não existe tristeza maior do que uma perda que ainda está por vir.",
+        "source": "universe"
+      },
+      {
         "text": "Eu sabia que você faria isso...",
         "original": "I knew you would do that..."
       },
@@ -10703,6 +11309,10 @@
       }
     ],
     "Zoe": [
+      {
+        "text": "Trago uma mensagem a todos, um alerta, um presságio! Mas primeiro quero ver um brilho no ar!",
+        "source": "universe"
+      },
       {
         "text": "Isso! Vai ser divertido! Né?",
         "original": "Yes! This'll be fun! Right?"
@@ -10765,6 +11375,10 @@
       }
     ],
     "Zyra": [
+      {
+        "text": "Onde estão seus amigos? Os meus estão por todo lado…",
+        "source": "universe"
+      },
       {
         "text": "Sinta o abraço dos espinhos.",
         "original": "Feel the thorns' embrace."

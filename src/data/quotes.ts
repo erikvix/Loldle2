@@ -11,6 +11,8 @@ export interface Quote {
   text: string
   // Fala original em inglês, quando o texto foi traduzido automaticamente.
   original?: string
+  // 'universe': fala oficial da biografia do campeão no Riot Universe.
+  source?: 'universe'
 }
 
 export const ddragonVersion: string = data.ddragonVersion

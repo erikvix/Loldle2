@@ -25,7 +25,16 @@ export function Layout() {
         <a href="https://leagueoflegends.fandom.com" className="underline" target="_blank" rel="noreferrer">
           em inglês
         </a>{' '}
-        (CC BY-SA). Loldle2 não é afiliado à Riot Games.
+        (CC BY-SA) e do{' '}
+        <a
+          href="https://universe.leagueoflegends.com/pt_BR/"
+          className="underline"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Riot Universe
+        </a>
+        . Loldle2 não é afiliado à Riot Games.
       </footer>
     </div>
   )

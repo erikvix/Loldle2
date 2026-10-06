@@ -1,4 +1,4 @@
-import { LanguagesIcon, QuoteIcon, RefreshCwIcon } from 'lucide-react'
+import { BadgeCheckIcon, LanguagesIcon, QuoteIcon, RefreshCwIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { ChampionIcon } from '@/components/ChampionIcon'
 import { GuessForm } from '@/components/GuessForm'
@@ -42,6 +42,12 @@ export function QuoteGame() {
             <QuoteIcon className="size-5 shrink-0 text-amber-500" />
             <p>“{showOriginal && quote.original ? quote.original : quote.text}”</p>
           </blockquote>
+          {quote.source === 'universe' && (
+            <div className="mt-2 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+              <BadgeCheckIcon className="size-3.5 text-amber-500" />
+              <span>Fala oficial do Riot Universe</span>
+            </div>
+          )}
           {quote.original && (
             <div className="mt-2 flex items-center justify-center gap-2 text-xs text-muted-foreground">
               <LanguagesIcon className="size-3.5" />

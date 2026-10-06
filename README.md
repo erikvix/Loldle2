@@ -25,7 +25,7 @@ npm run fetch:quotes  # atualiza src/data/quotes.json
 
 ```
 scripts/
-└── fetch-quotes.ts   # Gera a base de falas a partir da wiki PT-BR
+└── fetch-quotes.ts   # Gera a base de falas (wikis e Riot Universe)
 src/
 ├── components/       # Componentes do jogo (formulário de palpite, lista de chutes)
 │   └── ui/           # Componentes do shadcn/ui
@@ -39,12 +39,13 @@ src/
 
 - **Campeões e ícones:** [Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon) da Riot, em `pt_BR`. Não precisa de chave de API.
 - **Falas dubladas em PT-BR:** [Wiki League of Legends PT-BR](https://leagueoflegends.fandom.com/pt-br), páginas `<Campeão>/LoL/Áudio`.
+- **Fala oficial de cada campeão:** [Riot Universe](https://universe.leagueoflegends.com/pt_BR/), API `universe-meeps.leagueoflegends.com/v1/pt_br/champions/<campeão>/index.json`. É a frase da biografia do campeão, já em português. Entra só quando o autor é o próprio campeão e aparece no jogo como "Fala oficial do Riot Universe".
 - **Demais campeões:** [Wiki League of Legends em inglês](https://leagueoflegends.fandom.com), páginas `<Champion>/LoL/Audio`. As falas foram traduzidas para o português e ficam em `scripts/translations.json`. No jogo, elas aparecem marcadas como "Tradução automática", com opção de ver o original.
 
-As duas wikis usam a licença CC BY-SA.
+As duas wikis usam a licença CC BY-SA. O conteúdo do Riot Universe é da Riot Games.
 
-O script `npm run fetch:quotes` busca os dados e grava `src/data/quotes.json`. Ele usa a wiki PT-BR quando há falas lá e, se não houver, recorre à wiki em inglês com as traduções. Mantém só as falas da skin clássica e descarta as que contêm o nome do campeão. Se aparecerem falas em inglês sem tradução, o script as lista em `scripts/untranslated.json`, e elas ficam fora do jogo até alguém traduzir e adicionar em `translations.json`.
+O script `npm run fetch:quotes` busca os dados e grava `src/data/quotes.json`. Ele usa a wiki PT-BR quando há falas lá e, se não houver, recorre à wiki em inglês com as traduções. Em seguida, acrescenta a fala oficial do Universe. Mantém só as falas da skin clássica e descarta as que contêm o nome do campeão. Se aparecerem falas em inglês sem tradução, o script as lista em `scripts/untranslated.json`, e elas ficam fora do jogo até alguém traduzir e adicionar em `translations.json`.
 
-Hoje 165 dos 173 campeões têm falas: 532 dubladas e cerca de 2.000 traduzidas. Os 8 que faltam não falam no jogo (Bardo, Rammus, Rek'Sai) ou ainda não têm falas transcritas na wiki.
+Hoje 170 dos 173 campeões têm falas: 157 oficiais do Universe, 528 dubladas e cerca de 2.000 traduzidas. Os 3 que faltam (Bardo, Rammus e Rek'Sai) não falam no jogo, e as frases deles no Universe são ditas por outros personagens.
 
 Loldle2 não é afiliado à Riot Games.
