@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA: qualquer rota (ex.: /falas) serve o index.html e o React Router decide a página.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

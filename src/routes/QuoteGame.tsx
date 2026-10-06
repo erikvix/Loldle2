@@ -1,4 +1,4 @@
-import { BadgeCheckIcon, LanguagesIcon, LockIcon, QuoteIcon, RefreshCwIcon } from 'lucide-react'
+import { BadgeCheckIcon, LanguagesIcon, LockIcon, QuoteIcon, RefreshCwIcon, VolumeXIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { AudioButton } from '@/components/AudioButton'
 import { ChampionIcon } from '@/components/ChampionIcon'
@@ -68,9 +68,11 @@ export function QuoteGame() {
             <Badge variant="secondary">Tentativas: {guesses.length}</Badge>
             <Badge variant="secondary">Acertos: {roundsWon}</Badge>
           </div>
-          {!won && audioUrl && (
+          {!won && (
             <div className="mt-4 flex justify-center">
-              {hintRemaining > 0 ? (
+              {!audioUrl ? (
+                <NoAudio />
+              ) : hintRemaining > 0 ? (
                 <Button variant="outline" disabled>
                   <LockIcon data-icon="inline-start" />
                   Dica de áudio em {hintRemaining} {hintRemaining === 1 ? 'chute' : 'chutes'}
@@ -94,7 +96,7 @@ export function QuoteGame() {
                 {guesses.length} {guesses.length === 1 ? 'tentativa' : 'tentativas'}
               </p>
             </div>
-            {audioUrl && <AudioButton key={audioUrl} src={audioUrl} label="Ouvir fala" />}
+            {audioUrl ? <AudioButton key={audioUrl} src={audioUrl} label="Ouvir fala" /> : <NoAudio />}
             <Button size="lg" onClick={nextQuote} autoFocus>
               <RefreshCwIcon data-icon="inline-start" />
               Próxima fala
@@ -107,5 +109,15 @@ export function QuoteGame() {
 
       <GuessList guesses={guesses} answerId={answer.id} />
     </div>
+  )
+}
+
+// Só as falas dubladas têm áudio; as traduzidas e as oficiais do Universe ficam só em texto.
+function NoAudio() {
+  return (
+    <p className="flex items-center gap-2 text-xs text-muted-foreground">
+      <VolumeXIcon className="size-3.5" />
+      Esta fala não tem áudio
+    </p>
   )
 }
