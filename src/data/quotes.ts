@@ -13,6 +13,8 @@ export interface Quote {
   original?: string
   // 'universe': fala oficial da biografia do campeão no Riot Universe.
   source?: 'universe'
+  // Nome do arquivo .ogg da fala dublada em public/audio/.
+  audio?: string
 }
 
 export const ddragonVersion: string = data.ddragonVersion
@@ -28,4 +30,8 @@ export const quotes: Quote[] = Object.entries(
 
 export function championIconUrl(championId: string): string {
   return `https://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/champion/${championId}.png`
+}
+
+export function quoteAudioUrl(quote: Quote): string | null {
+  return quote.audio ? `${import.meta.env.BASE_URL}audio/${quote.audio}` : null
 }

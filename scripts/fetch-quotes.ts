@@ -6,13 +6,15 @@
  * - Campeões sem falas em PT-BR: Wiki League of Legends em inglês (CC BY-SA),
  *   com as falas traduzidas em scripts/translations.json
  * - Fala oficial de cada campeão em PT-BR: Riot Universe (biografia do campeão)
+ * - Áudio das falas dubladas: arquivos .ogg da wiki PT-BR, baixados para public/audio.
+ *   O CDN da wiki bloqueia hotlink, por isso os arquivos ficam no próprio projeto.
  *
  * Falas em inglês ainda sem tradução são gravadas em scripts/untranslated.json
  * e ficam de fora do jogo até serem traduzidas.
  *
  * Uso: npm run fetch:quotes
  */
-import { readFile, rm, writeFile } from 'node:fs/promises'
+import { mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises'
 
 const WIKI_PT = 'https://leagueoflegends.fandom.com/pt-br/api.php'
 const WIKI_EN = 'https://leagueoflegends.fandom.com/api.php'
@@ -21,6 +23,7 @@ const UNIVERSE = 'https://universe-meeps.leagueoflegends.com/v1/pt_br'
 const OUTPUT = new URL('../src/data/quotes.json', import.meta.url)
 const TRANSLATIONS = new URL('./translations.json', import.meta.url)
 const UNTRANSLATED = new URL('./untranslated.json', import.meta.url)
+const AUDIO_DIR = new URL('../public/audio/', import.meta.url)
 
 interface WikiSource {
   api: string
@@ -56,10 +59,17 @@ interface DDragonChampion {
 
 // `original` presente indica fala traduzida automaticamente do inglês.
 // `source: 'universe'` indica a fala oficial da biografia do campeão no Riot Universe.
+// `audio` é o nome do arquivo .ogg da fala dublada em public/audio/.
 export interface QuoteEntry {
   text: string
   original?: string
   source?: 'universe'
+  audio?: string
+}
+
+interface WikiQuote {
+  text: string
+  file?: string
 }
 
 interface QuotesFile {
@@ -137,9 +147,9 @@ function nameParts(names: string[]): string[] {
   )
 }
 
-function extractQuotes(wikitext: string, source: WikiSource, names: string[]): string[] {
+function extractQuotes(wikitext: string, source: WikiSource, names: string[]): WikiQuote[] {
   const forbidden = nameParts(names)
-  const quotes = new Set<string>()
+  const quotes = new Map<string, WikiQuote>()
 
   for (const line of classicSection(wikitext, source.classicTab).split('\n')) {
     if (!line.startsWith('*')) continue
@@ -154,12 +164,95 @@ function extractQuotes(wikitext: string, source: WikiSource, names: string[]): s
     const lower = quote.toLowerCase()
     if (forbidden.some((part) => lower.includes(part))) continue
 
-    quotes.add(quote)
+    // O primeiro {{sm2|arquivo.ogg}} da linha é o áudio da skin clássica.
+    const file = line.match(/\{\{sm2\|([^|}]+\.ogg)/i)?.[1].trim()
+    if (!quotes.has(quote)) quotes.set(quote, { text: quote, file })
   }
-  return [...quotes].slice(0, source.maxQuotes)
+  return [...quotes.values()].slice(0, source.maxQuotes)
 }
 
-async function fetchQuotes(source: WikiSource, pageNames: string[], names: string[]): Promise<string[]> {
+const AUDIO_BASE = 'https://static.wikia.nocookie.net/leagueoflegends/images/'
+
+// Resolve nomes de arquivo de áudio para caminhos no CDN da wiki (ex.: "f/f0/Ahri_Seleção.ogg").
+async function resolveAudio(api: string, files: string[]): Promise<Map<string, string>> {
+  const paths = new Map<string, string>()
+  const unique = [...new Set(files)]
+  for (let i = 0; i < unique.length; i += 50) {
+    const batch = unique.slice(i, i + 50)
+    const params = new URLSearchParams({
+      action: 'query',
+      titles: batch.map((file) => `File:${file}`).join('|'),
+      prop: 'imageinfo',
+      iiprop: 'url',
+      format: 'json',
+    })
+    try {
+      const data = await getJson<{
+        query: {
+          normalized?: { from: string; to: string }[]
+          pages: Record<string, { title: string; imageinfo?: { url: string }[] }>
+        }
+      }>(`${api}?${params}`)
+      const urlByTitle = new Map(
+        Object.values(data.query.pages).map((page) => [page.title, page.imageinfo?.[0]?.url]),
+      )
+      const titleByRequest = new Map(data.query.normalized?.map(({ from, to }) => [from, to]))
+      for (const file of batch) {
+        const requested = `File:${file}`
+        const url = urlByTitle.get(titleByRequest.get(requested) ?? requested)
+        if (url?.startsWith(AUDIO_BASE)) paths.set(file, url.slice(AUDIO_BASE.length).split('/revision/')[0])
+      }
+    } catch (error) {
+      console.warn(`  ! áudio: ${(error as Error).message}`)
+    }
+  }
+  return paths
+}
+
+// Nome do arquivo local, só com ASCII (ex.: "f/f0/Ahri_Sele%C3%A7%C3%A3o.ogg" -> "Ahri_Selecao.ogg").
+function localAudioName(path: string): string {
+  return decodeURIComponent(path.split('/').pop()!)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^A-Za-z0-9._-]/g, '_')
+}
+
+const fileExists = (url: URL) => stat(url).then(() => true, () => false)
+
+// Baixa o áudio da wiki PT-BR para public/audio, se ainda não estiver lá.
+async function downloadAudio(path: string): Promise<string | null> {
+  const name = localAudioName(path)
+  const dest = new URL(name, AUDIO_DIR)
+  if (await fileExists(dest)) return name
+  try {
+    const res = await fetch(`${AUDIO_BASE}${path}/revision/latest?path-prefix=pt-br`, {
+      headers: { 'User-Agent': 'Loldle2 quote fetcher' },
+    })
+    if (!res.ok) throw new Error(`${res.status}`)
+    await writeFile(dest, Buffer.from(await res.arrayBuffer()))
+    await sleep(100)
+    return name
+  } catch (error) {
+    console.warn(`  ! áudio ${name}: ${(error as Error).message}`)
+    return null
+  }
+}
+
+async function withAudio(quotes: WikiQuote[]): Promise<QuoteEntry[]> {
+  const paths = await resolveAudio(
+    PT_SOURCE.api,
+    quotes.flatMap(({ file }) => (file ? [file] : [])),
+  )
+  const entries: QuoteEntry[] = []
+  for (const { text, file } of quotes) {
+    const path = file ? paths.get(file) : undefined
+    const audio = path ? await downloadAudio(path) : null
+    entries.push(audio ? { text, audio } : { text })
+  }
+  return entries
+}
+
+async function fetchQuotes(source: WikiSource, pageNames: string[], names: string[]): Promise<WikiQuote[]> {
   for (const pageName of new Set(pageNames)) {
     for (const page of source.pages) {
       try {
@@ -230,6 +323,7 @@ async function fetchUniverseQuote(championId: string, names: string[]): Promise<
 }
 
 async function main() {
+  await mkdir(AUDIO_DIR, { recursive: true })
   const [version] = await getJson<string[]>(`${DDRAGON}/api/versions.json`)
   const champions = await getChampions(version, 'pt_BR')
   const englishNames = new Map((await getChampions(version, 'en_US')).map((c) => [c.id, c.name]))
@@ -247,17 +341,17 @@ async function main() {
     let voiceQuotes: QuoteEntry[]
     const ptQuotes = await fetchQuotes(PT_SOURCE, [champion.name], names)
     if (ptQuotes.length > 0) {
-      voiceQuotes = ptQuotes.map((text) => ({ text }))
+      voiceQuotes = await withAudio(ptQuotes)
     } else {
       // Algumas páginas usam o id do Data Dragon (ex.: "Nunu" em vez de "Nunu & Willump").
       const enQuotes = await fetchQuotes(EN_SOURCE, [englishName, champion.id], names)
       const forbidden = nameParts(names)
-      voiceQuotes = enQuotes
-        .filter((original) => translations[original])
-        .map((original) => ({ text: translations[original], original }))
+      const translatable = enQuotes.filter(({ text }) => translations[text])
+      voiceQuotes = translatable
+        .map(({ text }) => ({ text: translations[text], original: text }))
         // A tradução também não pode entregar o nome do campeão.
         .filter(({ text }) => !forbidden.some((part) => text.toLowerCase().includes(part)))
-      const pending = enQuotes.filter((original) => !translations[original])
+      const pending = enQuotes.filter(({ text }) => !translations[text]).map(({ text }) => text)
       if (pending.length > 0) untranslated[champion.id] = pending
     }
 
@@ -287,14 +381,21 @@ async function main() {
   }
   await writeFile(OUTPUT, JSON.stringify(output, null, 2) + '\n')
 
+  // Remove áudios que não são mais usados por nenhuma fala.
+  const used = new Set(Object.values(quotesById).flatMap((quotes) => quotes.map((q) => q.audio)))
+  for (const file of await readdir(AUDIO_DIR)) {
+    if (!used.has(file)) await rm(new URL(file, AUDIO_DIR))
+  }
+
   const entries = Object.values(quotesById).flat()
   const translatedCount = entries.filter((q) => q.original).length
   const officialCount = entries.filter((q) => q.source === 'universe').length
+  const audioCount = entries.filter((q) => q.audio).length
   const pendingCount = Object.values(untranslated).flat().length
   console.log(
     `\n${Object.keys(quotesById).length} campeões, ${entries.length} falas ` +
       `(${officialCount} oficiais, ${entries.length - translatedCount - officialCount} dubladas, ` +
-      `${translatedCount} traduzidas)`,
+      `${translatedCount} traduzidas), ${audioCount} com áudio`,
   )
   if (pendingCount > 0) {
     await writeFile(UNTRANSLATED, JSON.stringify(untranslated, null, 2) + '\n')

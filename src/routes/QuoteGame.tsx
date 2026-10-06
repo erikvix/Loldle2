@@ -1,13 +1,17 @@
-import { BadgeCheckIcon, LanguagesIcon, QuoteIcon, RefreshCwIcon } from 'lucide-react'
+import { BadgeCheckIcon, LanguagesIcon, LockIcon, QuoteIcon, RefreshCwIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
+import { AudioButton } from '@/components/AudioButton'
 import { ChampionIcon } from '@/components/ChampionIcon'
 import { GuessForm } from '@/components/GuessForm'
 import { GuessList } from '@/components/GuessList'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { championsById, type Champion } from '@/data/quotes'
+import { championsById, quoteAudioUrl, type Champion } from '@/data/quotes'
 import { pickRandomQuote } from '@/game/quotes'
+
+// Chutes errados necessários para liberar o áudio como dica.
+const AUDIO_HINT_AFTER = 3
 
 export function QuoteGame() {
   const [quote, setQuote] = useState(() => pickRandomQuote())
@@ -18,6 +22,9 @@ export function QuoteGame() {
   const answer = championsById.get(quote.championId)!
   const won = guesses[0]?.id === answer.id
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses])
+  const audioUrl = quoteAudioUrl(quote)
+  const wrongGuesses = guesses.length - (won ? 1 : 0)
+  const hintRemaining = AUDIO_HINT_AFTER - wrongGuesses
 
   function handleGuess(champion: Champion) {
     setGuesses((prev) => [champion, ...prev])
@@ -61,6 +68,18 @@ export function QuoteGame() {
             <Badge variant="secondary">Tentativas: {guesses.length}</Badge>
             <Badge variant="secondary">Acertos: {roundsWon}</Badge>
           </div>
+          {!won && audioUrl && (
+            <div className="mt-4 flex justify-center">
+              {hintRemaining > 0 ? (
+                <Button variant="outline" disabled>
+                  <LockIcon data-icon="inline-start" />
+                  Dica de áudio em {hintRemaining} {hintRemaining === 1 ? 'chute' : 'chutes'}
+                </Button>
+              ) : (
+                <AudioButton key={audioUrl} src={audioUrl} label="Ouvir dica de áudio" />
+              )}
+            </div>
+          )}
         </CardContent>
       </Card>
 
@@ -75,6 +94,7 @@ export function QuoteGame() {
                 {guesses.length} {guesses.length === 1 ? 'tentativa' : 'tentativas'}
               </p>
             </div>
+            {audioUrl && <AudioButton key={audioUrl} src={audioUrl} label="Ouvir fala" />}
             <Button size="lg" onClick={nextQuote} autoFocus>
               <RefreshCwIcon data-icon="inline-start" />
               Próxima fala

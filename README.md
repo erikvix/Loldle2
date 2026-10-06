@@ -4,6 +4,8 @@ Jogo de adivinhação de campeões de League of Legends, inspirado no [Loldle](h
 
 Por enquanto há um modo: **Falas**. O jogo mostra uma fala dublada em português e você tenta descobrir qual campeão a disse. Os chutes são ilimitados: ao acertar, você pode passar para a próxima fala.
 
+Nas falas dubladas, dá para ouvir o áudio da dublagem. Ele vira dica depois de 3 chutes errados e fica disponível também depois que você acerta.
+
 ## Stack
 
 - [Vite](https://vite.dev/) + [React](https://react.dev/) + TypeScript
@@ -18,14 +20,16 @@ npm install
 npm run dev           # servidor de desenvolvimento
 npm run build         # build de produção
 npm run lint          # lint
-npm run fetch:quotes  # atualiza src/data/quotes.json
+npm run fetch:quotes  # atualiza src/data/quotes.json e public/audio
 ```
 
 ## Estrutura
 
 ```
+public/
+└── audio/            # Áudios das falas dubladas (.ogg)
 scripts/
-└── fetch-quotes.ts   # Gera a base de falas (wikis e Riot Universe)
+└── fetch-quotes.ts   # Gera a base de falas e baixa os áudios
 src/
 ├── components/       # Componentes do jogo (formulário de palpite, lista de chutes)
 │   └── ui/           # Componentes do shadcn/ui
@@ -39,6 +43,7 @@ src/
 
 - **Campeões e ícones:** [Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon) da Riot, em `pt_BR`. Não precisa de chave de API.
 - **Falas dubladas em PT-BR:** [Wiki League of Legends PT-BR](https://leagueoflegends.fandom.com/pt-br), páginas `<Campeão>/LoL/Áudio`.
+- **Áudio das falas dubladas:** arquivos `.ogg` da wiki PT-BR, guardados em `public/audio` (cerca de 500 arquivos, 24 MB). O CDN da wiki bloqueia áudio tocado a partir de outros sites, por isso os arquivos ficam no próprio projeto. As falas traduzidas e as oficiais não têm áudio.
 - **Fala oficial de cada campeão:** [Riot Universe](https://universe.leagueoflegends.com/pt_BR/), API `universe-meeps.leagueoflegends.com/v1/pt_br/champions/<campeão>/index.json`. É a frase da biografia do campeão, já em português. Entra só quando o autor é o próprio campeão e aparece no jogo como "Fala oficial do Riot Universe".
 - **Demais campeões:** [Wiki League of Legends em inglês](https://leagueoflegends.fandom.com), páginas `<Champion>/LoL/Audio`. As falas foram traduzidas para o português e ficam em `scripts/translations.json`. No jogo, elas aparecem marcadas como "Tradução automática", com opção de ver o original.
 

@@ -874,91 +874,120 @@
         "source": "universe"
       },
       {
-        "text": "Ouçam, o silêncio depois da aniquilação!"
+        "text": "Ouçam, o silêncio depois da aniquilação!",
+        "audio": "Aatrox_Selecao.ogg"
       },
       {
-        "text": "Darei um fim nisso."
+        "text": "Darei um fim nisso.",
+        "audio": "Aatrox_Banimento.ogg"
       },
       {
-        "text": "Pantheon, eu sei quem você é! Como um parasita, você se prende a um hospedeiro! Eu vou te libertar desta forma mortal, e eviscerar vocês dois!"
+        "text": "Pantheon, eu sei quem você é! Como um parasita, você se prende a um hospedeiro! Eu vou te libertar desta forma mortal, e eviscerar vocês dois!",
+        "audio": "Aatrox_PMovimentoPantheon_0.ogg"
       },
       {
-        "text": "Pantheon! Eu vou extinguir a sua divindade, eu vou desentranhar seus ideais, eu vou pisotear até na sua memória!"
+        "text": "Pantheon! Eu vou extinguir a sua divindade, eu vou desentranhar seus ideais, eu vou pisotear até na sua memória!",
+        "audio": "Aatrox_PMovimentoPantheon_2.ogg"
       },
       {
-        "text": "Targon enviou um aspecto contra mim? Prepare-se, Pantheon, eu vou acabar com tudo que você sempre desejou ser!"
+        "text": "Targon enviou um aspecto contra mim? Prepare-se, Pantheon, eu vou acabar com tudo que você sempre desejou ser!",
+        "audio": "Aatrox_PMovimentoPantheon_1.ogg"
       },
       {
-        "text": "O verdadeiro som da minha lâmina só é ouvido por aqueles que abominam a reencarnação."
+        "text": "O verdadeiro som da minha lâmina só é ouvido por aqueles que abominam a reencarnação.",
+        "audio": "Aatrox_Movimento_0.ogg"
       },
       {
-        "text": "A única paz que busco... é a morte!"
+        "text": "A única paz que busco... é a morte!",
+        "audio": "Aatrox_Movimento_1.ogg"
       },
       {
-        "text": "Você é chamado de vilão... Ótimo, quero conquistar o seu ódio, quantas vezes precisar."
+        "text": "Você é chamado de vilão... Ótimo, quero conquistar o seu ódio, quantas vezes precisar.",
+        "audio": "Aatrox_Movimento_2.ogg"
       },
       {
-        "text": "Eu sou a ruína!"
+        "text": "Eu sou a ruína!",
+        "audio": "Aatrox_Movimento_3.ogg"
       },
       {
-        "text": "Meu coração abriga uma escuridão mais profunda do que qualquer sombra!"
+        "text": "Meu coração abriga uma escuridão mais profunda do que qualquer sombra!",
+        "audio": "Aatrox_Movimento_4.ogg"
       },
       {
-        "text": "Marche rumo à vingança, afogue este mundo... em sangue."
+        "text": "Marche rumo à vingança, afogue este mundo... em sangue.",
+        "audio": "Aatrox_Movimento_5.ogg"
       },
       {
-        "text": "Seus gritos de horror serão o meu... deleite supremo."
+        "text": "Seus gritos de horror serão o meu... deleite supremo.",
+        "audio": "Aatrox_Movimento_7.ogg"
       },
       {
-        "text": "A moeda de troca pela minha prisão... será o sofrimento eterno."
+        "text": "A moeda de troca pela minha prisão... será o sofrimento eterno.",
+        "audio": "Aatrox_Movimento_8.ogg"
       },
       {
-        "text": "Me desafiem, mortais! Eu! Estou! Aqui!"
+        "text": "Me desafiem, mortais! Eu! Estou! Aqui!",
+        "audio": "Aatrox_Movimento_9.ogg"
       },
       {
-        "text": "Eles acham que eu fui derrotado, que eu estou acorrentado. Mas eu não me curvo a nada e a ninguém. Minha bênção será uma nobre carnificina."
+        "text": "Eles acham que eu fui derrotado, que eu estou acorrentado. Mas eu não me curvo a nada e a ninguém. Minha bênção será uma nobre carnificina.",
+        "audio": "Aatrox_Movimento_10.ogg"
       },
       {
-        "text": "Os primitivos me veneram, implorando misericórdia. Eu considerei somente... a morte."
+        "text": "Os primitivos me veneram, implorando misericórdia. Eu considerei somente... a morte.",
+        "audio": "Aatrox_Movimento_11.ogg"
       },
       {
-        "text": "Hei de afogar todos... em um mar de sangue."
+        "text": "Hei de afogar todos... em um mar de sangue.",
+        "audio": "Aatrox_Movimento_12.ogg"
       },
       {
-        "text": "Eu vou extinguir a luz, e criar a escuridão eterna."
+        "text": "Eu vou extinguir a luz, e criar a escuridão eterna.",
+        "audio": "Aatrox_Movimento_13.ogg"
       },
       {
-        "text": "Eu sou o Oblívio! Eu sou a Destruição! Eu sou... a ruína."
+        "text": "Eu sou o Oblívio! Eu sou a Destruição! Eu sou... a ruína.",
+        "audio": "Aatrox_Movimento_14.ogg"
       },
       {
-        "text": "Eu trilho o caminho da morte. Uma pena... que não será a minha."
+        "text": "Eu trilho o caminho da morte. Uma pena... que não será a minha.",
+        "audio": "Aatrox_Movimento_15.ogg"
       },
       {
-        "text": "Eu farei o meu sofrimento... florescer."
+        "text": "Eu farei o meu sofrimento... florescer.",
+        "audio": "Aatrox_Movimento_16.ogg"
       },
       {
-        "text": "Moldarei todas as formas mortais à minha própria imagem!"
+        "text": "Moldarei todas as formas mortais à minha própria imagem!",
+        "audio": "Aatrox_Movimento_18.ogg"
       },
       {
-        "text": "Deuses e mortais, não merecem nada, se não a morte!"
+        "text": "Deuses e mortais, não merecem nada, se não a morte!",
+        "audio": "Aatrox_Movimento_19.ogg"
       },
       {
-        "text": "Enquanto esta forma viver... eu os punirei."
+        "text": "Enquanto esta forma viver... eu os punirei.",
+        "audio": "Aatrox_Movimento_20.ogg"
       },
       {
-        "text": "Eu lutei contra o Vazio. Mas agora, eu o aceitaria de braços abertos."
+        "text": "Eu lutei contra o Vazio. Mas agora, eu o aceitaria de braços abertos.",
+        "audio": "Aatrox_Movimento_21.ogg"
       },
       {
-        "text": "Essa forma maldita e deplorável feita de... carne! Como ela me enoja!"
+        "text": "Essa forma maldita e deplorável feita de... carne! Como ela me enoja!",
+        "audio": "Aatrox_Movimento_22.ogg"
       },
       {
-        "text": "É a mim que vocês pagarão, mortais!"
+        "text": "É a mim que vocês pagarão, mortais!",
+        "audio": "Aatrox_Movimento_23.ogg"
       },
       {
-        "text": "Eu quero ouvir lamentarem... o meu nome."
+        "text": "Eu quero ouvir lamentarem... o meu nome.",
+        "audio": "Aatrox_Movimento_24.ogg"
       },
       {
-        "text": "Eles me chamam de... Deicida!"
+        "text": "Eles me chamam de... Deicida!",
+        "audio": "Aatrox_Movimento_25.ogg"
       }
     ],
     "Ahri": [
@@ -967,94 +996,124 @@
         "source": "universe"
       },
       {
-        "text": "Uma raposa esperta nunca é apanhada."
+        "text": "Uma raposa esperta nunca é apanhada.",
+        "audio": "Ahri_Selecao.ogg"
       },
       {
-        "text": "Hmm, não precisa ter medo de mim."
+        "text": "Hmm, não precisa ter medo de mim.",
+        "audio": "Ahri_Banimento.ogg"
       },
       {
-        "text": "Eu conheço esse lugar, parte de mim se lembra."
+        "text": "Eu conheço esse lugar, parte de mim se lembra.",
+        "audio": "Ahri_PMovimento_1.ogg"
       },
       {
-        "text": "Não estou mais sozinha, posso confiar nos outros, e em mim mesma."
+        "text": "Não estou mais sozinha, posso confiar nos outros, e em mim mesma.",
+        "audio": "Ahri_PMovimento_2.ogg"
       },
       {
-        "text": "Já lutei ao lado de alguns dos melhores sabia? Tente não ficar pra trás."
+        "text": "Já lutei ao lado de alguns dos melhores sabia? Tente não ficar pra trás.",
+        "audio": "Ahri_PMovimento_3.ogg"
       },
       {
-        "text": "Novas experiências me esperam hoje, e eu encaro seja o que for."
+        "text": "Novas experiências me esperam hoje, e eu encaro seja o que for.",
+        "audio": "Ahri_PMovimento_4.ogg"
       },
       {
-        "text": "Desperdicei uma eternidade ficando parada, é hora de seguir em frente."
+        "text": "Desperdicei uma eternidade ficando parada, é hora de seguir em frente.",
+        "audio": "Ahri_PMovimento_5.ogg"
       },
       {
-        "text": "Vamos criar novas memórias juntos."
+        "text": "Vamos criar novas memórias juntos.",
+        "audio": "Ahri_PMovimento_6.ogg"
       },
       {
-        "text": "Tá todo mundo olhando, se o nervosismo bater procurem o palco, eu vou estar logo ao lado."
+        "text": "Tá todo mundo olhando, se o nervosismo bater procurem o palco, eu vou estar logo ao lado.",
+        "audio": "Ahri_EstrelaDoPop_PMovimento_0.ogg"
       },
       {
-        "text": "Os meus shows são bem intensos, acham que dão conta?"
+        "text": "Os meus shows são bem intensos, acham que dão conta?",
+        "audio": "Ahri_EstrelaDoPop_PMovimento_1.ogg"
       },
       {
-        "text": "Eu vivi e ainda vivo uma eternidade."
+        "text": "Eu vivi e ainda vivo uma eternidade.",
+        "audio": "Ahri_Movimento_0.ogg"
       },
       {
-        "text": "Todo animal tem fome de alguma coisa."
+        "text": "Todo animal tem fome de alguma coisa.",
+        "audio": "Ahri_Movimento_1.ogg"
       },
       {
-        "text": "Eu carrego o legado dos Vesani."
+        "text": "Eu carrego o legado dos Vesani.",
+        "audio": "Ahri_Movimento_2.ogg"
       },
       {
-        "text": "A beleza até nos momentos mais singelos."
+        "text": "A beleza até nos momentos mais singelos.",
+        "audio": "Ahri_Movimento_3.ogg"
       },
       {
-        "text": "Eles vão correr atrás das próprias caudas."
+        "text": "Eles vão correr atrás das próprias caudas.",
+        "audio": "Ahri_Movimento_4.ogg"
       },
       {
-        "text": "O mundo está aí para que eu explore."
+        "text": "O mundo está aí para que eu explore.",
+        "audio": "Ahri_Movimento_5.ogg"
       },
       {
-        "text": "Eu devia ter saído de casa a muito tempo."
+        "text": "Eu devia ter saído de casa a muito tempo.",
+        "audio": "Ahri_Movimento_6.ogg"
       },
       {
-        "text": "Posso ouvir o vento cantar."
+        "text": "Posso ouvir o vento cantar.",
+        "audio": "Ahri_Movimento_7.ogg"
       },
       {
-        "text": "Viva sem arrependimentos."
+        "text": "Viva sem arrependimentos.",
+        "audio": "Ahri_Movimento_8.ogg"
       },
       {
-        "text": "Vidas mortais são tão passageiras."
+        "text": "Vidas mortais são tão passageiras.",
+        "audio": "Ahri_Movimento_9.ogg"
       },
       {
-        "text": "As estações mudam, e eu também."
+        "text": "As estações mudam, e eu também.",
+        "audio": "Ahri_Movimento_10.ogg"
       },
       {
-        "text": "Corpo nutrido, alma alimentada."
+        "text": "Corpo nutrido, alma alimentada.",
+        "audio": "Ahri_Movimento_11.ogg"
       },
       {
-        "text": "A natureza aqui é quieta demais."
+        "text": "A natureza aqui é quieta demais.",
+        "audio": "Ahri_Movimento_12.ogg"
       },
       {
-        "text": "Não vou me esquecer do que significa roubar uma vida."
+        "text": "Não vou me esquecer do que significa roubar uma vida.",
+        "audio": "Ahri_Movimento_13.ogg"
       },
       {
-        "text": "Lembre-se deste momento."
+        "text": "Lembre-se deste momento.",
+        "audio": "Ahri_Movimento_14.ogg"
       },
       {
-        "text": "Há tanta coisa que eu quero ver."
+        "text": "Há tanta coisa que eu quero ver.",
+        "audio": "Ahri_Movimento_15.ogg"
       },
       {
-        "text": "Eu vago mas não estou perdida."
+        "text": "Eu vago mas não estou perdida.",
+        "audio": "Ahri_Movimento_16.ogg"
       },
       {
-        "text": "Assim como a floresta, eu sou selvagem."
+        "text": "Assim como a floresta, eu sou selvagem.",
+        "audio": "Ahri_Movimento_17.ogg"
       },
       {
-        "text": "Tantas memórias se misturam em mim."
+        "text": "Tantas memórias se misturam em mim.",
+        "audio": "Ahri_Movimento_18.ogg"
       },
       {
-        "text": "Esse lugar me lembra de casa."
+        "text": "Esse lugar me lembra de casa.",
+        "audio": "Ahri_Movimento_19.ogg"
       }
     ],
     "Akali": [
@@ -1195,19 +1254,24 @@
         "source": "universe"
       },
       {
-        "text": "Agora estou enfurecido."
+        "text": "Agora estou enfurecido.",
+        "audio": "Alistar_Banimento.ogg"
       },
       {
-        "text": "Você deve seguir."
+        "text": "Você deve seguir.",
+        "audio": "Alistar_Movimento_2.ogg"
       },
       {
-        "text": "Eu conheço o caminho."
+        "text": "Eu conheço o caminho.",
+        "audio": "Alistar_Movimento_3.ogg"
       },
       {
-        "text": "Se mexer com o touro vai levar uma chifrada."
+        "text": "Se mexer com o touro vai levar uma chifrada.",
+        "audio": "Alistar_Provocacao.ogg"
       },
       {
-        "text": "Quem você chamou de chifrudo?"
+        "text": "Quem você chamou de chifrudo?",
+        "audio": "Alistar_Piada.ogg"
       },
       {
         "text": "Quem está pronto para travar chifres comigo!?"
@@ -1228,25 +1292,32 @@
         "source": "universe"
       },
       {
-        "text": "Achei que nunca fosse me escolher."
+        "text": "Achei que nunca fosse me escolher.",
+        "audio": "Amumu_Selecao.ogg"
       },
       {
-        "text": "Para onde estamos indo?"
+        "text": "Para onde estamos indo?",
+        "audio": "Amumu_Movimento_1.ogg"
       },
       {
-        "text": "Vamos fazer alguns amigos."
+        "text": "Vamos fazer alguns amigos.",
+        "audio": "Amumu_Movimento_2.ogg"
       },
       {
-        "text": "Vem jogar comigo."
+        "text": "Vem jogar comigo.",
+        "audio": "Amumu_Movimento_3.ogg"
       },
       {
-        "text": "Posso te dar um abraço?"
+        "text": "Posso te dar um abraço?",
+        "audio": "Amumu_Provocacao.ogg"
       },
       {
-        "text": "Vamos ser amigos para sempre."
+        "text": "Vamos ser amigos para sempre.",
+        "audio": "Amumu_Piada.ogg"
       },
       {
-        "text": "Espera, volta aqui!"
+        "text": "Espera, volta aqui!",
+        "audio": "Amumu_Ataque_2.ogg"
       },
       {
         "text": "Quer me adicionar na lista de amigos?"
@@ -1261,88 +1332,116 @@
         "source": "universe"
       },
       {
-        "text": "Em minhas asas."
+        "text": "Em minhas asas.",
+        "audio": "Anivia_Selecao.ogg"
       },
       {
-        "text": "Eu hei de perdurar."
+        "text": "Eu hei de perdurar.",
+        "audio": "Anivia_Banimento.ogg"
       },
       {
-        "text": "Não sou nem a primeira, nem a última."
+        "text": "Não sou nem a primeira, nem a última.",
+        "audio": "Anivia_Movimento_0.ogg"
       },
       {
-        "text": "Já senti essa corrupção antes."
+        "text": "Já senti essa corrupção antes.",
+        "audio": "Anivia_Movimento_1.ogg"
       },
       {
-        "text": "Vento do inverno, guie a mim."
+        "text": "Vento do inverno, guie a mim.",
+        "audio": "Anivia_Movimento_2.ogg"
       },
       {
-        "text": "Eu renascerei."
+        "text": "Eu renascerei.",
+        "audio": "Anivia_Movimento_3.ogg"
       },
       {
-        "text": "Estamos todos conectados."
+        "text": "Estamos todos conectados.",
+        "audio": "Anivia_Movimento_4.ogg"
       },
       {
-        "text": "Eu sonho com eras passadas."
+        "text": "Eu sonho com eras passadas.",
+        "audio": "Anivia_Movimento_5.ogg"
       },
       {
-        "text": "Eternamente vigilante."
+        "text": "Eternamente vigilante.",
+        "audio": "Anivia_Movimento_6.ogg"
       },
       {
-        "text": "Algo ancestral se manifesta."
+        "text": "Algo ancestral se manifesta.",
+        "audio": "Anivia_Movimento_7.ogg"
       },
       {
-        "text": "Não se apresse, reflita."
+        "text": "Não se apresse, reflita.",
+        "audio": "Anivia_Movimento_9.ogg"
       },
       {
-        "text": "Significado em cada floco de neve."
+        "text": "Significado em cada floco de neve.",
+        "audio": "Anivia_Movimento_10.ogg"
       },
       {
-        "text": "Mil vidas darei por Freljord."
+        "text": "Mil vidas darei por Freljord.",
+        "audio": "Anivia_Movimento_11.ogg"
       },
       {
-        "text": "Quais mudanças este vento trará?"
+        "text": "Quais mudanças este vento trará?",
+        "audio": "Anivia_Movimento_12.ogg"
       },
       {
-        "text": "Pense além do tempo de uma vida."
+        "text": "Pense além do tempo de uma vida.",
+        "audio": "Anivia_Movimento_13.ogg"
       },
       {
-        "text": "Pobres criaturas, confinadas a uma única vida."
+        "text": "Pobres criaturas, confinadas a uma única vida.",
+        "audio": "Anivia_Provocacao_0.ogg"
       },
       {
-        "text": "Tão jovem, tão ingênua."
+        "text": "Tão jovem, tão ingênua.",
+        "audio": "Anivia_Provocacao_1.ogg"
       },
       {
-        "text": "O ovo ou a galinha? Na verdade eu vim primeiro."
+        "text": "O ovo ou a galinha? Na verdade eu vim primeiro.",
+        "audio": "Anivia_Piada_0.ogg"
       },
       {
-        "text": "Botar um ovo não é tão fácil quanto parece."
+        "text": "Botar um ovo não é tão fácil quanto parece.",
+        "audio": "Anivia_Piada_1.ogg"
       },
       {
-        "text": "Freljord desperta."
+        "text": "Freljord desperta.",
+        "audio": "Anivia_Ataque_0.ogg"
       },
       {
-        "text": "Não abandonarei meu lar."
+        "text": "Não abandonarei meu lar.",
+        "audio": "Anivia_Ataque_1.ogg"
       },
       {
-        "text": "Não instigue a nevasca."
+        "text": "Não instigue a nevasca.",
+        "audio": "Anivia_Ataque_2.ogg"
       },
       {
-        "text": "Encontre paz."
+        "text": "Encontre paz.",
+        "audio": "Anivia_Ataque_3.ogg"
       },
       {
-        "text": "Eu trago a tempestade."
+        "text": "Eu trago a tempestade.",
+        "audio": "Anivia_Ataque_4.ogg"
       },
       {
-        "text": "A vida passa tão brevemente."
+        "text": "A vida passa tão brevemente.",
+        "audio": "Anivia_Ataque_5.ogg"
       },
       {
-        "text": "O ciclo termina."
+        "text": "O ciclo termina.",
+        "audio": "Anivia_Ataque_6.ogg"
       },
       {
-        "text": "Sou a neve, o vento, e o gelo."
+        "text": "Sou a neve, o vento, e o gelo.",
+        "audio": "Anivia_Ataque_7.ogg"
       },
       {
-        "text": "Uma grande escuridão se aproxima."
+        "text": "Uma grande escuridão se aproxima.",
+        "audio": "Anivia_Ataque_9.ogg"
       }
     ],
     "Annie": [
@@ -1351,67 +1450,88 @@
         "source": "universe"
       },
       {
-        "text": "Você quer brincar também? Vai ser divertido!"
+        "text": "Você quer brincar também? Vai ser divertido!",
+        "audio": "Annie_Selecao.ogg"
       },
       {
-        "text": "Não seja medroso!"
+        "text": "Não seja medroso!",
+        "audio": "Annie_Banimento.ogg"
       },
       {
-        "text": "Saia daí, não vá se esconder!"
+        "text": "Saia daí, não vá se esconder!",
+        "audio": "Annie_Movimento_0.ogg"
       },
       {
-        "text": "Tente me acompanhar!"
+        "text": "Tente me acompanhar!",
+        "audio": "Annie_Movimento_2.ogg"
       },
       {
-        "text": "A gente já chegou?"
+        "text": "A gente já chegou?",
+        "audio": "Annie_Movimento_3.ogg"
       },
       {
-        "text": "Você viu meu ursinho Tibbers?"
+        "text": "Você viu meu ursinho Tibbers?",
+        "audio": "Annie_Movimento_5.ogg"
       },
       {
-        "text": "O que vem de baixo não me... queima!"
+        "text": "O que vem de baixo não me... queima!",
+        "audio": "Annie_Provocacao_0.ogg"
       },
       {
-        "text": "Derrotado por uma garotinha... ha!"
+        "text": "Derrotado por uma garotinha... ha!",
+        "audio": "Annie_Provocacao_1.ogg"
       },
       {
-        "text": "Qual é o seu animal preferido? É um urso?"
+        "text": "Qual é o seu animal preferido? É um urso?",
+        "audio": "Annie_Piada_0.ogg"
       },
       {
-        "text": "Você tá com cheiro de... queimado!"
+        "text": "Você tá com cheiro de... queimado!",
+        "audio": "Annie_Piada_1.ogg"
       },
       {
-        "text": "Isso é divertido!"
+        "text": "Isso é divertido!",
+        "audio": "Annie_Ataque_0.ogg"
       },
       {
-        "text": "Um dois três... fogo!"
+        "text": "Um dois três... fogo!",
+        "audio": "Annie_Ataque_1.ogg"
       },
       {
-        "text": "Hora de brincar!"
+        "text": "Hora de brincar!",
+        "audio": "Annie_Ataque_2.ogg"
       },
       {
-        "text": "Vamos contar até cinco!"
+        "text": "Vamos contar até cinco!",
+        "audio": "Annie_Ataque_4.ogg"
       },
       {
-        "text": "Não me faça machucar você!"
+        "text": "Não me faça machucar você!",
+        "audio": "Annie_Ataque_5.ogg"
       },
       {
-        "text": "É a minha vez!"
+        "text": "É a minha vez!",
+        "audio": "Annie_Ataque_6.ogg"
       },
       {
-        "text": "Cinzas, cinzas, todas elas caem."
+        "text": "Cinzas, cinzas, todas elas caem.",
+        "audio": "Annie_Ataque_7.ogg"
       },
       {
-        "text": "Eles podem fazer isso?"
+        "text": "Eles podem fazer isso?",
+        "audio": "Annie_Ataque_8.ogg"
       },
       {
-        "text": "Pegue-os, Tibbers!"
+        "text": "Pegue-os, Tibbers!",
+        "audio": "Annie_R_1.ogg"
       },
       {
-        "text": "Abraço de urso!"
+        "text": "Abraço de urso!",
+        "audio": "Annie_R_3.ogg"
       },
       {
-        "text": "Yay, Tibbers!"
+        "text": "Yay, Tibbers!",
+        "audio": "Annie_R_4.ogg"
       },
       {
         "text": "Oi! Meu amigo Tibbers quer te conhecer..."
@@ -1422,94 +1542,124 @@
     ],
     "Aphelios": [
       {
-        "text": "Condenados à escuridão, onde nosso poder aumenta."
+        "text": "Condenados à escuridão, onde nosso poder aumenta.",
+        "audio": "Aphelios_Banimento.ogg"
       },
       {
-        "text": "Cada passo seu, é um passo nosso. Se você respira, eu respiro."
+        "text": "Cada passo seu, é um passo nosso. Se você respira, eu respiro.",
+        "audio": "Aphelios_PMovimento_0.ogg"
       },
       {
-        "text": "Mesmo estando deste lado do véu celestial, estou com você, meu irmão."
+        "text": "Mesmo estando deste lado do véu celestial, estou com você, meu irmão.",
+        "audio": "Aphelios_PMovimento_1.ogg"
       },
       {
-        "text": "Sua vida no altar irmão... Não vou trai-la."
+        "text": "Sua vida no altar irmão... Não vou trai-la.",
+        "audio": "Aphelios_PMovimento_3.ogg"
       },
       {
-        "text": "A ordem luta pela luz. O caos luta pela escuridão. Na Lua, encontramos ambos, e um jeito de sobreviver."
+        "text": "A ordem luta pela luz. O caos luta pela escuridão. Na Lua, encontramos ambos, e um jeito de sobreviver.",
+        "audio": "Aphelios_EmissarioDaEscuridao_PMovimento_1.ogg"
       },
       {
-        "text": "Deveríamos odiar um ao outro. Mas mostraremos a todos, seres perversos e divinos, que juntos somos mais fortes."
+        "text": "Deveríamos odiar um ao outro. Mas mostraremos a todos, seres perversos e divinos, que juntos somos mais fortes.",
+        "audio": "Aphelios_EmissarioDaEscuridao_PMovimento_2.ogg"
       },
       {
-        "text": "Encontre sua órbita, irmão."
+        "text": "Encontre sua órbita, irmão.",
+        "audio": "Aphelios_Movimento_0.ogg"
       },
       {
-        "text": "Vejo que está sempre dando seu sangue... por mim."
+        "text": "Vejo que está sempre dando seu sangue... por mim.",
+        "audio": "Aphelios_Movimento_1.ogg"
       },
       {
-        "text": "Estou com você, te iluminando daqui de cima."
+        "text": "Estou com você, te iluminando daqui de cima.",
+        "audio": "Aphelios_Movimento_2.ogg"
       },
       {
-        "text": "Escuridão não é heresia. Ela está dentro de nós."
+        "text": "Escuridão não é heresia. Ela está dentro de nós.",
+        "audio": "Aphelios_Movimento_4.ogg"
       },
       {
-        "text": "Não podemos deixar que o medo nos aprisione no crepúsculo."
+        "text": "Não podemos deixar que o medo nos aprisione no crepúsculo.",
+        "audio": "Aphelios_Movimento_5.ogg"
       },
       {
-        "text": "Vejo tantas maravilhas através dos seus olhos."
+        "text": "Vejo tantas maravilhas através dos seus olhos.",
+        "audio": "Aphelios_Movimento_6.ogg"
       },
       {
-        "text": "Quando seus passos falsearem, irmão, siga a minha voz."
+        "text": "Quando seus passos falsearem, irmão, siga a minha voz.",
+        "audio": "Aphelios_Movimento_7.ogg"
       },
       {
-        "text": "Você sabia que não seria fácil, o caminho em nossa frente é forjado em cicatrizes."
+        "text": "Você sabia que não seria fácil, o caminho em nossa frente é forjado em cicatrizes.",
+        "audio": "Aphelios_Movimento_8.ogg"
       },
       {
-        "text": "Você adentra a escuridão em meu nome."
+        "text": "Você adentra a escuridão em meu nome.",
+        "audio": "Aphelios_Movimento_9.ogg"
       },
       {
-        "text": "Nosso destino está em coberto pela noite."
+        "text": "Nosso destino está em coberto pela noite.",
+        "audio": "Aphelios_Movimento_10.ogg"
       },
       {
-        "text": "Como posso ajudar se sou eu que coloco sua vida em risco?"
+        "text": "Como posso ajudar se sou eu que coloco sua vida em risco?",
+        "audio": "Aphelios_Movimento_11.ogg"
       },
       {
-        "text": "Estou certa. Pelo menos é o que a Lua me disse."
+        "text": "Estou certa. Pelo menos é o que a Lua me disse.",
+        "audio": "Aphelios_Movimento_12.ogg"
       },
       {
-        "text": "Você é a arma que os Lunari precisam."
+        "text": "Você é a arma que os Lunari precisam.",
+        "audio": "Aphelios_Movimento_13.ogg"
       },
       {
-        "text": "Só queremos que alguém testemunhe o nosso sofrimento."
+        "text": "Só queremos que alguém testemunhe o nosso sofrimento.",
+        "audio": "Aphelios_Movimento_14.ogg"
       },
       {
-        "text": "Mesmo de olhos fechados, nunca desviarei o olhar."
+        "text": "Mesmo de olhos fechados, nunca desviarei o olhar.",
+        "audio": "Aphelios_Movimento_15.ogg"
       },
       {
-        "text": "Lembre-se do que aprendeu, irmão."
+        "text": "Lembre-se do que aprendeu, irmão.",
+        "audio": "Aphelios_Movimento_16.ogg"
       },
       {
-        "text": "Estou sempre a um sussurro de distância, ecoando no silêncio."
+        "text": "Estou sempre a um sussurro de distância, ecoando no silêncio.",
+        "audio": "Aphelios_Movimento_17.ogg"
       },
       {
-        "text": "Mesmo sob a máscara do silêncio, conheço seu verdadeiro rosto, irmão."
+        "text": "Mesmo sob a máscara do silêncio, conheço seu verdadeiro rosto, irmão.",
+        "audio": "Aphelios_Movimento_18.ogg"
       },
       {
-        "text": "Estamos juntos nessa. Luz e escuridão."
+        "text": "Estamos juntos nessa. Luz e escuridão.",
+        "audio": "Aphelios_Movimento_20.ogg"
       },
       {
-        "text": "A Lua brilha mais forte na escuridão."
+        "text": "A Lua brilha mais forte na escuridão.",
+        "audio": "Aphelios_Movimento_21.ogg"
       },
       {
-        "text": "Da nossa fortaleza, sempre guiarei você. Eu prometo."
+        "text": "Da nossa fortaleza, sempre guiarei você. Eu prometo.",
+        "audio": "Aphelios_Movimento_22.ogg"
       },
       {
-        "text": "Tanto a luz como a escuridão revelam nosso caminho."
+        "text": "Tanto a luz como a escuridão revelam nosso caminho.",
+        "audio": "Aphelios_Movimento_23.ogg"
       },
       {
-        "text": "Cada um de nós, uma oferenda."
+        "text": "Cada um de nós, uma oferenda.",
+        "audio": "Aphelios_Movimento_24.ogg"
       },
       {
-        "text": "Precisamos encontrar um ao outro, antes do amanhecer."
+        "text": "Precisamos encontrar um ao outro, antes do amanhecer.",
+        "audio": "Aphelios_Movimento_25.ogg"
       }
     ],
     "Ashe": [
@@ -1518,94 +1668,124 @@
         "source": "universe"
       },
       {
-        "text": "O mundo todo em uma flecha."
+        "text": "O mundo todo em uma flecha.",
+        "audio": "Ashe_Selecao.ogg"
       },
       {
-        "text": "Covarde! Espero que morra de olhos fechados!"
+        "text": "Covarde! Espero que morra de olhos fechados!",
+        "audio": "Ashe_Banimento.ogg"
       },
       {
-        "text": "Avarosa, guie-me."
+        "text": "Avarosa, guie-me.",
+        "audio": "Ashe_Movimento_17.ogg"
       },
       {
-        "text": "Indique o alvo."
+        "text": "Indique o alvo.",
+        "audio": "Ashe_Movimento_33.ogg"
       },
       {
-        "text": "Precisamos avançar!"
+        "text": "Precisamos avançar!",
+        "audio": "Ashe_Movimento_6.ogg"
       },
       {
-        "text": "A paz requer mão firme."
+        "text": "A paz requer mão firme.",
+        "audio": "Ashe_Movimento_24.ogg"
       },
       {
-        "text": "Não confunda piedade com fraqueza."
+        "text": "Não confunda piedade com fraqueza.",
+        "audio": "Ashe_Movimento_20.ogg"
       },
       {
-        "text": "Nós vamos unir Freljord."
+        "text": "Nós vamos unir Freljord.",
+        "audio": "Ashe_Movimento_29.ogg"
       },
       {
-        "text": "Vamos ver o quão perto eles chegam."
+        "text": "Vamos ver o quão perto eles chegam.",
+        "audio": "Ashe_Movimento_8.ogg"
       },
       {
-        "text": "Aja com rapidez e estratégia, e a batalha será vencida antes de derramar sangue."
+        "text": "Aja com rapidez e estratégia, e a batalha será vencida antes de derramar sangue.",
+        "audio": "Ashe_Movimento_30.ogg"
       },
       {
-        "text": "Uma batalha digna de Freljord."
+        "text": "Uma batalha digna de Freljord.",
+        "audio": "Ashe_Movimento_26.ogg"
       },
       {
-        "text": "Hoje, o destino do nosso povo é incerto."
+        "text": "Hoje, o destino do nosso povo é incerto.",
+        "audio": "Ashe_Movimento_18.ogg"
       },
       {
-        "text": "Freljord será unificada!"
+        "text": "Freljord será unificada!",
+        "audio": "Ashe_Movimento_12.ogg"
       },
       {
-        "text": "Minha tribo trará paz ao norte! O sul deve nos temer."
+        "text": "Minha tribo trará paz ao norte! O sul deve nos temer.",
+        "audio": "Ashe_Movimento_1.ogg"
       },
       {
-        "text": "Vou mostrar a eles o poder de uma glacinata."
+        "text": "Vou mostrar a eles o poder de uma glacinata.",
+        "audio": "Ashe_Movimento_11.ogg"
       },
       {
-        "text": "Somos todos iguais, sangue do mesmo sangue."
+        "text": "Somos todos iguais, sangue do mesmo sangue.",
+        "audio": "Ashe_Movimento_25.ogg"
       },
       {
-        "text": "Quando nossas tribos se tornarem uma, o mundo estremecerá."
+        "text": "Quando nossas tribos se tornarem uma, o mundo estremecerá.",
+        "audio": "Ashe_Movimento_16.ogg"
       },
       {
-        "text": "Sou Freljordana, família e tribo são tudo pra mim."
+        "text": "Sou Freljordana, família e tribo são tudo pra mim.",
+        "audio": "Ashe_Movimento_15.ogg"
       },
       {
-        "text": "Sou uma mãe de guerra, faço juramentos a poucos, mas recebo de muitos."
+        "text": "Sou uma mãe de guerra, faço juramentos a poucos, mas recebo de muitos.",
+        "audio": "Ashe_Movimento_0.ogg"
       },
       {
-        "text": "Busque a paz, mas tenha as ferramentas da guerra."
+        "text": "Busque a paz, mas tenha as ferramentas da guerra.",
+        "audio": "Ashe_Movimento_2.ogg"
       },
       {
-        "text": "O arco representa minha determinação, eu sou ele e ele sou eu."
+        "text": "O arco representa minha determinação, eu sou ele e ele sou eu.",
+        "audio": "Ashe_Movimento_32.ogg"
       },
       {
-        "text": "O destino não é traçado por ninguém além de você."
+        "text": "O destino não é traçado por ninguém além de você.",
+        "audio": "Ashe_Movimento_22.ogg"
       },
       {
-        "text": "Deuses e espíritos nos guiam, mas nossas vidas... são nossas."
+        "text": "Deuses e espíritos nos guiam, mas nossas vidas... são nossas.",
+        "audio": "Ashe_Movimento_14.ogg"
       },
       {
-        "text": "Freljord terá paz, eu mesma vou forjá-la."
+        "text": "Freljord terá paz, eu mesma vou forjá-la.",
+        "audio": "Ashe_Movimento_4.ogg"
       },
       {
-        "text": "Meu povo só conhece o frio e a adversidade... Vou ensinar o que é a paz."
+        "text": "Meu povo só conhece o frio e a adversidade... Vou ensinar o que é a paz.",
+        "audio": "Ashe_Movimento_31.ogg"
       },
       {
-        "text": "Empunho um arco de gelo verdadeiro, como meu próprio coração."
+        "text": "Empunho um arco de gelo verdadeiro, como meu próprio coração.",
+        "audio": "Ashe_Movimento_7.ogg"
       },
       {
-        "text": "Termestres e Glacinatas, Andarilhos Espirituais e Ígnatas. Todos de Freljord são meus semelhantes."
+        "text": "Termestres e Glacinatas, Andarilhos Espirituais e Ígnatas. Todos de Freljord são meus semelhantes.",
+        "audio": "Ashe_Movimento_19.ogg"
       },
       {
-        "text": "Eu nasci na miséria — como todos os Freljordanos."
+        "text": "Eu nasci na miséria — como todos os Freljordanos.",
+        "audio": "Ashe_Movimento_23.ogg"
       },
       {
-        "text": "Não permitirei que continuemos divididos, nós somos um."
+        "text": "Não permitirei que continuemos divididos, nós somos um.",
+        "audio": "Ashe_Movimento_21.ogg"
       },
       {
-        "text": "Acham que sou fria, mas já presenciei coisas que gente do sul nem consegue imaginar."
+        "text": "Acham que sou fria, mas já presenciei coisas que gente do sul nem consegue imaginar.",
+        "audio": "Ashe_Movimento_10.ogg"
       }
     ],
     "AurelionSol": [
@@ -1746,94 +1926,124 @@
         "source": "universe"
       },
       {
-        "text": "Shurima! Seu imperador retornou."
+        "text": "Shurima! Seu imperador retornou.",
+        "audio": "Azir_Selecao.ogg"
       },
       {
-        "text": "Seu imperador há de retornar."
+        "text": "Seu imperador há de retornar.",
+        "audio": "Azir_Banimento.ogg"
       },
       {
-        "text": "O mundo é um deserto. Eu sou o oásis."
+        "text": "O mundo é um deserto. Eu sou o oásis.",
+        "audio": "Azir_PMovimento_0.ogg"
       },
       {
-        "text": "Mais uma vez, Shurima se expandirá ao horizonte."
+        "text": "Mais uma vez, Shurima se expandirá ao horizonte.",
+        "audio": "Azir_PMovimento_1.ogg"
       },
       {
-        "text": "É a minha vez. Coloque sua fé em mim."
+        "text": "É a minha vez. Coloque sua fé em mim.",
+        "audio": "Azir_PMovimento_2.ogg"
       },
       {
-        "text": "Todos os caminhos levam a Shurima."
+        "text": "Todos os caminhos levam a Shurima.",
+        "audio": "Azir_PMovimento_3.ogg"
       },
       {
-        "text": "Eu nos guiarei à glória."
+        "text": "Eu nos guiarei à glória.",
+        "audio": "Azir_PMovimento_4.ogg"
       },
       {
-        "text": "Retornemos ao nosso lugar de direito, Nasus."
+        "text": "Retornemos ao nosso lugar de direito, Nasus.",
+        "audio": "Azir_PMovimentoNasusAliado_0.ogg"
       },
       {
-        "text": "Foi uma longa espera, Nasus, mas valerá a pena."
+        "text": "Foi uma longa espera, Nasus, mas valerá a pena.",
+        "audio": "Azir_PMovimentoNasusAliado_1.ogg"
       },
       {
-        "text": "Juntos, lutaremos rumo à vitória, Sivir."
+        "text": "Juntos, lutaremos rumo à vitória, Sivir.",
+        "audio": "Azir_PMovimentoSivirAliado_0.ogg"
       },
       {
-        "text": "É direito nosso, Sivir, o de reinar."
+        "text": "É direito nosso, Sivir, o de reinar.",
+        "audio": "Azir_PMovimentoSivirAliado_1.ogg"
       },
       {
-        "text": "Imperadores não têm rivais, Xerath."
+        "text": "Imperadores não têm rivais, Xerath.",
+        "audio": "Azir_PMovimentoXerathAliado.ogg"
       },
       {
-        "text": "Somos os autores da história."
+        "text": "Somos os autores da história.",
+        "audio": "Azir_Movimento_0.ogg"
       },
       {
-        "text": "Todos os olhos, buscam por nós."
+        "text": "Todos os olhos, buscam por nós.",
+        "audio": "Azir_Movimento_1.ogg"
       },
       {
-        "text": "Um governante deve escolher sua hora."
+        "text": "Um governante deve escolher sua hora.",
+        "audio": "Azir_Movimento_2.ogg"
       },
       {
-        "text": "Ninguém conhece melhor a vontade do deserto do que EU."
+        "text": "Ninguém conhece melhor a vontade do deserto do que EU.",
+        "audio": "Azir_Movimento_3.ogg"
       },
       {
-        "text": "Meu império, vive em cada grão de areia."
+        "text": "Meu império, vive em cada grão de areia.",
+        "audio": "Azir_Movimento_4.ogg"
       },
       {
-        "text": "Somos feitos por nossas escolhas."
+        "text": "Somos feitos por nossas escolhas.",
+        "audio": "Azir_Movimento_5.ogg"
       },
       {
-        "text": "Todos saberão o nome, SHURIMA."
+        "text": "Todos saberão o nome, SHURIMA.",
+        "audio": "Azir_Movimento_6.ogg"
       },
       {
-        "text": "Junte-se a mim, e eleve-se."
+        "text": "Junte-se a mim, e eleve-se.",
+        "audio": "Azir_Movimento_7.ogg"
       },
       {
-        "text": "Shurima vive em mim."
+        "text": "Shurima vive em mim.",
+        "audio": "Azir_Movimento_8.ogg"
       },
       {
-        "text": "Eu devolverei grandeza a Shurima."
+        "text": "Eu devolverei grandeza a Shurima.",
+        "audio": "Azir_Movimento_9.ogg"
       },
       {
-        "text": "Traçamos um caminho de resplendor."
+        "text": "Traçamos um caminho de resplendor.",
+        "audio": "Azir_Movimento_10.ogg"
       },
       {
-        "text": "Esse mundo adormecido, há de acordar."
+        "text": "Esse mundo adormecido, há de acordar.",
+        "audio": "Azir_Movimento_11.ogg"
       },
       {
-        "text": "Não precisa seguir, mas deve testemunhar."
+        "text": "Não precisa seguir, mas deve testemunhar.",
+        "audio": "Azir_Movimento_12.ogg"
       },
       {
-        "text": "Lealdade será recompensada."
+        "text": "Lealdade será recompensada.",
+        "audio": "Azir_Movimento_13.ogg"
       },
       {
-        "text": "Nenhum sacrifício é grande demais."
+        "text": "Nenhum sacrifício é grande demais.",
+        "audio": "Azir_Movimento_14.ogg"
       },
       {
-        "text": "Acredite em nosso futuro."
+        "text": "Acredite em nosso futuro.",
+        "audio": "Azir_Movimento_15.ogg"
       },
       {
-        "text": "Não há futuro, sem Shurima."
+        "text": "Não há futuro, sem Shurima.",
+        "audio": "Azir_Movimento_16.ogg"
       },
       {
-        "text": "Desenterraremos o que foi perdido."
+        "text": "Desenterraremos o que foi perdido.",
+        "audio": "Azir_Movimento_17.ogg"
       }
     ],
     "Belveth": [
@@ -1842,94 +2052,124 @@
         "source": "universe"
       },
       {
-        "text": "Eu sou a voz do silêncio."
+        "text": "Eu sou a voz do silêncio.",
+        "audio": "Bel_Veth_Selecao.ogg"
       },
       {
-        "text": "Estaremos esperando."
+        "text": "Estaremos esperando.",
+        "audio": "Bel_Veth_Banimento.ogg"
       },
       {
-        "text": "Que meus primeiros passos marquem o fim deste mundo."
+        "text": "Que meus primeiros passos marquem o fim deste mundo.",
+        "audio": "Bel_Veth_PMovimento1.ogg"
       },
       {
-        "text": "Acham que não somos nada, mas somos tudo. Todos os lugares, as eras, nós somos vocês."
+        "text": "Acham que não somos nada, mas somos tudo. Todos os lugares, as eras, nós somos vocês.",
+        "audio": "Bel_Veth_PMovimento2.ogg"
       },
       {
-        "text": "Durante a vida inteira vocês têm buscado a própria destruição. Pois bem, eu estou aqui."
+        "text": "Durante a vida inteira vocês têm buscado a própria destruição. Pois bem, eu estou aqui.",
+        "audio": "Bel_Veth_PMovimento3.ogg"
       },
       {
-        "text": "Minha fome é insaciável. Ela não tem fim, e não será apagada."
+        "text": "Minha fome é insaciável. Ela não tem fim, e não será apagada.",
+        "audio": "Bel_Veth_PMovimento4.ogg"
       },
       {
-        "text": "A existência era o nosso casulo. Ela transformou o Vazio em algo... novo."
+        "text": "A existência era o nosso casulo. Ela transformou o Vazio em algo... novo.",
+        "audio": "Bel_Veth_PMovimento5.ogg"
       },
       {
-        "text": "Estou infinitamente acima de você. Minha mente não conhece fraqueza, ou misericórdia."
+        "text": "Estou infinitamente acima de você. Minha mente não conhece fraqueza, ou misericórdia.",
+        "audio": "Bel_Veth_PMovimento6.ogg"
       },
       {
-        "text": "Nossa vitória foi garantida no momento em que eu nasci."
+        "text": "Nossa vitória foi garantida no momento em que eu nasci.",
+        "audio": "Bel_Veth_Movimento1.ogg"
       },
       {
-        "text": "A minha Runeterra será linda."
+        "text": "A minha Runeterra será linda.",
+        "audio": "Bel_Veth_Movimento2.ogg"
       },
       {
-        "text": "Imperturbado, o Vazio não queria nada. Agora, simplesmente queremos."
+        "text": "Imperturbado, o Vazio não queria nada. Agora, simplesmente queremos.",
+        "audio": "Bel_Veth_Movimento3.ogg"
       },
       {
-        "text": "Tudo que restará será um Mar de Lavanda."
+        "text": "Tudo que restará será um Mar de Lavanda.",
+        "audio": "Bel_Veth_Movimento4.ogg"
       },
       {
-        "text": "Eu me espalho por cada recanto do Antigo Vazio."
+        "text": "Eu me espalho por cada recanto do Antigo Vazio.",
+        "audio": "Bel_Veth_Movimento5.ogg"
       },
       {
-        "text": "Eu sou tudo que há e tudo que sempre haverá."
+        "text": "Eu sou tudo que há e tudo que sempre haverá.",
+        "audio": "Bel_Veth_Movimento6.ogg"
       },
       {
-        "text": "Uma cidade vasta cresce sob nós. A minha cidade."
+        "text": "Uma cidade vasta cresce sob nós. A minha cidade.",
+        "audio": "Bel_Veth_Movimento7.ogg"
       },
       {
-        "text": "Eu desejo tudo."
+        "text": "Eu desejo tudo.",
+        "audio": "Bel_Veth_Movimento8.ogg"
       },
       {
-        "text": "Eu não sinto ódio."
+        "text": "Eu não sinto ódio.",
+        "audio": "Bel_Veth_Movimento9.ogg"
       },
       {
-        "text": "Minha mente se expande."
+        "text": "Minha mente se expande.",
+        "audio": "Bel_Veth_Movimento10.ogg"
       },
       {
-        "text": "A luz da realidade ardia, até se apagar."
+        "text": "A luz da realidade ardia, até se apagar.",
+        "audio": "Bel_Veth_Movimento11.ogg"
       },
       {
-        "text": "Vamos consumir vocês e nos tornar vocês."
+        "text": "Vamos consumir vocês e nos tornar vocês.",
+        "audio": "Bel_Veth_Movimento12.ogg"
       },
       {
-        "text": "Emoções, memórias... É isso que eu desejo."
+        "text": "Emoções, memórias... É isso que eu desejo.",
+        "audio": "Bel_Veth_Movimento13.ogg"
       },
       {
-        "text": "A evolução nunca é gentil."
+        "text": "A evolução nunca é gentil.",
+        "audio": "Bel_Veth_Movimento14.ogg"
       },
       {
-        "text": "Eu preciso saber o significado da existência."
+        "text": "Eu preciso saber o significado da existência.",
+        "audio": "Bel_Veth_Movimento15.ogg"
       },
       {
-        "text": "A humanidade arquitetou a própria extinção."
+        "text": "A humanidade arquitetou a própria extinção.",
+        "audio": "Bel_Veth_Movimento16.ogg"
       },
       {
-        "text": "Mudar é necessário."
+        "text": "Mudar é necessário.",
+        "audio": "Bel_Veth_Movimento17.ogg"
       },
       {
-        "text": "Minha espécie invadirá Runeterra, e tudo ruirá."
+        "text": "Minha espécie invadirá Runeterra, e tudo ruirá.",
+        "audio": "Bel_Veth_Movimento18.ogg"
       },
       {
-        "text": "O Vazio não pode mais voltar ao que era antes."
+        "text": "O Vazio não pode mais voltar ao que era antes.",
+        "audio": "Bel_Veth_Movimento19.ogg"
       },
       {
-        "text": "Nós invejamos a dádiva da existência."
+        "text": "Nós invejamos a dádiva da existência.",
+        "audio": "Bel_Veth_Movimento20.ogg"
       },
       {
-        "text": "O fim está à espera."
+        "text": "O fim está à espera.",
+        "audio": "Bel_Veth_Movimento21.ogg"
       },
       {
-        "text": "Um último banquete para devorar o mundo."
+        "text": "Um último banquete para devorar o mundo.",
+        "audio": "Bel_Veth_Movimento22.ogg"
       }
     ],
     "Blitzcrank": [
@@ -2260,91 +2500,120 @@
         "source": "universe"
       },
       {
-        "text": "Que decisão mais estapafúrdia!"
+        "text": "Que decisão mais estapafúrdia!",
+        "audio": "Camille_Banimento.ogg"
       },
       {
-        "text": "O progresso nunca pode tardar."
+        "text": "O progresso nunca pode tardar.",
+        "audio": "Camille_PMovimento1.ogg"
       },
       {
-        "text": "Vou onde o trabalho me leva."
+        "text": "Vou onde o trabalho me leva.",
+        "audio": "Camille_PMovimento2.ogg"
       },
       {
-        "text": "Permaneço humana... na maior parte."
+        "text": "Permaneço humana... na maior parte.",
+        "audio": "Camille_PMovimento3.ogg"
       },
       {
-        "text": "Uma ilha de ruína, hm... que glamuroso."
+        "text": "Uma ilha de ruína, hm... que glamuroso.",
+        "audio": "Camille_PMovimentoTT.ogg"
       },
       {
-        "text": "Eu... detesto... neve."
+        "text": "Eu... detesto... neve.",
+        "audio": "Camille_PMovimentoARAM.ogg"
       },
       {
-        "text": "A tecnologia e eu temos um... relacionamento complicado."
+        "text": "A tecnologia e eu temos um... relacionamento complicado.",
+        "audio": "Camille_Movimento1.ogg"
       },
       {
-        "text": "Sou o que chamam de... recurso negável."
+        "text": "Sou o que chamam de... recurso negável.",
+        "audio": "Camille_Movimento2.ogg"
       },
       {
-        "text": "Eu asseguro a sobrevivência de Piltover."
+        "text": "Eu asseguro a sobrevivência de Piltover.",
+        "audio": "Camille_Movimento3.ogg"
       },
       {
-        "text": "O progresso é aprimorado com... mortes necessárias."
+        "text": "O progresso é aprimorado com... mortes necessárias.",
+        "audio": "Camille_Movimento4.ogg"
       },
       {
-        "text": "A memória pesada do passado não melhora com a idade."
+        "text": "A memória pesada do passado não melhora com a idade.",
+        "audio": "Camille_Movimento5.ogg"
       },
       {
-        "text": "Arrependimento é o que tempera o aço da nossa alma."
+        "text": "Arrependimento é o que tempera o aço da nossa alma.",
+        "audio": "Camille_Movimento6.ogg"
       },
       {
-        "text": "A palavra certa corta mais profundamente que uma faca."
+        "text": "A palavra certa corta mais profundamente que uma faca.",
+        "audio": "Camille_Movimento7.ogg"
       },
       {
-        "text": "O medo afia todas as lâminas."
+        "text": "O medo afia todas as lâminas.",
+        "audio": "Camille_Movimento8.ogg"
       },
       {
-        "text": "Não jogo o jogo. Faço suas regras."
+        "text": "Não jogo o jogo. Faço suas regras.",
+        "audio": "Camille_Movimento9.ogg"
       },
       {
-        "text": "Não são mentiras que cortam, e sim, a afies da verdade."
+        "text": "Não são mentiras que cortam, e sim, a afies da verdade.",
+        "audio": "Camille_Movimento10.ogg"
       },
       {
-        "text": "Às vezes, ambições precisam ser reprimidas."
+        "text": "Às vezes, ambições precisam ser reprimidas.",
+        "audio": "Camille_Movimento11.ogg"
       },
       {
-        "text": "Violência é um meio para um fim."
+        "text": "Violência é um meio para um fim.",
+        "audio": "Camille_Movimento12.ogg"
       },
       {
-        "text": "Moralidade é uma serva linda, e uma mestra perigosa."
+        "text": "Moralidade é uma serva linda, e uma mestra perigosa.",
+        "audio": "Camille_Movimento13.ogg"
       },
       {
-        "text": "Elegância nunca sai de moda."
+        "text": "Elegância nunca sai de moda.",
+        "audio": "Camille_Movimento14.ogg"
       },
       {
-        "text": "Todos temos limites. Posso ter passado do meu..."
+        "text": "Todos temos limites. Posso ter passado do meu...",
+        "audio": "Camille_Movimento15.ogg"
       },
       {
-        "text": "Mais um passo pela marcha do progresso!"
+        "text": "Mais um passo pela marcha do progresso!",
+        "audio": "Camille_Movimento16.ogg"
       },
       {
-        "text": "Eles me pagam para encontrar problemas, e aí, me livrar deles."
+        "text": "Eles me pagam para encontrar problemas, e aí, me livrar deles.",
+        "audio": "Camille_Movimento17.ogg"
       },
       {
-        "text": "Tudo tem um lugar. Esquecer o teu é perigoso."
+        "text": "Tudo tem um lugar. Esquecer o teu é perigoso.",
+        "audio": "Camille_Movimento18.ogg"
       },
       {
-        "text": "Sou chamada quando as negociações falham."
+        "text": "Sou chamada quando as negociações falham.",
+        "audio": "Camille_Movimento19.ogg"
       },
       {
-        "text": "A sociedade precisa de regras."
+        "text": "A sociedade precisa de regras.",
+        "audio": "Camille_Movimento20.ogg"
       },
       {
-        "text": "Mulheres autossuficientes precisam ser mais predominantes."
+        "text": "Mulheres autossuficientes precisam ser mais predominantes.",
+        "audio": "Camille_Movimento21.ogg"
       },
       {
-        "text": "Privilégio deve ser preservado a todo custo."
+        "text": "Privilégio deve ser preservado a todo custo.",
+        "audio": "Camille_Movimento22.ogg"
       },
       {
-        "text": "Não é a arma que te define, e sim, como tu a utilizas."
+        "text": "Não é a arma que te define, e sim, como tu a utilizas.",
+        "audio": "Camille_Movimento23.ogg"
       }
     ],
     "Cassiopeia": [
@@ -2353,94 +2622,124 @@
         "source": "universe"
       },
       {
-        "text": "Não há antidoto contra mim."
+        "text": "Não há antidoto contra mim.",
+        "audio": "Cassiopeia_Selecao.ogg"
       },
       {
-        "text": "Que criaturas deselegantes."
+        "text": "Que criaturas deselegantes.",
+        "audio": "Cassiopeia_Banimento.ogg"
       },
       {
-        "text": "Quem terá a sorte de me encarar hoje?"
+        "text": "Quem terá a sorte de me encarar hoje?",
+        "audio": "Cassiopeia_PMovimento_0.ogg"
       },
       {
-        "text": "São tantos os fios que esperam ser puxados."
+        "text": "São tantos os fios que esperam ser puxados.",
+        "audio": "Cassiopeia_PMovimento_1.ogg"
       },
       {
-        "text": "Outro jogo de cobra e ratos."
+        "text": "Outro jogo de cobra e ratos.",
+        "audio": "Cassiopeia_PMovimento_2.ogg"
       },
       {
-        "text": "Violência é desordem."
+        "text": "Violência é desordem.",
+        "audio": "Cassiopeia_Movimento_0.ogg"
       },
       {
-        "text": "Não instigue uma víbora."
+        "text": "Não instigue uma víbora.",
+        "audio": "Cassiopeia_Movimento_1.ogg"
       },
       {
-        "text": "Você tem saudade de algo? Gostaria de ter?"
+        "text": "Você tem saudade de algo? Gostaria de ter?",
+        "audio": "Cassiopeia_Movimento_2.ogg"
       },
       {
-        "text": "Quem não controla os peões é um deles."
+        "text": "Quem não controla os peões é um deles.",
+        "audio": "Cassiopeia_Movimento_3.ogg"
       },
       {
-        "text": "Não sou tão fácil assim de sair de seu corpo."
+        "text": "Não sou tão fácil assim de sair de seu corpo.",
+        "audio": "Cassiopeia_Movimento_4.ogg"
       },
       {
-        "text": "Riqueza é valiosa somente como caminho ao poder."
+        "text": "Riqueza é valiosa somente como caminho ao poder.",
+        "audio": "Cassiopeia_Movimento_5.ogg"
       },
       {
-        "text": "Paciência, queridos."
+        "text": "Paciência, queridos.",
+        "audio": "Cassiopeia_Movimento_6.ogg"
       },
       {
-        "text": "Tenha cuidado, eu mordo!"
+        "text": "Tenha cuidado, eu mordo!",
+        "audio": "Cassiopeia_Movimento_7.ogg"
       },
       {
-        "text": "Eu gosto de deixar uma impressão duradoura!"
+        "text": "Eu gosto de deixar uma impressão duradoura!",
+        "audio": "Cassiopeia_Movimento_8.ogg"
       },
       {
-        "text": "Eu não sou inflexível, se é que você me entende."
+        "text": "Eu não sou inflexível, se é que você me entende.",
+        "audio": "Cassiopeia_Movimento_9.ogg"
       },
       {
-        "text": "Gosta do que vê?"
+        "text": "Gosta do que vê?",
+        "audio": "Cassiopeia_Movimento_10.ogg"
       },
       {
-        "text": "Eu sei o que todo mundo quer!"
+        "text": "Eu sei o que todo mundo quer!",
+        "audio": "Cassiopeia_Movimento_11.ogg"
       },
       {
-        "text": "Poder requer precisão."
+        "text": "Poder requer precisão.",
+        "audio": "Cassiopeia_Movimento_12.ogg"
       },
       {
-        "text": "Segredos são mais afiados que espadas."
+        "text": "Segredos são mais afiados que espadas.",
+        "audio": "Cassiopeia_Movimento_13.ogg"
       },
       {
-        "text": "Cuidado por onde anda."
+        "text": "Cuidado por onde anda.",
+        "audio": "Cassiopeia_Movimento_14.ogg"
       },
       {
-        "text": "Eu cuidarei de tudo!"
+        "text": "Eu cuidarei de tudo!",
+        "audio": "Cassiopeia_Movimento_15.ogg"
       },
       {
-        "text": "Pense no que eu poderia oferecer."
+        "text": "Pense no que eu poderia oferecer.",
+        "audio": "Cassiopeia_Movimento_16.ogg"
       },
       {
-        "text": "Mantenha seus inimigos por perto, e eu, mais perto ainda."
+        "text": "Mantenha seus inimigos por perto, e eu, mais perto ainda.",
+        "audio": "Cassiopeia_Movimento_17.ogg"
       },
       {
-        "text": "Muitas guerras começam com um sussurro."
+        "text": "Muitas guerras começam com um sussurro.",
+        "audio": "Cassiopeia_Movimento_18.ogg"
       },
       {
-        "text": "Cada problema é uma oportunidade!"
+        "text": "Cada problema é uma oportunidade!",
+        "audio": "Cassiopeia_Movimento_19.ogg"
       },
       {
-        "text": "Oh Sivir, tudo que você precisava era do estímulo certo."
+        "text": "Oh Sivir, tudo que você precisava era do estímulo certo.",
+        "audio": "Cassiopeia_PEncontroSivir_2.ogg"
       },
       {
-        "text": "Sinto muito, Sivir, mas me desfaço de ferramentas das quais não preciso mais!"
+        "text": "Sinto muito, Sivir, mas me desfaço de ferramentas das quais não preciso mais!",
+        "audio": "Cassiopeia_PEncontroSivir_1.ogg"
       },
       {
-        "text": "Sivir! Já voltou para morrer?"
+        "text": "Sivir! Já voltou para morrer?",
+        "audio": "Cassiopeia_PEncontroSivir_0.ogg"
       },
       {
-        "text": "É impossível descer ao nível dessa competição!"
+        "text": "É impossível descer ao nível dessa competição!",
+        "audio": "Cassiopeia_Provocacao_0.ogg"
       },
       {
-        "text": "Com o tempo, todos eles voltam rastejando."
+        "text": "Com o tempo, todos eles voltam rastejando.",
+        "audio": "Cassiopeia_Provocacao_1.ogg"
       }
     ],
     "Chogath": [
@@ -2631,76 +2930,100 @@
         "source": "universe"
       },
       {
-        "text": "A lua nova está nascendo."
+        "text": "A lua nova está nascendo.",
+        "audio": "Diana_Selecao.ogg"
       },
       {
-        "text": "Servos boçais!"
+        "text": "Servos boçais!",
+        "audio": "Diana_Banimento.ogg"
       },
       {
-        "text": "Jamais siga a luz falsa."
+        "text": "Jamais siga a luz falsa.",
+        "audio": "Diana_Movimento_0.ogg"
       },
       {
-        "text": "A Lua também nasce."
+        "text": "A Lua também nasce.",
+        "audio": "Diana_Movimento_1.ogg"
       },
       {
-        "text": "Eles não escutariam."
+        "text": "Eles não escutariam.",
+        "audio": "Diana_Movimento_2.ogg"
       },
       {
-        "text": "Eu serei ouvida!"
+        "text": "Eu serei ouvida!",
+        "audio": "Diana_Movimento_3.ogg"
       },
       {
-        "text": "A escolhida da Lua."
+        "text": "A escolhida da Lua.",
+        "audio": "Diana_Movimento_4.ogg"
       },
       {
-        "text": "Meus olhos estão abertos."
+        "text": "Meus olhos estão abertos.",
+        "audio": "Diana_Movimento_5.ogg"
       },
       {
-        "text": "Envolva a noite."
+        "text": "Envolva a noite.",
+        "audio": "Diana_Movimento_6.ogg"
       },
       {
-        "text": "Eles não me quebrariam."
+        "text": "Eles não me quebrariam.",
+        "audio": "Diana_Movimento_7.ogg"
       },
       {
-        "text": "Não vou voltar atrás."
+        "text": "Não vou voltar atrás.",
+        "audio": "Diana_Movimento_8.ogg"
       },
       {
-        "text": "O crepúsculo se aproxima."
+        "text": "O crepúsculo se aproxima.",
+        "audio": "Diana_Movimento_9.ogg"
       },
       {
-        "text": "Eu falo somente a verdade."
+        "text": "Eu falo somente a verdade.",
+        "audio": "Diana_Movimento_10.ogg"
       },
       {
-        "text": "me chamou de herege, agora está morto!"
+        "text": "me chamou de herege, agora está morto!",
+        "audio": "Diana_Provocacao_0.ogg"
       },
       {
-        "text": "A Lua vai se erguer. E a noite será eterna."
+        "text": "A Lua vai se erguer. E a noite será eterna.",
+        "audio": "Diana_Provocacao_1.ogg"
       },
       {
-        "text": "Isto é necessário."
+        "text": "Isto é necessário.",
+        "audio": "Diana_Ataque_0.ogg"
       },
       {
-        "text": "Faça o Sol se pôr."
+        "text": "Faça o Sol se pôr.",
+        "audio": "Diana_Ataque_2.ogg"
       },
       {
-        "text": "Não me sobra outra escolha."
+        "text": "Não me sobra outra escolha.",
+        "audio": "Diana_Ataque_3.ogg"
       },
       {
-        "text": "Nunca mais negue a mim!"
+        "text": "Nunca mais negue a mim!",
+        "audio": "Diana_Ataque_4.ogg"
       },
       {
-        "text": "Cega para a verdade."
+        "text": "Cega para a verdade.",
+        "audio": "Diana_Ataque_5.ogg"
       },
       {
-        "text": "Chega de mentiras."
+        "text": "Chega de mentiras.",
+        "audio": "Diana_Ataque_6.ogg"
       },
       {
-        "text": "O cair da noite!"
+        "text": "O cair da noite!",
+        "audio": "Diana_R_0.ogg"
       },
       {
-        "text": "A luz se esvai!"
+        "text": "A luz se esvai!",
+        "audio": "Diana_R_2.ogg"
       },
       {
-        "text": "Se aproxima a noite!"
+        "text": "Se aproxima a noite!",
+        "audio": "Diana_R_3.ogg"
       }
     ],
     "Draven": [
@@ -4437,94 +4760,124 @@
         "source": "universe"
       },
       {
-        "text": "Morte a todos os traidores."
+        "text": "Morte a todos os traidores.",
+        "audio": "Kalista_Selecao.ogg"
       },
       {
-        "text": "Vira-casacas, perjuradores e traidores, odiamos todos eles."
+        "text": "Vira-casacas, perjuradores e traidores, odiamos todos eles.",
+        "audio": "Kalista_PMovimento1.ogg"
       },
       {
-        "text": "O sangue de amigos e família mancha suas mãos."
+        "text": "O sangue de amigos e família mancha suas mãos.",
+        "audio": "Kalista_PMovimento2.ogg"
       },
       {
-        "text": "Não há justiça a se fazer. Apenas vingança."
+        "text": "Não há justiça a se fazer. Apenas vingança.",
+        "audio": "Kalista_PMovimento3.ogg"
       },
       {
-        "text": "Esse sofrimento não é estranho... conhecemos esse lugar."
+        "text": "Esse sofrimento não é estranho... conhecemos esse lugar.",
+        "audio": "Kalista_PMovimentoTT.ogg"
       },
       {
-        "text": "Os mortos não sentem frio."
+        "text": "Os mortos não sentem frio.",
+        "audio": "Kalista_PMovimentoARAM.ogg"
       },
       {
-        "text": "Nós somos vingança."
+        "text": "Nós somos vingança.",
+        "audio": "Kalista_Movimento1.ogg"
       },
       {
-        "text": "Tudo tem sua consequência."
+        "text": "Tudo tem sua consequência.",
+        "audio": "Kalista_Movimento2.ogg"
       },
       {
-        "text": "Um pensamento nos motiva."
+        "text": "Um pensamento nos motiva.",
+        "audio": "Kalista_Movimento3.ogg"
       },
       {
-        "text": "Promessas devem ser mantidas."
+        "text": "Promessas devem ser mantidas.",
+        "audio": "Kalista_Movimento4.ogg"
       },
       {
-        "text": "Permanecemos em movimento."
+        "text": "Permanecemos em movimento.",
+        "audio": "Kalista_Movimento5.ogg"
       },
       {
-        "text": "Podemos estar em qualquer lugar."
+        "text": "Podemos estar em qualquer lugar.",
+        "audio": "Kalista_Movimento6.ogg"
       },
       {
-        "text": "O que começou será terminado."
+        "text": "O que começou será terminado.",
+        "audio": "Kalista_Movimento7.ogg"
       },
       {
-        "text": "Nossa tarefa é infindável."
+        "text": "Nossa tarefa é infindável.",
+        "audio": "Kalista_Movimento8.ogg"
       },
       {
-        "text": "Nosso ódio queima a frio."
+        "text": "Nosso ódio queima a frio.",
+        "audio": "Kalista_Movimento10.ogg"
       },
       {
-        "text": "Nunca descansamos."
+        "text": "Nunca descansamos.",
+        "audio": "Kalista_Movimento11.ogg"
       },
       {
-        "text": "Conheça nossa dor. Conheça nossa verdade."
+        "text": "Conheça nossa dor. Conheça nossa verdade.",
+        "audio": "Kalista_Movimento12.ogg"
       },
       {
-        "text": "As feridas da traição nunca cicatrizam."
+        "text": "As feridas da traição nunca cicatrizam.",
+        "audio": "Kalista_Movimento13.ogg"
       },
       {
-        "text": "Permanecemos íntegras ao nosso propósito."
+        "text": "Permanecemos íntegras ao nosso propósito.",
+        "audio": "Kalista_Movimento14.ogg"
       },
       {
-        "text": "Vamos aonde somos necessárias."
+        "text": "Vamos aonde somos necessárias.",
+        "audio": "Kalista_Movimento15.ogg"
       },
       {
-        "text": "Nada nos desviará de nosso caminho."
+        "text": "Nada nos desviará de nosso caminho.",
+        "audio": "Kalista_Movimento16.ogg"
       },
       {
-        "text": "Nos chamam em outro lugar."
+        "text": "Nos chamam em outro lugar.",
+        "audio": "Kalista_Movimento17.ogg"
       },
       {
-        "text": "Nós — Eu — preciso me lembrar."
+        "text": "Nós — Eu — preciso me lembrar.",
+        "audio": "Kalista_Movimento18.ogg"
       },
       {
-        "text": "Confiança... é uma arma."
+        "text": "Confiança... é uma arma.",
+        "audio": "Kalista_Movimento19.ogg"
       },
       {
-        "text": "Não há nada mais hediondo do que a traição."
+        "text": "Não há nada mais hediondo do que a traição.",
+        "audio": "Kalista_Movimento20.ogg"
       },
       {
-        "text": "Começamos como uma."
+        "text": "Começamos como uma.",
+        "audio": "Kalista_Movimento21.ogg"
       },
       {
-        "text": "Protegemos umas às outras."
+        "text": "Protegemos umas às outras.",
+        "audio": "Kalista_Movimento22.ogg"
       },
       {
-        "text": "Já tivemos um nome."
+        "text": "Já tivemos um nome.",
+        "audio": "Kalista_Movimento23.ogg"
       },
       {
-        "text": "Já confiamos."
+        "text": "Já confiamos.",
+        "audio": "Kalista_Movimento24.ogg"
       },
       {
-        "text": "Esse lugar já foi tão bonito..."
+        "text": "Esse lugar já foi tão bonito...",
+        "audio": "Kalista_Movimento26.ogg"
       }
     ],
     "Karma": [
@@ -4773,10 +5126,12 @@
         "source": "universe"
       },
       {
-        "text": "Vão tremer diante da minha perfeição!"
+        "text": "Vão tremer diante da minha perfeição!",
+        "audio": "Kayle_Selecao.ogg"
       },
       {
-        "text": "A hora do seu julgamento vai chegar."
+        "text": "A hora do seu julgamento vai chegar.",
+        "audio": "Kayle_Banimento.ogg"
       }
     ],
     "Kayn": [
@@ -5425,28 +5780,36 @@
         "source": "universe"
       },
       {
-        "text": "Eu? Um sonho que virou realidade!"
+        "text": "Eu? Um sonho que virou realidade!",
+        "audio": "Selecionada-Lillia.ogg"
       },
       {
-        "text": "Eles estão fugindo de mim?…"
+        "text": "Eles estão fugindo de mim?…",
+        "audio": "Ban-Lillia.ogg"
       },
       {
-        "text": "Você traz tantos sonhos, criança brilhante. Mas tanta angústia…"
+        "text": "Você traz tantos sonhos, criança brilhante. Mas tanta angústia…",
+        "audio": "Lillia_FirstEncounter_Zoe.ogg"
       },
       {
-        "text": "Uns chegam perdidos ao jardim. Outros, querem se perder. Como você, Ahri."
+        "text": "Uns chegam perdidos ao jardim. Outros, querem se perder. Como você, Ahri.",
+        "audio": "Lillia_FirstEncounter_Ahri.ogg"
       },
       {
-        "text": "Neeko, por quê os humanos escondem o que sentem? Será que a sua flor sabe?"
+        "text": "Neeko, por quê os humanos escondem o que sentem? Será que a sua flor sabe?",
+        "audio": "Lillia_FirstEncounter_Neeko.ogg"
       },
       {
-        "text": "Ivern! Ainda sou sua plantinha preferida? Não que eu tenha que ser…"
+        "text": "Ivern! Ainda sou sua plantinha preferida? Não que eu tenha que ser…",
+        "audio": "Lillia_FirstEncounter_Ivern.ogg"
       },
       {
-        "text": "Acho que você comeu… Muito roxo."
+        "text": "Acho que você comeu… Muito roxo.",
+        "audio": "Lillia_FirstEncounter_Lulu.ogg"
       },
       {
-        "text": "Ah! Oi, passarinho! O que você… Ah, ah… Atchim! Opa…"
+        "text": "Ah! Oi, passarinho! O que você… Ah, ah… Atchim! Opa…",
+        "audio": "Lillia_Joke_General.ogg"
       }
     ],
     "Lissandra": [
@@ -5593,73 +5956,96 @@
         "source": "universe"
       },
       {
-        "text": "Prazer em conhecer você!"
+        "text": "Prazer em conhecer você!",
+        "audio": "Lulu_Selecao.ogg"
       },
       {
-        "text": "Acho que eles não acreditam, Pix."
+        "text": "Acho que eles não acreditam, Pix.",
+        "audio": "Lulu_Banimento.ogg"
       },
       {
-        "text": "É, tem um gosto meio roxo!"
+        "text": "É, tem um gosto meio roxo!",
+        "audio": "Lulu_Movimento_0.ogg"
       },
       {
-        "text": "Só uma pitadinha..."
+        "text": "Só uma pitadinha...",
+        "audio": "Lulu_Movimento_1.ogg"
       },
       {
-        "text": "Conheço esse esquilo de algum lugar."
+        "text": "Conheço esse esquilo de algum lugar.",
+        "audio": "Lulu_Movimento_2.ogg"
       },
       {
-        "text": "Nunca olhe diretamente para uma tulipa..."
+        "text": "Nunca olhe diretamente para uma tulipa...",
+        "audio": "Lulu_Movimento_3.ogg"
       },
       {
-        "text": "Conseguirá ver melhor com os olhos fechados."
+        "text": "Conseguirá ver melhor com os olhos fechados.",
+        "audio": "Lulu_Movimento_4.ogg"
       },
       {
-        "text": "Ai... tô tonta."
+        "text": "Ai... tô tonta.",
+        "audio": "Lulu_Movimento_5.ogg"
       },
       {
-        "text": "Vou em um pé e volto no outro."
+        "text": "Vou em um pé e volto no outro.",
+        "audio": "Lulu_Movimento_6.ogg"
       },
       {
-        "text": "Orvalho intrometido!"
+        "text": "Orvalho intrometido!",
+        "audio": "Lulu_Movimento_7.ogg"
       },
       {
-        "text": "Vamos dar mais uma volta! Há!"
+        "text": "Vamos dar mais uma volta! Há!",
+        "audio": "Lulu_Provocacao_0.ogg"
       },
       {
-        "text": "Vamos lá, vamos dançar! Há!"
+        "text": "Vamos lá, vamos dançar! Há!",
+        "audio": "Lulu_Provocacao_1.ogg"
       },
       {
-        "text": "Precisamos pensar direitinho! Hmm... hmmhmm... Ah! Entendi"
+        "text": "Precisamos pensar direitinho! Hmm... hmmhmm... Ah! Entendi",
+        "audio": "Lulu_Piada_0.ogg"
       },
       {
-        "text": "Que tal uma giradinha? Whoa, whoa whoa ah, ihaha!"
+        "text": "Que tal uma giradinha? Whoa, whoa whoa ah, ihaha!",
+        "audio": "Lulu_Piada_1.ogg"
       },
       {
-        "text": "Uma risadinha deve resolver o problema."
+        "text": "Uma risadinha deve resolver o problema.",
+        "audio": "Lulu_Ataque_0.ogg"
       },
       {
-        "text": "Eles não vão gostar nada disso."
+        "text": "Eles não vão gostar nada disso.",
+        "audio": "Lulu_Ataque_1.ogg"
       },
       {
-        "text": "Acabe com eles, Pix!"
+        "text": "Acabe com eles, Pix!",
+        "audio": "Lulu_Ataque_2.ogg"
       },
       {
-        "text": "Muito alto... Muito muito alto."
+        "text": "Muito alto... Muito muito alto.",
+        "audio": "Lulu_Ataque_3.ogg"
       },
       {
-        "text": "Vamos usar TODAS as cores!"
+        "text": "Vamos usar TODAS as cores!",
+        "audio": "Lulu_Ataque_4.ogg"
       },
       {
-        "text": "Fofura chegando!"
+        "text": "Fofura chegando!",
+        "audio": "Lulu_W_Inimigo_1.ogg"
       },
       {
-        "text": "Transmogular!"
+        "text": "Transmogular!",
+        "audio": "Lulu_W_Inimigo_4.ogg"
       },
       {
-        "text": "Engrandecer!"
+        "text": "Engrandecer!",
+        "audio": "Lulu_R_0.ogg"
       },
       {
-        "text": "E lá vamos nós!"
+        "text": "E lá vamos nós!",
+        "audio": "Lulu_R_1.ogg"
       }
     ],
     "Lux": [
@@ -6542,94 +6928,124 @@
     ],
     "Neeko": [
       {
-        "text": "Esse lugar tem gosto de um monte de emoção: Empolgação, raiva, alegria e... salgado? Salgado é sentimento?"
+        "text": "Esse lugar tem gosto de um monte de emoção: Empolgação, raiva, alegria e... salgado? Salgado é sentimento?",
+        "audio": "Neeko_PMovimento_0.ogg"
       },
       {
-        "text": "Co-'om se-henna. Ah, é tipo 'sorrimos para sempre'. Amigos! Essa é a palavra! Amigos!"
+        "text": "Co-'om se-henna. Ah, é tipo 'sorrimos para sempre'. Amigos! Essa é a palavra! Amigos!",
+        "audio": "Neeko_PMovimento_1.ogg"
       },
       {
-        "text": "Dividir lembranças, cores e sentimentos é mágico! Magia conecta as pessoas."
+        "text": "Dividir lembranças, cores e sentimentos é mágico! Magia conecta as pessoas.",
+        "audio": "Neeko_Movimento_0.ogg"
       },
       {
-        "text": "Quando a briga acabar, todo mundo convidados pro piquenique! Até inimigos!"
+        "text": "Quando a briga acabar, todo mundo convidados pro piquenique! Até inimigos!",
+        "audio": "Neeko_Movimento_2.ogg"
       },
       {
-        "text": "Pra sobreviver preciso se misturar."
+        "text": "Pra sobreviver preciso se misturar.",
+        "audio": "Neeko_Movimento_4.ogg"
       },
       {
-        "text": "Mais devagar? Nada! Rápido rápido rápido!"
+        "text": "Mais devagar? Nada! Rápido rápido rápido!",
+        "audio": "Neeko_Movimento_5.ogg"
       },
       {
-        "text": "O que fazer agora? Procurar pão de queijo? Aii já sei! Piquenique!"
+        "text": "O que fazer agora? Procurar pão de queijo? Aii já sei! Piquenique!",
+        "audio": "Neeko_Movimento_6.ogg"
       },
       {
-        "text": "Como alguém pode ter saudade de casa? Casa é todo lugar."
+        "text": "Como alguém pode ter saudade de casa? Casa é todo lugar.",
+        "audio": "Neeko_Movimento_7.ogg"
       },
       {
-        "text": "Os espíritos estão sempre perto. Quentinho, tipo o abraço."
+        "text": "Os espíritos estão sempre perto. Quentinho, tipo o abraço.",
+        "audio": "Neeko_Movimento_10.ogg"
       },
       {
-        "text": "Woo! Poderosa! Como a gata selvagem ! Ah... saudade dela."
+        "text": "Woo! Poderosa! Como a gata selvagem ! Ah... saudade dela.",
+        "audio": "Neeko_Movimento_11.ogg"
       },
       {
-        "text": "Não se prende a um corpo só. Têm tantos por aí."
+        "text": "Não se prende a um corpo só. Têm tantos por aí.",
+        "audio": "Neeko_Movimento_13.ogg"
       },
       {
-        "text": "Gente sem cauda? Solitário? Aham."
+        "text": "Gente sem cauda? Solitário? Aham.",
+        "audio": "Neeko_Movimento_15.ogg"
       },
       {
-        "text": "Que legal! Tá tudo desabando!"
+        "text": "Que legal! Tá tudo desabando!",
+        "audio": "Neeko_Movimento_17.ogg"
       },
       {
-        "text": "Não, cauda! Agora é pra ficar com raiva!"
+        "text": "Não, cauda! Agora é pra ficar com raiva!",
+        "audio": "Neeko_Movimento_23.ogg"
       },
       {
-        "text": "A beleza vem de dentro, é lá que o coração dança."
+        "text": "A beleza vem de dentro, é lá que o coração dança.",
+        "audio": "Neeko_Movimento_26.ogg"
       },
       {
-        "text": "Tô só sendo eu... fazendo coisa de eu. Coisa não suspeita."
+        "text": "Tô só sendo eu... fazendo coisa de eu. Coisa não suspeita.",
+        "audio": "Neeko_MovimentoDisfarca_1.ogg"
       },
       {
-        "text": "Sou normal! Tudo normal. Nada de suspeito aqui."
+        "text": "Sou normal! Tudo normal. Nada de suspeito aqui.",
+        "audio": "Neeko_MovimentoDisfarca_2.ogg"
       },
       {
-        "text": "É legal andar por aí em outra pele. Ahaha!"
+        "text": "É legal andar por aí em outra pele. Ahaha!",
+        "audio": "Neeko_MovimentoDisfarca_3.ogg"
       },
       {
-        "text": "Não cabe mais problema no meu vida. Só mais pão de queijo!"
+        "text": "Não cabe mais problema no meu vida. Só mais pão de queijo!",
+        "audio": "Neeko_MovimentoL_0.ogg"
       },
       {
-        "text": "Todo lugar é bonita. Todo lugar é perigo. Será que perigo... é bonita?"
+        "text": "Todo lugar é bonita. Todo lugar é perigo. Será que perigo... é bonita?",
+        "audio": "Neeko_MovimentoL_1.ogg"
       },
       {
-        "text": "Palavras são difíceis. Melhor fala com cor! E emoção!"
+        "text": "Palavras são difíceis. Melhor fala com cor! E emoção!",
+        "audio": "Neeko_MovimentoL_4.ogg"
       },
       {
-        "text": "Sho'ma é tipo, é... a forma do espírito de alguém, como você realmente é por dentro."
+        "text": "Sho'ma é tipo, é... a forma do espírito de alguém, como você realmente é por dentro.",
+        "audio": "Neeko_MovimentoL_5.ogg"
       },
       {
-        "text": "Olá, inimigo!"
+        "text": "Olá, inimigo!",
+        "audio": "Neeko_PEncontro_0.ogg"
       },
       {
-        "text": "Oi, natureza! A natureza daqui é engraçada."
+        "text": "Oi, natureza! A natureza daqui é engraçada.",
+        "audio": "Neeko_PEncontroIvern_0.ogg"
       },
       {
-        "text": "Nossa! Lá de onde eu venho não tem isso."
+        "text": "Nossa! Lá de onde eu venho não tem isso.",
+        "audio": "Neeko_PEncontroIvern_1.ogg"
       },
       {
-        "text": "Não, Rengar! Seja legal e fofinho, como a Nidalee."
+        "text": "Não, Rengar! Seja legal e fofinho, como a Nidalee.",
+        "audio": "Neeko_PEncontroRengar.ogg"
       },
       {
-        "text": "Me mostra o mundo, Taliyah. Me leva com você!"
+        "text": "Me mostra o mundo, Taliyah. Me leva com você!",
+        "audio": "Neeko_PEncontroTaliyah.ogg"
       },
       {
-        "text": "Fa hasici! Significa gosto de você. De um jeito bom."
+        "text": "Fa hasici! Significa gosto de você. De um jeito bom.",
+        "audio": "Neeko_PEncontroFeminino_0.ogg"
       },
       {
-        "text": "Oi, Vastaya! Você conhece a ? Ela é legal?"
+        "text": "Oi, Vastaya! Você conhece a ? Ela é legal?",
+        "audio": "Neeko_PEncontroVastaya_0.ogg"
       },
       {
-        "text": "Ataco, ataco!"
+        "text": "Ataco, ataco!",
+        "audio": "Neeko_Ataque_1.ogg"
       }
     ],
     "Nidalee": [
@@ -6638,94 +7054,124 @@
         "source": "universe"
       },
       {
-        "text": "A selva chama, eu respondo."
+        "text": "A selva chama, eu respondo.",
+        "audio": "Nidalee_Selecao.ogg"
       },
       {
-        "text": "É pra ter medo mesmo."
+        "text": "É pra ter medo mesmo.",
+        "audio": "Nidalee_Banimento.ogg"
       },
       {
-        "text": "Adoro esse silêncio. A paz antes da caçada."
+        "text": "Adoro esse silêncio. A paz antes da caçada.",
+        "audio": "Nidalee_PMovimento_3.ogg"
       },
       {
-        "text": "Nunca estou só. Minha tribo vive no meu coração, e na minha lança."
+        "text": "Nunca estou só. Minha tribo vive no meu coração, e na minha lança.",
+        "audio": "Nidalee_PMovimento_2.ogg"
       },
       {
-        "text": "As presas se escondem nos sons da selva—ouça, e depois ataque."
+        "text": "As presas se escondem nos sons da selva—ouça, e depois ataque.",
+        "audio": "Nidalee_PMovimento_0.ogg"
       },
       {
-        "text": "Os acham que podem conquistar a selva, mas ninguém doma a natureza."
+        "text": "Os acham que podem conquistar a selva, mas ninguém doma a natureza.",
+        "audio": "Nidalee_PMovimento_1.ogg"
       },
       {
-        "text": "A vida não para."
+        "text": "A vida não para.",
+        "audio": "Nidalee_Movimento_1.ogg"
       },
       {
-        "text": "Meu propósito é proteger meu bando."
+        "text": "Meu propósito é proteger meu bando.",
+        "audio": "Nidalee_Movimento_7.ogg"
       },
       {
-        "text": "Essa terra vai ser o túmulo de todos os invasores!"
+        "text": "Essa terra vai ser o túmulo de todos os invasores!",
+        "audio": "Nidalee_Movimento_3.ogg"
       },
       {
-        "text": "É fácil encontrar invasores."
+        "text": "É fácil encontrar invasores.",
+        "audio": "Nidalee_Movimento_2.ogg"
       },
       {
-        "text": "Eu sou a protetora da selva!"
+        "text": "Eu sou a protetora da selva!",
+        "audio": "Nidalee_Movimento_6.ogg"
       },
       {
-        "text": "Eu lidero minha tribo há gerações."
+        "text": "Eu lidero minha tribo há gerações.",
+        "audio": "Nidalee_Movimento_8.ogg"
       },
       {
-        "text": "Minha família, é minha força."
+        "text": "Minha família, é minha força.",
+        "audio": "Nidalee_Movimento_9.ogg"
       },
       {
-        "text": "Nosso futuro, são nossos Pakiti."
+        "text": "Nosso futuro, são nossos Pakiti.",
+        "audio": "Nidalee_Movimento_0.ogg"
       },
       {
-        "text": "Mãos sem garras precisam de uma lança!"
+        "text": "Mãos sem garras precisam de uma lança!",
+        "audio": "Nidalee_Movimento_10.ogg"
       },
       {
-        "text": "A selva nunca dorme."
+        "text": "A selva nunca dorme.",
+        "audio": "Nidalee_Movimento_17.ogg"
       },
       {
-        "text": "Veja... Escute... Tenha foco..."
+        "text": "Veja... Escute... Tenha foco...",
+        "audio": "Nidalee_Movimento_14.ogg"
       },
       {
-        "text": "O instinto guia meus passos."
+        "text": "O instinto guia meus passos.",
+        "audio": "Nidalee_Movimento_15.ogg"
       },
       {
-        "text": "Só caço o que preciso."
+        "text": "Só caço o que preciso.",
+        "audio": "Nidalee_Movimento_11.ogg"
       },
       {
-        "text": "Faço minhas lanças com os ossos de caçadores."
+        "text": "Faço minhas lanças com os ossos de caçadores.",
+        "audio": "Nidalee_Movimento_5.ogg"
       },
       {
-        "text": "Minha caça não vai escapar."
+        "text": "Minha caça não vai escapar.",
+        "audio": "Nidalee_Movimento_13.ogg"
       },
       {
-        "text": "Pata macia, pés rápidos."
+        "text": "Pata macia, pés rápidos.",
+        "audio": "Nidalee_Movimento_4.ogg"
       },
       {
-        "text": "Eu não questiono minhas duas formas."
+        "text": "Eu não questiono minhas duas formas.",
+        "audio": "Nidalee_Movimento_16.ogg"
       },
       {
-        "text": "Já foi estranho andar sobre dois pés."
+        "text": "Já foi estranho andar sobre dois pés.",
+        "audio": "Nidalee_Movimento_19.ogg"
       },
       {
-        "text": "Huh, serei sempre a filhote da minha mãe."
+        "text": "Huh, serei sempre a filhote da minha mãe.",
+        "audio": "Nidalee_Movimento_12.ogg"
       },
       {
-        "text": "Os instintos de um caçador são naturais. As habilidades, aprendidas."
+        "text": "Os instintos de um caçador são naturais. As habilidades, aprendidas.",
+        "audio": "Nidalee_MovimentoL_0.ogg"
       },
       {
-        "text": "O título da minha mãe veio carregado de sangue dos Kiilash. Assim, mantenho nossa família viva."
+        "text": "O título da minha mãe veio carregado de sangue dos Kiilash. Assim, mantenho nossa família viva.",
+        "audio": "Nidalee_MovimentoL_1.ogg"
       },
       {
-        "text": "Somos a tribo dos 'Pakaa'. Só as presas estrangeiras nos chamam de Kashdaji."
+        "text": "Somos a tribo dos 'Pakaa'. Só as presas estrangeiras nos chamam de Kashdaji.",
+        "audio": "Nidalee_MovimentoL_2.ogg"
       },
       {
-        "text": "Não ligo pro que os humanos fazem—até ser obrigada a virar inimiga deles."
+        "text": "Não ligo pro que os humanos fazem—até ser obrigada a virar inimiga deles.",
+        "audio": "Nidalee_MovimentoL_3.ogg"
       },
       {
-        "text": "Não entendo a natureza dos humanos. Nada se ganha com abates desnecessários."
+        "text": "Não entendo a natureza dos humanos. Nada se ganha com abates desnecessários.",
+        "audio": "Nidalee_MovimentoL_4.ogg"
       }
     ],
     "Nilah": [
@@ -7564,94 +8010,124 @@
         "source": "universe"
       },
       {
-        "text": "Ai, que sufoco."
+        "text": "Ai, que sufoco.",
+        "audio": "Renata_Glasc_Banimento.ogg"
       },
       {
-        "text": "Ah, minha parte favorita do trabalho: testar produtos."
+        "text": "Ah, minha parte favorita do trabalho: testar produtos.",
+        "audio": "Renata_Glasc_PMovimento1.ogg"
       },
       {
-        "text": "Todo Piltovense de bom gosto, tem ao menos um produto meu. Tão crédulos, tão ingênuos."
+        "text": "Todo Piltovense de bom gosto, tem ao menos um produto meu. Tão crédulos, tão ingênuos.",
+        "audio": "Renata_Glasc_PMovimento2.ogg"
       },
       {
-        "text": "Trabalhe pra mim ou contra mim, não importa. Todos acabam vindo pro meu lado."
+        "text": "Trabalhe pra mim ou contra mim, não importa. Todos acabam vindo pro meu lado.",
+        "audio": "Renata_Glasc_PMovimento3.ogg"
       },
       {
-        "text": "Bom, eu tenho empresas a comprar e uma cidade a destruir, então vamos logo com isso."
+        "text": "Bom, eu tenho empresas a comprar e uma cidade a destruir, então vamos logo com isso.",
+        "audio": "Renata_Glasc_PMovimento4.ogg"
       },
       {
-        "text": "A diferença entre o remédio e o veneno está na dose. Permita que eu demonstre."
+        "text": "A diferença entre o remédio e o veneno está na dose. Permita que eu demonstre.",
+        "audio": "Renata_Glasc_PMovimento5.ogg"
       },
       {
-        "text": "Lembro quando eu passava fome no Sumidouro. Uma pobre garotinha patética. Vejam aonde cheguei!"
+        "text": "Lembro quando eu passava fome no Sumidouro. Uma pobre garotinha patética. Vejam aonde cheguei!",
+        "audio": "Renata_Glasc_PMovimento6.ogg"
       },
       {
-        "text": "Meu decantador é só mais um dos peões no meu jogo."
+        "text": "Meu decantador é só mais um dos peões no meu jogo.",
+        "audio": "Renata_Glasc_Movimento1.ogg"
       },
       {
-        "text": "O progresso tem um preço que os outros não querem pagar."
+        "text": "O progresso tem um preço que os outros não querem pagar.",
+        "audio": "Renata_Glasc_Movimento2.ogg"
       },
       {
-        "text": "Os meus pais só me deixaram o meu nome. Agora, ele vale milhões."
+        "text": "Os meus pais só me deixaram o meu nome. Agora, ele vale milhões.",
+        "audio": "Renata_Glasc_Movimento3.ogg"
       },
       {
-        "text": "Antes eu tinha rivais, agora eu tenho parceiros de negócios."
+        "text": "Antes eu tinha rivais, agora eu tenho parceiros de negócios.",
+        "audio": "Renata_Glasc_Movimento4.ogg"
       },
       {
-        "text": "Ugh, o ar é limpo demais aqui em cima."
+        "text": "Ugh, o ar é limpo demais aqui em cima.",
+        "audio": "Renata_Glasc_Movimento5.ogg"
       },
       {
-        "text": "Eu não perdoo dívidas. E eu nunca me esqueço delas."
+        "text": "Eu não perdoo dívidas. E eu nunca me esqueço delas.",
+        "audio": "Renata_Glasc_Movimento6.ogg"
       },
       {
-        "text": "A maioria dos Barões da Química são lacaios que falharam."
+        "text": "A maioria dos Barões da Química são lacaios que falharam.",
+        "audio": "Renata_Glasc_Movimento7.ogg"
       },
       {
-        "text": "Zaun não é inferior a Piltover, não importam as aparências."
+        "text": "Zaun não é inferior a Piltover, não importam as aparências.",
+        "audio": "Renata_Glasc_Movimento8.ogg"
       },
       {
-        "text": "Eu não preciso fazer o trabalho sujo. Ah, mas eu adoro!"
+        "text": "Eu não preciso fazer o trabalho sujo. Ah, mas eu adoro!",
+        "audio": "Renata_Glasc_Movimento9.ogg"
       },
       {
-        "text": "Competir é para os fracos. Eu domino!"
+        "text": "Competir é para os fracos. Eu domino!",
+        "audio": "Renata_Glasc_Movimento10.ogg"
       },
       {
-        "text": "Ambição não é ganância."
+        "text": "Ambição não é ganância.",
+        "audio": "Renata_Glasc_Movimento11.ogg"
       },
       {
-        "text": "Piltover sofrerá pelos crimes contra mim!"
+        "text": "Piltover sofrerá pelos crimes contra mim!",
+        "audio": "Renata_Glasc_Movimento12.ogg"
       },
       {
-        "text": "O dinheiro escreve as leis que os governos aplicam."
+        "text": "O dinheiro escreve as leis que os governos aplicam.",
+        "audio": "Renata_Glasc_Movimento13.ogg"
       },
       {
-        "text": "Zaun merece mais."
+        "text": "Zaun merece mais.",
+        "audio": "Renata_Glasc_Movimento14.ogg"
       },
       {
-        "text": "Quem disse que a Quimtec não é linda?"
+        "text": "Quem disse que a Quimtec não é linda?",
+        "audio": "Renata_Glasc_Movimento15.ogg"
       },
       {
-        "text": "Não é à toa que sou eu quem manda."
+        "text": "Não é à toa que sou eu quem manda.",
+        "audio": "Renata_Glasc_Movimento16.ogg"
       },
       {
-        "text": "Ninguém constrói impérios só com o suficiente."
+        "text": "Ninguém constrói impérios só com o suficiente.",
+        "audio": "Renata_Glasc_Movimento17.ogg"
       },
       {
-        "text": "Ninguém sequer pensou em investir em Quimtec antes de mim."
+        "text": "Ninguém sequer pensou em investir em Quimtec antes de mim.",
+        "audio": "Renata_Glasc_Movimento18.ogg"
       },
       {
-        "text": "Poder pode ser comprado. Lealdade, também."
+        "text": "Poder pode ser comprado. Lealdade, também.",
+        "audio": "Renata_Glasc_Movimento19.ogg"
       },
       {
-        "text": "Piltover não merece o Portão do Sol."
+        "text": "Piltover não merece o Portão do Sol.",
+        "audio": "Renata_Glasc_Movimento20.ogg"
       },
       {
-        "text": "Aquela que controla o Portão Solar, controla o mundo!"
+        "text": "Aquela que controla o Portão Solar, controla o mundo!",
+        "audio": "Renata_Glasc_Movimento21.ogg"
       },
       {
-        "text": "Os outros Barões da Química temem o meu poder. Com razão."
+        "text": "Os outros Barões da Química temem o meu poder. Com razão.",
+        "audio": "Renata_Glasc_Movimento22.ogg"
       },
       {
-        "text": "Dê migalhas aos que têm fome, e eles te agradecem pelo banquete."
+        "text": "Dê migalhas aos que têm fome, e eles te agradecem pelo banquete.",
+        "audio": "Renata_Glasc_Movimento23.ogg"
       }
     ],
     "Renekton": [
@@ -8530,10 +9006,12 @@
         "source": "universe"
       },
       {
-        "text": "Eu sempre pego minha parte - em ouro, ou sangue."
+        "text": "Eu sempre pego minha parte - em ouro, ou sangue.",
+        "audio": "Sivir_Selecao.ogg"
       },
       {
-        "text": "São apenas negócios."
+        "text": "São apenas negócios.",
+        "audio": "Sivir_Banimento.ogg"
       }
     ],
     "Skarner": [
@@ -9066,94 +9544,124 @@
         "source": "universe"
       },
       {
-        "text": "Conheça o tear. Seja a pedra."
+        "text": "Conheça o tear. Seja a pedra.",
+        "audio": "Taliyah_Selecao.ogg"
       },
       {
-        "text": "O chão aqui oculta um imenso poder."
+        "text": "O chão aqui oculta um imenso poder.",
+        "audio": "Taliyah_PMovimento_0.ogg"
       },
       {
-        "text": "Toda tapeçaria começa com um único ponto."
+        "text": "Toda tapeçaria começa com um único ponto.",
+        "audio": "Taliyah_PMovimento_1.ogg"
       },
       {
-        "text": "Hora de usar o que aprendi."
+        "text": "Hora de usar o que aprendi.",
+        "audio": "Taliyah_PMovimento_2.ogg"
       },
       {
-        "text": "Hora de arregaçar as mangas."
+        "text": "Hora de arregaçar as mangas.",
+        "audio": "Taliyah_PMovimento_3.ogg"
       },
       {
-        "text": "Vou na frente."
+        "text": "Vou na frente.",
+        "audio": "Taliyah_PMovimento_4.ogg"
       },
       {
-        "text": "O sol nasce. Devo partir."
+        "text": "O sol nasce. Devo partir.",
+        "audio": "Taliyah_PMovimento_5.ogg"
       },
       {
-        "text": "A confiança de um pássaro não está no galho."
+        "text": "A confiança de um pássaro não está no galho.",
+        "audio": "Taliyah_PMovimento_6.ogg"
       },
       {
-        "text": "As pedras aqui são incríveis."
+        "text": "As pedras aqui são incríveis.",
+        "audio": "Taliyah_PMovimento_7.ogg"
       },
       {
-        "text": "As menores pedras podem começar uma avalanche."
+        "text": "As menores pedras podem começar uma avalanche.",
+        "audio": "Taliyah_Freljord_PMovimento.ogg"
       },
       {
-        "text": "A terra aqui, que cores."
+        "text": "A terra aqui, que cores.",
+        "audio": "Taliyah_Movimento_0.ogg"
       },
       {
-        "text": "Mantenha os olhos no horizonte e seus pés no chão."
+        "text": "Mantenha os olhos no horizonte e seus pés no chão.",
+        "audio": "Taliyah_Movimento_1.ogg"
       },
       {
-        "text": "A terra chama, devo responder."
+        "text": "A terra chama, devo responder.",
+        "audio": "Taliyah_Movimento_2.ogg"
       },
       {
-        "text": "Não posso tirar muito mais dessa pedra."
+        "text": "Não posso tirar muito mais dessa pedra.",
+        "audio": "Taliyah_Movimento_3.ogg"
       },
       {
-        "text": "As vezes queria que rochas pudessem me aconselhar."
+        "text": "As vezes queria que rochas pudessem me aconselhar.",
+        "audio": "Taliyah_Movimento_4.ogg"
       },
       {
-        "text": "Sei que depois disso tudo irei para casa um dia."
+        "text": "Sei que depois disso tudo irei para casa um dia.",
+        "audio": "Taliyah_Movimento_5.ogg"
       },
       {
-        "text": "A beleza do deserto está abaixo da areia."
+        "text": "A beleza do deserto está abaixo da areia.",
+        "audio": "Taliyah_Movimento_6.ogg"
       },
       {
-        "text": "Uma tribo sem tradição é como um rebanho sem pastor."
+        "text": "Uma tribo sem tradição é como um rebanho sem pastor.",
+        "audio": "Taliyah_Movimento_7.ogg"
       },
       {
-        "text": "O mundo é meu tear e toda pedra é minha linha."
+        "text": "O mundo é meu tear e toda pedra é minha linha.",
+        "audio": "Taliyah_Movimento_8.ogg"
       },
       {
-        "text": "Que padrão interessante."
+        "text": "Que padrão interessante.",
+        "audio": "Taliyah_Movimento_9.ogg"
       },
       {
-        "text": "É melhor continuar."
+        "text": "É melhor continuar.",
+        "audio": "Taliyah_Movimento_10.ogg"
       },
       {
-        "text": "Já é hora de ir e nem apreciei a paisagem."
+        "text": "Já é hora de ir e nem apreciei a paisagem.",
+        "audio": "Taliyah_Movimento_11.ogg"
       },
       {
-        "text": "Devo terminar minha tarefa."
+        "text": "Devo terminar minha tarefa.",
+        "audio": "Taliyah_Movimento_12.ogg"
       },
       {
-        "text": "Que pedra magnífica."
+        "text": "Que pedra magnífica.",
+        "audio": "Taliyah_Movimento_13.ogg"
       },
       {
-        "text": "Toda pedrinha tem potencial infinito."
+        "text": "Toda pedrinha tem potencial infinito.",
+        "audio": "Taliyah_Movimento_14.ogg"
       },
       {
-        "text": "Se eu tropeçar, tenho a terra para me pegar."
+        "text": "Se eu tropeçar, tenho a terra para me pegar.",
+        "audio": "Taliyah_Movimento_15.ogg"
       },
       {
-        "text": "Enquanto o deserto florescer. Existe esperança."
+        "text": "Enquanto o deserto florescer. Existe esperança.",
+        "audio": "Taliyah_Movimento_16.ogg"
       },
       {
-        "text": "Minha jornada ainda não chegou ao fim."
+        "text": "Minha jornada ainda não chegou ao fim.",
+        "audio": "Taliyah_Movimento_17.ogg"
       },
       {
-        "text": "Este mundo é uma tapeçaria feita por nós."
+        "text": "Este mundo é uma tapeçaria feita por nós.",
+        "audio": "Taliyah_Movimento_20.ogg"
       },
       {
-        "text": "O pardal voa contra o vento."
+        "text": "O pardal voa contra o vento.",
+        "audio": "Taliyah_Movimento_21.ogg"
       }
     ],
     "Talon": [
