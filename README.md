@@ -1,45 +1,47 @@
 # Loldle2
 
-Jogo diário de adivinhação de campeões de League of Legends, inspirado no [Loldle](https://loldle.net).
+Jogo de adivinhação de campeões de League of Legends, inspirado no [Loldle](https://loldle.net).
+
+Por enquanto há um modo: **Falas**. O jogo mostra uma fala dublada em português e você tenta descobrir qual campeão a disse. Os chutes são ilimitados: ao acertar, você pode passar para a próxima fala.
 
 ## Stack
 
 - [Vite](https://vite.dev/) + [React](https://react.dev/) + TypeScript
-- [oxlint](https://oxc.rs/) para lint
+- [shadcn/ui](https://ui.shadcn.com/) + [Tailwind CSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/)
+- [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
 
 ## Como rodar
 
 ```bash
 npm install
-npm run dev      # servidor de desenvolvimento
-npm run build    # build de produção
-npm run lint     # lint
+npm run dev           # servidor de desenvolvimento
+npm run build         # build de produção
+npm run lint          # lint
+npm run fetch:quotes  # atualiza src/data/quotes.json
 ```
 
 ## Estrutura
 
 ```
+scripts/
+└── fetch-quotes.ts   # Gera a base de falas a partir da wiki PT-BR
 src/
-├── components/   # Componentes de UI (input de palpite, tabela de resultados)
-├── data/         # Dados dos campeões
-├── game/         # Lógica do jogo (comparação de atributos, campeão do dia)
-├── types/        # Tipos TypeScript
-├── App.tsx       # Tela principal (modo clássico)
-└── main.tsx      # Ponto de entrada
+├── components/       # Componentes do jogo (formulário de palpite, lista de chutes)
+│   └── ui/           # Componentes do shadcn/ui
+├── data/             # quotes.json e helpers de acesso aos dados
+├── game/             # Lógica do jogo (sorteio de falas, busca de campeões)
+├── routes/           # Páginas (início e modo Falas)
+└── main.tsx          # Rotas e ponto de entrada
 ```
 
-## Modo clássico
+## Dados
 
-O jogador digita o nome de um campeão e recebe dicas por atributo:
+- **Campeões e ícones:** [Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon) da Riot, em `pt_BR`. Não precisa de chave de API.
+- **Falas:** [Wiki League of Legends PT-BR](https://leagueoflegends.fandom.com/pt-br), licença CC BY-SA, páginas `<Campeão>/LoL/Áudio`.
 
-- 🟩 **Correto**: o atributo é igual ao do campeão do dia
-- 🟧 **Parcial**: há sobreposição (por exemplo, uma das posições é igual)
-- 🟥 **Errado**: nenhuma correspondência
-- ↑ / ↓ no ano de lançamento indicam se o campeão do dia é mais novo ou mais antigo
+O script `npm run fetch:quotes` busca os dados das duas fontes e grava `src/data/quotes.json`. Ele mantém só as falas da skin clássica e descarta as que contêm o nome do campeão.
 
-## Próximos passos
+A wiki PT-BR ainda não tem falas para todos os campeões, então só uma parte deles aparece como resposta. Mesmo assim, todos ficam disponíveis como palpite.
 
-- [ ] Completar `src/data/champions.ts` com todos os campeões
-- [ ] Imagens dos campeões (Data Dragon da Riot)
-- [ ] Salvar o progresso do dia no `localStorage`
-- [ ] Outros modos: citação, habilidade, emoji, splash art
+Loldle2 não é afiliado à Riot Games.

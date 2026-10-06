@@ -1,0 +1,1454 @@
+{
+  "ddragonVersion": "16.19.1",
+  "champions": [
+    {
+      "id": "Aatrox",
+      "name": "Aatrox",
+      "title": "a Espada Darkin"
+    },
+    {
+      "id": "Ahri",
+      "name": "Ahri",
+      "title": "a Raposa de Nove Caudas"
+    },
+    {
+      "id": "Akali",
+      "name": "Akali",
+      "title": "a Assassina Renegada"
+    },
+    {
+      "id": "Akshan",
+      "name": "Akshan",
+      "title": "o Sentinela Rebelde"
+    },
+    {
+      "id": "Alistar",
+      "name": "Alistar",
+      "title": "o Minotauro"
+    },
+    {
+      "id": "Ambessa",
+      "name": "Ambessa",
+      "title": "Matriarca da Guerra"
+    },
+    {
+      "id": "Amumu",
+      "name": "Amumu",
+      "title": "a Múmia Triste"
+    },
+    {
+      "id": "Anivia",
+      "name": "Anivia",
+      "title": "a Criofênix"
+    },
+    {
+      "id": "Annie",
+      "name": "Annie",
+      "title": "a Criança Sombria"
+    },
+    {
+      "id": "Aphelios",
+      "name": "Aphelios",
+      "title": "a Arma dos Devotos"
+    },
+    {
+      "id": "Ashe",
+      "name": "Ashe",
+      "title": "a Arqueira do Gelo"
+    },
+    {
+      "id": "AurelionSol",
+      "name": "Aurelion Sol",
+      "title": "o Forjador de Estrelas"
+    },
+    {
+      "id": "Aurora",
+      "name": "Aurora",
+      "title": "a Bruxa Entre Mundos"
+    },
+    {
+      "id": "Azir",
+      "name": "Azir",
+      "title": "o Imperador das Areias"
+    },
+    {
+      "id": "Bard",
+      "name": "Bardo",
+      "title": "o Protetor Andarilho"
+    },
+    {
+      "id": "Belveth",
+      "name": "Bel'Veth",
+      "title": "a Imperatriz do Vazio"
+    },
+    {
+      "id": "Blitzcrank",
+      "name": "Blitzcrank",
+      "title": "o Grande Golem a Vapor"
+    },
+    {
+      "id": "Brand",
+      "name": "Brand",
+      "title": "a Vingança Flamejante"
+    },
+    {
+      "id": "Braum",
+      "name": "Braum",
+      "title": "o Coração de Freljord"
+    },
+    {
+      "id": "Briar",
+      "name": "Briar",
+      "title": "a Fome Contida"
+    },
+    {
+      "id": "Caitlyn",
+      "name": "Caitlyn",
+      "title": "a Xerife de Piltover"
+    },
+    {
+      "id": "Camille",
+      "name": "Camille",
+      "title": "a Sombra de Aço"
+    },
+    {
+      "id": "Cassiopeia",
+      "name": "Cassiopeia",
+      "title": "o Abraço da Serpente"
+    },
+    {
+      "id": "Chogath",
+      "name": "Cho'Gath",
+      "title": "o Terror do Vazio"
+    },
+    {
+      "id": "Corki",
+      "name": "Corki",
+      "title": "o Bombardeiro Ousado"
+    },
+    {
+      "id": "Darius",
+      "name": "Darius",
+      "title": "a Mão de Noxus"
+    },
+    {
+      "id": "Diana",
+      "name": "Diana",
+      "title": "o Escárnio da Lua"
+    },
+    {
+      "id": "DrMundo",
+      "name": "Dr. Mundo",
+      "title": "o Louco de Zaun"
+    },
+    {
+      "id": "Draven",
+      "name": "Draven",
+      "title": "o Carrasco de Noxus"
+    },
+    {
+      "id": "Ekko",
+      "name": "Ekko",
+      "title": "o Rapaz que Estilhaçou o Tempo"
+    },
+    {
+      "id": "Elise",
+      "name": "Elise",
+      "title": "a Aranha Rainha"
+    },
+    {
+      "id": "Evelynn",
+      "name": "Evelynn",
+      "title": "o Abraço da Agonia"
+    },
+    {
+      "id": "Ezreal",
+      "name": "Ezreal",
+      "title": "o Explorador Pródigo"
+    },
+    {
+      "id": "Fiddlesticks",
+      "name": "Fiddlesticks",
+      "title": "o Terror Ancestral"
+    },
+    {
+      "id": "Fiora",
+      "name": "Fiora",
+      "title": "a Grande Duelista"
+    },
+    {
+      "id": "Fizz",
+      "name": "Fizz",
+      "title": "o Trapaceiro das Marés"
+    },
+    {
+      "id": "Galio",
+      "name": "Galio",
+      "title": "o Colosso"
+    },
+    {
+      "id": "Gangplank",
+      "name": "Gangplank",
+      "title": "o Terror dos Doze Mares"
+    },
+    {
+      "id": "Garen",
+      "name": "Garen",
+      "title": "o Poder de Demacia"
+    },
+    {
+      "id": "Gnar",
+      "name": "Gnar",
+      "title": "o Yordle Pré-Histórico"
+    },
+    {
+      "id": "Gragas",
+      "name": "Gragas",
+      "title": "o Badernista"
+    },
+    {
+      "id": "Graves",
+      "name": "Graves",
+      "title": "o Foragido"
+    },
+    {
+      "id": "Gwen",
+      "name": "Gwen",
+      "title": "A Costureira Encantada"
+    },
+    {
+      "id": "Hecarim",
+      "name": "Hecarim",
+      "title": "a Sombra da Guerra"
+    },
+    {
+      "id": "Heimerdinger",
+      "name": "Heimerdinger",
+      "title": "o Inventor Idolatrado"
+    },
+    {
+      "id": "Hwei",
+      "name": "Hwei",
+      "title": "o Visionário"
+    },
+    {
+      "id": "Illaoi",
+      "name": "Illaoi",
+      "title": "a Sacerdotisa Cráquem"
+    },
+    {
+      "id": "Irelia",
+      "name": "Irelia",
+      "title": "a Dançarina das Lâminas"
+    },
+    {
+      "id": "Ivern",
+      "name": "Ivern",
+      "title": "o Pai do Verde"
+    },
+    {
+      "id": "Janna",
+      "name": "Janna",
+      "title": "a Fúria da Tormenta"
+    },
+    {
+      "id": "JarvanIV",
+      "name": "Jarvan IV",
+      "title": "o Exemplo de Demacia"
+    },
+    {
+      "id": "Jax",
+      "name": "Jax",
+      "title": "o Grão-Mestre das Armas"
+    },
+    {
+      "id": "Jayce",
+      "name": "Jayce",
+      "title": "o Defensor do Amanhã"
+    },
+    {
+      "id": "Jhin",
+      "name": "Jhin",
+      "title": "o Virtuoso"
+    },
+    {
+      "id": "Jinx",
+      "name": "Jinx",
+      "title": "o Gatilho Desenfreado"
+    },
+    {
+      "id": "KSante",
+      "name": "K'Sante",
+      "title": "o Orgulho de Nazumah."
+    },
+    {
+      "id": "Kaisa",
+      "name": "Kai'Sa",
+      "title": "a Filha do Vazio"
+    },
+    {
+      "id": "Kalista",
+      "name": "Kalista",
+      "title": "a Lança da Vingança"
+    },
+    {
+      "id": "Karma",
+      "name": "Karma",
+      "title": "a Iluminada"
+    },
+    {
+      "id": "Karthus",
+      "name": "Karthus",
+      "title": "a Voz Mortal"
+    },
+    {
+      "id": "Kassadin",
+      "name": "Kassadin",
+      "title": "o Andarilho do Vazio"
+    },
+    {
+      "id": "Katarina",
+      "name": "Katarina",
+      "title": "a Lâmina Sinistra"
+    },
+    {
+      "id": "Kayle",
+      "name": "Kayle",
+      "title": "a Justa"
+    },
+    {
+      "id": "Kayn",
+      "name": "Kayn",
+      "title": "o Ceifador das Sombras"
+    },
+    {
+      "id": "Kennen",
+      "name": "Kennen",
+      "title": "o Coração da Tempestade"
+    },
+    {
+      "id": "Khazix",
+      "name": "Kha'Zix",
+      "title": "o Ceifador do Vazio"
+    },
+    {
+      "id": "Kindred",
+      "name": "Kindred",
+      "title": "os Caçadores Eternos"
+    },
+    {
+      "id": "Kled",
+      "name": "Kled",
+      "title": "o Cavaleiro Intratável"
+    },
+    {
+      "id": "KogMaw",
+      "name": "Kog'Maw",
+      "title": "a Boca do Abismo"
+    },
+    {
+      "id": "Leblanc",
+      "name": "LeBlanc",
+      "title": "a Farsante"
+    },
+    {
+      "id": "LeeSin",
+      "name": "Lee Sin",
+      "title": "o Monge Cego"
+    },
+    {
+      "id": "Leona",
+      "name": "Leona",
+      "title": "a Alvorada Radiante"
+    },
+    {
+      "id": "Lillia",
+      "name": "Lillia",
+      "title": "o Florir Receoso"
+    },
+    {
+      "id": "Lissandra",
+      "name": "Lissandra",
+      "title": "a Bruxa Gélida"
+    },
+    {
+      "id": "Locke",
+      "name": "Locke",
+      "title": "o Exorcista das Cinzas"
+    },
+    {
+      "id": "Lucian",
+      "name": "Lucian",
+      "title": "o Purificador"
+    },
+    {
+      "id": "Lulu",
+      "name": "Lulu",
+      "title": "a Fada Feiticeira"
+    },
+    {
+      "id": "Lux",
+      "name": "Lux",
+      "title": "a Dama da Luz"
+    },
+    {
+      "id": "Malphite",
+      "name": "Malphite",
+      "title": "o Fragmento do Monolito"
+    },
+    {
+      "id": "Malzahar",
+      "name": "Malzahar",
+      "title": "o Profeta do Vazio"
+    },
+    {
+      "id": "Maokai",
+      "name": "Maokai",
+      "title": "o Ente Sinistro"
+    },
+    {
+      "id": "MasterYi",
+      "name": "Master Yi",
+      "title": "o Espadachim Wuju"
+    },
+    {
+      "id": "Mel",
+      "name": "Mel",
+      "title": "o Reflexo da Alma"
+    },
+    {
+      "id": "Milio",
+      "name": "Milio",
+      "title": "A Chama Gentil"
+    },
+    {
+      "id": "MissFortune",
+      "name": "Miss Fortune",
+      "title": "a Caçadora de Recompensas"
+    },
+    {
+      "id": "Mordekaiser",
+      "name": "Mordekaiser",
+      "title": "o Revenã de Ferro"
+    },
+    {
+      "id": "Morgana",
+      "name": "Morgana",
+      "title": "a Caída"
+    },
+    {
+      "id": "Naafiri",
+      "name": "Naafiri",
+      "title": "Fera das Cem Mordidas"
+    },
+    {
+      "id": "Nami",
+      "name": "Nami",
+      "title": "a Conjuradora das Marés"
+    },
+    {
+      "id": "Nasus",
+      "name": "Nasus",
+      "title": "o Curador das Areias"
+    },
+    {
+      "id": "Nautilus",
+      "name": "Nautilus",
+      "title": "o Titã das Profundezas"
+    },
+    {
+      "id": "Neeko",
+      "name": "Neeko",
+      "title": "a Camaleoa Curiosa"
+    },
+    {
+      "id": "Nidalee",
+      "name": "Nidalee",
+      "title": "a Caçadora Bestial"
+    },
+    {
+      "id": "Nilah",
+      "name": "Nilah",
+      "title": "a Alegria Irrestrita"
+    },
+    {
+      "id": "Nocturne",
+      "name": "Nocturne",
+      "title": "o Eterno Pesadelo"
+    },
+    {
+      "id": "Nunu",
+      "name": "Nunu e Willump",
+      "title": "o Garoto e seu Yeti"
+    },
+    {
+      "id": "Olaf",
+      "name": "Olaf",
+      "title": "o Berserker"
+    },
+    {
+      "id": "Orianna",
+      "name": "Orianna",
+      "title": "a Donzela Mecânica"
+    },
+    {
+      "id": "Ornn",
+      "name": "Ornn",
+      "title": "O Fogo sob a Montanha"
+    },
+    {
+      "id": "Pantheon",
+      "name": "Pantheon",
+      "title": "a Lança Indestrutível"
+    },
+    {
+      "id": "Poppy",
+      "name": "Poppy",
+      "title": "a Guardiã do Martelo"
+    },
+    {
+      "id": "Pyke",
+      "name": "Pyke",
+      "title": "o Estripador das Águas Sangrentas"
+    },
+    {
+      "id": "Qiyana",
+      "name": "Qiyana",
+      "title": "a Imperatriz dos Elementos"
+    },
+    {
+      "id": "Quinn",
+      "name": "Quinn",
+      "title": "as Asas de Demacia"
+    },
+    {
+      "id": "Rakan",
+      "name": "Rakan",
+      "title": "O Charmoso"
+    },
+    {
+      "id": "Rammus",
+      "name": "Rammus",
+      "title": "o Tatu Blindado"
+    },
+    {
+      "id": "RekSai",
+      "name": "Rek'Sai",
+      "title": "a Escavadora do Vazio"
+    },
+    {
+      "id": "Rell",
+      "name": "Rell",
+      "title": "a Dama de Ferro"
+    },
+    {
+      "id": "Renata",
+      "name": "Renata Glasc",
+      "title": "a Baronesa da Química"
+    },
+    {
+      "id": "Renekton",
+      "name": "Renekton",
+      "title": "o Carniceiro das Areias"
+    },
+    {
+      "id": "Rengar",
+      "name": "Rengar",
+      "title": "o Acossador da Alcateia"
+    },
+    {
+      "id": "Riven",
+      "name": "Riven",
+      "title": "a Exilada"
+    },
+    {
+      "id": "Rumble",
+      "name": "Rumble",
+      "title": "a Ameaça Mecânica"
+    },
+    {
+      "id": "Ryze",
+      "name": "Ryze",
+      "title": "o Mago Rúnico"
+    },
+    {
+      "id": "Samira",
+      "name": "Samira",
+      "title": "a Rosa do Deserto"
+    },
+    {
+      "id": "Sejuani",
+      "name": "Sejuani",
+      "title": "a Fúria do Norte"
+    },
+    {
+      "id": "Senna",
+      "name": "Senna",
+      "title": "A Redentora"
+    },
+    {
+      "id": "Seraphine",
+      "name": "Seraphine",
+      "title": "a Cantora Sonhadora"
+    },
+    {
+      "id": "Sett",
+      "name": "Sett",
+      "title": "o Chefe"
+    },
+    {
+      "id": "Shaco",
+      "name": "Shaco",
+      "title": "o Bufão Demoníaco"
+    },
+    {
+      "id": "Shen",
+      "name": "Shen",
+      "title": "o Olho do Crepúsculo"
+    },
+    {
+      "id": "Shyvana",
+      "name": "Shyvana",
+      "title": "a Meio-Dragão"
+    },
+    {
+      "id": "Singed",
+      "name": "Singed",
+      "title": "o Químico Louco"
+    },
+    {
+      "id": "Sion",
+      "name": "Sion",
+      "title": "o Colosso Morto-Vivo"
+    },
+    {
+      "id": "Sivir",
+      "name": "Sivir",
+      "title": "a Mestra da Batalha"
+    },
+    {
+      "id": "Skarner",
+      "name": "Skarner",
+      "title": "o Soberano Primordial"
+    },
+    {
+      "id": "Smolder",
+      "name": "Smolder",
+      "title": "o Filhote Flamejante"
+    },
+    {
+      "id": "Sona",
+      "name": "Sona",
+      "title": "a Mestra das Cordas"
+    },
+    {
+      "id": "Soraka",
+      "name": "Soraka",
+      "title": "a Filha das Estrelas"
+    },
+    {
+      "id": "Swain",
+      "name": "Swain",
+      "title": "o Grande General Noxiano"
+    },
+    {
+      "id": "Sylas",
+      "name": "Sylas",
+      "title": "o Abjugado"
+    },
+    {
+      "id": "Syndra",
+      "name": "Syndra",
+      "title": "a Soberana Sombria"
+    },
+    {
+      "id": "TahmKench",
+      "name": "Tahm Kench",
+      "title": "o Rei do Rio"
+    },
+    {
+      "id": "Taliyah",
+      "name": "Taliyah",
+      "title": "a Tecelã de Pedras"
+    },
+    {
+      "id": "Talon",
+      "name": "Talon",
+      "title": "a Sombra da Lâmina"
+    },
+    {
+      "id": "Taric",
+      "name": "Taric",
+      "title": "o Escudo de Valoran"
+    },
+    {
+      "id": "Teemo",
+      "name": "Teemo",
+      "title": "o Explorador Veloz"
+    },
+    {
+      "id": "Thresh",
+      "name": "Thresh",
+      "title": "o Guardião das Correntes"
+    },
+    {
+      "id": "Tristana",
+      "name": "Tristana",
+      "title": "a Artilheira Yordle"
+    },
+    {
+      "id": "Trundle",
+      "name": "Trundle",
+      "title": "o Rei dos Trolls"
+    },
+    {
+      "id": "Tryndamere",
+      "name": "Tryndamere",
+      "title": "o Rei Bárbaro"
+    },
+    {
+      "id": "TwistedFate",
+      "name": "Twisted Fate",
+      "title": "o Mestre das Cartas"
+    },
+    {
+      "id": "Twitch",
+      "name": "Twitch",
+      "title": "o Semeador da Peste"
+    },
+    {
+      "id": "Udyr",
+      "name": "Udyr",
+      "title": "o Andarilho Espiritual"
+    },
+    {
+      "id": "Urgot",
+      "name": "Urgot",
+      "title": "o Encouraçado"
+    },
+    {
+      "id": "Varus",
+      "name": "Varus",
+      "title": "a Flecha da Vingança"
+    },
+    {
+      "id": "Vayne",
+      "name": "Vayne",
+      "title": "a Caçadora Noturna"
+    },
+    {
+      "id": "Veigar",
+      "name": "Veigar",
+      "title": "o Pequeno Mestre do Mal"
+    },
+    {
+      "id": "Velkoz",
+      "name": "Vel'Koz",
+      "title": "o Olho do Vazio"
+    },
+    {
+      "id": "Vex",
+      "name": "Vex",
+      "title": "a Melancolista"
+    },
+    {
+      "id": "Vi",
+      "name": "Vi",
+      "title": "a Defensora de Piltover"
+    },
+    {
+      "id": "Viego",
+      "name": "Viego",
+      "title": "O Rei Destruído"
+    },
+    {
+      "id": "Viktor",
+      "name": "Viktor",
+      "title": "o Arauto do Arcano"
+    },
+    {
+      "id": "Vladimir",
+      "name": "Vladimir",
+      "title": "o Sanguinário Escarlate"
+    },
+    {
+      "id": "Volibear",
+      "name": "Volibear",
+      "title": "a Tempestade Implacável"
+    },
+    {
+      "id": "Warwick",
+      "name": "Warwick",
+      "title": "a Ira Desimpedida de Zaun"
+    },
+    {
+      "id": "MonkeyKing",
+      "name": "Wukong",
+      "title": "o Macaco Rei"
+    },
+    {
+      "id": "Xayah",
+      "name": "Xayah",
+      "title": "a Rebelde"
+    },
+    {
+      "id": "Xerath",
+      "name": "Xerath",
+      "title": "o Mago Ascendente"
+    },
+    {
+      "id": "XinZhao",
+      "name": "Xin Zhao",
+      "title": "o Senescal de Demacia"
+    },
+    {
+      "id": "Yasuo",
+      "name": "Yasuo",
+      "title": "o Imperdoável"
+    },
+    {
+      "id": "Yone",
+      "name": "Yone",
+      "title": "o Inesquecido"
+    },
+    {
+      "id": "Yorick",
+      "name": "Yorick",
+      "title": "o Pastor de Almas"
+    },
+    {
+      "id": "Yunara",
+      "name": "Yunara",
+      "title": "a Fé Inabalável"
+    },
+    {
+      "id": "Yuumi",
+      "name": "Yuumi",
+      "title": "a Gata Mágica"
+    },
+    {
+      "id": "Zaahen",
+      "name": "Zaahen",
+      "title": "O Indissociável"
+    },
+    {
+      "id": "Zac",
+      "name": "Zac",
+      "title": "a Arma Secreta"
+    },
+    {
+      "id": "Zed",
+      "name": "Zed",
+      "title": "o Mestre das Sombras"
+    },
+    {
+      "id": "Zeri",
+      "name": "Zeri",
+      "title": "A Faísca de Zaun"
+    },
+    {
+      "id": "Ziggs",
+      "name": "Ziggs",
+      "title": "o Especialista em Hexplosivos"
+    },
+    {
+      "id": "Zilean",
+      "name": "Zilean",
+      "title": "o Guardião do Tempo"
+    },
+    {
+      "id": "Zoe",
+      "name": "Zoe",
+      "title": "o Aspecto do Crepúsculo"
+    },
+    {
+      "id": "Zyra",
+      "name": "Zyra",
+      "title": "a Ascensão dos Espinhos"
+    }
+  ],
+  "quotes": {
+    "Aatrox": [
+      "Ouçam, o silêncio depois da aniquilação!",
+      "Darei um fim nisso.",
+      "Pantheon, eu sei quem você é! Como um parasita, você se prende a um hospedeiro! Eu vou te libertar desta forma mortal, e eviscerar vocês dois!",
+      "Pantheon! Eu vou extinguir a sua divindade, eu vou desentranhar seus ideais, eu vou pisotear até na sua memória!",
+      "Targon enviou um aspecto contra mim? Prepare-se, Pantheon, eu vou acabar com tudo que você sempre desejou ser!",
+      "O verdadeiro som da minha lâmina só é ouvido por aqueles que abominam a reencarnação.",
+      "A única paz que busco... é a morte!",
+      "Você é chamado de vilão... Ótimo, quero conquistar o seu ódio, quantas vezes precisar.",
+      "Eu sou a ruína!",
+      "Meu coração abriga uma escuridão mais profunda do que qualquer sombra!",
+      "Marche rumo à vingança, afogue este mundo... em sangue.",
+      "Seus gritos de horror serão o meu... deleite supremo.",
+      "A moeda de troca pela minha prisão... será o sofrimento eterno.",
+      "Me desafiem, mortais! Eu! Estou! Aqui!",
+      "Eles acham que eu fui derrotado, que eu estou acorrentado. Mas eu não me curvo a nada e a ninguém. Minha bênção será uma nobre carnificina.",
+      "Os primitivos me veneram, implorando misericórdia. Eu considerei somente... a morte.",
+      "Hei de afogar todos... em um mar de sangue.",
+      "Eu vou extinguir a luz, e criar a escuridão eterna.",
+      "Eu sou o Oblívio! Eu sou a Destruição! Eu sou... a ruína.",
+      "Eu trilho o caminho da morte. Uma pena... que não será a minha.",
+      "Eu farei o meu sofrimento... florescer.",
+      "Minha missão é destruir até... a esperança.",
+      "Moldarei todas as formas mortais à minha própria imagem!",
+      "Deuses e mortais, não merecem nada, se não a morte!",
+      "Enquanto esta forma viver... eu os punirei.",
+      "Eu lutei contra o Vazio. Mas agora, eu o aceitaria de braços abertos.",
+      "Essa forma maldita e deplorável feita de... carne! Como ela me enoja!",
+      "É a mim que vocês pagarão, mortais!",
+      "Eu quero ouvir lamentarem... o meu nome.",
+      "Eles me chamam de... Deicida!"
+    ],
+    "Ahri": [
+      "Uma raposa esperta nunca é apanhada.",
+      "Hmm, não precisa ter medo de mim.",
+      "Eu conheço esse lugar, parte de mim se lembra.",
+      "Não estou mais sozinha, posso confiar nos outros, e em mim mesma.",
+      "Já lutei ao lado de alguns dos melhores sabia? Tente não ficar pra trás.",
+      "Novas experiências me esperam hoje, e eu encaro seja o que for.",
+      "Desperdicei uma eternidade ficando parada, é hora de seguir em frente.",
+      "Vamos criar novas memórias juntos.",
+      "Tá todo mundo olhando, se o nervosismo bater procurem o palco, eu vou estar logo ao lado.",
+      "Os meus shows são bem intensos, acham que dão conta?",
+      "Eu vivi e ainda vivo uma eternidade.",
+      "Todo animal tem fome de alguma coisa.",
+      "Eu carrego o legado dos Vesani.",
+      "A beleza até nos momentos mais singelos.",
+      "Eles vão correr atrás das próprias caudas.",
+      "O mundo está aí para que eu explore.",
+      "Eu devia ter saído de casa a muito tempo.",
+      "Posso ouvir o vento cantar.",
+      "Viva sem arrependimentos.",
+      "Vidas mortais são tão passageiras.",
+      "As estações mudam, e eu também.",
+      "Corpo nutrido, alma alimentada.",
+      "A natureza aqui é quieta demais.",
+      "Não vou me esquecer do que significa roubar uma vida.",
+      "Lembre-se deste momento.",
+      "Há tanta coisa que eu quero ver.",
+      "Eu vago mas não estou perdida.",
+      "Assim como a floresta, eu sou selvagem.",
+      "Tantas memórias se misturam em mim.",
+      "Esse lugar me lembra de casa."
+    ],
+    "Alistar": [
+      "Nada pode me impedir.",
+      "Agora estou enfurecido.",
+      "Você deve seguir.",
+      "Eu conheço o caminho.",
+      "Se mexer com o touro vai levar uma chifrada.",
+      "Quem você chamou de chifrudo?",
+      "Quem está pronto para travar chifres comigo!?",
+      "Você é forte!"
+    ],
+    "Amumu": [
+      "Achei que nunca fosse me escolher.",
+      "Para onde estamos indo?",
+      "Vamos fazer alguns amigos.",
+      "Vem jogar comigo.",
+      "Posso te dar um abraço?",
+      "Vamos ser amigos para sempre.",
+      "Espera, volta aqui!",
+      "Quer me adicionar na lista de amigos?",
+      "Vamos jogar de novo outra hora!"
+    ],
+    "Anivia": [
+      "Em minhas asas.",
+      "Eu hei de perdurar.",
+      "Não sou nem a primeira, nem a última.",
+      "Já senti essa corrupção antes.",
+      "Vento do inverno, guie a mim.",
+      "Eu renascerei.",
+      "Estamos todos conectados.",
+      "Eu sonho com eras passadas.",
+      "Eternamente vigilante.",
+      "Algo ancestral se manifesta.",
+      "Não se apresse, reflita.",
+      "Significado em cada floco de neve.",
+      "Mil vidas darei por Freljord.",
+      "Quais mudanças este vento trará?",
+      "Pense além do tempo de uma vida.",
+      "Pobres criaturas, confinadas a uma única vida.",
+      "Tão jovem, tão ingênua.",
+      "O ovo ou a galinha? Na verdade eu vim primeiro.",
+      "Botar um ovo não é tão fácil quanto parece.",
+      "Freljord desperta.",
+      "Não abandonarei meu lar.",
+      "Não instigue a nevasca.",
+      "Encontre paz.",
+      "Eu trago a tempestade.",
+      "A vida passa tão brevemente.",
+      "O ciclo termina.",
+      "Sou a neve, o vento, e o gelo.",
+      "Uma grande escuridão se aproxima."
+    ],
+    "Annie": [
+      "Você quer brincar também? Vai ser divertido!",
+      "Não seja medroso!",
+      "Saia daí, não vá se esconder!",
+      "Tente me acompanhar!",
+      "A gente já chegou?",
+      "Eu nunca brinco com fósforos.",
+      "Você viu meu ursinho Tibbers?",
+      "O que vem de baixo não me... queima!",
+      "Derrotado por uma garotinha... ha!",
+      "Qual é o seu animal preferido? É um urso?",
+      "Você tá com cheiro de... queimado!",
+      "Isso é divertido!",
+      "Um dois três... fogo!",
+      "Hora de brincar!",
+      "Vamos contar até cinco!",
+      "Não me faça machucar você!",
+      "É a minha vez!",
+      "Cinzas, cinzas, todas elas caem.",
+      "Eles podem fazer isso?",
+      "Pegue-os, Tibbers!",
+      "Abraço de urso!",
+      "Yay, Tibbers!",
+      "Oi! Meu amigo Tibbers quer te conhecer...",
+      "Vamos, Tibbers. Vamos jogar mais uma."
+    ],
+    "Aphelios": [
+      "Condenados à escuridão, onde nosso poder aumenta.",
+      "Cada passo seu, é um passo nosso. Se você respira, eu respiro.",
+      "Mesmo estando deste lado do véu celestial, estou com você, meu irmão.",
+      "Sua vida no altar irmão... Não vou trai-la.",
+      "A ordem luta pela luz. O caos luta pela escuridão. Na Lua, encontramos ambos, e um jeito de sobreviver.",
+      "Deveríamos odiar um ao outro. Mas mostraremos a todos, seres perversos e divinos, que juntos somos mais fortes.",
+      "Encontre sua órbita, irmão.",
+      "Vejo que está sempre dando seu sangue... por mim.",
+      "Estou com você, te iluminando daqui de cima.",
+      "Escuridão não é heresia. Ela está dentro de nós.",
+      "Não podemos deixar que o medo nos aprisione no crepúsculo.",
+      "Vejo tantas maravilhas através dos seus olhos.",
+      "Quando seus passos falsearem, irmão, siga a minha voz.",
+      "Você sabia que não seria fácil, o caminho em nossa frente é forjado em cicatrizes.",
+      "Você adentra a escuridão em meu nome.",
+      "Nosso destino está em coberto pela noite.",
+      "Como posso ajudar se sou eu que coloco sua vida em risco?",
+      "Estou certa. Pelo menos é o que a Lua me disse.",
+      "Você é a arma que os Lunari precisam.",
+      "Só queremos que alguém testemunhe o nosso sofrimento.",
+      "Mesmo de olhos fechados, nunca desviarei o olhar.",
+      "Lembre-se do que aprendeu, irmão.",
+      "Estou sempre a um sussurro de distância, ecoando no silêncio.",
+      "Mesmo sob a máscara do silêncio, conheço seu verdadeiro rosto, irmão.",
+      "Estamos juntos nessa. Luz e escuridão.",
+      "A Lua brilha mais forte na escuridão.",
+      "Da nossa fortaleza, sempre guiarei você. Eu prometo.",
+      "Tanto a luz como a escuridão revelam nosso caminho.",
+      "Cada um de nós, uma oferenda.",
+      "Precisamos encontrar um ao outro, antes do amanhecer."
+    ],
+    "Ashe": [
+      "O mundo todo em uma flecha.",
+      "Covarde! Espero que morra de olhos fechados!",
+      "Avarosa, guie-me.",
+      "Indique o alvo.",
+      "Precisamos avançar!",
+      "A paz requer mão firme.",
+      "Não confunda piedade com fraqueza.",
+      "Nós vamos unir Freljord.",
+      "Vamos ver o quão perto eles chegam.",
+      "Aja com rapidez e estratégia, e a batalha será vencida antes de derramar sangue.",
+      "Uma batalha digna de Freljord.",
+      "Hoje, o destino do nosso povo é incerto.",
+      "Freljord será unificada!",
+      "Minha tribo trará paz ao norte! O sul deve nos temer.",
+      "Vou mostrar a eles o poder de uma glacinata.",
+      "Somos todos iguais, sangue do mesmo sangue.",
+      "Quando nossas tribos se tornarem uma, o mundo estremecerá.",
+      "Sou Freljordana, família e tribo são tudo pra mim.",
+      "Sou uma mãe de guerra, faço juramentos a poucos, mas recebo de muitos.",
+      "Busque a paz, mas tenha as ferramentas da guerra.",
+      "O arco representa minha determinação, eu sou ele e ele sou eu.",
+      "O destino não é traçado por ninguém além de você.",
+      "Deuses e espíritos nos guiam, mas nossas vidas... são nossas.",
+      "Freljord terá paz, eu mesma vou forjá-la.",
+      "Meu povo só conhece o frio e a adversidade... Vou ensinar o que é a paz.",
+      "Empunho um arco de gelo verdadeiro, como meu próprio coração.",
+      "Termestres e Glacinatas, Andarilhos Espirituais e Ígnatas. Todos de Freljord são meus semelhantes.",
+      "Eu nasci na miséria — como todos os Freljordanos.",
+      "Não permitirei que continuemos divididos, nós somos um.",
+      "Acham que sou fria, mas já presenciei coisas que gente do sul nem consegue imaginar."
+    ],
+    "Azir": [
+      "Shurima! Seu imperador retornou.",
+      "Seu imperador há de retornar.",
+      "O mundo é um deserto. Eu sou o oásis.",
+      "Mais uma vez, Shurima se expandirá ao horizonte.",
+      "É a minha vez. Coloque sua fé em mim.",
+      "Todos os caminhos levam a Shurima.",
+      "Eu nos guiarei à glória.",
+      "Retornemos ao nosso lugar de direito, Nasus.",
+      "Foi uma longa espera, Nasus, mas valerá a pena.",
+      "Juntos, lutaremos rumo à vitória, Sivir.",
+      "É direito nosso, Sivir, o de reinar.",
+      "Imperadores não têm rivais, Xerath.",
+      "Somos os autores da história.",
+      "Todos os olhos, buscam por nós.",
+      "Um governante deve escolher sua hora.",
+      "Ninguém conhece melhor a vontade do deserto do que EU.",
+      "Meu império, vive em cada grão de areia.",
+      "Somos feitos por nossas escolhas.",
+      "Todos saberão o nome, SHURIMA.",
+      "Junte-se a mim, e eleve-se.",
+      "Shurima vive em mim.",
+      "Eu devolverei grandeza a Shurima.",
+      "Traçamos um caminho de resplendor.",
+      "Esse mundo adormecido, há de acordar.",
+      "Não precisa seguir, mas deve testemunhar.",
+      "Lealdade será recompensada.",
+      "Nenhum sacrifício é grande demais.",
+      "Acredite em nosso futuro.",
+      "Não há futuro, sem Shurima.",
+      "Desenterraremos o que foi perdido."
+    ],
+    "Belveth": [
+      "Eu sou a voz do silêncio.",
+      "Estaremos esperando.",
+      "Que meus primeiros passos marquem o fim deste mundo.",
+      "Acham que não somos nada, mas somos tudo. Todos os lugares, as eras, nós somos vocês.",
+      "Durante a vida inteira vocês têm buscado a própria destruição. Pois bem, eu estou aqui.",
+      "Minha fome é insaciável. Ela não tem fim, e não será apagada.",
+      "A existência era o nosso casulo. Ela transformou o Vazio em algo... novo.",
+      "Estou infinitamente acima de você. Minha mente não conhece fraqueza, ou misericórdia.",
+      "Nossa vitória foi garantida no momento em que eu nasci.",
+      "A minha Runeterra será linda.",
+      "Imperturbado, o Vazio não queria nada. Agora, simplesmente queremos.",
+      "Tudo que restará será um Mar de Lavanda.",
+      "Eu me espalho por cada recanto do Antigo Vazio.",
+      "Eu sou tudo que há e tudo que sempre haverá.",
+      "Uma cidade vasta cresce sob nós. A minha cidade.",
+      "Eu desejo tudo.",
+      "Eu não sinto ódio.",
+      "Minha mente se expande.",
+      "A luz da realidade ardia, até se apagar.",
+      "Vamos consumir vocês e nos tornar vocês.",
+      "Emoções, memórias... É isso que eu desejo.",
+      "A evolução nunca é gentil.",
+      "Eu preciso saber o significado da existência.",
+      "A humanidade arquitetou a própria extinção.",
+      "Mudar é necessário.",
+      "Minha espécie invadirá Runeterra, e tudo ruirá.",
+      "O Vazio não pode mais voltar ao que era antes.",
+      "Nós invejamos a dádiva da existência.",
+      "O fim está à espera.",
+      "Um último banquete para devorar o mundo."
+    ],
+    "Camille": [
+      "Precisão é a diferença entre um açougueiro e um cirurgião.",
+      "Que decisão mais estapafúrdia!",
+      "O progresso nunca pode tardar.",
+      "Vou onde o trabalho me leva.",
+      "Permaneço humana... na maior parte.",
+      "Uma ilha de ruína, hm... que glamuroso.",
+      "Eu... detesto... neve.",
+      "A tecnologia e eu temos um... relacionamento complicado.",
+      "Sou o que chamam de... recurso negável.",
+      "Eu asseguro a sobrevivência de Piltover.",
+      "O progresso é aprimorado com... mortes necessárias.",
+      "A memória pesada do passado não melhora com a idade.",
+      "Arrependimento é o que tempera o aço da nossa alma.",
+      "A palavra certa corta mais profundamente que uma faca.",
+      "O medo afia todas as lâminas.",
+      "Não jogo o jogo. Faço suas regras.",
+      "Não são mentiras que cortam, e sim, a afies da verdade.",
+      "Às vezes, ambições precisam ser reprimidas.",
+      "Violência é um meio para um fim.",
+      "Moralidade é uma serva linda, e uma mestra perigosa.",
+      "Elegância nunca sai de moda.",
+      "Todos temos limites. Posso ter passado do meu...",
+      "Mais um passo pela marcha do progresso!",
+      "Eles me pagam para encontrar problemas, e aí, me livrar deles.",
+      "Tudo tem um lugar. Esquecer o teu é perigoso.",
+      "Sou chamada quando as negociações falham.",
+      "A sociedade precisa de regras.",
+      "Mulheres autossuficientes precisam ser mais predominantes.",
+      "Privilégio deve ser preservado a todo custo.",
+      "Não é a arma que te define, e sim, como tu a utilizas."
+    ],
+    "Cassiopeia": [
+      "Não há antidoto contra mim.",
+      "Que criaturas deselegantes.",
+      "Quem terá a sorte de me encarar hoje?",
+      "São tantos os fios que esperam ser puxados.",
+      "Outro jogo de cobra e ratos.",
+      "Violência é desordem.",
+      "Não instigue uma víbora.",
+      "Você tem saudade de algo? Gostaria de ter?",
+      "Quem não controla os peões é um deles.",
+      "Não sou tão fácil assim de sair de seu corpo.",
+      "Riqueza é valiosa somente como caminho ao poder.",
+      "Paciência, queridos.",
+      "Tenha cuidado, eu mordo!",
+      "Eu gosto de deixar uma impressão duradoura!",
+      "Eu não sou inflexível, se é que você me entende.",
+      "Gosta do que vê?",
+      "Eu sei o que todo mundo quer!",
+      "Poder requer precisão.",
+      "Segredos são mais afiados que espadas.",
+      "Cuidado por onde anda.",
+      "Eu cuidarei de tudo!",
+      "Pense no que eu poderia oferecer.",
+      "Mantenha seus inimigos por perto, e eu, mais perto ainda.",
+      "Muitas guerras começam com um sussurro.",
+      "Cada problema é uma oportunidade!",
+      "Oh Sivir, tudo que você precisava era do estímulo certo.",
+      "Sinto muito, Sivir, mas me desfaço de ferramentas das quais não preciso mais!",
+      "Sivir! Já voltou para morrer?",
+      "É impossível descer ao nível dessa competição!",
+      "Com o tempo, todos eles voltam rastejando."
+    ],
+    "Diana": [
+      "A lua nova está nascendo.",
+      "Servos boçais!",
+      "Jamais siga a luz falsa.",
+      "A Lua também nasce.",
+      "Eles não escutariam.",
+      "Eu serei ouvida!",
+      "A escolhida da Lua.",
+      "Meus olhos estão abertos.",
+      "Envolva a noite.",
+      "Eles não me quebrariam.",
+      "Não vou voltar atrás.",
+      "O crepúsculo se aproxima.",
+      "Eu falo somente a verdade.",
+      "me chamou de herege, agora está morto!",
+      "A Lua vai se erguer. E a noite será eterna.",
+      "Isto é necessário.",
+      "Faça o Sol se pôr.",
+      "Não me sobra outra escolha.",
+      "Nunca mais negue a mim!",
+      "Cega para a verdade.",
+      "Chega de mentiras.",
+      "O cair da noite!",
+      "A luz se esvai!",
+      "Se aproxima a noite!"
+    ],
+    "Graves": [
+      "Vamos encarar o perigo.",
+      "Calma, amigo."
+    ],
+    "Kalista": [
+      "Morte a todos os traidores.",
+      "Vira-casacas, perjuradores e traidores, odiamos todos eles.",
+      "O sangue de amigos e família mancha suas mãos.",
+      "Não há justiça a se fazer. Apenas vingança.",
+      "Esse sofrimento não é estranho... conhecemos esse lugar.",
+      "Os mortos não sentem frio.",
+      "Nós somos vingança.",
+      "Tudo tem sua consequência.",
+      "Um pensamento nos motiva.",
+      "Promessas devem ser mantidas.",
+      "Permanecemos em movimento.",
+      "Podemos estar em qualquer lugar.",
+      "O que começou será terminado.",
+      "Nossa tarefa é infindável.",
+      "Nosso ódio queima a frio.",
+      "Nunca descansamos.",
+      "Conheça nossa dor. Conheça nossa verdade.",
+      "As feridas da traição nunca cicatrizam.",
+      "Permanecemos íntegras ao nosso propósito.",
+      "Vamos aonde somos necessárias.",
+      "Nada nos desviará de nosso caminho.",
+      "Nos chamam em outro lugar.",
+      "Nós — Eu — preciso me lembrar.",
+      "Confiança... é uma arma.",
+      "Não há nada mais hediondo do que a traição.",
+      "Começamos como uma.",
+      "Protegemos umas às outras.",
+      "Já tivemos um nome.",
+      "Já confiamos.",
+      "Esse lugar já foi tão bonito..."
+    ],
+    "Kayle": [
+      "Vão tremer diante da minha perfeição!",
+      "A hora do seu julgamento vai chegar."
+    ],
+    "Lillia": [
+      "Eu? Um sonho que virou realidade!",
+      "Eles estão fugindo de mim?…",
+      "Você traz tantos sonhos, criança brilhante. Mas tanta angústia…",
+      "Uns chegam perdidos ao jardim. Outros, querem se perder. Como você, Ahri.",
+      "Neeko, por quê os humanos escondem o que sentem? Será que a sua flor sabe?",
+      "Ivern! Ainda sou sua plantinha preferida? Não que eu tenha que ser…",
+      "Acho que você comeu… Muito roxo.",
+      "Ah! Oi, passarinho! O que você… Ah, ah… Atchim! Opa…"
+    ],
+    "Lulu": [
+      "Prazer em conhecer você!",
+      "Acho que eles não acreditam, Pix.",
+      "É, tem um gosto meio roxo!",
+      "Só uma pitadinha...",
+      "Conheço esse esquilo de algum lugar.",
+      "Nunca olhe diretamente para uma tulipa...",
+      "Conseguirá ver melhor com os olhos fechados.",
+      "Ai... tô tonta.",
+      "Vou em um pé e volto no outro.",
+      "Orvalho intrometido!",
+      "Vamos dar mais uma volta! Há!",
+      "Vamos lá, vamos dançar! Há!",
+      "Precisamos pensar direitinho! Hmm... hmmhmm... Ah! Entendi",
+      "Que tal uma giradinha? Whoa, whoa whoa ah, ihaha!",
+      "Uma risadinha deve resolver o problema.",
+      "Eles não vão gostar nada disso.",
+      "Acabe com eles, Pix!",
+      "Muito alto... Muito muito alto.",
+      "Vamos usar TODAS as cores!",
+      "Fofura chegando!",
+      "Transmogular!",
+      "Engrandecer!",
+      "E lá vamos nós!"
+    ],
+    "Neeko": [
+      "Esse lugar tem gosto de um monte de emoção: Empolgação, raiva, alegria e... salgado? Salgado é sentimento?",
+      "Co-'om se-henna. Ah, é tipo 'sorrimos para sempre'. Amigos! Essa é a palavra! Amigos!",
+      "Dividir lembranças, cores e sentimentos é mágico! Magia conecta as pessoas.",
+      "Quando a briga acabar, todo mundo convidados pro piquenique! Até inimigos!",
+      "Pra sobreviver preciso se misturar.",
+      "Mais devagar? Nada! Rápido rápido rápido!",
+      "O que fazer agora? Procurar pão de queijo? Aii já sei! Piquenique!",
+      "Como alguém pode ter saudade de casa? Casa é todo lugar.",
+      "Os espíritos estão sempre perto. Quentinho, tipo o abraço.",
+      "Woo! Poderosa! Como a gata selvagem ! Ah... saudade dela.",
+      "Não se prende a um corpo só. Têm tantos por aí.",
+      "Gente sem cauda? Solitário? Aham.",
+      "Que legal! Tá tudo desabando!",
+      "Não, cauda! Agora é pra ficar com raiva!",
+      "A beleza vem de dentro, é lá que o coração dança.",
+      "Tô só sendo eu... fazendo coisa de eu. Coisa não suspeita.",
+      "Sou normal! Tudo normal. Nada de suspeito aqui.",
+      "É legal andar por aí em outra pele. Ahaha!",
+      "Não cabe mais problema no meu vida. Só mais pão de queijo!",
+      "Todo lugar é bonita. Todo lugar é perigo. Será que perigo... é bonita?",
+      "Palavras são difíceis. Melhor fala com cor! E emoção!",
+      "Sho'ma é tipo, é... a forma do espírito de alguém, como você realmente é por dentro.",
+      "Olá, inimigo!",
+      "Oi, natureza! A natureza daqui é engraçada.",
+      "Nossa! Lá de onde eu venho não tem isso.",
+      "Não, Rengar! Seja legal e fofinho, como a Nidalee.",
+      "Me mostra o mundo, Taliyah. Me leva com você!",
+      "Fa hasici! Significa gosto de você. De um jeito bom.",
+      "Oi, Vastaya! Você conhece a ? Ela é legal?",
+      "Ataco, ataco!"
+    ],
+    "Nidalee": [
+      "A selva chama, eu respondo.",
+      "É pra ter medo mesmo.",
+      "Adoro esse silêncio. A paz antes da caçada.",
+      "Nunca estou só. Minha tribo vive no meu coração, e na minha lança.",
+      "As presas se escondem nos sons da selva—ouça, e depois ataque.",
+      "Os acham que podem conquistar a selva, mas ninguém doma a natureza.",
+      "A vida não para.",
+      "Meu propósito é proteger meu bando.",
+      "Essa terra vai ser o túmulo de todos os invasores!",
+      "É fácil encontrar invasores.",
+      "Eu sou a protetora da selva!",
+      "Eu lidero minha tribo há gerações.",
+      "Minha família, é minha força.",
+      "Nosso futuro, são nossos Pakiti.",
+      "Mãos sem garras precisam de uma lança!",
+      "A selva nunca dorme.",
+      "Veja... Escute... Tenha foco...",
+      "O instinto guia meus passos.",
+      "Só caço o que preciso.",
+      "Faço minhas lanças com os ossos de caçadores.",
+      "Minha caça não vai escapar.",
+      "Pata macia, pés rápidos.",
+      "Eu não questiono minhas duas formas.",
+      "Já foi estranho andar sobre dois pés.",
+      "Huh, serei sempre a filhote da minha mãe.",
+      "Os instintos de um caçador são naturais. As habilidades, aprendidas.",
+      "O título da minha mãe veio carregado de sangue dos Kiilash. Assim, mantenho nossa família viva.",
+      "Somos a tribo dos 'Pakaa'. Só as presas estrangeiras nos chamam de Kashdaji.",
+      "Não ligo pro que os humanos fazem—até ser obrigada a virar inimiga deles.",
+      "Não entendo a natureza dos humanos. Nada se ganha com abates desnecessários."
+    ],
+    "Renata": [
+      "Ai, que sufoco.",
+      "Ah, minha parte favorita do trabalho: testar produtos.",
+      "Todo Piltovense de bom gosto, tem ao menos um produto meu. Tão crédulos, tão ingênuos.",
+      "Trabalhe pra mim ou contra mim, não importa. Todos acabam vindo pro meu lado.",
+      "Bom, eu tenho empresas a comprar e uma cidade a destruir, então vamos logo com isso.",
+      "A diferença entre o remédio e o veneno está na dose. Permita que eu demonstre.",
+      "Lembro quando eu passava fome no Sumidouro. Uma pobre garotinha patética. Vejam aonde cheguei!",
+      "Meu decantador é só mais um dos peões no meu jogo.",
+      "O progresso tem um preço que os outros não querem pagar.",
+      "Os meus pais só me deixaram o meu nome. Agora, ele vale milhões.",
+      "Antes eu tinha rivais, agora eu tenho parceiros de negócios.",
+      "Ugh, o ar é limpo demais aqui em cima.",
+      "Eu não perdoo dívidas. E eu nunca me esqueço delas.",
+      "A maioria dos Barões da Química são lacaios que falharam.",
+      "Zaun não é inferior a Piltover, não importam as aparências.",
+      "Eu não preciso fazer o trabalho sujo. Ah, mas eu adoro!",
+      "Competir é para os fracos. Eu domino!",
+      "Ambição não é ganância.",
+      "Piltover sofrerá pelos crimes contra mim!",
+      "O dinheiro escreve as leis que os governos aplicam.",
+      "Zaun merece mais.",
+      "Quem disse que a Quimtec não é linda?",
+      "Não é à toa que sou eu quem manda.",
+      "Ninguém constrói impérios só com o suficiente.",
+      "Ninguém sequer pensou em investir em Quimtec antes de mim.",
+      "Poder pode ser comprado. Lealdade, também.",
+      "Piltover não merece o Portão do Sol.",
+      "Aquela que controla o Portão Solar, controla o mundo!",
+      "Os outros Barões da Química temem o meu poder. Com razão.",
+      "Dê migalhas aos que têm fome, e eles te agradecem pelo banquete."
+    ],
+    "Samira": [
+      "É estilo que você quer? Toma.",
+      "É, eu mereço coisa melhor."
+    ],
+    "Shaco": [
+      "Que tal um truque de mágica?",
+      "Voce é a piada aqui!",
+      "Olhe atrás de você.",
+      "Isto vai ser divertido!",
+      "Aqui vamos nós!",
+      "Vamos, vamos, vamos, vamos!",
+      "Marche, marche, marche marche!",
+      "E para o meu próximo truque, eu farei voce desaparecer!",
+      "Agora você me vê, agora você não vê!",
+      "Chegue um pouco mais perto!"
+    ],
+    "Sivir": [
+      "Eu sempre pego minha parte - em ouro, ou sangue.",
+      "São apenas negócios."
+    ],
+    "Taliyah": [
+      "Conheça o tear. Seja a pedra.",
+      "O chão aqui oculta um imenso poder.",
+      "Toda tapeçaria começa com um único ponto.",
+      "Hora de usar o que aprendi.",
+      "Hora de arregaçar as mangas.",
+      "Vou na frente.",
+      "O sol nasce. Devo partir.",
+      "A confiança de um pássaro não está no galho.",
+      "As pedras aqui são incríveis.",
+      "As menores pedras podem começar uma avalanche.",
+      "A terra aqui, que cores.",
+      "Mantenha os olhos no horizonte e seus pés no chão.",
+      "A terra chama, devo responder.",
+      "Não posso tirar muito mais dessa pedra.",
+      "As vezes queria que rochas pudessem me aconselhar.",
+      "Sei que depois disso tudo irei para casa um dia.",
+      "A beleza do deserto está abaixo da areia.",
+      "Uma tribo sem tradição é como um rebanho sem pastor.",
+      "O mundo é meu tear e toda pedra é minha linha.",
+      "Que padrão interessante.",
+      "É melhor continuar.",
+      "Já é hora de ir e nem apreciei a paisagem.",
+      "Devo terminar minha tarefa.",
+      "Que pedra magnífica.",
+      "Toda pedrinha tem potencial infinito.",
+      "Se eu tropeçar, tenho a terra para me pegar.",
+      "Enquanto o deserto florescer. Existe esperança.",
+      "Minha jornada ainda não chegou ao fim.",
+      "Este mundo é uma tapeçaria feita por nós.",
+      "O pardal voa contra o vento."
+    ]
+  }
+}
