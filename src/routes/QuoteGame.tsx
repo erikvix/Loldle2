@@ -1,4 +1,4 @@
-import { QuoteIcon, RefreshCwIcon } from 'lucide-react'
+import { LanguagesIcon, QuoteIcon, RefreshCwIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { ChampionIcon } from '@/components/ChampionIcon'
 import { GuessForm } from '@/components/GuessForm'
@@ -13,6 +13,7 @@ export function QuoteGame() {
   const [quote, setQuote] = useState(() => pickRandomQuote())
   const [guesses, setGuesses] = useState<Champion[]>([])
   const [roundsWon, setRoundsWon] = useState(0)
+  const [showOriginal, setShowOriginal] = useState(false)
 
   const answer = championsById.get(quote.championId)!
   const won = guesses[0]?.id === answer.id
@@ -26,6 +27,7 @@ export function QuoteGame() {
   function nextQuote() {
     setQuote((previous) => pickRandomQuote(previous))
     setGuesses([])
+    setShowOriginal(false)
   }
 
   return (
@@ -38,8 +40,17 @@ export function QuoteGame() {
         <CardContent>
           <blockquote className="flex gap-3 rounded-lg bg-muted p-4 text-lg italic">
             <QuoteIcon className="size-5 shrink-0 text-amber-500" />
-            <p>“{quote.text}”</p>
+            <p>“{showOriginal && quote.original ? quote.original : quote.text}”</p>
           </blockquote>
+          {quote.original && (
+            <div className="mt-2 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+              <LanguagesIcon className="size-3.5" />
+              <span>Tradução automática</span>
+              <Button variant="link" size="xs" onClick={() => setShowOriginal((v) => !v)}>
+                {showOriginal ? 'Ver tradução' : 'Ver original em inglês'}
+              </Button>
+            </div>
+          )}
           <div className="mt-4 flex justify-center gap-2">
             <Badge variant="secondary">Tentativas: {guesses.length}</Badge>
             <Badge variant="secondary">Acertos: {roundsWon}</Badge>

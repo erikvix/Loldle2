@@ -38,10 +38,13 @@ src/
 ## Dados
 
 - **Campeões e ícones:** [Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon) da Riot, em `pt_BR`. Não precisa de chave de API.
-- **Falas:** [Wiki League of Legends PT-BR](https://leagueoflegends.fandom.com/pt-br), licença CC BY-SA, páginas `<Campeão>/LoL/Áudio`.
+- **Falas dubladas em PT-BR:** [Wiki League of Legends PT-BR](https://leagueoflegends.fandom.com/pt-br), páginas `<Campeão>/LoL/Áudio`.
+- **Demais campeões:** [Wiki League of Legends em inglês](https://leagueoflegends.fandom.com), páginas `<Champion>/LoL/Audio`. As falas foram traduzidas para o português e ficam em `scripts/translations.json`. No jogo, elas aparecem marcadas como "Tradução automática", com opção de ver o original.
 
-O script `npm run fetch:quotes` busca os dados das duas fontes e grava `src/data/quotes.json`. Ele mantém só as falas da skin clássica e descarta as que contêm o nome do campeão.
+As duas wikis usam a licença CC BY-SA.
 
-A wiki PT-BR ainda não tem falas para todos os campeões, então só uma parte deles aparece como resposta. Mesmo assim, todos ficam disponíveis como palpite.
+O script `npm run fetch:quotes` busca os dados e grava `src/data/quotes.json`. Ele usa a wiki PT-BR quando há falas lá e, se não houver, recorre à wiki em inglês com as traduções. Mantém só as falas da skin clássica e descarta as que contêm o nome do campeão. Se aparecerem falas em inglês sem tradução, o script as lista em `scripts/untranslated.json`, e elas ficam fora do jogo até alguém traduzir e adicionar em `translations.json`.
+
+Hoje 165 dos 173 campeões têm falas: 532 dubladas e cerca de 2.000 traduzidas. Os 8 que faltam não falam no jogo (Bardo, Rammus, Rek'Sai) ou ainda não têm falas transcritas na wiki.
 
 Loldle2 não é afiliado à Riot Games.

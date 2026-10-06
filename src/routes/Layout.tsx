@@ -12,14 +12,18 @@ export function Layout() {
         <Outlet />
       </main>
       <footer className="px-4 py-6 text-center text-xs text-muted-foreground">
-        Falas da{' '}
+        Falas da Wiki League of Legends{' '}
         <a
           href="https://leagueoflegends.fandom.com/pt-br"
           className="underline"
           target="_blank"
           rel="noreferrer"
         >
-          Wiki League of Legends PT-BR
+          PT-BR
+        </a>{' '}
+        e{' '}
+        <a href="https://leagueoflegends.fandom.com" className="underline" target="_blank" rel="noreferrer">
+          em inglês
         </a>{' '}
         (CC BY-SA). Loldle2 não é afiliado à Riot Games.
       </footer>
