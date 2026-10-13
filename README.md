@@ -2,9 +2,23 @@
 
 Jogo de adivinhação de campeões de League of Legends, inspirado no [Loldle](https://loldle.net).
 
-Por enquanto há um modo: **Falas**. O jogo mostra uma fala dublada em português e você tenta descobrir qual campeão a disse. Os chutes são ilimitados: ao acertar, você pode passar para a próxima fala.
+Há dois modos: **Falas**, para jogar sozinho, e **Multiplayer**.
+
+### Falas
+
+O jogo mostra uma fala em português e você tenta descobrir qual campeão a disse. Os chutes são ilimitados: ao acertar, você pode passar para a próxima fala.
 
 Nas falas dubladas, dá para ouvir o áudio da dublagem. Ele vira dica depois de 3 chutes errados e fica disponível também depois que você acerta.
+
+### Multiplayer
+
+De 2 a 4 jogadores, cada um no seu aparelho, jogam 10 rodadas do modo Falas. Todos veem a mesma fala ao mesmo tempo, e quem acertar o campeão primeiro leva o ponto da rodada. Se ninguém acertar em 90 segundos, a resposta é revelada sem pontos. No fim, aparece o placar e o host pode começar outra partida.
+
+- Um jogador cria a sala e compartilha o código ou o link de convite (`/multi/<código>`).
+- A conexão é direta entre os navegadores (WebRTC, via [PeerJS](https://peerjs.com/)). Não há servidor do jogo: o navegador de quem criou a sala (o host) sorteia as falas, valida os chutes e soma os pontos.
+- Para os navegadores se encontrarem, o PeerJS usa o servidor de sinalização gratuito `0.peerjs.com`. Para usar outro servidor, defina `VITE_PEER_HOST`, `VITE_PEER_PORT`, `VITE_PEER_PATH` e `VITE_PEER_SECURE` no build.
+- Se o host fechar a página, a partida acaba para todos. Se um convidado sair, ele fica marcado como "saiu" e a partida continua.
+- Em algumas redes muito restritas (ex.: redes corporativas), a conexão direta pode falhar. Isso exigiria um servidor TURN, que o projeto ainda não tem.
 
 ## Stack
 
@@ -12,6 +26,7 @@ Nas falas dubladas, dá para ouvir o áudio da dublagem. Ele vira dica depois de
 - [shadcn/ui](https://ui.shadcn.com/) + [Tailwind CSS](https://tailwindcss.com/)
 - [React Router](https://reactrouter.com/)
 - [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- [PeerJS](https://peerjs.com/) (multiplayer via WebRTC)
 
 ## Como rodar
 
@@ -35,7 +50,8 @@ src/
 │   └── ui/           # Componentes do shadcn/ui
 ├── data/             # quotes.json e helpers de acesso aos dados
 ├── game/             # Lógica do jogo (sorteio de falas, busca de campeões)
-├── routes/           # Páginas (início e modo Falas)
+├── multiplayer/      # Protocolo e conexão das salas (PeerJS)
+├── routes/           # Páginas (início, Falas, Multiplayer)
 └── main.tsx          # Rotas e ponto de entrada
 ```
 

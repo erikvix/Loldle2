@@ -17,6 +17,9 @@ export interface Quote {
   audio?: string
 }
 
+// Fala sem o campeão, como é enviada aos jogadores no multiplayer.
+export type PublicQuote = Omit<Quote, 'championId'>
+
 export const ddragonVersion: string = data.ddragonVersion
 
 // Todos os campeões que podem ser chutados, inclusive os que ainda não têm falas.
@@ -32,6 +35,6 @@ export function championIconUrl(championId: string): string {
   return `https://ddragon.leagueoflegends.com/cdn/${ddragonVersion}/img/champion/${championId}.png`
 }
 
-export function quoteAudioUrl(quote: Quote): string | null {
+export function quoteAudioUrl(quote: PublicQuote): string | null {
   return quote.audio ? `${import.meta.env.BASE_URL}audio/${quote.audio}` : null
 }

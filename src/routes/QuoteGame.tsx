@@ -1,30 +1,25 @@
-import { BadgeCheckIcon, LanguagesIcon, LockIcon, QuoteIcon, RefreshCwIcon, VolumeXIcon } from 'lucide-react'
+import { RefreshCwIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { AudioButton } from '@/components/AudioButton'
+import { AudioHint } from '@/components/AudioHint'
 import { ChampionIcon } from '@/components/ChampionIcon'
 import { GuessForm } from '@/components/GuessForm'
 import { GuessList } from '@/components/GuessList'
+import { QuoteCard } from '@/components/QuoteCard'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { championsById, quoteAudioUrl, type Champion } from '@/data/quotes'
+import { Card, CardContent } from '@/components/ui/card'
+import { championsById, type Champion } from '@/data/quotes'
 import { pickRandomQuote } from '@/game/quotes'
-
-// Chutes errados necessários para liberar o áudio como dica.
-const AUDIO_HINT_AFTER = 3
 
 export function QuoteGame() {
   const [quote, setQuote] = useState(() => pickRandomQuote())
   const [guesses, setGuesses] = useState<Champion[]>([])
   const [roundsWon, setRoundsWon] = useState(0)
-  const [showOriginal, setShowOriginal] = useState(false)
 
   const answer = championsById.get(quote.championId)!
   const won = guesses[0]?.id === answer.id
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses])
-  const audioUrl = quoteAudioUrl(quote)
   const wrongGuesses = guesses.length - (won ? 1 : 0)
-  const hintRemaining = AUDIO_HINT_AFTER - wrongGuesses
 
   function handleGuess(champion: Champion) {
     setGuesses((prev) => [champion, ...prev])
@@ -34,56 +29,21 @@ export function QuoteGame() {
   function nextQuote() {
     setQuote((previous) => pickRandomQuote(previous))
     setGuesses([])
-    setShowOriginal(false)
   }
 
   return (
     <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-6">
-      <Card className="w-full">
-        <CardHeader className="text-center">
-          <CardTitle>Qual campeão disse isto?</CardTitle>
-          <CardDescription>Chutes ilimitados. Acerte e passe para a próxima fala.</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <blockquote className="flex gap-3 rounded-lg bg-muted p-4 text-lg italic">
-            <QuoteIcon className="size-5 shrink-0 text-amber-500" />
-            <p>“{showOriginal && quote.original ? quote.original : quote.text}”</p>
-          </blockquote>
-          {quote.source === 'universe' && (
-            <div className="mt-2 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-              <BadgeCheckIcon className="size-3.5 text-amber-500" />
-              <span>Fala oficial do Riot Universe</span>
-            </div>
-          )}
-          {quote.original && (
-            <div className="mt-2 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-              <LanguagesIcon className="size-3.5" />
-              <span>Tradução automática</span>
-              <Button variant="link" size="xs" onClick={() => setShowOriginal((v) => !v)}>
-                {showOriginal ? 'Ver tradução' : 'Ver original em inglês'}
-              </Button>
-            </div>
-          )}
-          <div className="mt-4 flex justify-center gap-2">
-            <Badge variant="secondary">Tentativas: {guesses.length}</Badge>
-            <Badge variant="secondary">Acertos: {roundsWon}</Badge>
+      <QuoteCard quote={quote} description="Chutes ilimitados. Acerte e passe para a próxima fala.">
+        <div className="mt-4 flex justify-center gap-2">
+          <Badge variant="secondary">Tentativas: {guesses.length}</Badge>
+          <Badge variant="secondary">Acertos: {roundsWon}</Badge>
+        </div>
+        {!won && (
+          <div className="mt-4 flex justify-center">
+            <AudioHint quote={quote} wrongGuesses={wrongGuesses} revealed={false} />
           </div>
-          {!won && (
-            <div className="mt-4 flex justify-center">
-              {!audioUrl ? (
-                <NoAudio />
-              ) : hintRemaining > 0 ? (
-                <Button variant="outline" disabled>
-                  <LockIcon data-icon="inline-start" />
-                  Dica de áudio em {hintRemaining} {hintRemaining === 1 ? 'chute' : 'chutes'}
-                </Button>
-              ) : (
-                <AudioButton key={audioUrl} src={audioUrl} label="Ouvir dica de áudio" />
-              )}
-            </div>
-          )}
-        </CardContent>
-      </Card>
+        )}
+      </QuoteCard>
 
       {won ? (
         <Card className="w-full border-emerald-500">
@@ -96,7 +56,7 @@ export function QuoteGame() {
                 {guesses.length} {guesses.length === 1 ? 'tentativa' : 'tentativas'}
               </p>
             </div>
-            {audioUrl ? <AudioButton key={audioUrl} src={audioUrl} label="Ouvir fala" /> : <NoAudio />}
+            <AudioHint quote={quote} wrongGuesses={wrongGuesses} revealed />
             <Button size="lg" onClick={nextQuote} autoFocus>
               <RefreshCwIcon data-icon="inline-start" />
               Próxima fala
@@ -109,15 +69,5 @@ export function QuoteGame() {
 
       <GuessList guesses={guesses} answerId={answer.id} />
     </div>
-  )
-}
-
-// Só as falas dubladas têm áudio; as traduzidas e as oficiais do Universe ficam só em texto.
-function NoAudio() {
-  return (
-    <p className="flex items-center gap-2 text-xs text-muted-foreground">
-      <VolumeXIcon className="size-3.5" />
-      Esta fala não tem áudio
-    </p>
   )
 }

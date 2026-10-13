@@ -12,6 +12,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'falas', element: <QuoteGame /> },
+      // Multiplayer carregado sob demanda, para o PeerJS não pesar no modo solo.
+      { path: 'multi', lazy: () => import('./routes/MultiplayerHome').then((m) => ({ Component: m.MultiplayerHome })) },
+      {
+        path: 'multi/:code',
+        lazy: () => import('./routes/MultiplayerRoom').then((m) => ({ Component: m.MultiplayerRoom })),
+      },
       { path: '*', element: <Navigate to="/" replace /> },
     ],
   },
