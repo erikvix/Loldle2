@@ -1,4 +1,4 @@
-import { ImageIcon, QuoteIcon, SparklesIcon, UsersIcon } from 'lucide-react'
+import { HammerIcon, ImageIcon, QuoteIcon, SparklesIcon, UsersIcon } from 'lucide-react'
 import { Link } from 'react-router'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -35,6 +35,17 @@ export function Home() {
             <div>
               <CardTitle>Habilidade</CardTitle>
               <CardDescription>Adivinhe o campeão pelo ícone de uma habilidade</CardDescription>
+            </div>
+          </CardHeader>
+        </Card>
+      </Link>
+      <Link to="/forja" className="rounded-xl transition-transform hover:scale-[1.02]">
+        <Card className="hover:border-amber-500">
+          <CardHeader className="flex flex-row items-center gap-4">
+            <HammerIcon className="size-8 text-amber-500" />
+            <div>
+              <CardTitle>Forja de Itens</CardTitle>
+              <CardDescription>Monte a receita de um item com os componentes certos</CardDescription>
             </div>
           </CardHeader>
         </Card>

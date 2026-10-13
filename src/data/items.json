@@ -1,0 +1,1704 @@
+{
+  "ddragonVersion": "16.20.1",
+  "items": {
+    "1001": {
+      "name": "Botas",
+      "gold": 300
+    },
+    "1004": {
+      "name": "Amuleto da Fada",
+      "gold": 200
+    },
+    "1006": {
+      "name": "Pérola do Rejuvenescimento",
+      "gold": 300
+    },
+    "1011": {
+      "name": "Cinto do Gigante",
+      "gold": 900,
+      "from": [
+        "1028"
+      ]
+    },
+    "1018": {
+      "name": "Capa da Agilidade",
+      "gold": 600
+    },
+    "1026": {
+      "name": "Varinha Explosiva",
+      "gold": 850
+    },
+    "1027": {
+      "name": "Cristal de Safira",
+      "gold": 300
+    },
+    "1028": {
+      "name": "Cristal de Rubi",
+      "gold": 400
+    },
+    "1029": {
+      "name": "Couraça de Pano",
+      "gold": 300
+    },
+    "1031": {
+      "name": "Cota de Malha",
+      "gold": 800,
+      "from": [
+        "1029"
+      ]
+    },
+    "1033": {
+      "name": "Manto Anula-Magia",
+      "gold": 400
+    },
+    "1036": {
+      "name": "Espada Longa",
+      "gold": 350
+    },
+    "1037": {
+      "name": "Picareta",
+      "gold": 875
+    },
+    "1038": {
+      "name": "Espada G. p. C.",
+      "gold": 1300
+    },
+    "1042": {
+      "name": "Adaga",
+      "gold": 250
+    },
+    "1043": {
+      "name": "Arco Recurvo",
+      "gold": 700,
+      "from": [
+        "1042"
+      ]
+    },
+    "1052": {
+      "name": "Tomo Amplificador",
+      "gold": 400
+    },
+    "1053": {
+      "name": "Cetro Vampírico",
+      "gold": 900,
+      "from": [
+        "1036"
+      ]
+    },
+    "1054": {
+      "name": "Escudo de Doran",
+      "gold": 450
+    },
+    "1055": {
+      "name": "Lâmina de Doran",
+      "gold": 450
+    },
+    "1056": {
+      "name": "Anel de Doran",
+      "gold": 400
+    },
+    "1057": {
+      "name": "Capa Negatron",
+      "gold": 850,
+      "from": [
+        "1033"
+      ]
+    },
+    "1058": {
+      "name": "Bastão Desnecessariamente Grande",
+      "gold": 1200
+    },
+    "1082": {
+      "name": "Lacre Sombrio",
+      "gold": 350
+    },
+    "1083": {
+      "name": "Abatedora",
+      "gold": 450
+    },
+    "1086": {
+      "name": "Arco de Doran",
+      "gold": 400
+    },
+    "1101": {
+      "name": "Filhote de Garrabrasa",
+      "gold": 450
+    },
+    "1102": {
+      "name": "Cria de Andabrisas",
+      "gold": 450
+    },
+    "1103": {
+      "name": "Broto de Esmagamusgo",
+      "gold": 450
+    },
+    "1105": {
+      "name": "Broto de Esmagamusgo",
+      "gold": 450
+    },
+    "1106": {
+      "name": "Cria de Andabrisas",
+      "gold": 450
+    },
+    "1107": {
+      "name": "Filhote de Garrabrasa",
+      "gold": 450
+    },
+    "1120": {
+      "name": "Elmo de Doran",
+      "gold": 450
+    },
+    "2003": {
+      "name": "Poção de Vida",
+      "gold": 50
+    },
+    "2019": {
+      "name": "Sigilo de Aço",
+      "gold": 1100,
+      "from": [
+        "1029",
+        "1036",
+        "1029"
+      ]
+    },
+    "2020": {
+      "name": "Brutalizador",
+      "gold": 1337,
+      "from": [
+        "2022",
+        "1037"
+      ]
+    },
+    "2021": {
+      "name": "Tunelizador",
+      "gold": 1150,
+      "from": [
+        "1036",
+        "1028"
+      ]
+    },
+    "2022": {
+      "name": "Partícula Brilhante",
+      "gold": 250
+    },
+    "2031": {
+      "name": "Poção com Refil",
+      "gold": 150
+    },
+    "2051": {
+      "name": "Berrante do Guardião",
+      "gold": 950
+    },
+    "2055": {
+      "name": "Sentinela de Controle",
+      "gold": 75
+    },
+    "2065": {
+      "name": "Hino Bélico de Shurelya",
+      "gold": 2200,
+      "from": [
+        "3113",
+        "4642"
+      ]
+    },
+    "2138": {
+      "name": "Elixir de Ferro",
+      "gold": 500
+    },
+    "2139": {
+      "name": "Elixir da Feitiçaria",
+      "gold": 500
+    },
+    "2140": {
+      "name": "Elixir da Ira",
+      "gold": 500
+    },
+    "2141": {
+      "name": "Suco de Chapéu",
+      "gold": 300
+    },
+    "2420": {
+      "name": "Armaguarda da Caçadora",
+      "gold": 1600,
+      "from": [
+        "1052",
+        "1029",
+        "1052"
+      ]
+    },
+    "2501": {
+      "name": "Armadura Sangrenta do Suserano",
+      "gold": 3300,
+      "from": [
+        "2021",
+        "2021"
+      ]
+    },
+    "2502": {
+      "name": "Desespero Eterno",
+      "gold": 2800,
+      "from": [
+        "1031",
+        "3067",
+        "1028"
+      ]
+    },
+    "2503": {
+      "name": "Tocha de Chamas Negras",
+      "gold": 2800,
+      "from": [
+        "3802",
+        "2508"
+      ]
+    },
+    "2504": {
+      "name": "Rookern Lamúrico",
+      "gold": 2900,
+      "from": [
+        "3211",
+        "1057"
+      ]
+    },
+    "2508": {
+      "name": "Cinzas do Destino",
+      "gold": 900,
+      "from": [
+        "1052"
+      ]
+    },
+    "2510": {
+      "name": "Aurora e Crepúsculo",
+      "gold": 3100,
+      "from": [
+        "3057",
+        "1026",
+        "3067",
+        "1042"
+      ]
+    },
+    "2512": {
+      "name": "Dardos de Caça-Demônios",
+      "gold": 2650,
+      "from": [
+        "3086",
+        "3144"
+      ]
+    },
+    "2517": {
+      "name": "Fome Eterna",
+      "gold": 3100,
+      "from": [
+        "3133",
+        "1037",
+        "1036"
+      ]
+    },
+    "2520": {
+      "name": "Quebra-Bastião",
+      "gold": 3000,
+      "from": [
+        "2020",
+        "3134"
+      ]
+    },
+    "2522": {
+      "name": "Concretizador",
+      "gold": 2800,
+      "from": [
+        "3802",
+        "1026"
+      ]
+    },
+    "2523": {
+      "name": "Hexótica C44",
+      "gold": 2800,
+      "from": [
+        "1037",
+        "6670",
+        "1036"
+      ]
+    },
+    "2524": {
+      "name": "Bandocanos",
+      "gold": 2300,
+      "from": [
+        "3067",
+        "1029",
+        "1033"
+      ]
+    },
+    "2525": {
+      "name": "Couraça Protoplasmática",
+      "gold": 2600,
+      "from": [
+        "3067",
+        "1011"
+      ]
+    },
+    "2526": {
+      "name": "Tiara Sussurrante",
+      "gold": 2250,
+      "from": [
+        "3114",
+        "1028",
+        "3070"
+      ]
+    },
+    "3003": {
+      "name": "Cajado do Arcanjo",
+      "gold": 2900,
+      "from": [
+        "3070",
+        "3802",
+        "3108"
+      ]
+    },
+    "3004": {
+      "name": "Manamune",
+      "gold": 2900,
+      "from": [
+        "3070",
+        "3133",
+        "1036"
+      ]
+    },
+    "3006": {
+      "name": "Grevas do Berserker",
+      "gold": 1100,
+      "from": [
+        "1001",
+        "1042",
+        "1042"
+      ]
+    },
+    "3008": {
+      "name": "Grevas Vorazes",
+      "gold": 1000,
+      "from": [
+        "1001"
+      ]
+    },
+    "3009": {
+      "name": "Botas da Rapidez",
+      "gold": 1000,
+      "from": [
+        "1001"
+      ]
+    },
+    "3020": {
+      "name": "Sapatos do Feiticeiro",
+      "gold": 1100,
+      "from": [
+        "1001"
+      ]
+    },
+    "3024": {
+      "name": "Broquel Glacial",
+      "gold": 900,
+      "from": [
+        "1029",
+        "1027",
+        "2022"
+      ]
+    },
+    "3026": {
+      "name": "Anjo Guardião",
+      "gold": 3200,
+      "from": [
+        "2019",
+        "1038"
+      ]
+    },
+    "3031": {
+      "name": "Gume do Infinito",
+      "gold": 3500,
+      "from": [
+        "1038",
+        "1037",
+        "1018"
+      ]
+    },
+    "3032": {
+      "name": "Flechatroz de Yun Tal",
+      "gold": 3000,
+      "from": [
+        "1038",
+        "3144",
+        "1036"
+      ]
+    },
+    "3033": {
+      "name": "Lembrete Mortal",
+      "gold": 3000,
+      "from": [
+        "3123",
+        "3035",
+        "1018"
+      ]
+    },
+    "3035": {
+      "name": "Último Sussurro",
+      "gold": 1450,
+      "from": [
+        "1036",
+        "1036"
+      ]
+    },
+    "3036": {
+      "name": "Lembranças do Lorde Dominik",
+      "gold": 3300,
+      "from": [
+        "3035",
+        "6670"
+      ]
+    },
+    "3041": {
+      "name": "Ladrão de Almas de Mejai",
+      "gold": 1500,
+      "from": [
+        "1082"
+      ]
+    },
+    "3044": {
+      "name": "Fago",
+      "gold": 1100,
+      "from": [
+        "1028",
+        "1036"
+      ]
+    },
+    "3046": {
+      "name": "Dançarina Fantasma",
+      "gold": 2650,
+      "from": [
+        "1042",
+        "3086",
+        "1042"
+      ]
+    },
+    "3047": {
+      "name": "Botas Galvanizadas de Aço",
+      "gold": 1200,
+      "from": [
+        "1001",
+        "1029"
+      ]
+    },
+    "3050": {
+      "name": "Convergência de Zeke",
+      "gold": 2200,
+      "from": [
+        "3067",
+        "1029",
+        "1033"
+      ]
+    },
+    "3051": {
+      "name": "Machado Termestre",
+      "gold": 1200,
+      "from": [
+        "1036",
+        "1042",
+        "1036"
+      ]
+    },
+    "3053": {
+      "name": "Sinal de Sterak",
+      "gold": 3200,
+      "from": [
+        "1037",
+        "2021",
+        "1028"
+      ]
+    },
+    "3057": {
+      "name": "Fulgor",
+      "gold": 900,
+      "from": [
+        "2022"
+      ]
+    },
+    "3065": {
+      "name": "Semblante Espiritual",
+      "gold": 2700,
+      "from": [
+        "3211",
+        "3067"
+      ]
+    },
+    "3066": {
+      "name": "Couraça Lunar Alada",
+      "gold": 800,
+      "from": [
+        "1028"
+      ]
+    },
+    "3067": {
+      "name": "Gema Ardente",
+      "gold": 800,
+      "from": [
+        "1028",
+        "2022"
+      ]
+    },
+    "3068": {
+      "name": "Égide de Fogo Solar",
+      "gold": 2800,
+      "from": [
+        "6660",
+        "1031",
+        "1028"
+      ]
+    },
+    "3070": {
+      "name": "Lágrima da Deusa",
+      "gold": 400
+    },
+    "3071": {
+      "name": "Cutelo Negro",
+      "gold": 3000,
+      "from": [
+        "3044",
+        "3067",
+        "1037"
+      ]
+    },
+    "3072": {
+      "name": "Sedenta por Sangue",
+      "gold": 3400,
+      "from": [
+        "1038",
+        "1037",
+        "1053"
+      ]
+    },
+    "3073": {
+      "name": "Hexoplaca Experimental",
+      "gold": 3000,
+      "from": [
+        "2021",
+        "1042",
+        "3044"
+      ]
+    },
+    "3074": {
+      "name": "Hidra Raivosa",
+      "gold": 3300,
+      "from": [
+        "3077",
+        "1053",
+        "3133"
+      ]
+    },
+    "3075": {
+      "name": "Armadura de Espinhos",
+      "gold": 2450,
+      "from": [
+        "3076",
+        "1031",
+        "1028"
+      ]
+    },
+    "3076": {
+      "name": "Colete Espinhoso",
+      "gold": 800,
+      "from": [
+        "1029",
+        "1029"
+      ]
+    },
+    "3077": {
+      "name": "Tiamat",
+      "gold": 1200,
+      "from": [
+        "1036",
+        "1036"
+      ]
+    },
+    "3078": {
+      "name": "Força da Trindade",
+      "gold": 3333,
+      "from": [
+        "3057",
+        "3044",
+        "3051"
+      ]
+    },
+    "3082": {
+      "name": "Carapaça do Vigia",
+      "gold": 1000,
+      "from": [
+        "1029",
+        "1029"
+      ]
+    },
+    "3083": {
+      "name": "Armadura de Warmog",
+      "gold": 3100,
+      "from": [
+        "1011",
+        "1011",
+        "3801"
+      ]
+    },
+    "3084": {
+      "name": "Coração de Aço",
+      "gold": 3000,
+      "from": [
+        "1011",
+        "3801",
+        "1011"
+      ]
+    },
+    "3085": {
+      "name": "Furacão de Runaan",
+      "gold": 2650,
+      "from": [
+        "3086",
+        "3144"
+      ]
+    },
+    "3086": {
+      "name": "Zelo",
+      "gold": 1200,
+      "from": [
+        "1018",
+        "1042"
+      ]
+    },
+    "3087": {
+      "name": "Faca de Statikk",
+      "gold": 3000,
+      "from": [
+        "3144",
+        "3113",
+        "1037"
+      ]
+    },
+    "3089": {
+      "name": "Capuz da Morte de Rabadon",
+      "gold": 3500,
+      "from": [
+        "1058",
+        "1058"
+      ]
+    },
+    "3091": {
+      "name": "Limite da Razão",
+      "gold": 2800,
+      "from": [
+        "1043",
+        "1057",
+        "1043"
+      ]
+    },
+    "3094": {
+      "name": "Canhão Fumegante",
+      "gold": 2650,
+      "from": [
+        "3086",
+        "3144"
+      ]
+    },
+    "3095": {
+      "name": "Chuva de Canivete",
+      "gold": 3200,
+      "from": [
+        "1038",
+        "1018",
+        "3144"
+      ]
+    },
+    "3100": {
+      "name": "Perdição de Lich",
+      "gold": 2900,
+      "from": [
+        "3057",
+        "3113",
+        "1026"
+      ]
+    },
+    "3102": {
+      "name": "Véu da Banshee",
+      "gold": 3000,
+      "from": [
+        "1058",
+        "4632"
+      ]
+    },
+    "3107": {
+      "name": "Redenção",
+      "gold": 2300,
+      "from": [
+        "3108",
+        "3114"
+      ]
+    },
+    "3108": {
+      "name": "Códex Demoníaco",
+      "gold": 850,
+      "from": [
+        "1052",
+        "2022"
+      ]
+    },
+    "3109": {
+      "name": "Juramento do Cavaleiro",
+      "gold": 2300,
+      "from": [
+        "3067",
+        "1031",
+        "1006"
+      ]
+    },
+    "3110": {
+      "name": "Coração Congelado",
+      "gold": 2500,
+      "from": [
+        "3082",
+        "3024"
+      ]
+    },
+    "3111": {
+      "name": "Passos de Mercúrio",
+      "gold": 1250,
+      "from": [
+        "1001",
+        "1033"
+      ]
+    },
+    "3112": {
+      "name": "Orbe do Guardião",
+      "gold": 950
+    },
+    "3113": {
+      "name": "Cintilação Etérea",
+      "gold": 900,
+      "from": [
+        "1052"
+      ]
+    },
+    "3114": {
+      "name": "Ídolo Proibido",
+      "gold": 600,
+      "from": [
+        "1004"
+      ]
+    },
+    "3115": {
+      "name": "Dente de Na'Shor",
+      "gold": 2900,
+      "from": [
+        "1043",
+        "1026",
+        "3108"
+      ]
+    },
+    "3116": {
+      "name": "Cetro de Cristal de Rylai",
+      "gold": 2600,
+      "from": [
+        "1026",
+        "1011",
+        "1052"
+      ]
+    },
+    "3118": {
+      "name": "Malevolência",
+      "gold": 2700,
+      "from": [
+        "3802",
+        "1026"
+      ]
+    },
+    "3119": {
+      "name": "Aproximação Invernal",
+      "gold": 2400,
+      "from": [
+        "3070",
+        "1011",
+        "3067"
+      ]
+    },
+    "3123": {
+      "name": "Chamado do Carrasco",
+      "gold": 800,
+      "from": [
+        "1036"
+      ]
+    },
+    "3124": {
+      "name": "Lâmina da Fúria de Guinsoo",
+      "gold": 3000,
+      "from": [
+        "1052",
+        "1043",
+        "1037"
+      ]
+    },
+    "3133": {
+      "name": "Martelo de Guerra de Caulfield",
+      "gold": 1050,
+      "from": [
+        "1036",
+        "2022",
+        "1036"
+      ]
+    },
+    "3134": {
+      "name": "Punhal Serrilhado",
+      "gold": 1000,
+      "from": [
+        "1036",
+        "1036"
+      ]
+    },
+    "3135": {
+      "name": "Cajado do Vazio",
+      "gold": 3000,
+      "from": [
+        "4630",
+        "1026"
+      ]
+    },
+    "3137": {
+      "name": "Criptoflora",
+      "gold": 3000,
+      "from": [
+        "4630",
+        "3108",
+        "3108"
+      ]
+    },
+    "3139": {
+      "name": "Cimitarra Mercurial",
+      "gold": 3200,
+      "from": [
+        "3140",
+        "1037",
+        "1053"
+      ]
+    },
+    "3140": {
+      "name": "Bandana de Mercúrio",
+      "gold": 1300,
+      "from": [
+        "1033"
+      ]
+    },
+    "3142": {
+      "name": "Lâmina Fantasma de Youmuu",
+      "gold": 2800,
+      "from": [
+        "3134",
+        "6690",
+        "1036"
+      ]
+    },
+    "3143": {
+      "name": "Presságio de Randuin",
+      "gold": 2700,
+      "from": [
+        "3082",
+        "1011"
+      ]
+    },
+    "3144": {
+      "name": "Estilingue do Patrulheiro",
+      "gold": 600,
+      "from": [
+        "1042",
+        "1042"
+      ]
+    },
+    "3145": {
+      "name": "Alternador Hextec",
+      "gold": 1100,
+      "from": [
+        "1052",
+        "1052"
+      ]
+    },
+    "3146": {
+      "name": "Pistola Laminar Hextec",
+      "gold": 3000,
+      "from": [
+        "1053",
+        "3145",
+        "1052"
+      ]
+    },
+    "3147": {
+      "name": "Máscara Assustadora",
+      "gold": 1300,
+      "from": [
+        "1052",
+        "1028"
+      ]
+    },
+    "3152": {
+      "name": "Explocinturão Hextec",
+      "gold": 2650,
+      "from": [
+        "3145",
+        "3067",
+        "1028"
+      ]
+    },
+    "3153": {
+      "name": "Espada do Rei Destruído",
+      "gold": 3200,
+      "from": [
+        "1053",
+        "1043",
+        "1037"
+      ]
+    },
+    "3155": {
+      "name": "Hexdrinker",
+      "gold": 1300,
+      "from": [
+        "1036",
+        "1033",
+        "1036"
+      ]
+    },
+    "3156": {
+      "name": "Mandíbula de Malmortius",
+      "gold": 3100,
+      "from": [
+        "3155",
+        "3133"
+      ]
+    },
+    "3157": {
+      "name": "Ampulheta de Zhonya",
+      "gold": 3250,
+      "from": [
+        "1058",
+        "2420"
+      ]
+    },
+    "3158": {
+      "name": "Botas Ionianas da Lucidez",
+      "gold": 900,
+      "from": [
+        "1001",
+        "2022"
+      ]
+    },
+    "3161": {
+      "name": "Lança de Shojin",
+      "gold": 3100,
+      "from": [
+        "1037",
+        "2021",
+        "1028"
+      ]
+    },
+    "3165": {
+      "name": "Morellonomicon",
+      "gold": 2850,
+      "from": [
+        "3916",
+        "1026",
+        "3067"
+      ]
+    },
+    "3168": {
+      "name": "Caminho Imortal",
+      "gold": 1000,
+      "from": [
+        "3008"
+      ]
+    },
+    "3170": {
+      "name": "Marcha Célere",
+      "gold": 1000,
+      "from": [
+        "3009"
+      ]
+    },
+    "3171": {
+      "name": "Lucidez Escarlate",
+      "gold": 900,
+      "from": [
+        "3158"
+      ]
+    },
+    "3172": {
+      "name": "Grevas Bélicas",
+      "gold": 1100,
+      "from": [
+        "3006"
+      ]
+    },
+    "3173": {
+      "name": "Esmagadores Acorrentados",
+      "gold": 1250,
+      "from": [
+        "3111"
+      ]
+    },
+    "3174": {
+      "name": "Mobilização Blindada",
+      "gold": 1200,
+      "from": [
+        "3047"
+      ]
+    },
+    "3175": {
+      "name": "Sapatos Enfeitiçados",
+      "gold": 1100,
+      "from": [
+        "3020"
+      ]
+    },
+    "3177": {
+      "name": "Lâmina do Guardião",
+      "gold": 950
+    },
+    "3179": {
+      "name": "Glaive Sombria",
+      "gold": 2800,
+      "from": [
+        "3134",
+        "3133"
+      ]
+    },
+    "3181": {
+      "name": "Quebracascos",
+      "gold": 3000,
+      "from": [
+        "2021",
+        "3066",
+        "1037"
+      ]
+    },
+    "3184": {
+      "name": "Martelo do Guardião",
+      "gold": 950
+    },
+    "3190": {
+      "name": "Medalhão dos Solari de Ferro",
+      "gold": 2200,
+      "from": [
+        "3067",
+        "1029",
+        "1033"
+      ]
+    },
+    "3211": {
+      "name": "Capuz do Espectro",
+      "gold": 1250,
+      "from": [
+        "1028",
+        "1033",
+        "1006"
+      ]
+    },
+    "3222": {
+      "name": "Bênção de Mikael",
+      "gold": 2300,
+      "from": [
+        "3067",
+        "3114"
+      ]
+    },
+    "3302": {
+      "name": "Terminus",
+      "gold": 3000,
+      "from": [
+        "3051",
+        "1043"
+      ]
+    },
+    "3340": {
+      "name": "Sentinela Invisível",
+      "gold": 0
+    },
+    "3363": {
+      "name": "Alteração Vidente",
+      "gold": 0
+    },
+    "3364": {
+      "name": "Lente do Oráculo",
+      "gold": 0
+    },
+    "3504": {
+      "name": "Turíbulo Ardente",
+      "gold": 2200,
+      "from": [
+        "3113",
+        "3114"
+      ]
+    },
+    "3508": {
+      "name": "Colhedor de Essência",
+      "gold": 3050,
+      "from": [
+        "3057",
+        "3133",
+        "1018"
+      ]
+    },
+    "3742": {
+      "name": "Couraça do Defunto",
+      "gold": 2900,
+      "from": [
+        "3066",
+        "1028",
+        "1031"
+      ]
+    },
+    "3748": {
+      "name": "Hidra Titânica",
+      "gold": 3300,
+      "from": [
+        "3077",
+        "2021",
+        "1011"
+      ]
+    },
+    "3801": {
+      "name": "Braçadeira Cristalina",
+      "gold": 800,
+      "from": [
+        "1028",
+        "1006"
+      ]
+    },
+    "3802": {
+      "name": "Capítulo Perdido",
+      "gold": 1200,
+      "from": [
+        "1052",
+        "1027",
+        "2022"
+      ]
+    },
+    "3803": {
+      "name": "Catalisador das Eras",
+      "gold": 1300,
+      "from": [
+        "1028",
+        "1028",
+        "1027"
+      ]
+    },
+    "3814": {
+      "name": "Limiar da Noite",
+      "gold": 3000,
+      "from": [
+        "3134",
+        "2021"
+      ]
+    },
+    "3865": {
+      "name": "Atlas Mundial",
+      "gold": 400
+    },
+    "3869": {
+      "name": "Oposição Celestial",
+      "gold": 400
+    },
+    "3870": {
+      "name": "Criassonhos",
+      "gold": 400
+    },
+    "3871": {
+      "name": "Invadomínio de Zaz'Zak",
+      "gold": 400
+    },
+    "3876": {
+      "name": "Trenó do Solstício",
+      "gold": 400
+    },
+    "3877": {
+      "name": "Canção de Sangue",
+      "gold": 400
+    },
+    "3916": {
+      "name": "Orbe do Oblívio",
+      "gold": 800,
+      "from": [
+        "1052"
+      ]
+    },
+    "4005": {
+      "name": "Mandato Imperial",
+      "gold": 2400,
+      "from": [
+        "1052",
+        "4642",
+        "1052"
+      ]
+    },
+    "4401": {
+      "name": "Força da Natureza",
+      "gold": 2800,
+      "from": [
+        "1057",
+        "1028",
+        "3066"
+      ]
+    },
+    "4628": {
+      "name": "Foco do Horizonte",
+      "gold": 2700,
+      "from": [
+        "3108",
+        "3108",
+        "1052"
+      ]
+    },
+    "4629": {
+      "name": "Ímpeto Cósmico",
+      "gold": 3000,
+      "from": [
+        "3067",
+        "3113",
+        "3108"
+      ]
+    },
+    "4630": {
+      "name": "Joia da Ruína",
+      "gold": 1100,
+      "from": [
+        "1052"
+      ]
+    },
+    "4632": {
+      "name": "Barreira Verdejante",
+      "gold": 1600,
+      "from": [
+        "1052",
+        "1033",
+        "1052"
+      ]
+    },
+    "4633": {
+      "name": "Criafendas",
+      "gold": 3100,
+      "from": [
+        "3147",
+        "3108"
+      ]
+    },
+    "4642": {
+      "name": "Espelho de Bandópolis",
+      "gold": 900,
+      "from": [
+        "1004",
+        "1052",
+        "2022"
+      ]
+    },
+    "4645": {
+      "name": "Chama Sombria",
+      "gold": 3200,
+      "from": [
+        "3145",
+        "1058"
+      ]
+    },
+    "4646": {
+      "name": "Ápice da Tempestade",
+      "gold": 2800,
+      "from": [
+        "3145",
+        "3113"
+      ]
+    },
+    "6333": {
+      "name": "Dança da Morte",
+      "gold": 3300,
+      "from": [
+        "2019",
+        "1037",
+        "3133"
+      ]
+    },
+    "6609": {
+      "name": "Serrespada Quimiopunk",
+      "gold": 3000,
+      "from": [
+        "3123",
+        "1011",
+        "3133"
+      ]
+    },
+    "6610": {
+      "name": "Céu Dividido",
+      "gold": 3100,
+      "from": [
+        "2021",
+        "3133"
+      ]
+    },
+    "6616": {
+      "name": "Cajado Aquafluxo",
+      "gold": 2250,
+      "from": [
+        "3108",
+        "3114"
+      ]
+    },
+    "6617": {
+      "name": "Regenerador de Pedra Lunar",
+      "gold": 2200,
+      "from": [
+        "3067",
+        "4642"
+      ]
+    },
+    "6620": {
+      "name": "Ecos de Helia",
+      "gold": 2200,
+      "from": [
+        "3067",
+        "4642"
+      ]
+    },
+    "6621": {
+      "name": "Auronúcleo",
+      "gold": 2500,
+      "from": [
+        "1026",
+        "3114",
+        "3114"
+      ]
+    },
+    "6631": {
+      "name": "Quebrapassos",
+      "gold": 3300,
+      "from": [
+        "3077",
+        "3044",
+        "1042"
+      ]
+    },
+    "6653": {
+      "name": "Tormento de Liandry",
+      "gold": 3000,
+      "from": [
+        "3147",
+        "2508"
+      ]
+    },
+    "6655": {
+      "name": "Eco de Luden",
+      "gold": 2750,
+      "from": [
+        "3802",
+        "3145"
+      ]
+    },
+    "6657": {
+      "name": "Bastão das Eras",
+      "gold": 2600,
+      "from": [
+        "1026",
+        "3803"
+      ]
+    },
+    "6660": {
+      "name": "Brasa de Bami",
+      "gold": 900,
+      "from": [
+        "1028",
+        "2022"
+      ]
+    },
+    "6662": {
+      "name": "Manopla dos Glacinatas",
+      "gold": 2900,
+      "from": [
+        "3057",
+        "1028",
+        "1031"
+      ]
+    },
+    "6664": {
+      "name": "Resplendor Vazio",
+      "gold": 2800,
+      "from": [
+        "6660",
+        "3211"
+      ]
+    },
+    "6665": {
+      "name": "Jak'Sho, o Inconstante",
+      "gold": 3200,
+      "from": [
+        "1011",
+        "1031",
+        "1057"
+      ]
+    },
+    "6670": {
+      "name": "Aljava Vespertina",
+      "gold": 1300,
+      "from": [
+        "1036",
+        "1018"
+      ]
+    },
+    "6672": {
+      "name": "Mata-Cráquens",
+      "gold": 3000,
+      "from": [
+        "6690",
+        "3051",
+        "1043"
+      ]
+    },
+    "6673": {
+      "name": "Arco-escudo Imortal",
+      "gold": 3000,
+      "from": [
+        "1037",
+        "6670"
+      ]
+    },
+    "6675": {
+      "name": "Adaga Oscilante Navori",
+      "gold": 2650,
+      "from": [
+        "1042",
+        "3086",
+        "1042"
+      ]
+    },
+    "6676": {
+      "name": "A Coletora",
+      "gold": 3000,
+      "from": [
+        "1037",
+        "3134",
+        "1018"
+      ]
+    },
+    "6690": {
+      "name": "Retriz",
+      "gold": 775,
+      "from": [
+        "1036"
+      ]
+    },
+    "6692": {
+      "name": "Eclipse",
+      "gold": 2900,
+      "from": [
+        "3133",
+        "1037",
+        "1036"
+      ]
+    },
+    "6694": {
+      "name": "Rancor de Serylda",
+      "gold": 3000,
+      "from": [
+        "3133",
+        "3035"
+      ]
+    },
+    "6695": {
+      "name": "Presa da Serpente",
+      "gold": 2500,
+      "from": [
+        "3134",
+        "1037"
+      ]
+    },
+    "6696": {
+      "name": "Arco do Axioma",
+      "gold": 2750,
+      "from": [
+        "2020",
+        "3133"
+      ]
+    },
+    "6697": {
+      "name": "Húbris",
+      "gold": 2800,
+      "from": [
+        "3134",
+        "3133"
+      ]
+    },
+    "6698": {
+      "name": "Hidra Profana",
+      "gold": 2850,
+      "from": [
+        "3077",
+        "2020"
+      ]
+    },
+    "6699": {
+      "name": "Cicloespada Voltaica",
+      "gold": 3000,
+      "from": [
+        "2020",
+        "1036",
+        "1036"
+      ]
+    },
+    "8010": {
+      "name": "Maldição Sanguinária",
+      "gold": 2900,
+      "from": [
+        "3147",
+        "3108"
+      ]
+    },
+    "8020": {
+      "name": "Máscara Abissal",
+      "gold": 2650,
+      "from": [
+        "3067",
+        "1057"
+      ]
+    }
+  },
+  "recipes": [
+    "2019",
+    "2020",
+    "2021",
+    "2065",
+    "2420",
+    "2501",
+    "2502",
+    "2503",
+    "2504",
+    "2510",
+    "2512",
+    "2517",
+    "2520",
+    "2522",
+    "2523",
+    "2524",
+    "2525",
+    "2526",
+    "3003",
+    "3004",
+    "3006",
+    "3024",
+    "3026",
+    "3031",
+    "3032",
+    "3033",
+    "3035",
+    "3036",
+    "3044",
+    "3046",
+    "3047",
+    "3050",
+    "3051",
+    "3053",
+    "3065",
+    "3067",
+    "3068",
+    "3071",
+    "3072",
+    "3073",
+    "3074",
+    "3075",
+    "3076",
+    "3077",
+    "3078",
+    "3082",
+    "3083",
+    "3084",
+    "3085",
+    "3086",
+    "3087",
+    "3089",
+    "3091",
+    "3094",
+    "3095",
+    "3100",
+    "3102",
+    "3107",
+    "3108",
+    "3109",
+    "3110",
+    "3111",
+    "3115",
+    "3116",
+    "3118",
+    "3119",
+    "3124",
+    "3133",
+    "3134",
+    "3135",
+    "3137",
+    "3139",
+    "3142",
+    "3143",
+    "3144",
+    "3145",
+    "3146",
+    "3147",
+    "3152",
+    "3153",
+    "3155",
+    "3156",
+    "3157",
+    "3158",
+    "3161",
+    "3165",
+    "3179",
+    "3181",
+    "3190",
+    "3211",
+    "3222",
+    "3302",
+    "3504",
+    "3508",
+    "3742",
+    "3748",
+    "3801",
+    "3802",
+    "3803",
+    "3814",
+    "4005",
+    "4401",
+    "4628",
+    "4629",
+    "4632",
+    "4633",
+    "4642",
+    "4645",
+    "4646",
+    "6333",
+    "6609",
+    "6610",
+    "6616",
+    "6617",
+    "6620",
+    "6621",
+    "6631",
+    "6653",
+    "6655",
+    "6657",
+    "6660",
+    "6662",
+    "6664",
+    "6665",
+    "6670",
+    "6672",
+    "6673",
+    "6675",
+    "6676",
+    "6692",
+    "6694",
+    "6695",
+    "6696",
+    "6697",
+    "6698",
+    "6699",
+    "8010",
+    "8020"
+  ]
+}

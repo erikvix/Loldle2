@@ -15,6 +15,7 @@ const router = createBrowserRouter([
       // Splash e Habilidade carregam os dados de skins e habilidades só quando abertos.
       { path: 'splash', lazy: () => import('./routes/SplashGame').then((m) => ({ Component: m.SplashGame })) },
       { path: 'habilidade', lazy: () => import('./routes/AbilityGame').then((m) => ({ Component: m.AbilityGame })) },
+      { path: 'forja', lazy: () => import('./routes/ForgeGame').then((m) => ({ Component: m.ForgeGame })) },
       // Multiplayer carregado sob demanda, para o PeerJS não pesar no modo solo.
       { path: 'multi', lazy: () => import('./routes/MultiplayerHome').then((m) => ({ Component: m.MultiplayerHome })) },
       {
