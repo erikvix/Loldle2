@@ -34,6 +34,15 @@ export function Layout() {
         >
           Riot Universe
         </a>
+        . Imagens, skins e habilidades do{' '}
+        <a
+          href="https://developer.riotgames.com/docs/lol#data-dragon"
+          className="underline"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Data Dragon
+        </a>
         . Loldle2 não é afiliado à Riot Games.
       </footer>
     </div>

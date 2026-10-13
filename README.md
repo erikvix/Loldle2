@@ -2,13 +2,21 @@
 
 Jogo de adivinhação de campeões de League of Legends, inspirado no [Loldle](https://loldle.net).
 
-Há dois modos: **Falas**, para jogar sozinho, e **Multiplayer**.
+Há três modos para jogar sozinho, **Falas**, **Splash** e **Habilidade**, e um modo **Multiplayer**. Em todos, os chutes são ilimitados.
 
 ### Falas
 
 O jogo mostra uma fala em português e você tenta descobrir qual campeão a disse. Os chutes são ilimitados: ao acertar, você pode passar para a próxima fala.
 
 Nas falas dubladas, dá para ouvir o áudio da dublagem. Ele vira dica depois de 3 chutes errados e fica disponível também depois que você acerta.
+
+### Splash
+
+O jogo mostra um pedaço ampliado da splash art de uma skin. A cada chute errado, a imagem se afasta (de 6x até a arte inteira). Depois de acertar o campeão, há uma pergunta bônus: qual é a skin.
+
+### Habilidade
+
+O jogo mostra o ícone de uma habilidade (passiva, Q, W, E ou R), em preto e branco e possivelmente girado. As cores voltam depois de 3 chutes errados, e a posição original, depois de 6. Depois de acertar, há uma pergunta bônus: qual é a tecla da habilidade.
 
 ### Multiplayer
 
@@ -36,6 +44,7 @@ npm run dev           # servidor de desenvolvimento
 npm run build         # build de produção
 npm run lint          # lint
 npm run fetch:quotes  # atualiza src/data/quotes.json e public/audio
+npm run fetch:champions  # atualiza src/data/champion-details.json (skins e habilidades)
 ```
 
 ## Estrutura
@@ -44,20 +53,22 @@ npm run fetch:quotes  # atualiza src/data/quotes.json e public/audio
 public/
 └── audio/            # Áudios das falas dubladas (.ogg)
 scripts/
-└── fetch-quotes.ts   # Gera a base de falas e baixa os áudios
+├── fetch-quotes.ts      # Gera a base de falas e baixa os áudios
+└── fetch-champions.ts   # Gera skins e habilidades (modos Splash e Habilidade)
 src/
 ├── components/       # Componentes do jogo (formulário de palpite, lista de chutes)
 │   └── ui/           # Componentes do shadcn/ui
-├── data/             # quotes.json e helpers de acesso aos dados
+├── data/             # quotes.json, champion-details.json e helpers de acesso
 ├── game/             # Lógica do jogo (sorteio de falas, busca de campeões)
 ├── multiplayer/      # Protocolo e conexão das salas (PeerJS)
-├── routes/           # Páginas (início, Falas, Multiplayer)
+├── routes/           # Páginas (início, Falas, Splash, Habilidade, Multiplayer)
 └── main.tsx          # Rotas e ponto de entrada
 ```
 
 ## Dados
 
 - **Campeões e ícones:** [Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon) da Riot, em `pt_BR`. Não precisa de chave de API.
+- **Skins e habilidades:** Data Dragon, `championFull.json` em `pt_BR` (nomes das skins e das habilidades em português). Os chromas ficam de fora, porque não têm splash art própria, e o script confere se cada splash existe no CDN. São cerca de 2.100 skins. As imagens (splash arts e ícones) são carregadas direto do CDN do Data Dragon.
 - **Falas dubladas em PT-BR:** [Wiki League of Legends PT-BR](https://leagueoflegends.fandom.com/pt-br), páginas `<Campeão>/LoL/Áudio`.
 - **Áudio das falas dubladas:** arquivos `.ogg` da wiki PT-BR, guardados em `public/audio` (cerca de 500 arquivos, 24 MB). O CDN da wiki bloqueia áudio tocado a partir de outros sites, por isso os arquivos ficam no próprio projeto. As falas traduzidas e as oficiais não têm áudio.
 - **Fala oficial de cada campeão:** [Riot Universe](https://universe.leagueoflegends.com/pt_BR/), API `universe-meeps.leagueoflegends.com/v1/pt_br/champions/<campeão>/index.json`. É a frase da biografia do campeão, já em português. Entra só quando o autor é o próprio campeão e aparece no jogo como "Fala oficial do Riot Universe".
