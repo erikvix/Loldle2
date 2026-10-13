@@ -4,7 +4,7 @@ const quotesByChampion = new Map<string, Quote[]>()
 for (const quote of quotes) {
   quotesByChampion.set(quote.championId, [...(quotesByChampion.get(quote.championId) ?? []), quote])
 }
-const championIdsWithQuotes = [...quotesByChampion.keys()]
+export const championIdsWithQuotes = [...quotesByChampion.keys()]
 
 const randomItem = <T,>(items: T[]): T => items[Math.floor(Math.random() * items.length)]
 
@@ -17,15 +17,8 @@ export function pickRandomQuote(previous?: Quote): Quote {
   return randomItem(quotesByChampion.get(randomItem(pool))!)
 }
 
-// Sorteia falas de campeões diferentes para uma partida (ex.: as 10 rodadas do multiplayer).
-export function pickRoundQuotes(count: number): Quote[] {
-  const pool = [...championIdsWithQuotes]
-  const picked: Quote[] = []
-  while (picked.length < count && pool.length > 0) {
-    const [championId] = pool.splice(Math.floor(Math.random() * pool.length), 1)
-    picked.push(randomItem(quotesByChampion.get(championId)!))
-  }
-  return picked
+export function randomQuoteFor(championId: string): Quote {
+  return randomItem(quotesByChampion.get(championId)!)
 }
 
 export function normalize(text: string): string {

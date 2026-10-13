@@ -20,10 +20,10 @@ O jogo mostra o ícone de uma habilidade (passiva, Q, W, E ou R), em preto e bra
 
 ### Multiplayer
 
-De 2 a 4 jogadores, cada um no seu aparelho, jogam 10 rodadas do modo Falas. Todos veem a mesma fala ao mesmo tempo, e quem acertar o campeão primeiro leva o ponto da rodada. Se ninguém acertar em 90 segundos, a resposta é revelada sem pontos. No fim, aparece o placar e o host pode começar outra partida.
+De 2 a 4 jogadores, cada um no seu aparelho, jogam 10 rodadas. O host escolhe o modo no lobby: **Falas**, **Splash**, **Habilidade** ou **Misto** (cada rodada sorteia um dos três). Todos veem o mesmo desafio ao mesmo tempo, e quem acertar o campeão primeiro leva o ponto da rodada. As dicas são individuais: o zoom da splash, a cor e a posição da habilidade e o áudio das falas dependem dos chutes errados de cada jogador. Ao revelar a resposta, aparece também a skin ou a habilidade. Se ninguém acertar em 90 segundos, a resposta é revelada sem pontos. No fim, aparece o placar e o host pode começar outra partida.
 
 - Um jogador cria a sala e compartilha o código ou o link de convite (`/multi/<código>`).
-- A conexão é direta entre os navegadores (WebRTC, via [PeerJS](https://peerjs.com/)). Não há servidor do jogo: o navegador de quem criou a sala (o host) sorteia as falas, valida os chutes e soma os pontos.
+- A conexão é direta entre os navegadores (WebRTC, via [PeerJS](https://peerjs.com/)). Não há servidor do jogo: o navegador de quem criou a sala (o host) sorteia as rodadas, valida os chutes e soma os pontos. Como as imagens vêm do CDN da Riot, quem souber olhar as requisições do navegador consegue descobrir a resposta pelo endereço da imagem; para uma partida entre amigos isso não deve ser um problema.
 - Para os navegadores se encontrarem, o PeerJS usa o servidor de sinalização gratuito `0.peerjs.com`. Para usar outro servidor, defina `VITE_PEER_HOST`, `VITE_PEER_PORT`, `VITE_PEER_PATH` e `VITE_PEER_SECURE` no build.
 - Se o host fechar a página, a partida acaba para todos. Se um convidado sair, ele fica marcado como "saiu" e a partida continua.
 - Em algumas redes muito restritas (ex.: redes corporativas), a conexão direta pode falhar. Isso exigiria um servidor TURN, que o projeto ainda não tem.

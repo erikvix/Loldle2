@@ -45,7 +45,7 @@ export function Home() {
             <UsersIcon className="size-8 text-amber-500" />
             <div>
               <CardTitle>Multiplayer</CardTitle>
-              <CardDescription>De 2 a 4 jogadores, 10 rodadas: quem acertar primeiro pontua</CardDescription>
+              <CardDescription>De 2 a 4 jogadores, 10 rodadas de Falas, Splash ou Habilidade: quem acertar primeiro pontua</CardDescription>
             </div>
           </CardHeader>
         </Card>

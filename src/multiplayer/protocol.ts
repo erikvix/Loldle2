@@ -38,20 +38,38 @@ export interface PlayerState {
   connected: boolean
 }
 
+export type GameMode = 'quote' | 'splash' | 'ability' | 'mixed'
+
+export const GAME_MODES: { id: GameMode; label: string; description: string }[] = [
+  { id: 'quote', label: 'Falas', description: 'Qual campeão disse esta fala?' },
+  { id: 'splash', label: 'Splash', description: 'De quem é esta splash art? O zoom diminui a cada erro.' },
+  { id: 'ability', label: 'Habilidade', description: 'De quem é esta habilidade? Cor e posição voltam com os erros.' },
+  { id: 'mixed', label: 'Misto', description: 'Cada rodada sorteia um dos três modos.' },
+]
+
+// O que os jogadores veem na rodada. Nunca inclui o campeão da resposta diretamente.
+export type Challenge =
+  | { kind: 'quote'; quote: PublicQuote }
+  | { kind: 'splash'; imageUrl: string; focus: { x: number; y: number } }
+  | { kind: 'ability'; imageUrl: string; rotation: number }
+
 export interface RoundState {
   index: number
   total: number
-  quote: PublicQuote
+  challenge: Challenge
   status: 'playing' | 'revealed'
   winnerId: string | null
-  // Só é preenchido quando a rodada é revelada.
+  // Só são preenchidos quando a rodada é revelada.
   answerId: string | null
+  // Informação extra da resposta (ex.: nome da skin ou da habilidade).
+  answerDetail: string | null
   // Tempo restante no momento do envio (o relógio de cada aparelho pode estar diferente).
   remainingMs: number
 }
 
 export interface RoomState {
   phase: 'lobby' | 'playing' | 'finished'
+  mode: GameMode
   hostId: string
   players: PlayerState[]
   round: RoundState | null

@@ -1,7 +1,5 @@
 import Peer, { type DataConnection, type PeerError, type PeerOptions } from 'peerjs'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { Quote } from '@/data/quotes'
-import { pickRoundQuotes } from '@/game/quotes'
 import {
   HEARTBEAT_MS,
   HEARTBEAT_TIMEOUT_MS,
@@ -11,10 +9,12 @@ import {
   REVEAL_TIME_MS,
   ROUND_TIME_MS,
   ROUNDS,
+  type GameMode,
   type GuestMessage,
   type HostMessage,
   type RoomState,
 } from './protocol'
+import { pickRounds, type HostRound } from './rounds'
 
 export type Role = 'host' | 'guest'
 
@@ -35,12 +35,15 @@ export interface Room {
   start: () => void
   guess: (championId: string) => void
   restart: () => void
+  // Só o host escolhe o modo, no lobby.
+  setMode: (mode: GameMode) => void
 }
 
 interface Actions {
   start: () => void
   guess: (championId: string) => void
   restart: () => void
+  setMode: (mode: GameMode) => void
 }
 
 const noop = () => {}
@@ -86,7 +89,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
   const [state, setState] = useState<RoomState | null>(null)
   const [deadline, setDeadline] = useState<number | null>(null)
   const [myGuesses, setMyGuesses] = useState<{ round: number; guesses: MyGuess[] }>({ round: -1, guesses: [] })
-  const actions = useRef<Actions>({ start: noop, guess: noop, restart: noop })
+  const actions = useRef<Actions>({ start: noop, guess: noop, restart: noop, setMode: noop })
 
   useEffect(() => {
     let disposed = false
@@ -123,7 +126,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
       const lastSeen = new Map<string, number>()
       let peer: Peer | null = null
       let room: RoomState | null = null
-      let quotes: Quote[] = []
+      let rounds: HostRound[] = []
       let guessed = new Map<string, Set<string>>()
       let roundEndsAt = 0
       let timer: ReturnType<typeof setTimeout> | undefined
@@ -150,18 +153,18 @@ export function useRoom(role: Role, code: string, name: string): Room {
         clearTimeout(timer)
         guessed = new Map()
         roundEndsAt = Date.now() + ROUND_TIME_MS
-        const { championId: _answer, ...quote } = quotes[index]
         update((current) => ({
           ...current,
           phase: 'playing',
           players: current.players.map((player) => ({ ...player, guessCount: 0 })),
           round: {
             index,
-            total: quotes.length,
-            quote,
+            total: rounds.length,
+            challenge: rounds[index].challenge,
             status: 'playing',
             winnerId: null,
             answerId: null,
+            answerDetail: null,
             remainingMs: ROUND_TIME_MS,
           },
         }))
@@ -178,10 +181,16 @@ export function useRoom(role: Role, code: string, name: string): Room {
           players: current.players.map((player) =>
             player.id === winnerId ? { ...player, score: player.score + 1 } : player,
           ),
-          round: { ...round, status: 'revealed', winnerId, answerId: quotes[round.index].championId },
+          round: {
+            ...round,
+            status: 'revealed',
+            winnerId,
+            answerId: rounds[round.index].championId,
+            answerDetail: rounds[round.index].answerDetail,
+          },
         }))
         timer = setTimeout(() => {
-          if (round.index + 1 < quotes.length) startRound(round.index + 1)
+          if (round.index + 1 < rounds.length) startRound(round.index + 1)
           else update((current) => ({ ...current, phase: 'finished' }))
         }, REVEAL_TIME_MS)
       }
@@ -201,7 +210,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
         playerGuesses.add(championId)
         guessed.set(playerId, playerGuesses)
 
-        const correct = championId === quotes[round.index].championId
+        const correct = championId === rounds[round.index].championId
         reply(correct)
         // Chutes chegam um de cada vez ao host, então o primeiro acerto que chega leva o ponto.
         if (correct) {
@@ -289,6 +298,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
           if (room) return
           room = {
             phase: 'lobby',
+            mode: 'quote',
             hostId: id,
             players: [{ id, name: cleanPlayerName(name), score: 0, guessCount: 0, connected: true }],
             round: null,
@@ -323,7 +333,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
         start: () => {
           if (!room || room.phase !== 'lobby') return
           if (room.players.filter((p) => p.connected).length < MIN_PLAYERS) return
-          quotes = pickRoundQuotes(ROUNDS)
+          rounds = pickRounds(room.mode, ROUNDS)
           update((current) => ({ ...current, players: current.players.map((p) => ({ ...p, score: 0 })) }))
           startRound(0)
         },
@@ -333,6 +343,9 @@ export function useRoom(role: Role, code: string, name: string): Room {
           handleGuess(room.hostId, round.index, championId, (correct) =>
             recordMyGuess(round.index, championId, correct),
           )
+        },
+        setMode: (mode) => {
+          if (room?.phase === 'lobby') update((current) => ({ ...current, mode }))
         },
         restart: () => {
           clearTimeout(timer)
@@ -403,6 +416,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
       actions.current = {
         start: noop,
         restart: noop,
+        setMode: noop,
         guess: (championId) => {
           const round = latest?.round
           if (!connection?.open || !round || round.status !== 'playing') return
@@ -422,6 +436,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
   const start = useCallback(() => actions.current.start(), [])
   const guess = useCallback((championId: string) => actions.current.guess(championId), [])
   const restart = useCallback(() => actions.current.restart(), [])
+  const setMode = useCallback((mode: GameMode) => actions.current.setMode(mode), [])
 
   const roundIndex = state?.round?.index ?? -1
   return {
@@ -434,5 +449,6 @@ export function useRoom(role: Role, code: string, name: string): Room {
     start,
     guess,
     restart,
+    setMode,
   }
 }

@@ -17,7 +17,10 @@ export interface SplashRound {
 }
 
 export function pickSplashRound(previousId?: string): SplashRound {
-  const championId = pickChampion(previousId)
+  return splashRoundFor(pickChampion(previousId))
+}
+
+export function splashRoundFor(championId: string): SplashRound {
   return {
     championId,
     skin: randomItem(championDetails[championId].skins),
@@ -32,7 +35,10 @@ export interface AbilityRound {
 }
 
 export function pickAbilityRound(previousId?: string): AbilityRound {
-  const championId = pickChampion(previousId)
+  return abilityRoundFor(pickChampion(previousId))
+}
+
+export function abilityRoundFor(championId: string): AbilityRound {
   return {
     championId,
     ability: randomItem(championDetails[championId].abilities),
@@ -48,4 +54,11 @@ export function pickOptions<T>(correct: T, others: T[], count = 4): T[] {
     picked.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0])
   }
   return picked.sort(() => Math.random() - 0.5)
+}
+
+// Zoom da arte a cada chute errado: começa bem de perto e vai mostrando mais da imagem.
+const ZOOM_LEVELS = [6, 4.5, 3.5, 2.7, 2.1, 1.6, 1.25, 1]
+
+export function splashZoom(wrongGuesses: number, revealed: boolean): number {
+  return revealed ? 1 : ZOOM_LEVELS[Math.min(wrongGuesses, ZOOM_LEVELS.length - 1)]
 }

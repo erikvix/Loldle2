@@ -15,26 +15,32 @@ import { useEffect, useMemo, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link, useLocation, useParams } from 'react-router'
 import { z } from 'zod'
+import { AbilityIcon } from '@/components/AbilityIcon'
 import { AudioHint } from '@/components/AudioHint'
 import { ChampionIcon } from '@/components/ChampionIcon'
 import { GuessForm } from '@/components/GuessForm'
 import { GuessList } from '@/components/GuessList'
 import { QuoteCard } from '@/components/QuoteCard'
+import { SplashImage, ZoomBadge } from '@/components/SplashImage'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Field, FieldError, FieldGroup, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { championsById, type Champion } from '@/data/quotes'
+import { splashZoom } from '@/game/details'
 import { cn } from '@/lib/utils'
 import { loadPlayerName, savePlayerName } from '@/multiplayer/playerName'
 import {
   CODE_LENGTH,
+  GAME_MODES,
   MAX_PLAYERS,
   MIN_PLAYERS,
   normalizeRoomCode,
+  type Challenge,
   type PlayerState,
   type RoomState,
+  type RoundState,
 } from '@/multiplayer/protocol'
 import { useRoom, type Role, type Room } from '@/multiplayer/useRoom'
 
@@ -160,6 +166,7 @@ function Lobby({
           )}
         </CardContent>
       </Card>
+      <ModePicker room={room} state={state} isHost={isHost} />
       {isHost ? (
         <div className="flex flex-col items-center gap-2">
           <Button size="lg" onClick={room.start} disabled={!canStart}>
@@ -177,6 +184,40 @@ function Lobby({
         </p>
       )}
     </>
+  )
+}
+
+function ModePicker({ room, state, isHost }: { room: Room; state: RoomState; isHost: boolean }) {
+  return (
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle>Modo de jogo</CardTitle>
+        {!isHost && <CardDescription>Escolhido pelo host.</CardDescription>}
+      </CardHeader>
+      <CardContent className="grid grid-cols-2 gap-2" role="radiogroup" aria-label="Modo de jogo">
+        {GAME_MODES.map((mode) => {
+          const selected = state.mode === mode.id
+          return (
+            <button
+              key={mode.id}
+              type="button"
+              role="radio"
+              aria-checked={selected}
+              disabled={!isHost}
+              onClick={() => room.setMode(mode.id)}
+              className={cn(
+                'rounded-lg border p-3 text-left transition-colors',
+                selected ? 'border-amber-500 bg-amber-500/10' : 'enabled:hover:bg-muted',
+                !isHost && !selected && 'opacity-50',
+              )}
+            >
+              <span className="font-medium">{mode.label}</span>
+              <span className="block text-xs text-muted-foreground">{mode.description}</span>
+            </button>
+          )
+        })}
+      </CardContent>
+    </Card>
   )
 }
 
@@ -276,7 +317,7 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
     <>
       <div className="flex w-full items-center justify-between">
         <Badge variant="secondary" className="text-sm">
-          Rodada {round.index + 1}/{round.total}
+          Rodada {round.index + 1}/{round.total} · {KIND_LABELS[round.challenge.kind]}
         </Badge>
         {!revealed && secondsLeft !== null && (
           <Badge variant={secondsLeft <= 10 ? 'destructive' : 'outline'} className="text-sm tabular-nums">
@@ -304,13 +345,7 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
         ))}
       </div>
 
-      <QuoteCard quote={round.quote} description="Quem acertar primeiro leva o ponto. Chutes ilimitados.">
-        {!revealed && (
-          <div className="mt-4 flex justify-center">
-            <AudioHint quote={round.quote} wrongGuesses={wrongGuesses} revealed={false} />
-          </div>
-        )}
-      </QuoteCard>
+      <ChallengeView round={round} wrongGuesses={wrongGuesses} revealed={revealed} />
 
       {revealed ? (
         <Card className={cn('w-full', winner ? 'border-emerald-500' : 'border-amber-500')}>
@@ -328,7 +363,10 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
                 Era <strong className="text-foreground">{answer.name}</strong>, <span>{answer.title}</span>
               </p>
             )}
-            <AudioHint quote={round.quote} wrongGuesses={wrongGuesses} revealed />
+            {round.answerDetail && <p className="text-sm text-muted-foreground">{round.answerDetail}</p>}
+            {round.challenge.kind === 'quote' && (
+              <AudioHint quote={round.challenge.quote} wrongGuesses={wrongGuesses} revealed />
+            )}
             <p className="flex items-center gap-2 text-sm text-muted-foreground">
               <LoaderCircleIcon className="size-4 animate-spin" />
               {round.index + 1 < round.total ? 'Próxima rodada em instantes...' : 'Calculando o resultado...'}
@@ -341,6 +379,57 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
 
       <GuessList guesses={myGuesses} answerId={myCorrect} />
     </>
+  )
+}
+
+const KIND_LABELS: Record<Challenge['kind'], string> = {
+  quote: 'Falas',
+  splash: 'Splash',
+  ability: 'Habilidade',
+}
+
+const RACE_HINT = 'Quem acertar primeiro leva o ponto. Chutes ilimitados.'
+
+// Mostra a fala, a splash art ou o ícone da rodada, com as dicas de cada jogador.
+function ChallengeView({ round, wrongGuesses, revealed }: { round: RoundState; wrongGuesses: number; revealed: boolean }) {
+  const { challenge } = round
+  if (challenge.kind === 'quote') {
+    return (
+      <QuoteCard quote={challenge.quote} description={RACE_HINT}>
+        {!revealed && (
+          <div className="mt-4 flex justify-center">
+            <AudioHint quote={challenge.quote} wrongGuesses={wrongGuesses} revealed={false} />
+          </div>
+        )}
+      </QuoteCard>
+    )
+  }
+
+  const zoom = splashZoom(wrongGuesses, revealed)
+  return (
+    <Card className="w-full">
+      <CardHeader className="text-center">
+        <CardTitle>
+          {challenge.kind === 'splash' ? 'De qual campeão é esta splash art?' : 'De qual campeão é esta habilidade?'}
+        </CardTitle>
+        <CardDescription>{RACE_HINT}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col items-center gap-3">
+        {challenge.kind === 'splash' ? (
+          <>
+            <SplashImage url={challenge.imageUrl} focus={challenge.focus} zoom={zoom} />
+            {!revealed && <ZoomBadge zoom={zoom} />}
+          </>
+        ) : (
+          <AbilityIcon
+            url={challenge.imageUrl}
+            rotation={challenge.rotation}
+            wrongGuesses={wrongGuesses}
+            revealed={revealed}
+          />
+        )}
+      </CardContent>
+    </Card>
   )
 }
 
@@ -376,7 +465,7 @@ function Finished({
           <CardDescription>Placar final</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
-          {ranking.map((player, i) => (
+          {ranking.map((player) => (
             <PlayerRow
               key={player.id}
               player={player}
@@ -385,7 +474,10 @@ function Finished({
               highlight={best > 0 && player.score === best}
               extra={
                 <>
-                  <span className="text-xs text-muted-foreground">{i + 1}º</span>
+                  {/* Empatados dividem a posição (ex.: dois 1º lugares). */}
+                  <span className="text-xs text-muted-foreground">
+                    {ranking.filter((p) => p.score > player.score).length + 1}º
+                  </span>
                   <span className="font-bold tabular-nums">
                     {player.score} {player.score === 1 ? 'ponto' : 'pontos'}
                   </span>
