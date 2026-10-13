@@ -3,154 +3,292 @@
   "items": {
     "1001": {
       "name": "Botas",
-      "gold": 300
+      "gold": 300,
+      "depth": 0,
+      "stats": [
+        "Movement"
+      ]
     },
     "1004": {
       "name": "Amuleto da Fada",
-      "gold": 200
+      "gold": 200,
+      "depth": 0,
+      "stats": [
+        "ManaRegen"
+      ]
     },
     "1006": {
       "name": "Pérola do Rejuvenescimento",
-      "gold": 300
+      "gold": 300,
+      "depth": 0,
+      "stats": [
+        "HealthRegen"
+      ]
     },
     "1011": {
       "name": "Cinto do Gigante",
       "gold": 900,
       "from": [
         "1028"
+      ],
+      "depth": 1,
+      "stats": [
+        "Health"
       ]
     },
     "1018": {
       "name": "Capa da Agilidade",
-      "gold": 600
+      "gold": 600,
+      "depth": 0,
+      "stats": [
+        "CriticalStrike"
+      ]
     },
     "1026": {
       "name": "Varinha Explosiva",
-      "gold": 850
+      "gold": 850,
+      "depth": 0,
+      "stats": [
+        "SpellDamage"
+      ]
     },
     "1027": {
       "name": "Cristal de Safira",
-      "gold": 300
+      "gold": 300,
+      "depth": 0,
+      "stats": [
+        "Mana"
+      ]
     },
     "1028": {
       "name": "Cristal de Rubi",
-      "gold": 400
+      "gold": 400,
+      "depth": 0,
+      "stats": [
+        "Health"
+      ]
     },
     "1029": {
       "name": "Couraça de Pano",
-      "gold": 300
+      "gold": 300,
+      "depth": 0,
+      "stats": [
+        "Armor"
+      ]
     },
     "1031": {
       "name": "Cota de Malha",
       "gold": 800,
       "from": [
         "1029"
+      ],
+      "depth": 1,
+      "stats": [
+        "Armor"
       ]
     },
     "1033": {
       "name": "Manto Anula-Magia",
-      "gold": 400
+      "gold": 400,
+      "depth": 0,
+      "stats": [
+        "SpellBlock"
+      ]
     },
     "1036": {
       "name": "Espada Longa",
-      "gold": 350
+      "gold": 350,
+      "depth": 0,
+      "stats": [
+        "Damage"
+      ]
     },
     "1037": {
       "name": "Picareta",
-      "gold": 875
+      "gold": 875,
+      "depth": 0,
+      "stats": [
+        "Damage"
+      ]
     },
     "1038": {
       "name": "Espada G. p. C.",
-      "gold": 1300
+      "gold": 1300,
+      "depth": 0,
+      "stats": [
+        "Damage"
+      ]
     },
     "1042": {
       "name": "Adaga",
-      "gold": 250
+      "gold": 250,
+      "depth": 0,
+      "stats": [
+        "AttackSpeed"
+      ]
     },
     "1043": {
       "name": "Arco Recurvo",
       "gold": 700,
       "from": [
         "1042"
+      ],
+      "depth": 1,
+      "stats": [
+        "AttackSpeed",
+        "OnHit"
       ]
     },
     "1052": {
       "name": "Tomo Amplificador",
-      "gold": 400
+      "gold": 400,
+      "depth": 0,
+      "stats": [
+        "SpellDamage"
+      ]
     },
     "1053": {
       "name": "Cetro Vampírico",
       "gold": 900,
       "from": [
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "Damage",
+        "LifeSteal"
       ]
     },
     "1054": {
       "name": "Escudo de Doran",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": [
+        "Health",
+        "HealthRegen"
+      ]
     },
     "1055": {
       "name": "Lâmina de Doran",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": [
+        "Damage",
+        "Health",
+        "LifeSteal",
+        "SpellVamp"
+      ]
     },
     "1056": {
       "name": "Anel de Doran",
-      "gold": 400
+      "gold": 400,
+      "depth": 0,
+      "stats": [
+        "Health",
+        "ManaRegen",
+        "SpellDamage"
+      ]
     },
     "1057": {
       "name": "Capa Negatron",
       "gold": 850,
       "from": [
         "1033"
+      ],
+      "depth": 1,
+      "stats": [
+        "SpellBlock"
       ]
     },
     "1058": {
       "name": "Bastão Desnecessariamente Grande",
-      "gold": 1200
+      "gold": 1200,
+      "depth": 0,
+      "stats": [
+        "SpellDamage"
+      ]
     },
     "1082": {
       "name": "Lacre Sombrio",
-      "gold": 350
+      "gold": 350,
+      "depth": 0,
+      "stats": [
+        "Health",
+        "SpellDamage"
+      ]
     },
     "1083": {
       "name": "Abatedora",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": [
+        "Damage",
+        "OnHit"
+      ]
     },
     "1086": {
       "name": "Arco de Doran",
-      "gold": 400
+      "gold": 400,
+      "depth": 0,
+      "stats": [
+        "AttackSpeed",
+        "Damage",
+        "SpellVamp"
+      ]
     },
     "1101": {
       "name": "Filhote de Garrabrasa",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": []
     },
     "1102": {
       "name": "Cria de Andabrisas",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": []
     },
     "1103": {
       "name": "Broto de Esmagamusgo",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": []
     },
     "1105": {
       "name": "Broto de Esmagamusgo",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": []
     },
     "1106": {
       "name": "Cria de Andabrisas",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": []
     },
     "1107": {
       "name": "Filhote de Garrabrasa",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": []
     },
     "1120": {
       "name": "Elmo de Doran",
-      "gold": 450
+      "gold": 450,
+      "depth": 0,
+      "stats": [
+        "Armor",
+        "Health",
+        "SpellBlock"
+      ]
     },
     "2003": {
       "name": "Poção de Vida",
-      "gold": 50
+      "gold": 50,
+      "depth": 0,
+      "stats": [
+        "HealthRegen"
+      ]
     },
     "2019": {
       "name": "Sigilo de Aço",
@@ -159,6 +297,11 @@
         "1029",
         "1036",
         "1029"
+      ],
+      "depth": 1,
+      "stats": [
+        "Armor",
+        "Damage"
       ]
     },
     "2020": {
@@ -167,6 +310,12 @@
       "from": [
         "2022",
         "1037"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "2021": {
@@ -175,23 +324,43 @@
       "from": [
         "1036",
         "1028"
+      ],
+      "depth": 1,
+      "stats": [
+        "Damage",
+        "Health"
       ]
     },
     "2022": {
       "name": "Partícula Brilhante",
-      "gold": 250
+      "gold": 250,
+      "depth": 0,
+      "stats": [
+        "AbilityHaste"
+      ]
     },
     "2031": {
       "name": "Poção com Refil",
-      "gold": 150
+      "gold": 150,
+      "depth": 0,
+      "stats": [
+        "HealthRegen"
+      ]
     },
     "2051": {
       "name": "Berrante do Guardião",
-      "gold": 950
+      "gold": 950,
+      "depth": 0,
+      "stats": [
+        "Health",
+        "HealthRegen"
+      ]
     },
     "2055": {
       "name": "Sentinela de Controle",
-      "gold": 75
+      "gold": 75,
+      "depth": 0,
+      "stats": []
     },
     "2065": {
       "name": "Hino Bélico de Shurelya",
@@ -199,23 +368,51 @@
       "from": [
         "3113",
         "4642"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ManaRegen",
+        "Movement",
+        "SpellDamage"
       ]
     },
     "2138": {
       "name": "Elixir de Ferro",
-      "gold": 500
+      "gold": 500,
+      "depth": 0,
+      "stats": [
+        "Health",
+        "Movement",
+        "Tenacity"
+      ]
     },
     "2139": {
       "name": "Elixir da Feitiçaria",
-      "gold": 500
+      "gold": 500,
+      "depth": 0,
+      "stats": [
+        "ManaRegen",
+        "SpellDamage"
+      ]
     },
     "2140": {
       "name": "Elixir da Ira",
-      "gold": 500
+      "gold": 500,
+      "depth": 0,
+      "stats": [
+        "Damage",
+        "LifeSteal",
+        "SpellVamp"
+      ]
     },
     "2141": {
       "name": "Suco de Chapéu",
-      "gold": 300
+      "gold": 300,
+      "depth": 0,
+      "stats": [
+        "Damage"
+      ]
     },
     "2420": {
       "name": "Armaguarda da Caçadora",
@@ -224,6 +421,11 @@
         "1052",
         "1029",
         "1052"
+      ],
+      "depth": 1,
+      "stats": [
+        "Armor",
+        "SpellDamage"
       ]
     },
     "2501": {
@@ -232,6 +434,11 @@
       "from": [
         "2021",
         "2021"
+      ],
+      "depth": 2,
+      "stats": [
+        "Damage",
+        "Health"
       ]
     },
     "2502": {
@@ -241,6 +448,12 @@
         "1031",
         "3067",
         "1028"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Health"
       ]
     },
     "2503": {
@@ -249,6 +462,12 @@
       "from": [
         "3802",
         "2508"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Mana",
+        "SpellDamage"
       ]
     },
     "2504": {
@@ -257,6 +476,12 @@
       "from": [
         "3211",
         "1057"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "SpellBlock"
       ]
     },
     "2508": {
@@ -264,6 +489,10 @@
       "gold": 900,
       "from": [
         "1052"
+      ],
+      "depth": 1,
+      "stats": [
+        "SpellDamage"
       ]
     },
     "2510": {
@@ -274,6 +503,14 @@
         "1026",
         "3067",
         "1042"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "AttackSpeed",
+        "Health",
+        "OnHit",
+        "SpellDamage"
       ]
     },
     "2512": {
@@ -282,6 +519,13 @@
       "from": [
         "3086",
         "3144"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "AttackSpeed",
+        "CriticalStrike",
+        "Movement"
       ]
     },
     "2517": {
@@ -291,6 +535,14 @@
         "3133",
         "1037",
         "1036"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "LifeSteal",
+        "SpellVamp",
+        "Tenacity"
       ]
     },
     "2520": {
@@ -299,6 +551,12 @@
       "from": [
         "2020",
         "3134"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "2522": {
@@ -307,6 +565,12 @@
       "from": [
         "3802",
         "1026"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Mana",
+        "SpellDamage"
       ]
     },
     "2523": {
@@ -316,6 +580,11 @@
         "1037",
         "6670",
         "1036"
+      ],
+      "depth": 2,
+      "stats": [
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "2524": {
@@ -325,6 +594,15 @@
         "3067",
         "1029",
         "1033"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "AttackSpeed",
+        "Health",
+        "Movement",
+        "SpellBlock"
       ]
     },
     "2525": {
@@ -333,6 +611,13 @@
       "from": [
         "3067",
         "1011"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "Movement",
+        "Tenacity"
       ]
     },
     "2526": {
@@ -342,6 +627,12 @@
         "3114",
         "1028",
         "3070"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "Mana",
+        "ManaRegen"
       ]
     },
     "3003": {
@@ -351,6 +642,12 @@
         "3070",
         "3802",
         "3108"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Mana",
+        "SpellDamage"
       ]
     },
     "3004": {
@@ -360,6 +657,13 @@
         "3070",
         "3133",
         "1036"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "Mana",
+        "OnHit"
       ]
     },
     "3006": {
@@ -369,6 +673,11 @@
         "1001",
         "1042",
         "1042"
+      ],
+      "depth": 1,
+      "stats": [
+        "AttackSpeed",
+        "Movement"
       ]
     },
     "3008": {
@@ -376,6 +685,12 @@
       "gold": 1000,
       "from": [
         "1001"
+      ],
+      "depth": 1,
+      "stats": [
+        "LifeSteal",
+        "Movement",
+        "SpellVamp"
       ]
     },
     "3009": {
@@ -383,6 +698,10 @@
       "gold": 1000,
       "from": [
         "1001"
+      ],
+      "depth": 1,
+      "stats": [
+        "Movement"
       ]
     },
     "3020": {
@@ -390,6 +709,11 @@
       "gold": 1100,
       "from": [
         "1001"
+      ],
+      "depth": 1,
+      "stats": [
+        "MagicPenetration",
+        "Movement"
       ]
     },
     "3024": {
@@ -399,6 +723,12 @@
         "1029",
         "1027",
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Mana"
       ]
     },
     "3026": {
@@ -407,6 +737,11 @@
       "from": [
         "2019",
         "1038"
+      ],
+      "depth": 2,
+      "stats": [
+        "Armor",
+        "Damage"
       ]
     },
     "3031": {
@@ -416,6 +751,11 @@
         "1038",
         "1037",
         "1018"
+      ],
+      "depth": 1,
+      "stats": [
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "3032": {
@@ -425,6 +765,12 @@
         "1038",
         "3144",
         "1036"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "3033": {
@@ -434,6 +780,12 @@
         "3123",
         "3035",
         "1018"
+      ],
+      "depth": 2,
+      "stats": [
+        "ArmorPenetration",
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "3035": {
@@ -442,6 +794,11 @@
       "from": [
         "1036",
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "3036": {
@@ -450,6 +807,12 @@
       "from": [
         "3035",
         "6670"
+      ],
+      "depth": 2,
+      "stats": [
+        "ArmorPenetration",
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "3041": {
@@ -457,6 +820,12 @@
       "gold": 1500,
       "from": [
         "1082"
+      ],
+      "depth": 1,
+      "stats": [
+        "Health",
+        "Movement",
+        "SpellDamage"
       ]
     },
     "3044": {
@@ -465,6 +834,12 @@
       "from": [
         "1028",
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "Damage",
+        "Health",
+        "Movement"
       ]
     },
     "3046": {
@@ -474,6 +849,12 @@
         "1042",
         "3086",
         "1042"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "CriticalStrike",
+        "Movement"
       ]
     },
     "3047": {
@@ -482,6 +863,11 @@
       "from": [
         "1001",
         "1029"
+      ],
+      "depth": 1,
+      "stats": [
+        "Armor",
+        "Movement"
       ]
     },
     "3050": {
@@ -491,6 +877,13 @@
         "3067",
         "1029",
         "1033"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Health",
+        "SpellBlock"
       ]
     },
     "3051": {
@@ -500,6 +893,11 @@
         "1036",
         "1042",
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "AttackSpeed",
+        "Damage"
       ]
     },
     "3053": {
@@ -509,6 +907,12 @@
         "1037",
         "2021",
         "1028"
+      ],
+      "depth": 2,
+      "stats": [
+        "Damage",
+        "Health",
+        "Tenacity"
       ]
     },
     "3057": {
@@ -516,6 +920,11 @@
       "gold": 900,
       "from": [
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "OnHit"
       ]
     },
     "3065": {
@@ -524,6 +933,13 @@
       "from": [
         "3211",
         "3067"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "HealthRegen",
+        "SpellBlock"
       ]
     },
     "3066": {
@@ -531,6 +947,11 @@
       "gold": 800,
       "from": [
         "1028"
+      ],
+      "depth": 1,
+      "stats": [
+        "Health",
+        "Movement"
       ]
     },
     "3067": {
@@ -539,6 +960,11 @@
       "from": [
         "1028",
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "Health"
       ]
     },
     "3068": {
@@ -548,11 +974,22 @@
         "6660",
         "1031",
         "1028"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Health"
       ]
     },
     "3070": {
       "name": "Lágrima da Deusa",
-      "gold": 400
+      "gold": 400,
+      "depth": 0,
+      "stats": [
+        "Mana",
+        "ManaRegen"
+      ]
     },
     "3071": {
       "name": "Cutelo Negro",
@@ -561,6 +998,15 @@
         "3044",
         "3067",
         "1037"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage",
+        "Health",
+        "Movement",
+        "OnHit"
       ]
     },
     "3072": {
@@ -570,6 +1016,11 @@
         "1038",
         "1037",
         "1053"
+      ],
+      "depth": 2,
+      "stats": [
+        "Damage",
+        "LifeSteal"
       ]
     },
     "3073": {
@@ -579,6 +1030,14 @@
         "2021",
         "1042",
         "3044"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "AttackSpeed",
+        "Damage",
+        "Health",
+        "Movement"
       ]
     },
     "3074": {
@@ -588,6 +1047,13 @@
         "3077",
         "1053",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "LifeSteal",
+        "OnHit"
       ]
     },
     "3075": {
@@ -597,6 +1063,11 @@
         "3076",
         "1031",
         "1028"
+      ],
+      "depth": 2,
+      "stats": [
+        "Armor",
+        "Health"
       ]
     },
     "3076": {
@@ -605,6 +1076,10 @@
       "from": [
         "1029",
         "1029"
+      ],
+      "depth": 1,
+      "stats": [
+        "Armor"
       ]
     },
     "3077": {
@@ -613,6 +1088,11 @@
       "from": [
         "1036",
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "Damage",
+        "OnHit"
       ]
     },
     "3078": {
@@ -622,6 +1102,15 @@
         "3057",
         "3044",
         "3051"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "AttackSpeed",
+        "Damage",
+        "Health",
+        "Movement",
+        "OnHit"
       ]
     },
     "3082": {
@@ -630,6 +1119,10 @@
       "from": [
         "1029",
         "1029"
+      ],
+      "depth": 1,
+      "stats": [
+        "Armor"
       ]
     },
     "3083": {
@@ -639,6 +1132,11 @@
         "1011",
         "1011",
         "3801"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "HealthRegen"
       ]
     },
     "3084": {
@@ -648,6 +1146,11 @@
         "1011",
         "3801",
         "1011"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "HealthRegen"
       ]
     },
     "3085": {
@@ -656,6 +1159,13 @@
       "from": [
         "3086",
         "3144"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "CriticalStrike",
+        "Movement",
+        "OnHit"
       ]
     },
     "3086": {
@@ -664,6 +1174,12 @@
       "from": [
         "1018",
         "1042"
+      ],
+      "depth": 1,
+      "stats": [
+        "AttackSpeed",
+        "CriticalStrike",
+        "Movement"
       ]
     },
     "3087": {
@@ -673,6 +1189,14 @@
         "3144",
         "3113",
         "1037"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "Damage",
+        "Movement",
+        "OnHit",
+        "SpellDamage"
       ]
     },
     "3089": {
@@ -681,6 +1205,10 @@
       "from": [
         "1058",
         "1058"
+      ],
+      "depth": 1,
+      "stats": [
+        "SpellDamage"
       ]
     },
     "3091": {
@@ -690,6 +1218,13 @@
         "1043",
         "1057",
         "1043"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "OnHit",
+        "SpellBlock",
+        "Tenacity"
       ]
     },
     "3094": {
@@ -698,6 +1233,12 @@
       "from": [
         "3086",
         "3144"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "CriticalStrike",
+        "Movement"
       ]
     },
     "3095": {
@@ -707,6 +1248,13 @@
         "1038",
         "1018",
         "3144"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "CriticalStrike",
+        "Damage",
+        "Movement"
       ]
     },
     "3100": {
@@ -716,6 +1264,13 @@
         "3057",
         "3113",
         "1026"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Movement",
+        "OnHit",
+        "SpellDamage"
       ]
     },
     "3102": {
@@ -724,6 +1279,11 @@
       "from": [
         "1058",
         "4632"
+      ],
+      "depth": 2,
+      "stats": [
+        "SpellBlock",
+        "SpellDamage"
       ]
     },
     "3107": {
@@ -732,6 +1292,12 @@
       "from": [
         "3108",
         "3114"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "3108": {
@@ -740,6 +1306,11 @@
       "from": [
         "1052",
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "SpellDamage"
       ]
     },
     "3109": {
@@ -749,6 +1320,13 @@
         "3067",
         "1031",
         "1006"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Health",
+        "HealthRegen"
       ]
     },
     "3110": {
@@ -757,6 +1335,12 @@
       "from": [
         "3082",
         "3024"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Mana"
       ]
     },
     "3111": {
@@ -765,17 +1349,34 @@
       "from": [
         "1001",
         "1033"
+      ],
+      "depth": 1,
+      "stats": [
+        "Movement",
+        "SpellBlock",
+        "Tenacity"
       ]
     },
     "3112": {
       "name": "Orbe do Guardião",
-      "gold": 950
+      "gold": 950,
+      "depth": 0,
+      "stats": [
+        "Health",
+        "ManaRegen",
+        "SpellDamage"
+      ]
     },
     "3113": {
       "name": "Cintilação Etérea",
       "gold": 900,
       "from": [
         "1052"
+      ],
+      "depth": 1,
+      "stats": [
+        "Movement",
+        "SpellDamage"
       ]
     },
     "3114": {
@@ -783,6 +1384,10 @@
       "gold": 600,
       "from": [
         "1004"
+      ],
+      "depth": 1,
+      "stats": [
+        "ManaRegen"
       ]
     },
     "3115": {
@@ -792,6 +1397,13 @@
         "1043",
         "1026",
         "3108"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "AttackSpeed",
+        "OnHit",
+        "SpellDamage"
       ]
     },
     "3116": {
@@ -801,6 +1413,11 @@
         "1026",
         "1011",
         "1052"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "SpellDamage"
       ]
     },
     "3118": {
@@ -809,6 +1426,12 @@
       "from": [
         "3802",
         "1026"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Mana",
+        "SpellDamage"
       ]
     },
     "3119": {
@@ -818,6 +1441,12 @@
         "3070",
         "1011",
         "3067"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "Mana"
       ]
     },
     "3123": {
@@ -825,6 +1454,10 @@
       "gold": 800,
       "from": [
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "Damage"
       ]
     },
     "3124": {
@@ -834,6 +1467,13 @@
         "1052",
         "1043",
         "1037"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "Damage",
+        "OnHit",
+        "SpellDamage"
       ]
     },
     "3133": {
@@ -843,6 +1483,11 @@
         "1036",
         "2022",
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "Damage"
       ]
     },
     "3134": {
@@ -851,6 +1496,11 @@
       "from": [
         "1036",
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "3135": {
@@ -859,6 +1509,11 @@
       "from": [
         "4630",
         "1026"
+      ],
+      "depth": 2,
+      "stats": [
+        "MagicPenetration",
+        "SpellDamage"
       ]
     },
     "3137": {
@@ -868,6 +1523,12 @@
         "4630",
         "3108",
         "3108"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "MagicPenetration",
+        "SpellDamage"
       ]
     },
     "3139": {
@@ -877,6 +1538,14 @@
         "3140",
         "1037",
         "1053"
+      ],
+      "depth": 2,
+      "stats": [
+        "Damage",
+        "LifeSteal",
+        "Movement",
+        "SpellBlock",
+        "Tenacity"
       ]
     },
     "3140": {
@@ -884,6 +1553,10 @@
       "gold": 1300,
       "from": [
         "1033"
+      ],
+      "depth": 1,
+      "stats": [
+        "SpellBlock"
       ]
     },
     "3142": {
@@ -893,6 +1566,12 @@
         "3134",
         "6690",
         "1036"
+      ],
+      "depth": 2,
+      "stats": [
+        "ArmorPenetration",
+        "Damage",
+        "Movement"
       ]
     },
     "3143": {
@@ -901,6 +1580,11 @@
       "from": [
         "3082",
         "1011"
+      ],
+      "depth": 2,
+      "stats": [
+        "Armor",
+        "Health"
       ]
     },
     "3144": {
@@ -909,6 +1593,10 @@
       "from": [
         "1042",
         "1042"
+      ],
+      "depth": 1,
+      "stats": [
+        "AttackSpeed"
       ]
     },
     "3145": {
@@ -917,6 +1605,10 @@
       "from": [
         "1052",
         "1052"
+      ],
+      "depth": 1,
+      "stats": [
+        "SpellDamage"
       ]
     },
     "3146": {
@@ -926,6 +1618,13 @@
         "1053",
         "3145",
         "1052"
+      ],
+      "depth": 2,
+      "stats": [
+        "Damage",
+        "LifeSteal",
+        "SpellDamage",
+        "SpellVamp"
       ]
     },
     "3147": {
@@ -934,6 +1633,11 @@
       "from": [
         "1052",
         "1028"
+      ],
+      "depth": 1,
+      "stats": [
+        "Health",
+        "SpellDamage"
       ]
     },
     "3152": {
@@ -943,6 +1647,13 @@
         "3145",
         "3067",
         "1028"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "Movement",
+        "SpellDamage"
       ]
     },
     "3153": {
@@ -952,6 +1663,13 @@
         "1053",
         "1043",
         "1037"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "Damage",
+        "LifeSteal",
+        "OnHit"
       ]
     },
     "3155": {
@@ -961,6 +1679,11 @@
         "1036",
         "1033",
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "Damage",
+        "SpellBlock"
       ]
     },
     "3156": {
@@ -969,6 +1692,14 @@
       "from": [
         "3155",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "LifeSteal",
+        "SpellBlock",
+        "SpellVamp"
       ]
     },
     "3157": {
@@ -977,6 +1708,11 @@
       "from": [
         "1058",
         "2420"
+      ],
+      "depth": 2,
+      "stats": [
+        "Armor",
+        "SpellDamage"
       ]
     },
     "3158": {
@@ -985,6 +1721,11 @@
       "from": [
         "1001",
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "Movement"
       ]
     },
     "3161": {
@@ -994,6 +1735,12 @@
         "1037",
         "2021",
         "1028"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "Health"
       ]
     },
     "3165": {
@@ -1003,6 +1750,12 @@
         "3916",
         "1026",
         "3067"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "SpellDamage"
       ]
     },
     "3168": {
@@ -1010,6 +1763,12 @@
       "gold": 1000,
       "from": [
         "3008"
+      ],
+      "depth": 2,
+      "stats": [
+        "LifeSteal",
+        "Movement",
+        "SpellVamp"
       ]
     },
     "3170": {
@@ -1017,6 +1776,10 @@
       "gold": 1000,
       "from": [
         "3009"
+      ],
+      "depth": 2,
+      "stats": [
+        "Movement"
       ]
     },
     "3171": {
@@ -1024,6 +1787,11 @@
       "gold": 900,
       "from": [
         "3158"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Movement"
       ]
     },
     "3172": {
@@ -1031,6 +1799,12 @@
       "gold": 1100,
       "from": [
         "3006"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "LifeSteal",
+        "Movement"
       ]
     },
     "3173": {
@@ -1038,6 +1812,12 @@
       "gold": 1250,
       "from": [
         "3111"
+      ],
+      "depth": 2,
+      "stats": [
+        "Movement",
+        "SpellBlock",
+        "Tenacity"
       ]
     },
     "3174": {
@@ -1045,6 +1825,11 @@
       "gold": 1200,
       "from": [
         "3047"
+      ],
+      "depth": 2,
+      "stats": [
+        "Armor",
+        "Movement"
       ]
     },
     "3175": {
@@ -1052,11 +1837,22 @@
       "gold": 1100,
       "from": [
         "3020"
+      ],
+      "depth": 2,
+      "stats": [
+        "MagicPenetration",
+        "Movement"
       ]
     },
     "3177": {
       "name": "Lâmina do Guardião",
-      "gold": 950
+      "gold": 950,
+      "depth": 0,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "Health"
+      ]
     },
     "3179": {
       "name": "Glaive Sombria",
@@ -1064,6 +1860,12 @@
       "from": [
         "3134",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "3181": {
@@ -1073,11 +1875,23 @@
         "2021",
         "3066",
         "1037"
+      ],
+      "depth": 2,
+      "stats": [
+        "Damage",
+        "Health",
+        "Movement"
       ]
     },
     "3184": {
       "name": "Martelo do Guardião",
-      "gold": 950
+      "gold": 950,
+      "depth": 0,
+      "stats": [
+        "Damage",
+        "Health",
+        "LifeSteal"
+      ]
     },
     "3190": {
       "name": "Medalhão dos Solari de Ferro",
@@ -1086,6 +1900,13 @@
         "3067",
         "1029",
         "1033"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Health",
+        "SpellBlock"
       ]
     },
     "3211": {
@@ -1095,6 +1916,12 @@
         "1028",
         "1033",
         "1006"
+      ],
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "SpellBlock"
       ]
     },
     "3222": {
@@ -1103,6 +1930,13 @@
       "from": [
         "3067",
         "3114"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "ManaRegen",
+        "Tenacity"
       ]
     },
     "3302": {
@@ -1111,19 +1945,33 @@
       "from": [
         "3051",
         "1043"
+      ],
+      "depth": 2,
+      "stats": [
+        "ArmorPenetration",
+        "AttackSpeed",
+        "Damage",
+        "MagicPenetration",
+        "OnHit"
       ]
     },
     "3340": {
       "name": "Sentinela Invisível",
-      "gold": 0
+      "gold": 0,
+      "depth": 0,
+      "stats": []
     },
     "3363": {
       "name": "Alteração Vidente",
-      "gold": 0
+      "gold": 0,
+      "depth": 0,
+      "stats": []
     },
     "3364": {
       "name": "Lente do Oráculo",
-      "gold": 0
+      "gold": 0,
+      "depth": 0,
+      "stats": []
     },
     "3504": {
       "name": "Turíbulo Ardente",
@@ -1131,6 +1979,13 @@
       "from": [
         "3113",
         "3114"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "ManaRegen",
+        "Movement",
+        "SpellDamage"
       ]
     },
     "3508": {
@@ -1140,6 +1995,14 @@
         "3057",
         "3133",
         "1018"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "CriticalStrike",
+        "Damage",
+        "ManaRegen",
+        "OnHit"
       ]
     },
     "3742": {
@@ -1149,6 +2012,12 @@
         "3066",
         "1028",
         "1031"
+      ],
+      "depth": 2,
+      "stats": [
+        "Armor",
+        "Health",
+        "Movement"
       ]
     },
     "3748": {
@@ -1158,6 +2027,13 @@
         "3077",
         "2021",
         "1011"
+      ],
+      "depth": 2,
+      "stats": [
+        "Damage",
+        "Health",
+        "HealthRegen",
+        "OnHit"
       ]
     },
     "3801": {
@@ -1166,6 +2042,11 @@
       "from": [
         "1028",
         "1006"
+      ],
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen"
       ]
     },
     "3802": {
@@ -1175,6 +2056,13 @@
         "1052",
         "1027",
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "Mana",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "3803": {
@@ -1184,6 +2072,13 @@
         "1028",
         "1028",
         "1027"
+      ],
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "Mana",
+        "ManaRegen"
       ]
     },
     "3814": {
@@ -1192,37 +2087,82 @@
       "from": [
         "3134",
         "2021"
+      ],
+      "depth": 2,
+      "stats": [
+        "ArmorPenetration",
+        "Damage",
+        "Health"
       ]
     },
     "3865": {
       "name": "Atlas Mundial",
-      "gold": 400
+      "gold": 400,
+      "depth": 0,
+      "stats": [
+        "Health",
+        "ManaRegen"
+      ]
     },
     "3869": {
       "name": "Oposição Celestial",
-      "gold": 400
+      "gold": 400,
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen"
+      ]
     },
     "3870": {
       "name": "Criassonhos",
-      "gold": 400
+      "gold": 400,
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen"
+      ]
     },
     "3871": {
       "name": "Invadomínio de Zaz'Zak",
-      "gold": 400
+      "gold": 400,
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen"
+      ]
     },
     "3876": {
       "name": "Trenó do Solstício",
-      "gold": 400
+      "gold": 400,
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen"
+      ]
     },
     "3877": {
       "name": "Canção de Sangue",
-      "gold": 400
+      "gold": 400,
+      "depth": 1,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "ManaRegen"
+      ]
     },
     "3916": {
       "name": "Orbe do Oblívio",
       "gold": 800,
       "from": [
         "1052"
+      ],
+      "depth": 1,
+      "stats": [
+        "SpellDamage"
       ]
     },
     "4005": {
@@ -1232,6 +2172,12 @@
         "1052",
         "4642",
         "1052"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "4401": {
@@ -1241,6 +2187,12 @@
         "1057",
         "1028",
         "3066"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "Movement",
+        "SpellBlock"
       ]
     },
     "4628": {
@@ -1250,6 +2202,11 @@
         "3108",
         "3108",
         "1052"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "SpellDamage"
       ]
     },
     "4629": {
@@ -1259,6 +2216,13 @@
         "3067",
         "3113",
         "3108"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "Movement",
+        "SpellDamage"
       ]
     },
     "4630": {
@@ -1266,6 +2230,11 @@
       "gold": 1100,
       "from": [
         "1052"
+      ],
+      "depth": 1,
+      "stats": [
+        "MagicPenetration",
+        "SpellDamage"
       ]
     },
     "4632": {
@@ -1275,6 +2244,11 @@
         "1052",
         "1033",
         "1052"
+      ],
+      "depth": 1,
+      "stats": [
+        "SpellBlock",
+        "SpellDamage"
       ]
     },
     "4633": {
@@ -1283,6 +2257,13 @@
       "from": [
         "3147",
         "3108"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "SpellDamage",
+        "SpellVamp"
       ]
     },
     "4642": {
@@ -1292,6 +2273,12 @@
         "1004",
         "1052",
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "4645": {
@@ -1300,6 +2287,11 @@
       "from": [
         "3145",
         "1058"
+      ],
+      "depth": 2,
+      "stats": [
+        "MagicPenetration",
+        "SpellDamage"
       ]
     },
     "4646": {
@@ -1308,6 +2300,12 @@
       "from": [
         "3145",
         "3113"
+      ],
+      "depth": 2,
+      "stats": [
+        "MagicPenetration",
+        "Movement",
+        "SpellDamage"
       ]
     },
     "6333": {
@@ -1317,6 +2315,12 @@
         "2019",
         "1037",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Damage"
       ]
     },
     "6609": {
@@ -1326,6 +2330,12 @@
         "3123",
         "1011",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "Health"
       ]
     },
     "6610": {
@@ -1334,6 +2344,12 @@
       "from": [
         "2021",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage",
+        "Health"
       ]
     },
     "6616": {
@@ -1342,6 +2358,12 @@
       "from": [
         "3108",
         "3114"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "6617": {
@@ -1350,6 +2372,13 @@
       "from": [
         "3067",
         "4642"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "6620": {
@@ -1358,6 +2387,13 @@
       "from": [
         "3067",
         "4642"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "6621": {
@@ -1367,6 +2403,11 @@
         "1026",
         "3114",
         "3114"
+      ],
+      "depth": 2,
+      "stats": [
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "6631": {
@@ -1376,6 +2417,12 @@
         "3077",
         "3044",
         "1042"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "Damage",
+        "Health"
       ]
     },
     "6653": {
@@ -1384,6 +2431,11 @@
       "from": [
         "3147",
         "2508"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "SpellDamage"
       ]
     },
     "6655": {
@@ -1392,6 +2444,12 @@
       "from": [
         "3802",
         "3145"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Mana",
+        "SpellDamage"
       ]
     },
     "6657": {
@@ -1400,6 +2458,14 @@
       "from": [
         "1026",
         "3803"
+      ],
+      "depth": 2,
+      "stats": [
+        "Health",
+        "HealthRegen",
+        "Mana",
+        "ManaRegen",
+        "SpellDamage"
       ]
     },
     "6660": {
@@ -1408,6 +2474,11 @@
       "from": [
         "1028",
         "2022"
+      ],
+      "depth": 1,
+      "stats": [
+        "AbilityHaste",
+        "Health"
       ]
     },
     "6662": {
@@ -1417,6 +2488,13 @@
         "3057",
         "1028",
         "1031"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Armor",
+        "Health",
+        "OnHit"
       ]
     },
     "6664": {
@@ -1425,6 +2503,13 @@
       "from": [
         "6660",
         "3211"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "HealthRegen",
+        "SpellBlock"
       ]
     },
     "6665": {
@@ -1434,6 +2519,12 @@
         "1011",
         "1031",
         "1057"
+      ],
+      "depth": 2,
+      "stats": [
+        "Armor",
+        "Health",
+        "SpellBlock"
       ]
     },
     "6670": {
@@ -1442,6 +2533,11 @@
       "from": [
         "1036",
         "1018"
+      ],
+      "depth": 1,
+      "stats": [
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "6672": {
@@ -1451,6 +2547,13 @@
         "6690",
         "3051",
         "1043"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "Damage",
+        "Movement",
+        "OnHit"
       ]
     },
     "6673": {
@@ -1459,6 +2562,11 @@
       "from": [
         "1037",
         "6670"
+      ],
+      "depth": 2,
+      "stats": [
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "6675": {
@@ -1468,6 +2576,12 @@
         "1042",
         "3086",
         "1042"
+      ],
+      "depth": 2,
+      "stats": [
+        "AttackSpeed",
+        "CriticalStrike",
+        "Movement"
       ]
     },
     "6676": {
@@ -1477,6 +2591,12 @@
         "1037",
         "3134",
         "1018"
+      ],
+      "depth": 2,
+      "stats": [
+        "ArmorPenetration",
+        "CriticalStrike",
+        "Damage"
       ]
     },
     "6690": {
@@ -1484,6 +2604,11 @@
       "gold": 775,
       "from": [
         "1036"
+      ],
+      "depth": 1,
+      "stats": [
+        "Damage",
+        "Movement"
       ]
     },
     "6692": {
@@ -1493,6 +2618,11 @@
         "3133",
         "1037",
         "1036"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Damage"
       ]
     },
     "6694": {
@@ -1501,6 +2631,12 @@
       "from": [
         "3133",
         "3035"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "6695": {
@@ -1509,6 +2645,11 @@
       "from": [
         "3134",
         "1037"
+      ],
+      "depth": 2,
+      "stats": [
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "6696": {
@@ -1517,6 +2658,12 @@
       "from": [
         "2020",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "6697": {
@@ -1525,6 +2672,12 @@
       "from": [
         "3134",
         "3133"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "6698": {
@@ -1533,6 +2686,12 @@
       "from": [
         "3077",
         "2020"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "6699": {
@@ -1542,6 +2701,12 @@
         "2020",
         "1036",
         "1036"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "ArmorPenetration",
+        "Damage"
       ]
     },
     "8010": {
@@ -1550,6 +2715,13 @@
       "from": [
         "3147",
         "3108"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "MagicPenetration",
+        "SpellDamage"
       ]
     },
     "8020": {
@@ -1558,6 +2730,12 @@
       "from": [
         "3067",
         "1057"
+      ],
+      "depth": 2,
+      "stats": [
+        "AbilityHaste",
+        "Health",
+        "SpellBlock"
       ]
     }
   },

@@ -19,6 +19,7 @@ interface DDragonItem {
   inStore?: boolean
   hideFromAll?: boolean
   requiredChampion?: string
+  tags?: string[]
 }
 
 interface Item {
@@ -26,6 +27,10 @@ interface Item {
   gold: number
   // Componentes diretos da receita (com repetição, ex.: duas Couraças de Pano).
   from?: string[]
+  // Nível na árvore de receitas: 0 = básico (sem componentes), 1 = feito de básicos, etc.
+  depth: number
+  // Atributos que o item dá (ex.: Health, Armor), usados para escolher alternativas parecidas.
+  stats: string[]
 }
 
 interface ItemsFile {
@@ -36,6 +41,32 @@ interface ItemsFile {
 }
 
 const SUMMONERS_RIFT = '11'
+
+// Tags do Data Dragon que são atributos. Sinônimos viram um só (ex.: CooldownReduction e
+// AbilityHaste); tags que não são atributo (Lane, Active, Vision...) ficam de fora.
+const STAT_TAGS: Record<string, string> = {
+  Health: 'Health',
+  HealthRegen: 'HealthRegen',
+  Armor: 'Armor',
+  SpellBlock: 'SpellBlock',
+  MagicResist: 'SpellBlock',
+  Damage: 'Damage',
+  SpellDamage: 'SpellDamage',
+  AttackSpeed: 'AttackSpeed',
+  CriticalStrike: 'CriticalStrike',
+  OnHit: 'OnHit',
+  LifeSteal: 'LifeSteal',
+  SpellVamp: 'SpellVamp',
+  ArmorPenetration: 'ArmorPenetration',
+  MagicPenetration: 'MagicPenetration',
+  AbilityHaste: 'AbilityHaste',
+  CooldownReduction: 'AbilityHaste',
+  Mana: 'Mana',
+  ManaRegen: 'ManaRegen',
+  NonbootsMovement: 'Movement',
+  Boots: 'Movement',
+  Tenacity: 'Tenacity',
+}
 
 // Itens compráveis na loja da Summoner's Rift. Ids acima de 100000 são variantes de outros
 // modos (ex.: Arena) que repetem o nome dos itens normais.
@@ -62,11 +93,27 @@ async function main() {
   const shop = Object.entries(data).filter(([id, item]) => isShopItem(id, item))
   const shopIds = new Set(shop.map(([id]) => id))
 
+  const depthCache = new Map<string, number>()
+  const depthOf = (id: string): number => {
+    if (!depthCache.has(id)) {
+      const from = data[id]?.from ?? []
+      depthCache.set(id, from.length === 0 ? 0 : 1 + Math.max(...from.map(depthOf)))
+    }
+    return depthCache.get(id)!
+  }
+
   const items: ItemsFile['items'] = {}
   const recipes: string[] = []
   for (const [id, item] of shop) {
     const from = item.from?.filter((component) => shopIds.has(component))
-    items[id] = { name: item.name, gold: item.gold.total, ...(from?.length ? { from } : {}) }
+    const stats = [...new Set((item.tags ?? []).flatMap((tag) => (STAT_TAGS[tag] ? [STAT_TAGS[tag]] : [])))]
+    items[id] = {
+      name: item.name,
+      gold: item.gold.total,
+      ...(from?.length ? { from } : {}),
+      depth: depthOf(id),
+      stats: stats.sort(),
+    }
     // Só entra como alvo se todos os componentes estiverem na loja.
     if (item.from && item.from.length >= 2 && from?.length === item.from.length) recipes.push(id)
   }

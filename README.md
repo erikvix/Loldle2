@@ -20,7 +20,7 @@ O jogo mostra o ícone de uma habilidade (passiva, Q, W, E ou R), em preto e bra
 
 ### Forja de Itens
 
-Inspirado no Item Forge do [LOLDOKU](https://loldoku.com). O jogo mostra um item da Summoner's Rift (nome, ícone, preço e quantos componentes tem) e você monta a receita escolhendo entre os componentes certos e 3 alternativas falsas. Componentes podem se repetir (ex.: duas Couraças de Pano) e a ordem não importa. São 3 tentativas, e cada erro diz quantos componentes estavam certos.
+Inspirado no Item Forge do [LOLDOKU](https://loldoku.com). O jogo mostra um item da Summoner's Rift (nome, ícone, preço e quantos componentes tem) e você monta a receita escolhendo entre os componentes certos e 3 alternativas falsas. As falsas são escolhidas para enganar: têm o mesmo nível de algum componente certo (básico com básico, intermediário com intermediário, nunca um item já pronto) e compartilham atributos com o item alvo (ex.: para um item de vida e armadura, outros componentes de vida ou armadura); na falta deles, atributos da mesma família (dano físico, dano mágico, defesa). Componentes podem se repetir (ex.: duas Couraças de Pano) e a ordem não importa. São 3 tentativas, e cada erro diz quantos componentes estavam certos.
 
 ### Multiplayer
 
@@ -75,7 +75,7 @@ src/
 
 - **Campeões e ícones:** [Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon) da Riot, em `pt_BR`. Não precisa de chave de API.
 - **Skins e habilidades:** Data Dragon, `championFull.json` em `pt_BR` (nomes das skins e das habilidades em português). Os chromas ficam de fora, porque não têm splash art própria, e o script confere se cada splash existe no CDN. São cerca de 2.100 skins. As imagens (splash arts e ícones) são carregadas direto do CDN do Data Dragon.
-- **Itens e receitas:** Data Dragon, `item.json` em `pt_BR`. Entram os itens compráveis na loja da Summoner's Rift; os alvos da Forja são as 138 receitas com 2 ou mais componentes.
+- **Itens e receitas:** Data Dragon, `item.json` em `pt_BR`. Entram os itens compráveis na loja da Summoner's Rift; os alvos da Forja são as 138 receitas com 2 ou mais componentes. O script também guarda o nível de cada item na árvore de receitas e os atributos dele (tags do Data Dragon como `Health`, `Armor`, `SpellBlock`).
 - **Falas dubladas em PT-BR:** [Wiki League of Legends PT-BR](https://leagueoflegends.fandom.com/pt-br), páginas `<Campeão>/LoL/Áudio`.
 - **Áudio das falas dubladas:** arquivos `.ogg` da wiki PT-BR, guardados em `public/audio` (cerca de 500 arquivos, 24 MB). O CDN da wiki bloqueia áudio tocado a partir de outros sites, por isso os arquivos ficam no próprio projeto. As falas traduzidas e as oficiais não têm áudio.
 - **Fala oficial de cada campeão:** [Riot Universe](https://universe.leagueoflegends.com/pt_BR/), API `universe-meeps.leagueoflegends.com/v1/pt_br/champions/<campeão>/index.json`. É a frase da biografia do campeão, já em português. Entra só quando o autor é o próprio campeão e aparece no jogo como "Fala oficial do Riot Universe".
