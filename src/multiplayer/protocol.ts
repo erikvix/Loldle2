@@ -1,4 +1,5 @@
 import type { PublicQuote } from '@/data/quotes'
+import { FORGE_ATTEMPTS } from '@/game/forge'
 
 export const MIN_PLAYERS = 2
 export const MAX_PLAYERS = 4
@@ -33,18 +34,24 @@ export interface PlayerState {
   id: string
   name: string
   score: number
-  // Chutes na rodada atual (só a quantidade, para não entregar pistas aos outros).
+  // Chutes (ou tentativas de receita, na Forja) na rodada atual. Só a quantidade, para não
+  // entregar pistas aos outros.
   guessCount: number
   connected: boolean
 }
 
-export type GameMode = 'quote' | 'splash' | 'ability' | 'mixed'
+export type GameMode = 'quote' | 'splash' | 'ability' | 'forge' | 'mixed'
 
 export const GAME_MODES: { id: GameMode; label: string; description: string }[] = [
   { id: 'quote', label: 'Falas', description: 'Qual campeão disse esta fala?' },
   { id: 'splash', label: 'Splash', description: 'De quem é esta splash art? O zoom diminui a cada erro.' },
   { id: 'ability', label: 'Habilidade', description: 'De quem é esta habilidade? Cor e posição voltam com os erros.' },
-  { id: 'mixed', label: 'Misto', description: 'Cada rodada sorteia um dos três modos.' },
+  {
+    id: 'forge',
+    label: 'Forja de Itens',
+    description: `Monte a receita do item. Cada um tem ${FORGE_ATTEMPTS} tentativas por rodada.`,
+  },
+  { id: 'mixed', label: 'Misto', description: 'Cada rodada sorteia um dos quatro modos.' },
 ]
 
 // O que os jogadores veem na rodada. Nunca inclui o campeão da resposta diretamente.
@@ -52,6 +59,8 @@ export type Challenge =
   | { kind: 'quote'; quote: PublicQuote }
   | { kind: 'splash'; imageUrl: string; focus: { x: number; y: number } }
   | { kind: 'ability'; imageUrl: string; rotation: number }
+  // Na Forja o item é conhecido; o segredo é a receita.
+  | { kind: 'forge'; itemId: string; slots: number; options: string[] }
 
 export interface RoundState {
   index: number
@@ -59,7 +68,8 @@ export interface RoundState {
   challenge: Challenge
   status: 'playing' | 'revealed'
   winnerId: string | null
-  // Só são preenchidos quando a rodada é revelada.
+  // Só são preenchidos quando a rodada é revelada. É o id do campeão ou, na Forja, a receita
+  // (ids dos componentes separados por vírgula, como em recipeKey).
   answerId: string | null
   // Informação extra da resposta (ex.: nome da skin ou da habilidade).
   answerDetail: string | null
@@ -78,12 +88,14 @@ export interface RoomState {
 // Convidado -> host
 export type GuestMessage =
   | { type: 'join'; name: string }
-  | { type: 'guess'; round: number; championId: string }
+  // `answer` é o id do campeão ou, na Forja, a receita tentada (recipeKey).
+  | { type: 'guess'; round: number; answer: string }
   | { type: 'ping' }
 
 // Host -> convidado
 export type HostMessage =
   | { type: 'state'; state: RoomState }
-  | { type: 'guessResult'; round: number; championId: string; correct: boolean }
+  // `matches`: na Forja, quantos componentes da tentativa estavam certos.
+  | { type: 'guessResult'; round: number; answer: string; correct: boolean; matches?: number }
   | { type: 'error'; message: string }
   | { type: 'ping' }

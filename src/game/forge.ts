@@ -84,7 +84,10 @@ function pickDecoys(target: Item, recipe: string[]): string[] {
 }
 
 export function pickForgeRound(previousId?: string): ForgeRound {
-  const itemId = randomItem(recipeItemIds.filter((id) => id !== previousId))
+  return forgeRoundFor(randomItem(recipeItemIds.filter((id) => id !== previousId)))
+}
+
+export function forgeRoundFor(itemId: string): ForgeRound {
   const recipe = items[itemId].from!
   const decoys = pickDecoys(items[itemId], recipe)
   return { itemId, recipe, options: shuffle([...new Set(recipe), ...decoys]) }

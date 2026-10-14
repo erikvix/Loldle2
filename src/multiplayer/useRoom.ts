@@ -14,13 +14,17 @@ import {
   type HostMessage,
   type RoomState,
 } from './protocol'
+import { countMatches, FORGE_ATTEMPTS } from '@/game/forge'
 import { pickRounds, type HostRound } from './rounds'
 
 export type Role = 'host' | 'guest'
 
 export interface MyGuess {
-  championId: string
+  // Id do campeão ou, na Forja, a receita tentada (recipeKey).
+  answer: string
   correct: boolean
+  // Na Forja: quantos componentes estavam certos.
+  matches?: number
 }
 
 export interface Room {
@@ -33,7 +37,7 @@ export interface Room {
   // Chutes deste jogador na rodada atual, do mais recente para o mais antigo.
   myGuesses: MyGuess[]
   start: () => void
-  guess: (championId: string) => void
+  guess: (answer: string) => void
   restart: () => void
   // Só o host escolhe o modo, no lobby.
   setMode: (mode: GameMode) => void
@@ -41,7 +45,7 @@ export interface Room {
 
 interface Actions {
   start: () => void
-  guess: (championId: string) => void
+  guess: (answer: string) => void
   restart: () => void
   setMode: (mode: GameMode) => void
 }
@@ -106,11 +110,11 @@ export function useRoom(role: Role, code: string, name: string): Room {
       setState(next)
       setDeadline(next.round?.status === 'playing' ? Date.now() + next.round.remainingMs : null)
     }
-    const recordMyGuess = (round: number, championId: string, correct: boolean) => {
+    const recordMyGuess = (round: number, answer: string, correct: boolean, matches?: number) => {
       if (disposed) return
       setMyGuesses((prev) => ({
         round,
-        guesses: [{ championId, correct }, ...(prev.round === round ? prev.guesses : [])],
+        guesses: [{ answer, correct, matches }, ...(prev.round === round ? prev.guesses : [])],
       }))
     }
 
@@ -185,7 +189,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
             ...round,
             status: 'revealed',
             winnerId,
-            answerId: rounds[round.index].championId,
+            answerId: rounds[round.index].answer,
             answerDetail: rounds[round.index].answerDetail,
           },
         }))
@@ -198,20 +202,32 @@ export function useRoom(role: Role, code: string, name: string): Room {
       const handleGuess = (
         playerId: string,
         roundIndex: number,
-        championId: string,
-        reply: (correct: boolean) => void,
+        answer: string,
+        reply: (correct: boolean, matches?: number) => void,
       ) => {
         const round = room?.round
         if (!room || room.phase !== 'playing' || !round || round.status !== 'playing' || round.index !== roundIndex) {
           return
         }
         const playerGuesses = guessed.get(playerId) ?? new Set<string>()
-        if (playerGuesses.has(championId)) return
-        playerGuesses.add(championId)
+        if (playerGuesses.has(answer)) return
+
+        const { challenge } = round
+        const hostRound = rounds[round.index]
+        let matches: number | undefined
+        if (challenge.kind === 'forge') {
+          // Na Forja cada jogador tem um número limitado de tentativas, e a receita precisa
+          // ter o tamanho certo e usar só as alternativas mostradas.
+          const ids = answer.split(',')
+          if (playerGuesses.size >= FORGE_ATTEMPTS) return
+          if (ids.length !== challenge.slots || ids.some((id) => !challenge.options.includes(id))) return
+          matches = countMatches(ids, hostRound.recipe!)
+        }
+        playerGuesses.add(answer)
         guessed.set(playerId, playerGuesses)
 
-        const correct = championId === rounds[round.index].championId
-        reply(correct)
+        const correct = answer === hostRound.answer
+        reply(correct, matches)
         // Chutes chegam um de cada vez ao host, então o primeiro acerto que chega leva o ponto.
         if (correct) {
           room = {
@@ -224,6 +240,11 @@ export function useRoom(role: Role, code: string, name: string): Room {
             ...current,
             players: current.players.map((p) => (p.id === playerId ? { ...p, guessCount: p.guessCount + 1 } : p)),
           }))
+          // Na Forja, se todos os jogadores conectados gastaram as tentativas, a rodada acaba sem ponto.
+          const everyoneOut = room.players
+            .filter((p) => p.connected)
+            .every((p) => (guessed.get(p.id)?.size ?? 0) >= FORGE_ATTEMPTS)
+          if (challenge.kind === 'forge' && everyoneOut) reveal(null)
         }
       }
 
@@ -248,12 +269,13 @@ export function useRoom(role: Role, code: string, name: string): Room {
               ],
             }))
           } else if (message.type === 'guess' && connections.get(connection.peer) === connection) {
-            handleGuess(connection.peer, message.round, message.championId, (correct) =>
+            handleGuess(connection.peer, message.round, message.answer, (correct, matches) =>
               connection.send({
                 type: 'guessResult',
                 round: message.round,
-                championId: message.championId,
+                answer: message.answer,
                 correct,
+                matches,
               } satisfies HostMessage),
             )
           }
@@ -337,11 +359,11 @@ export function useRoom(role: Role, code: string, name: string): Room {
           update((current) => ({ ...current, players: current.players.map((p) => ({ ...p, score: 0 })) }))
           startRound(0)
         },
-        guess: (championId) => {
+        guess: (answer) => {
           const round = room?.round
           if (!room || !round) return
-          handleGuess(room.hostId, round.index, championId, (correct) =>
-            recordMyGuess(round.index, championId, correct),
+          handleGuess(room.hostId, round.index, answer, (correct, matches) =>
+            recordMyGuess(round.index, answer, correct, matches),
           )
         },
         setMode: (mode) => {
@@ -404,7 +426,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
             setStatus('ready')
             receiveState(message.state)
           } else if (message.type === 'guessResult') {
-            recordMyGuess(message.round, message.championId, message.correct)
+            recordMyGuess(message.round, message.answer, message.correct, message.matches)
           } else if (message.type === 'error') {
             fail(message.message)
           }
@@ -417,10 +439,10 @@ export function useRoom(role: Role, code: string, name: string): Room {
         start: noop,
         restart: noop,
         setMode: noop,
-        guess: (championId) => {
+        guess: (answer) => {
           const round = latest?.round
           if (!connection?.open || !round || round.status !== 'playing') return
-          connection.send({ type: 'guess', round: round.index, championId } satisfies GuestMessage)
+          connection.send({ type: 'guess', round: round.index, answer } satisfies GuestMessage)
         },
       }
 
@@ -434,7 +456,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
   }, [role, code, name])
 
   const start = useCallback(() => actions.current.start(), [])
-  const guess = useCallback((championId: string) => actions.current.guess(championId), [])
+  const guess = useCallback((answer: string) => actions.current.guess(answer), [])
   const restart = useCallback(() => actions.current.restart(), [])
   const setMode = useCallback((mode: GameMode) => actions.current.setMode(mode), [])
 

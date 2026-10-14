@@ -18,6 +18,7 @@ import { z } from 'zod'
 import { AbilityIcon } from '@/components/AbilityIcon'
 import { AudioHint } from '@/components/AudioHint'
 import { ChampionIcon } from '@/components/ChampionIcon'
+import { ForgeAttempts, ForgePicker, ForgeTarget, RecipeReveal } from '@/components/ForgeBoard'
 import { GuessForm } from '@/components/GuessForm'
 import { GuessList } from '@/components/GuessList'
 import { QuoteCard } from '@/components/QuoteCard'
@@ -29,6 +30,7 @@ import { Field, FieldError, FieldGroup, FieldLabel } from '@/components/ui/field
 import { Input } from '@/components/ui/input'
 import { championsById, type Champion } from '@/data/quotes'
 import { splashZoom } from '@/game/details'
+import { FORGE_ATTEMPTS, recipeKey } from '@/game/forge'
 import { cn } from '@/lib/utils'
 import { loadPlayerName, savePlayerName } from '@/multiplayer/playerName'
 import {
@@ -301,15 +303,16 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
   const round = state.round!
   const secondsLeft = useCountdown(room.deadline)
   const revealed = round.status === 'revealed'
-  const answer = round.answerId ? championsById.get(round.answerId) : undefined
+  const isForge = round.challenge.kind === 'forge'
+  const answer = !isForge && round.answerId ? championsById.get(round.answerId) : undefined
   const winner = state.players.find((p) => p.id === round.winnerId)
 
   const myGuesses = useMemo(
-    () => room.myGuesses.map((g) => championsById.get(g.championId)).filter((c): c is Champion => !!c),
+    () => room.myGuesses.map((g) => championsById.get(g.answer)).filter((c): c is Champion => !!c),
     [room.myGuesses],
   )
-  const guessedIds = useMemo(() => new Set(room.myGuesses.map((g) => g.championId)), [room.myGuesses])
-  const myCorrect = room.myGuesses.find((g) => g.correct)?.championId ?? round.answerId ?? ''
+  const guessedIds = useMemo(() => new Set(room.myGuesses.map((g) => g.answer)), [room.myGuesses])
+  const myCorrect = room.myGuesses.find((g) => g.correct)?.answer ?? round.answerId ?? ''
   const wrongGuesses = room.myGuesses.filter((g) => !g.correct).length
   const ranking = [...state.players].sort((a, b) => b.score - a.score)
 
@@ -337,7 +340,11 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
             highlight={revealed && player.id === round.winnerId}
             extra={
               <>
-                {!revealed && <span className="text-xs text-muted-foreground">{player.guessCount} chutes</span>}
+                {!revealed && (
+                  <span className="text-xs text-muted-foreground">
+                    {isForge ? `${player.guessCount}/${FORGE_ATTEMPTS}` : `${player.guessCount} chutes`}
+                  </span>
+                )}
                 <span className="font-bold tabular-nums">{player.score}</span>
               </>
             }
@@ -345,7 +352,11 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
         ))}
       </div>
 
-      <ChallengeView round={round} wrongGuesses={wrongGuesses} revealed={revealed} />
+      {round.challenge.kind === 'forge' ? (
+        <ForgeRoundView room={room} round={round} challenge={round.challenge} revealed={revealed} />
+      ) : (
+        <ChallengeView round={round} wrongGuesses={wrongGuesses} revealed={revealed} />
+      )}
 
       {revealed ? (
         <Card className={cn('w-full', winner ? 'border-emerald-500' : 'border-amber-500')}>
@@ -356,14 +367,17 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
                 ? winner.id === myId
                   ? 'Você acertou primeiro! +1 ponto'
                   : `${winner.name} acertou primeiro!`
-                : 'Tempo esgotado! Ninguém acertou.'}
+                : isForge
+                  ? 'Ninguém forjou o item.'
+                  : 'Tempo esgotado! Ninguém acertou.'}
             </p>
+            {isForge && round.answerId && <RecipeReveal recipe={round.answerId.split(',')} />}
             {answer && (
               <p className="text-muted-foreground">
                 Era <strong className="text-foreground">{answer.name}</strong>, <span>{answer.title}</span>
               </p>
             )}
-            {round.answerDetail && <p className="text-sm text-muted-foreground">{round.answerDetail}</p>}
+            {!isForge && round.answerDetail && <p className="text-sm text-muted-foreground">{round.answerDetail}</p>}
             {round.challenge.kind === 'quote' && (
               <AudioHint quote={round.challenge.quote} wrongGuesses={wrongGuesses} revealed />
             )}
@@ -374,10 +388,10 @@ function Playing({ room, state, myId }: { room: Room; state: RoomState; myId: st
           </CardContent>
         </Card>
       ) : (
-        <GuessForm guessedIds={guessedIds} onGuess={(champion) => room.guess(champion.id)} />
+        !isForge && <GuessForm guessedIds={guessedIds} onGuess={(champion) => room.guess(champion.id)} />
       )}
 
-      <GuessList guesses={myGuesses} answerId={myCorrect} />
+      {!isForge && <GuessList guesses={myGuesses} answerId={myCorrect} />}
     </>
   )
 }
@@ -386,6 +400,57 @@ const KIND_LABELS: Record<Challenge['kind'], string> = {
   quote: 'Falas',
   splash: 'Splash',
   ability: 'Habilidade',
+  forge: 'Forja',
+}
+
+type ForgeChallenge = Extract<Challenge, { kind: 'forge' }>
+
+// Rodada da Forja: o item, o seletor de componentes e as tentativas deste jogador.
+function ForgeRoundView({
+  room,
+  round,
+  challenge,
+  revealed,
+}: {
+  room: Room
+  round: RoundState
+  challenge: ForgeChallenge
+  revealed: boolean
+}) {
+  const attempts = room.myGuesses.map((g) => ({ ids: g.answer.split(','), matches: g.matches ?? 0 }))
+  const triedKeys = new Set(room.myGuesses.map((g) => g.answer))
+  const outOfAttempts = room.myGuesses.length >= FORGE_ATTEMPTS && !room.myGuesses.some((g) => g.correct)
+
+  return (
+    <>
+      <Card className="w-full">
+        <CardHeader className="text-center">
+          <CardTitle>Monte a receita deste item</CardTitle>
+          <CardDescription>
+            Quem forjar primeiro leva o ponto. Você tem {FORGE_ATTEMPTS} tentativas nesta rodada.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-col items-center gap-5">
+          <ForgeTarget itemId={challenge.itemId} slots={challenge.slots} />
+          {!revealed &&
+            (outOfAttempts ? (
+              <p className="text-center text-sm text-muted-foreground">
+                Você usou suas {FORGE_ATTEMPTS} tentativas. Aguarde o fim da rodada.
+              </p>
+            ) : (
+              <ForgePicker
+                key={round.index}
+                slots={challenge.slots}
+                options={challenge.options}
+                triedKeys={triedKeys}
+                onForge={(ids) => room.guess(recipeKey(ids))}
+              />
+            ))}
+        </CardContent>
+      </Card>
+      {!revealed && <ForgeAttempts attempts={attempts} slots={challenge.slots} />}
+    </>
+  )
 }
 
 const RACE_HINT = 'Quem acertar primeiro leva o ponto. Chutes ilimitados.'
@@ -393,6 +458,7 @@ const RACE_HINT = 'Quem acertar primeiro leva o ponto. Chutes ilimitados.'
 // Mostra a fala, a splash art ou o ícone da rodada, com as dicas de cada jogador.
 function ChallengeView({ round, wrongGuesses, revealed }: { round: RoundState; wrongGuesses: number; revealed: boolean }) {
   const { challenge } = round
+  if (challenge.kind === 'forge') return null
   if (challenge.kind === 'quote') {
     return (
       <QuoteCard quote={challenge.quote} description={RACE_HINT}>

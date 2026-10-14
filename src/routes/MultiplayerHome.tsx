@@ -60,8 +60,8 @@ export function MultiplayerHome() {
             Multiplayer
           </CardTitle>
           <CardDescription>
-            De {MIN_PLAYERS} a {MAX_PLAYERS} jogadores, {ROUNDS} rodadas de Falas, Splash, Habilidade ou tudo misturado.
-            Quem acertar o campeão primeiro leva o ponto da rodada.
+            De {MIN_PLAYERS} a {MAX_PLAYERS} jogadores, {ROUNDS} rodadas de Falas, Splash, Habilidade, Forja de Itens ou tudo misturado.
+            Quem acertar primeiro leva o ponto da rodada.
           </CardDescription>
         </CardHeader>
         <CardContent>
