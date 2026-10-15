@@ -5,4 +5,6 @@ interface ImportMetaEnv {
   readonly VITE_PEER_PORT?: string
   readonly VITE_PEER_PATH?: string
   readonly VITE_PEER_SECURE?: string
+  // JSON com a lista de servidores STUN/TURN (RTCIceServer[]).
+  readonly VITE_ICE_SERVERS?: string
 }

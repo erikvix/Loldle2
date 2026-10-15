@@ -1,4 +1,4 @@
-import Peer, { type DataConnection, type PeerError, type PeerOptions } from 'peerjs'
+import Peer, { util, type DataConnection, type PeerError, type PeerOptions } from 'peerjs'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import {
   HEARTBEAT_MS,
@@ -56,7 +56,23 @@ const noop = () => {}
 // Por padrão usa o servidor de sinalização gratuito do PeerJS (0.peerjs.com). Para usar outro
 // (ex.: um servidor local em testes), defina VITE_PEER_HOST, VITE_PEER_PORT e VITE_PEER_PATH.
 const env = import.meta.env
+
+// Servidores STUN/TURN. Sem VITE_ICE_SERVERS, valem os do PeerJS (STUN do Google e TURN público
+// do PeerJS). Com ele (JSON no formato de RTCIceServer[]), dá para usar um TURN próprio.
+function iceServers(): RTCIceServer[] | undefined {
+  if (!env.VITE_ICE_SERVERS) return undefined
+  try {
+    const servers = JSON.parse(env.VITE_ICE_SERVERS) as RTCIceServer[]
+    return Array.isArray(servers) && servers.length > 0 ? servers : undefined
+  } catch {
+    console.error('[loldle2] VITE_ICE_SERVERS não é um JSON válido; usando os servidores padrão')
+    return undefined
+  }
+}
+const customIceServers = iceServers()
+
 const peerOptions: PeerOptions = {
+  ...(customIceServers ? { config: { iceServers: customIceServers } } : {}),
   ...(env.VITE_PEER_HOST
     ? {
         host: env.VITE_PEER_HOST,
@@ -73,12 +89,56 @@ const peerOptions: PeerOptions = {
 
 const signalingServer = env.VITE_PEER_HOST ? `${env.VITE_PEER_HOST}:${env.VITE_PEER_PORT ?? 443}` : '0.peerjs.com'
 
+// Tempo para o convidado abrir o canal de dados com o host. Quando a conexão direta falha, o
+// navegador ainda tenta o TURN, que pode levar alguns segundos a mais.
+const CONNECT_TIMEOUT_MS = 20_000
+
+// Sem RTCPeerConnection ou sem canal de dados não há como jogar. Acontece quando o WebRTC foi
+// desligado (ex.: media.peerconnection.enabled no Firefox, LibreWolf, extensões de privacidade)
+// ou em alguns navegadores embutidos em apps.
+function webRtcProblem(): string | null {
+  if (typeof RTCPeerConnection === 'undefined') {
+    return 'Este navegador está com o WebRTC desligado ou não tem suporte a ele, e o multiplayer depende disso. Verifique as configurações de privacidade ou extensões que bloqueiam WebRTC, ou abra o link em outro navegador (Chrome, Edge, Firefox ou Safari atualizados).'
+  }
+  if (!util.supports.data) {
+    return 'Este navegador não deixou criar o canal de dados do WebRTC, que o multiplayer usa. Verifique as configurações de privacidade ou abra o link em outro navegador.'
+  }
+  return null
+}
+
+// Resumo do navegador para o log: ajuda a ver qual combinação de navegadores falha.
+function describeBrowser(): string {
+  const supports = util.supports
+  return `Navegador detectado: ${util.browser} ${util.browserVersion || '?'} (WebRTC: ${
+    typeof RTCPeerConnection !== 'undefined' ? 'sim' : 'não'
+  }, canal de dados: ${supports.data ? 'sim' : 'não'}, TURN: ${customIceServers ? 'próprio' : 'público do PeerJS'})`
+}
+
 // Mostra só o fim dos ids do PeerJS, que são longos e aleatórios.
 const shortId = (id: string) => id.slice(-6)
 
 // Acompanha uma conexão WebRTC no log: estados do ICE e, quando abre, por qual caminho os
 // dados estão passando (host = mesma rede, srflx = direto pela internet via STUN, relay = TURN).
 function watchConnection(connection: DataConnection, label: string) {
+  // Quais tipos de candidato este navegador conseguiu levantar. Sem "srflx", o STUN não respondeu
+  // (ou o navegador esconde o endereço); sem "relay", o TURN não respondeu. Se nenhum lado tiver um
+  // par que funcione, a conexão falha.
+  const pc = connection.peerConnection as RTCPeerConnection | undefined
+  if (pc) {
+    const gathered = new Map<string, number>()
+    pc.addEventListener('icecandidate', (event) => {
+      if (!event.candidate) {
+        const summary = ['host', 'srflx', 'relay'].map((type) => `${type} ${gathered.get(type) ?? 0}`).join(', ')
+        const missing = !gathered.get('srflx') && !gathered.get('relay')
+        logConnection(missing ? 'warn' : 'info', `${label}: candidatos locais: ${summary}${
+          missing ? ' (só rede local: STUN e TURN não responderam ou estão bloqueados)' : ''
+        }`)
+        return
+      }
+      const type = event.candidate.type ?? /typ (\w+)/.exec(event.candidate.candidate)?.[1] ?? '?'
+      gathered.set(type, (gathered.get(type) ?? 0) + 1)
+    })
+  }
   connection.on('iceStateChanged', (state) => {
     logConnection(state === 'failed' || state === 'disconnected' ? 'warn' : 'info', `${label}: ICE ${state}`)
   })
@@ -163,6 +223,14 @@ export function useRoom(role: Role, code: string, name: string): Room {
 
     clearConnectionLog()
     logConnection('info', `Entrando na sala ${code} como ${role === 'host' ? 'host' : 'convidado'}`)
+    logConnection('info', describeBrowser())
+    const problem = webRtcProblem()
+    if (problem) {
+      fail(problem)
+      return () => {
+        disposed = true
+      }
+    }
     // Eventos do navegador que costumam derrubar a conexão (ex.: celular trocando de rede ou
     // indo para segundo plano).
     const onOnline = () => logConnection('info', 'Navegador voltou a ficar online')
@@ -346,7 +414,12 @@ export function useRoom(role: Role, code: string, name: string): Room {
           }
         })
         connection.on('close', () => {
-          logConnection('warn', `${label}: conexão fechada`)
+          logConnection(
+            'warn',
+            connection.peer && !connections.has(connection.peer) && !lastSeen.has(connection.peer)
+              ? `${label}: conexão fechada antes de o jogador entrar (a negociação do WebRTC pode ter falhado)`
+              : `${label}: conexão fechada`,
+          )
           removeConnection(connection)
         })
       }
@@ -481,18 +554,24 @@ export function useRoom(role: Role, code: string, name: string): Room {
         if (disposed) return
         setMyId(id)
         logConnection('info', `Servidor de sinalização ok (meu id: ${shortId(id)}); procurando a sala ${code}`)
-        const current = peer.connect(hostPeerId(code), { reliable: true })
+        // JSON em vez do formato binário padrão do PeerJS: há relatos de mensagens binárias que não
+        // chegam entre navegadores diferentes (principalmente Safari). O host responde no mesmo
+        // formato que o convidado escolheu. As mensagens do jogo são pequenas (bem abaixo do limite
+        // de 16 KB do JSON no PeerJS).
+        const current = peer.connect(hostPeerId(code), { reliable: true, serialization: 'json' })
+        let opened = false
         connection = current
         watchConnection(current, 'Host')
         connectTimer = setTimeout(
           () =>
             fail(
-              'Não foi possível conectar à sala em 15s. A rede pode estar bloqueando a conexão direta; veja o log de conexão.',
+              `Não foi possível conectar à sala em ${CONNECT_TIMEOUT_MS / 1000}s. A rede ou o navegador pode estar bloqueando a conexão direta; veja o log de conexão.`,
             ),
-          15_000,
+          CONNECT_TIMEOUT_MS,
         )
         current.on('error', (err) => logConnection('error', `Host: erro na conexão (${err.type ?? err.message})`))
         current.on('open', () => {
+          opened = true
           clearTimeout(connectTimer)
           logConnection('info', 'Host: canal de dados aberto, entrando na sala')
           current.send({ type: 'join', name: cleanPlayerName(name) } satisfies GuestMessage)
@@ -520,7 +599,15 @@ export function useRoom(role: Role, code: string, name: string): Room {
             fail(message.message)
           }
         })
-        current.on('close', () => fail('A conexão com o host foi encerrada. Ele pode ter saído da sala.'))
+        // Se fechar antes de abrir, o host não saiu: a negociação do WebRTC falhou (ex.: nenhum par de
+        // candidatos funcionou entre as duas redes ou navegadores).
+        current.on('close', () =>
+          fail(
+            opened
+              ? 'A conexão com o host foi encerrada. Ele pode ter saído da sala.'
+              : 'A sala foi encontrada, mas a conexão direta com o host falhou. Isso costuma ser a rede (Wi-Fi corporativo, 4G com NAT restrito) ou um bloqueio de WebRTC no navegador. Tente outra rede ou outro navegador e veja o log de conexão.',
+          ),
+        )
       })
       peer.on('error', (err) => {
         logConnection('error', `Erro do PeerJS: ${err.type} (${err.message})`)
