@@ -18,6 +18,7 @@ import { z } from 'zod'
 import { AbilityIcon } from '@/components/AbilityIcon'
 import { AudioHint } from '@/components/AudioHint'
 import { ChampionIcon } from '@/components/ChampionIcon'
+import { ConnectionLogPanel } from '@/components/ConnectionLogPanel'
 import { ForgeAttempts, ForgePicker, ForgeTarget, RecipeReveal } from '@/components/ForgeBoard'
 import { GuessForm } from '@/components/GuessForm'
 import { GuessList } from '@/components/GuessList'
@@ -110,12 +111,22 @@ function NameGate({ code, onSubmit }: { code: string; onSubmit: (name: string) =
 function RoomView({ role, code, name }: { role: Role; code: string; name: string }) {
   const room = useRoom(role, code, name)
 
-  if (room.status === 'error') return <Message title="Não foi possível jogar" text={room.error ?? ''} />
+  if (room.status === 'error') {
+    return (
+      <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-6">
+        <Message title="Não foi possível jogar" text={room.error ?? ''} />
+        <ConnectionLogPanel defaultOpen />
+      </div>
+    )
+  }
   if (room.status === 'connecting' || !room.state || !room.myId) {
     return (
-      <div className="flex flex-col items-center gap-3 py-12 text-muted-foreground">
-        <LoaderCircleIcon className="size-8 animate-spin" />
-        {role === 'host' ? 'Criando a sala...' : `Conectando à sala ${code}...`}
+      <div className="mx-auto flex w-full max-w-xl flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-3 py-12 text-muted-foreground">
+          <LoaderCircleIcon className="size-8 animate-spin" />
+          {role === 'host' ? 'Criando a sala...' : `Conectando à sala ${code}...`}
+        </div>
+        <ConnectionLogPanel />
       </div>
     )
   }
@@ -127,6 +138,7 @@ function RoomView({ role, code, name }: { role: Role; code: string; name: string
       {state.phase === 'lobby' && <Lobby room={room} state={state} myId={myId} isHost={isHost} code={code} />}
       {state.phase === 'playing' && <Playing room={room} state={state} myId={myId} />}
       {state.phase === 'finished' && <Finished room={room} state={state} myId={myId} isHost={isHost} />}
+      <ConnectionLogPanel />
     </div>
   )
 }

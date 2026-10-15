@@ -15,6 +15,7 @@ import {
   type RoomState,
 } from './protocol'
 import { countMatches, FORGE_ATTEMPTS } from '@/game/forge'
+import { clearConnectionLog, logConnection } from './connectionLog'
 import { pickRounds, type HostRound } from './rounds'
 
 export type Role = 'host' | 'guest'
@@ -55,14 +56,55 @@ const noop = () => {}
 // Por padrão usa o servidor de sinalização gratuito do PeerJS (0.peerjs.com). Para usar outro
 // (ex.: um servidor local em testes), defina VITE_PEER_HOST, VITE_PEER_PORT e VITE_PEER_PATH.
 const env = import.meta.env
-const peerOptions: PeerOptions = env.VITE_PEER_HOST
-  ? {
-      host: env.VITE_PEER_HOST,
-      port: Number(env.VITE_PEER_PORT ?? 443),
-      path: env.VITE_PEER_PATH ?? '/',
-      secure: env.VITE_PEER_SECURE !== 'false',
+const peerOptions: PeerOptions = {
+  ...(env.VITE_PEER_HOST
+    ? {
+        host: env.VITE_PEER_HOST,
+        port: Number(env.VITE_PEER_PORT ?? 443),
+        path: env.VITE_PEER_PATH ?? '/',
+        secure: env.VITE_PEER_SECURE !== 'false',
+      }
+    : {}),
+  // Avisos e erros internos do PeerJS vão para o log de conexão (nível 2 = avisos e erros).
+  debug: 2,
+  logFunction: (level, ...parts) =>
+    logConnection(level === 1 ? 'error' : 'warn', `PeerJS: ${parts.map((p) => (p instanceof Error ? p.message : String(p))).join(' ')}`),
+}
+
+const signalingServer = env.VITE_PEER_HOST ? `${env.VITE_PEER_HOST}:${env.VITE_PEER_PORT ?? 443}` : '0.peerjs.com'
+
+// Mostra só o fim dos ids do PeerJS, que são longos e aleatórios.
+const shortId = (id: string) => id.slice(-6)
+
+// Acompanha uma conexão WebRTC no log: estados do ICE e, quando abre, por qual caminho os
+// dados estão passando (host = mesma rede, srflx = direto pela internet via STUN, relay = TURN).
+function watchConnection(connection: DataConnection, label: string) {
+  connection.on('iceStateChanged', (state) => {
+    logConnection(state === 'failed' || state === 'disconnected' ? 'warn' : 'info', `${label}: ICE ${state}`)
+  })
+  connection.on('open', async () => {
+    try {
+      const stats = await connection.peerConnection.getStats()
+      let pairId: string | undefined
+      stats.forEach((report) => {
+        if (report.type === 'transport' && report.selectedCandidatePairId) pairId = report.selectedCandidatePairId
+      })
+      const pair = pairId ? stats.get(pairId) : undefined
+      const local = pair && stats.get(pair.localCandidateId)
+      const remote = pair && stats.get(pair.remoteCandidateId)
+      if (local && remote) {
+        logConnection(
+          'info',
+          `${label}: rota ${local.candidateType} → ${remote.candidateType} (${local.protocol ?? '?'}${
+            local.candidateType === 'relay' || remote.candidateType === 'relay' ? ', via servidor TURN' : ''
+          })`,
+        )
+      }
+    } catch {
+      // Estatísticas indisponíveis neste navegador: o log só não mostra a rota.
     }
-  : {}
+  })
+}
 
 export function cleanPlayerName(name: string): string {
   return name.trim().replace(/\s+/g, ' ').slice(0, 16) || 'Jogador'
@@ -101,6 +143,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
     // Vale a primeira mensagem de erro (ex.: "sala cheia" não vira "conexão encerrada" logo depois).
     const fail = (message: string) => {
       if (disposed || failed) return
+      logConnection('error', `Falha: ${message}`)
       failed = true
       setStatus('error')
       setError(message)
@@ -118,9 +161,24 @@ export function useRoom(role: Role, code: string, name: string): Room {
       }))
     }
 
+    clearConnectionLog()
+    logConnection('info', `Entrando na sala ${code} como ${role === 'host' ? 'host' : 'convidado'}`)
+    // Eventos do navegador que costumam derrubar a conexão (ex.: celular trocando de rede ou
+    // indo para segundo plano).
+    const onOnline = () => logConnection('info', 'Navegador voltou a ficar online')
+    const onOffline = () => logConnection('warn', 'Navegador ficou offline')
+    const onVisibility = () =>
+      logConnection('info', document.hidden ? 'Página foi para segundo plano' : 'Página voltou para primeiro plano')
+    window.addEventListener('online', onOnline)
+    window.addEventListener('offline', onOffline)
+    document.addEventListener('visibilitychange', onVisibility)
+
     const cleanup = role === 'host' ? runHost() : runGuest()
     return () => {
       disposed = true
+      window.removeEventListener('online', onOnline)
+      window.removeEventListener('offline', onOffline)
+      document.removeEventListener('visibilitychange', onVisibility)
       cleanup()
     }
 
@@ -249,18 +307,25 @@ export function useRoom(role: Role, code: string, name: string): Room {
       }
 
       const handleConnection = (connection: DataConnection) => {
+        const label = `Jogador ${shortId(connection.peer)}`
+        logConnection('info', `${label}: pedido de conexão recebido`)
+        watchConnection(connection, label)
+        connection.on('open', () => logConnection('info', `${label}: canal de dados aberto`))
+        connection.on('error', (err) => logConnection('error', `${label}: erro na conexão (${err.type ?? err.message})`))
         connection.on('data', (raw) => {
           const message = raw as GuestMessage
           lastSeen.set(connection.peer, Date.now())
           if (!room || message.type === 'ping') return
           if (message.type === 'join') {
             const reject = (text: string) => {
+              logConnection('warn', `${label}: entrada recusada (${text})`)
               connection.send({ type: 'error', message: text } satisfies HostMessage)
               setTimeout(() => connection.close(), 500)
             }
             if (room.phase !== 'lobby') return reject('A partida já começou. Espere ela terminar para entrar.')
             if (room.players.length >= MAX_PLAYERS) return reject(`A sala está cheia (máximo de ${MAX_PLAYERS}).`)
             connections.set(connection.peer, connection)
+            logConnection('info', `${label}: entrou na sala`)
             update((current) => ({
               ...current,
               players: [
@@ -280,7 +345,10 @@ export function useRoom(role: Role, code: string, name: string): Room {
             )
           }
         })
-        connection.on('close', () => removeConnection(connection))
+        connection.on('close', () => {
+          logConnection('warn', `${label}: conexão fechada`)
+          removeConnection(connection)
+        })
       }
 
       // No lobby, quem sai some da lista; durante a partida, fica marcado como "saiu" com seus pontos.
@@ -303,18 +371,22 @@ export function useRoom(role: Role, code: string, name: string): Room {
       const heartbeat = setInterval(() => {
         const now = Date.now()
         for (const connection of [...connections.values()]) {
-          if (now - (lastSeen.get(connection.peer) ?? now) > HEARTBEAT_TIMEOUT_MS) removeConnection(connection)
-          else if (connection.open) connection.send({ type: 'ping' } satisfies HostMessage)
+          if (now - (lastSeen.get(connection.peer) ?? now) > HEARTBEAT_TIMEOUT_MS) {
+            logConnection('warn', `Jogador ${shortId(connection.peer)}: sem sinal de vida há ${HEARTBEAT_TIMEOUT_MS / 1000}s, removido`)
+            removeConnection(connection)
+          } else if (connection.open) connection.send({ type: 'ping' } satisfies HostMessage)
         }
       }, HEARTBEAT_MS)
 
       // Em desenvolvimento (StrictMode) ou ao recarregar a página, o id da sala pode demorar
       // alguns segundos para ser liberado no servidor do PeerJS; por isso as novas tentativas.
       const open = (attempt: number) => {
+        logConnection('info', `Criando a sala ${code} no servidor de sinalização ${signalingServer} (tentativa ${attempt})`)
         const current = new Peer(hostPeerId(code), peerOptions)
         peer = current
         current.on('open', (id) => {
           if (disposed) return
+          logConnection('info', room ? 'Reconectado ao servidor de sinalização' : `Sala ${code} aberta, esperando jogadores`)
           reconnects = 0
           // Depois de uma reconexão, a sala continua a mesma.
           if (room) return
@@ -334,12 +406,17 @@ export function useRoom(role: Role, code: string, name: string): Room {
         // com os jogadores continuam; reconecta só para novos jogadores conseguirem entrar.
         // Antes de abrir, quem trata a falha é o evento 'error'.
         current.on('disconnected', () => {
-          if (disposed || current.destroyed || !room || reconnects >= 5) return
+          if (disposed || current.destroyed) return
+          logConnection('warn', 'Conexão com o servidor de sinalização caiu (quem já está na sala continua conectado)')
+          if (!room || reconnects >= 5) return
           reconnects++
+          logConnection('info', `Reconectando ao servidor de sinalização em ${2 * reconnects}s (tentativa ${reconnects}/5)`)
           retryTimer = setTimeout(() => current.reconnect(), 2000 * reconnects)
         })
         current.on('error', (err) => {
+          logConnection('error', `Erro do PeerJS: ${err.type} (${err.message})`)
           if (err.type === 'unavailable-id' && attempt < 5 && !disposed) {
+            logConnection('info', 'Código da sala ainda ocupado no servidor; tentando de novo em 2s')
             current.destroy()
             retryTimer = setTimeout(() => open(attempt + 1), 2000)
             return
@@ -392,6 +469,7 @@ export function useRoom(role: Role, code: string, name: string): Room {
     }
 
     function runGuest() {
+      logConnection('info', `Conectando ao servidor de sinalização ${signalingServer}`)
       const peer = new Peer(peerOptions)
       let connection: DataConnection | null = null
       let latest: RoomState | null = null
@@ -402,16 +480,27 @@ export function useRoom(role: Role, code: string, name: string): Room {
       peer.on('open', (id) => {
         if (disposed) return
         setMyId(id)
+        logConnection('info', `Servidor de sinalização ok (meu id: ${shortId(id)}); procurando a sala ${code}`)
         const current = peer.connect(hostPeerId(code), { reliable: true })
         connection = current
-        connectTimer = setTimeout(() => fail('Não foi possível conectar à sala. Tente de novo.'), 15_000)
+        watchConnection(current, 'Host')
+        connectTimer = setTimeout(
+          () =>
+            fail(
+              'Não foi possível conectar à sala em 15s. A rede pode estar bloqueando a conexão direta; veja o log de conexão.',
+            ),
+          15_000,
+        )
+        current.on('error', (err) => logConnection('error', `Host: erro na conexão (${err.type ?? err.message})`))
         current.on('open', () => {
           clearTimeout(connectTimer)
+          logConnection('info', 'Host: canal de dados aberto, entrando na sala')
           current.send({ type: 'join', name: cleanPlayerName(name) } satisfies GuestMessage)
           lastHostMessage = Date.now()
           heartbeat = setInterval(() => {
             if (Date.now() - lastHostMessage > HEARTBEAT_TIMEOUT_MS) {
               clearInterval(heartbeat)
+              logConnection('warn', `Host: sem sinal de vida há ${HEARTBEAT_TIMEOUT_MS / 1000}s`)
               fail('A conexão com o host foi encerrada. Ele pode ter saído da sala.')
             } else if (current.open) {
               current.send({ type: 'ping' } satisfies GuestMessage)
@@ -433,7 +522,11 @@ export function useRoom(role: Role, code: string, name: string): Room {
         })
         current.on('close', () => fail('A conexão com o host foi encerrada. Ele pode ter saído da sala.'))
       })
-      peer.on('error', (err) => fail(describePeerError(err)))
+      peer.on('error', (err) => {
+        logConnection('error', `Erro do PeerJS: ${err.type} (${err.message})`)
+        fail(describePeerError(err))
+      })
+      peer.on('disconnected', () => logConnection('warn', 'Conexão com o servidor de sinalização caiu'))
 
       actions.current = {
         start: noop,

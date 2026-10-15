@@ -30,7 +30,8 @@ De 2 a 4 jogadores, cada um no seu aparelho, jogam 10 rodadas. O host escolhe o 
 - A conexão é direta entre os navegadores (WebRTC, via [PeerJS](https://peerjs.com/)). Não há servidor do jogo: o navegador de quem criou a sala (o host) sorteia as rodadas, valida os chutes e soma os pontos. Como as imagens vêm do CDN da Riot, quem souber olhar as requisições do navegador consegue descobrir a resposta pelo endereço da imagem; para uma partida entre amigos isso não deve ser um problema.
 - Para os navegadores se encontrarem, o PeerJS usa o servidor de sinalização gratuito `0.peerjs.com`. Para usar outro servidor, defina `VITE_PEER_HOST`, `VITE_PEER_PORT`, `VITE_PEER_PATH` e `VITE_PEER_SECURE` no build.
 - Se o host fechar a página, a partida acaba para todos. Se um convidado sair, ele fica marcado como "saiu" e a partida continua.
-- Em algumas redes muito restritas (ex.: redes corporativas), a conexão direta pode falhar. Isso exigiria um servidor TURN, que o projeto ainda não tem.
+- A conexão usa o STUN do Google e os servidores TURN públicos do PeerJS (usados quando a conexão direta não é possível). Em algumas redes muito restritas (ex.: redes corporativas) ela ainda pode falhar; nesse caso, um servidor TURN próprio resolveria.
+- **Log de conexão:** na sala, a seção "Log de conexão" (no fim da página) mostra cada etapa com horário: servidor de sinalização, pedidos de conexão, estados do ICE, rota usada (`host` = mesma rede, `srflx` = direto pela internet, `relay` = via TURN), quedas, sinais de vida perdidos e erros, incluindo avisos internos do PeerJS. Ela abre sozinha quando há erro, e o botão "Copiar log" copia tudo com a versão do navegador. Os mesmos eventos vão para o console do navegador com o prefixo `[loldle2]`. O log fica só na memória da aba e não inclui nomes de jogadores nem respostas.
 
 ## Stack
 
