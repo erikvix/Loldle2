@@ -56,8 +56,9 @@ export function pickOptions<T>(correct: T, others: T[], count = 4): T[] {
   return picked.sort(() => Math.random() - 0.5)
 }
 
-// Zoom da arte a cada chute errado: começa bem de perto e vai mostrando mais da imagem.
-const ZOOM_LEVELS = [6, 4.5, 3.5, 2.7, 2.1, 1.6, 1.25, 1]
+// Zoom da arte a cada chute errado: começa bem de perto e vai abrindo devagar,
+// para a imagem só ficar fácil depois de muitos erros.
+const ZOOM_LEVELS = [6, 5.5, 5, 4.5, 4, 3.6, 3.2, 2.9, 2.6, 2.3, 2, 1.8, 1.6, 1.4, 1.2, 1]
 
 export function splashZoom(wrongGuesses: number, revealed: boolean): number {
   return revealed ? 1 : ZOOM_LEVELS[Math.min(wrongGuesses, ZOOM_LEVELS.length - 1)]
