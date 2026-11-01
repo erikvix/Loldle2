@@ -12,7 +12,7 @@ function pickChampion(previousId?: string): string {
 export interface SplashRound {
   championId: string
   skin: Skin
-  // Ponto da imagem onde o zoom começa, em % (longe das bordas).
+  // Ponto da imagem onde o zoom começa, em % (longe do centro).
   focus: { x: number; y: number }
 }
 
@@ -24,7 +24,17 @@ export function splashRoundFor(championId: string): SplashRound {
   return {
     championId,
     skin: randomItem(championDetails[championId].skins),
-    focus: { x: 20 + Math.random() * 60, y: 20 + Math.random() * 60 },
+    focus: pickFocus(),
+  }
+}
+
+// Sorteia um ponto entre 10% e 90% da imagem, mas longe do centro, onde costuma
+// ficar o rosto do campeão.
+function pickFocus(): { x: number; y: number } {
+  for (;;) {
+    const x = 10 + Math.random() * 80
+    const y = 10 + Math.random() * 80
+    if (Math.hypot(x - 50, y - 50) >= 25) return { x, y }
   }
 }
 
@@ -58,7 +68,7 @@ export function pickOptions<T>(correct: T, others: T[], count = 4): T[] {
 
 // Zoom da arte a cada chute errado: começa bem de perto e vai abrindo devagar,
 // para a imagem só ficar fácil depois de muitos erros.
-const ZOOM_LEVELS = [6, 5.5, 5, 4.5, 4, 3.6, 3.2, 2.9, 2.6, 2.3, 2, 1.8, 1.6, 1.4, 1.2, 1]
+const ZOOM_LEVELS = [8, 7.4, 6.8, 6.2, 5.7, 5.2, 4.7, 4.3, 3.9, 3.5, 3.1, 2.8, 2.5, 2.2, 1.9, 1.6, 1.35, 1.15, 1]
 
 export function splashZoom(wrongGuesses: number, revealed: boolean): number {
   return revealed ? 1 : ZOOM_LEVELS[Math.min(wrongGuesses, ZOOM_LEVELS.length - 1)]
