@@ -57,9 +57,8 @@ const noop = () => {}
 // (ex.: um servidor local em testes), defina VITE_PEER_HOST, VITE_PEER_PORT e VITE_PEER_PATH.
 const env = import.meta.env
 
-// Servidores STUN/TURN. Sem VITE_ICE_SERVERS, valem os do PeerJS (STUN do Google e TURN público
-// do PeerJS). Com ele (JSON no formato de RTCIceServer[]), dá para usar um TURN próprio.
-function iceServers(): RTCIceServer[] | undefined {
+// Servidores STUN/TURN fixos, vindos do build (JSON no formato de RTCIceServer[]).
+function iceServersFromEnv(): RTCIceServer[] | undefined {
   if (!env.VITE_ICE_SERVERS) return undefined
   try {
     const servers = JSON.parse(env.VITE_ICE_SERVERS) as RTCIceServer[]
@@ -69,10 +68,37 @@ function iceServers(): RTCIceServer[] | undefined {
     return undefined
   }
 }
-const customIceServers = iceServers()
+const envIceServers = iceServersFromEnv()
 
-const peerOptions: PeerOptions = {
-  ...(customIceServers ? { config: { iceServers: customIceServers } } : {}),
+// Credenciais temporárias de TURN geradas pela Netlify Function (netlify/functions/turn.mts).
+const TURN_ENDPOINT = '/.netlify/functions/turn'
+const TURN_FETCH_TIMEOUT_MS = 4000
+
+type IceSource = 'build' | 'netlify' | 'peerjs'
+
+// Escolhe os servidores STUN/TURN: os do build (VITE_ICE_SERVERS), senão os da Netlify Function,
+// senão os padrão do PeerJS (STUN do Google e TURN público do PeerJS, que nem sempre responde).
+async function loadIceServers(): Promise<{ servers: RTCIceServer[] | undefined; source: IceSource }> {
+  if (envIceServers) return { servers: envIceServers, source: 'build' }
+  try {
+    const response = await fetch(TURN_ENDPOINT, { signal: AbortSignal.timeout(TURN_FETCH_TIMEOUT_MS) })
+    if (response.ok) {
+      const data = (await response.json()) as { iceServers?: RTCIceServer[] }
+      if (Array.isArray(data.iceServers) && data.iceServers.length > 0) return { servers: data.iceServers, source: 'netlify' }
+    }
+  } catch {
+    // Sem a função (ex.: em desenvolvimento) ou sem resposta: fica com os servidores do PeerJS.
+  }
+  return { servers: undefined, source: 'peerjs' }
+}
+
+const ICE_SOURCE_LABEL: Record<IceSource, string> = {
+  build: 'próprio (VITE_ICE_SERVERS)',
+  netlify: 'Cloudflare (via Netlify)',
+  peerjs: 'público do PeerJS',
+}
+
+const basePeerOptions: PeerOptions = {
   ...(env.VITE_PEER_HOST
     ? {
         host: env.VITE_PEER_HOST,
@@ -111,7 +137,7 @@ function describeBrowser(): string {
   const supports = util.supports
   return `Navegador detectado: ${util.browser} ${util.browserVersion || '?'} (WebRTC: ${
     typeof RTCPeerConnection !== 'undefined' ? 'sim' : 'não'
-  }, canal de dados: ${supports.data ? 'sim' : 'não'}, TURN: ${customIceServers ? 'próprio' : 'público do PeerJS'})`
+  }, canal de dados: ${supports.data ? 'sim' : 'não'})`
 }
 
 // Mostra só o fim dos ids do PeerJS, que são longos e aleatórios.
@@ -241,7 +267,18 @@ export function useRoom(role: Role, code: string, name: string): Room {
     window.addEventListener('offline', onOffline)
     document.addEventListener('visibilitychange', onVisibility)
 
-    const cleanup = role === 'host' ? runHost() : runGuest()
+    let peerOptions = basePeerOptions
+    let cleanup = noop
+    void loadIceServers().then(({ servers, source }) => {
+      if (disposed) return
+      const turnCount = (servers ?? []).filter((s) => [s.urls].flat().some((url) => url.startsWith('turn'))).length
+      logConnection(
+        source === 'peerjs' ? 'warn' : 'info',
+        `Servidores TURN: ${ICE_SOURCE_LABEL[source]}${servers ? ` (${turnCount} com TURN)` : ''}`,
+      )
+      if (servers) peerOptions = { ...basePeerOptions, config: { iceServers: servers } }
+      cleanup = role === 'host' ? runHost() : runGuest()
+    })
     return () => {
       disposed = true
       window.removeEventListener('online', onOnline)
